@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FiraSans-Bold.ttf">
+            <string>FiraSans-Bold</string>
+        </array>
+        <array key="FiraSans-Regular.ttf">
+            <string>FiraSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddClassNavi" customModule="Trainer" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="qMa-CC-aFF" id="YxQ-VB-l7Q"/>
+                <outlet property="step" destination="fN7-4L-Zti" id="IOI-c7-sTz"/>
+                <outlet property="titleLabel" destination="Iyl-RB-m0H" id="rgV-gz-7kp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMa-CC-aFF">
+                    <rect key="frame" x="10" y="0.0" width="45" height="45"/>
+                    <state key="normal" image="close_button"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Class" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyl-RB-m0H">
+                    <rect key="frame" x="150" y="12" width="75" height="21"/>
+                    <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="17"/>
+                    <color key="textColor" red="0.20683905480000001" green="0.22982683779999999" blue="0.30865281820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fN7-4L-Zti">
+                    <rect key="frame" x="330" y="0.0" width="25" height="45"/>
+                    <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="17"/>
+                    <color key="textColor" red="0.20683905480000001" green="0.22982683779999999" blue="0.30865281820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.96047002079999999" green="0.96871930360000003" blue="0.96860390900000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qMa-CC-aFF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="0iz-nS-tZJ"/>
+                <constraint firstItem="Iyl-RB-m0H" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3Jn-rg-f6n"/>
+                <constraint firstItem="Iyl-RB-m0H" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="3Jz-mv-XJL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fN7-4L-Zti" secondAttribute="bottom" id="5ph-FF-1V5"/>
+                <constraint firstItem="qMa-CC-aFF" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="KfA-DX-m4B"/>
+                <constraint firstItem="fN7-4L-Zti" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="SGy-ww-5vw"/>
+                <constraint firstItem="qMa-CC-aFF" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Whk-aB-XC6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fN7-4L-Zti" secondAttribute="trailing" constant="20" id="h0c-Sp-oSH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="60" y="62"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close_button" width="45" height="45"/>
+    </resources>
+</document>

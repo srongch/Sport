@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FiraSans-Bold.ttf">
+            <string>FiraSans-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatePickerPopup" customModule="Trainer" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="k4c-7z-OrC" id="oSQ-89-VyU"/>
+                <outlet property="datePicker" destination="q4m-TL-eeC" id="bZv-4y-b5s"/>
+                <outlet property="doneButton" destination="agQ-xu-fzP" id="Sp5-W4-Xx2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="346"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="q4m-TL-eeC">
+                    <rect key="frame" x="0.0" y="45" width="375" height="216"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="216" id="A4p-mD-crw"/>
+                    </constraints>
+                    <date key="date" timeIntervalSinceReferenceDate="574448812.38782406">
+                        <!--2019-03-16 17:06:52 +0000-->
+                    </date>
+                    <connections>
+                        <action selector="datePickerValueChange:" destination="-1" eventType="valueChanged" id="TjI-ZX-TfH"/>
+                    </connections>
+                </datePicker>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhc-pG-iNe">
+                    <rect key="frame" x="0.0" y="10" width="375" height="20"/>
+                    <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="17"/>
+                    <color key="textColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="HLw-7b-nr7">
+                    <rect key="frame" x="20" y="281" width="326" height="45"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4c-7z-OrC">
+                            <rect key="frame" x="0.0" y="0.0" width="153.5" height="45"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="oMf-zs-A3X"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="17"/>
+                            <state key="normal" title="Back">
+                                <color key="titleColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="closePressed:" destination="-1" eventType="touchUpInside" id="cSP-pq-LaW"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agQ-xu-fzP">
+                            <rect key="frame" x="172.5" y="0.0" width="153.5" height="45"/>
+                            <color key="backgroundColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="mr4-fQ-r1v"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="17"/>
+                            <state key="normal" title="Next"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="donePressed:" destination="-1" eventType="touchUpInside" id="Yez-Kr-jXv"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HLw-7b-nr7" secondAttribute="bottom" constant="20" id="0ff-3K-js7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="q4m-TL-eeC" secondAttribute="trailing" id="39J-QZ-2c5"/>
+                <constraint firstItem="HLw-7b-nr7" firstAttribute="top" secondItem="q4m-TL-eeC" secondAttribute="bottom" constant="20" id="7gn-sB-wIk"/>
+                <constraint firstItem="q4m-TL-eeC" firstAttribute="top" secondItem="vhc-pG-iNe" secondAttribute="bottom" constant="15" id="GAP-Qx-HFG"/>
+                <constraint firstItem="vhc-pG-iNe" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="Haf-SD-C3Y"/>
+                <constraint firstItem="HLw-7b-nr7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Lhx-GQ-IHN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HLw-7b-nr7" secondAttribute="trailing" constant="29" id="XGq-lQ-JUs"/>
+                <constraint firstItem="vhc-pG-iNe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="pbe-es-Q10"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vhc-pG-iNe" secondAttribute="trailing" id="rC9-sN-5bl"/>
+                <constraint firstItem="q4m-TL-eeC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="s1Z-Lc-eXM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-74.400000000000006" y="17.091454272863569"/>
+        </view>
+    </objects>
+</document>

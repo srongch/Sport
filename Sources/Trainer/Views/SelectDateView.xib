@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FiraSans-Regular.ttf">
+            <string>FiraSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectDateView" customModule="Trainer" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="5ML-wO-mVh" id="1kX-ZD-jWk"/>
+                <outlet property="iconImage" destination="kTT-UN-WS4" id="QMi-eE-1e6"/>
+                <outlet property="textLabel" destination="zIl-gJ-63L" id="R6O-VQ-ZM3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="276" height="53"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StartDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIl-gJ-63L">
+                    <rect key="frame" x="40" y="0.0" width="226" height="53"/>
+                    <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="16"/>
+                    <color key="textColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="kTT-UN-WS4">
+                    <rect key="frame" x="10" y="16.5" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="OgL-fJ-2kH"/>
+                        <constraint firstAttribute="width" constant="20" id="jlq-jl-zWJ"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ML-wO-mVh">
+                    <rect key="frame" x="0.0" y="0.0" width="276" height="53"/>
+                    <connections>
+                        <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="Hva-3z-py2"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="kTT-UN-WS4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="0fx-3W-CKX"/>
+                <constraint firstItem="5ML-wO-mVh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="289-B0-tg8"/>
+                <constraint firstItem="zIl-gJ-63L" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="dgU-rV-ZR8"/>
+                <constraint firstItem="zIl-gJ-63L" firstAttribute="leading" secondItem="kTT-UN-WS4" secondAttribute="trailing" constant="10" id="fTG-Al-QfC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5ML-wO-mVh" secondAttribute="trailing" id="i1b-fP-A20"/>
+                <constraint firstItem="kTT-UN-WS4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="kxi-GB-knB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zIl-gJ-63L" secondAttribute="trailing" constant="10" id="niE-Dz-CMz"/>
+                <constraint firstItem="5ML-wO-mVh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="qws-5l-UsX"/>
+                <constraint firstItem="5ML-wO-mVh" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="wQ7-7M-Tww"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="zIl-gJ-63L" secondAttribute="bottom" id="wTl-f5-fST"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-123.2" y="-284.70764617691157"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="calendar" width="21" height="21"/>
+    </resources>
+</document>
