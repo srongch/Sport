@@ -17,14 +17,36 @@ class CalenderViewController: UIViewController {
     @IBOutlet weak var nextMonth: UIButton!
     @IBOutlet weak var previousMonth: UIButton!
     
+    @IBOutlet weak var minusButton: UIButton!
+    @IBOutlet weak var plusButton: UIButton!
+    @IBOutlet weak var numberLabel: UILabel!
+    
+    @IBOutlet weak var timeCollectionView: UICollectionView!
+    private let itemsPerRow: CGFloat = 3
+    private let sectionInsets = UIEdgeInsets(top: 0.0,
+                                             left: 10.0,
+                                             bottom: 0.0,
+                                             right: 10.0)
+    
+    var classModel : ClassModel?
+    var selectDate : Date?
+    var selectTime : Int64?
+    var numberofPerson : Int = 0
+    
     let formatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupCalenderView()
+        self.setupCollectionView()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func setupCollectionView(){
+        timeCollectionView.delegate = self
+        timeCollectionView.dataSource = self
     }
     
     func setupCalenderView (){
@@ -36,15 +58,23 @@ class CalenderViewController: UIViewController {
             self.handleMonthChange(from: visibleDates)
         }
         
+        
     }
     
-    func handleCelltextColor (cell : JTAppleCell?, cellState : CellState){
+    func handleCelltextColor (cell : JTAppleCell?, cellState : CellState, date : Date){
         guard let cell : CustomCalenderCell = cell as? CustomCalenderCell else{return}
         if (cellState.isSelected) {
             cell.textLabel.textColor = UIColor.white
         }else{
             if (cellState.dateBelongsTo == .thisMonth){
                 cell.textLabel.textColor = UIColor.blueColor
+                
+                guard let model = classModel else {
+                    return
+                }
+                let isEnable = date.isInTheRage(model.startDate.toDate(), model.endDate.toDate(), model.dayoftheWeek)
+                cell.textLabel.textColor = isEnable ?  UIColor.blueColor :  UIColor.calender_grey_color
+                
             }else{
                 cell.textLabel.textColor = UIColor.calender_grey_color
             }
@@ -57,8 +87,16 @@ class CalenderViewController: UIViewController {
             cell.selectedView.backgroundColor = UIColor.blueColor
             cell.stripView.isHidden = true
         }else{
+            
+            guard let model = classModel else {
+                cell.selectedView.backgroundColor = UIColor.white
+                cell.stripView.isHidden = true
+                return
+            }
+            let isEnable = date.isInTheRage(model.startDate.toDate(), model.endDate.toDate(), model.dayoftheWeek)
             cell.selectedView.backgroundColor = UIColor.white
-            cell.stripView.isHidden = true
+            cell.stripView.isHidden = isEnable
+            
         }
     }
     
@@ -66,6 +104,7 @@ class CalenderViewController: UIViewController {
         let tempdate  = visibleDates.monthDates.first!.date
         formatter.dateFormat = "MMMM YYYY"
         monthText.text = formatter.string(from: tempdate)
+        
     }
     
     func handleCalendarScroll(cellState : CellState){
@@ -76,6 +115,29 @@ class CalenderViewController: UIViewController {
         }
        
     }
+    
+    @IBAction func leftPressed(_ sender: Any) {
+        self.calenderView.scrollToSegment(.previous)
+    }
+    
+    @IBAction func rightPressed(_ sender: Any) {
+        self.calenderView.scrollToSegment(.next)
+    }
+    
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        switch sender {
+        case minusButton:
+            numberofPerson = numberofPerson <= 1 ? 0 : numberofPerson - 1
+        default:
+            numberofPerson = numberofPerson <= 10 ? numberofPerson + 1 : numberofPerson
+        }
+        numberLabel.text = "\(numberofPerson)"
+    }
+    
+    @IBAction func bookButtonPressed(_ sender: Any) {
+    }
+    
     
 
     /*
@@ -105,30 +167,24 @@ extension CalenderViewController : JTAppleCalendarViewDelegate, JTAppleCalendarV
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         handleCellBackgroundColor(cell: cell, cellState: cellState, date: date)
-        handleCelltextColor(cell: cell, cellState: cellState)
+        handleCelltextColor(cell: cell, cellState: cellState,date: date)
         handleCalendarScroll(cellState: cellState)
-        
+        let isInRage = date.isInTheRage(classModel!.startDate.toDate(), classModel!.endDate.toDate(), classModel!.dayoftheWeek)
+        print(isInRage ? "yes" : "no" )
+        print("date of week : \(String(describing: date.dayNumberOfWeek()))")
+        selectDate  = date
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         handleCellBackgroundColor(cell: cell, cellState: cellState, date: date)
-        handleCelltextColor(cell: cell, cellState: cellState)
+        handleCelltextColor(cell: cell, cellState: cellState,date: date)
     }
     
     func sharedFunctionToConfigureCell(myCustomCell: CustomCalenderCell, cellState: CellState, date: Date) {
         myCustomCell.textLabel.text = cellState.text
         handleCellBackgroundColor(cell: myCustomCell, cellState: cellState, date: date)
-        handleCelltextColor(cell: myCustomCell, cellState: cellState)
-        
-//        if testCalendar.isDateInToday(date) {
-//            myCustomCell.backgroundColor = red
-//        } else {
-//            myCustomCell.backgroundColor = white
-//        }
-        // more code configurations
-        // ...
-        // ...
-        // ...
+        handleCelltextColor(cell: myCustomCell, cellState: cellState,date: date)
+
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
@@ -136,7 +192,11 @@ extension CalenderViewController : JTAppleCalendarViewDelegate, JTAppleCalendarV
     }
     
     func calendar(_ calendar: JTAppleCalendarView, shouldSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) -> Bool {
-        return true
+        
+        guard let model = classModel else {
+            return false
+        }
+        return date.isInTheRage(model.startDate.toDate(), model.endDate.toDate(), model.dayoftheWeek)
     }
     
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
@@ -148,8 +208,93 @@ extension CalenderViewController : JTAppleCalendarViewDelegate, JTAppleCalendarV
         let startDate = formatter.date(from: "2017 01 01")!
         let endDate = formatter.date(from: "2017 12 01")!
         
-        let parameter = ConfigurationParameters(startDate: startDate, endDate: endDate)
+       
+        
+        guard let model = classModel else{
+            let parameter = ConfigurationParameters(startDate: startDate, endDate: endDate)
+            return parameter
+        }
+        
+        print("start date is : \(model.startDate.toDate())")
+        print("end date is : \(model.endDate.toDate())")
+        print("date of week : \(String(describing: model.endDate.toDate().dayNumberOfWeek()))")
+        let parameter = ConfigurationParameters(startDate: Date(), endDate: model.endDate.toDate())
         return parameter
+        
+        
+        
+    }
+}
+
+
+extension CalenderViewController : UICollectionViewDelegate, UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+       return classModel?.times.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SelectTimesCollectionViewCell",
+                                                      for: indexPath) as! SelectTimesCollectionViewCell
+
+        
+        guard let time = classModel else {
+            return cell
+        }
+        
+        let timeStr = time.times[indexPath.row].toDate().timeFromDate()
+        
+        cell.textLabel.text = "\(timeStr) - \(time.hours[indexPath.row]) hour\(time.hours[indexPath.row] == 1 ? "" : "s")"
+        
+        if(time.times[indexPath.row] == selectTime){
+            cell.wrapView.layer.borderWidth = 1
+            cell.wrapView.layer.borderColor = UIColor.blueColor.cgColor
+//           cell.wrapView.backgroundColor = UIColor.blueColor
+//           cell.textLabel.textColor = UIColor.white
+        }else{
+            cell.wrapView.layer.borderWidth = 0
+//            cell.wrapView.backgroundColor = UIColor.white
+//            cell.textLabel.textColor = UIColor.blueColor
+        }
+        
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let time = classModel else {
+            return 
+        }
+        selectTime = time.times[indexPath.row]
+        timeCollectionView.reloadData()
+    }
+
+}
+
+extension CalenderViewController : UICollectionViewDelegateFlowLayout{
+    //1
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        //2
+        let paddingSpace = sectionInsets.left * (itemsPerRow)
+        let availableWidth = view.frame.width - 10 - 10 - paddingSpace
+        let widthPerItem = availableWidth / itemsPerRow
+        
+        return CGSize(width: widthPerItem, height: 40)
+    }
+    
+    //3
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
+    // 4
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
     }
 }
 
