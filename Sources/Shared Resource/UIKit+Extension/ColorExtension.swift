@@ -15,6 +15,12 @@ extension UIColor {
     
     static var calender_grey_color : UIColor{ return UIColor(red: 113.0/255, green: 116.0/255, blue: 127.0/255, alpha: 1) }
     
+    static var level_0: UIColor  { return UIColor(red: 5/255, green: 34/255, blue: 133/255, alpha: 1.0) }
+     static var level_1: UIColor  { return UIColor(red: 5.0/255, green: 133.0/255, blue: 22.0/255, alpha: 1.0) }
+     static var level_2: UIColor  { return UIColor(red: 133.0/255, green: 5.0/255, blue: 8.0/255, alpha: 1.0) }
+    
+    
+    
 }
 
 extension UIFont {

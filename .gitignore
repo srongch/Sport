@@ -1055,3 +1055,8 @@ Pods/TPKeyboardAvoidingSwift/README.md
 Pods/TPKeyboardAvoidingSwift/TPKeyboardAvoidingSwift/Classes/TPKeyboardAvoidingSwift.swift
 Sources/Trainer/GoogleService-Info.plist
 Sources/User/GoogleService-Info.plist
+Podfile.lock
+Pods/FirebaseCore/Firebase/Core/Private/FIRComponentRegistrant.h
+Pods/FirebaseCore/Firebase/Core/Private/FIRCoreConfigurable.h
+Podfile.lock
+Podfile.lock
