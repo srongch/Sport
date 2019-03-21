@@ -82,7 +82,7 @@ extension TimetableViewController : UICollectionViewDelegateFlowLayout, UICollec
         
         let classRegister = ClassRegistration(level: Int.random(in: 0...2), activity : Int.random(in: 0...5))
         
-        cell.levelButton.setTitle(classRegister.getLevelName(), for: .normal)
+        cell.levelButton.setTitle(classRegister.getLevelName().uppercased(), for: .normal)
         cell.levelButton.backgroundColor = classRegister.getLevelColor()
         cell.lineView.backgroundColor = classRegister.getLevelColor()
         cell.activityImage.image = UIImage(named: classRegister.getActivityIconName())
