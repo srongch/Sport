@@ -23,7 +23,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>Classes</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Timetable</string>
+	<string>Tabbar</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="chZ-yW-ePc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="bxh-2i-01h">
+            <objects>
+                <viewController id="jXf-zt-grO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ei6-LI-jbW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="TQF-1U-NEp"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="6MQ-GS-gLg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omn-Ku-DxY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="178" y="134"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cH6-s6-q50">
+            <objects>
+                <viewController id="Cu7-HQ-TVS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aAs-8m-Sc4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="l6P-ub-3Ur"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" selectedImage="bar_icon_profile_select" systemItem="mostRecent" id="GXF-nC-ZM8">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="0.0"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bIg-hW-yOH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="-733"/>
+        </scene>
+        <!--Bookings-->
+        <scene sceneID="wnC-J4-YUp">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="BookingViewController" storyboardName="Bookings" id="a7J-bP-Uyj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Schedule" image="bar_icon_schedule" selectedImage="bar_icon_schedule_select" id="uvV-Yp-JtH">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ul-k1-HUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24" y="-329"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="rkW-zC-MWJ">
+            <objects>
+                <tabBarController id="chZ-yW-ePc" customClass="TabBarViewController" customModule="User" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="centered" id="oAr-gR-oan">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.044900021130000002" green="0.16671320680000001" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Cu7-HQ-TVS" kind="relationship" relationship="viewControllers" id="vmz-g5-Rij"/>
+                        <segue destination="jXf-zt-grO" kind="relationship" relationship="viewControllers" id="Fex-ce-QUn"/>
+                        <segue destination="a7J-bP-Uyj" kind="relationship" relationship="viewControllers" id="lrG-H3-55C"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P05-DH-9Vl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-879" y="-227"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bar_icon_profile_select" width="27" height="27"/>
+        <image name="bar_icon_schedule" width="31" height="29"/>
+        <image name="bar_icon_schedule_select" width="31" height="29"/>
+    </resources>
+</document>

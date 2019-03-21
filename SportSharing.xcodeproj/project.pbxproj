@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		165CF28F22438F3C00953E73 /* BookingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 165CF28E22438F3C00953E73 /* BookingCell.xib */; };
+		165CF29122438F6F00953E73 /* BookingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165CF29022438F6F00953E73 /* BookingCell.swift */; };
 		1664445D224303770063E3D4 /* Bookings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1664445C224303770063E3D4 /* Bookings.storyboard */; };
 		16644461224303C20063E3D4 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16644460224303C20063E3D4 /* BookingViewController.swift */; };
+		1680A8F32243DF5A00B23A1B /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1680A8F22243DF5A00B23A1B /* Tabbar.storyboard */; };
+		1680A8F52243E6F300B23A1B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1680A8F42243E6F300B23A1B /* TabBarViewController.swift */; };
 		16AC45BC22427EB100E9B351 /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AC45BB22427EB100E9B351 /* Timetable.storyboard */; };
 		16AC45BE22427EED00E9B351 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AC45BD22427EED00E9B351 /* TimetableViewController.swift */; };
 		16AC45C22242825400E9B351 /* TimetableMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AC45C12242825400E9B351 /* TimetableMenuView.swift */; };
@@ -192,8 +196,12 @@
 
 /* Begin PBXFileReference section */
 		0E9687BA0A334C4101B43DB8 /* Pods-UserUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserUITests.debug.xcconfig"; path = "Target Support Files/Pods-UserUITests/Pods-UserUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		165CF28E22438F3C00953E73 /* BookingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingCell.xib; sourceTree = "<group>"; };
+		165CF29022438F6F00953E73 /* BookingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingCell.swift; sourceTree = "<group>"; };
 		1664445C224303770063E3D4 /* Bookings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bookings.storyboard; sourceTree = "<group>"; };
 		16644460224303C20063E3D4 /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
+		1680A8F22243DF5A00B23A1B /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		1680A8F42243E6F300B23A1B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		16AC45BB22427EB100E9B351 /* Timetable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timetable.storyboard; sourceTree = "<group>"; };
 		16AC45BD22427EED00E9B351 /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
 		16AC45C12242825400E9B351 /* TimetableMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableMenuView.swift; sourceTree = "<group>"; };
@@ -391,8 +399,19 @@
 			children = (
 				1664445C224303770063E3D4 /* Bookings.storyboard */,
 				16644460224303C20063E3D4 /* BookingViewController.swift */,
+				165CF28E22438F3C00953E73 /* BookingCell.xib */,
+				165CF29022438F6F00953E73 /* BookingCell.swift */,
 			);
 			path = Booking;
+			sourceTree = "<group>";
+		};
+		1680A8F12243DF4700B23A1B /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				1680A8F22243DF5A00B23A1B /* Tabbar.storyboard */,
+				1680A8F42243E6F300B23A1B /* TabBarViewController.swift */,
+			);
+			path = Tabbar;
 			sourceTree = "<group>";
 		};
 		16AC45BA22427E8D00E9B351 /* Timetable */ = {
@@ -460,6 +479,7 @@
 		9DB3EC242241582400BE1A62 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				1680A8F12243DF4700B23A1B /* Tabbar */,
 				1664445B224303620063E3D4 /* Booking */,
 				16AC45BA22427E8D00E9B351 /* Timetable */,
 				9DB3ED1322415AE300BE1A62 /* Assets.xcassets */,
@@ -937,11 +957,13 @@
 				9DB3ECBE22415A7500BE1A62 /* FiraSans-Thin.ttf in Resources */,
 				9DB3EC332241582500BE1A62 /* LaunchScreen.storyboard in Resources */,
 				9DB3ED0622415AAF00BE1A62 /* beautiful-beauty-blurred-background-1239288.jpg in Resources */,
+				165CF28F22438F3C00953E73 /* BookingCell.xib in Resources */,
 				1664445D224303770063E3D4 /* Bookings.storyboard in Resources */,
 				9DB3ECD222415A7500BE1A62 /* FiraSans-Light.ttf in Resources */,
 				9DB3ECCE22415A7500BE1A62 /* FiraSans-MediumItalic.ttf in Resources */,
 				16AC45CA2242953000E9B351 /* ScheduleCell.xib in Resources */,
 				9DB3ECDE22415A7500BE1A62 /* FiraSans-Regular.ttf in Resources */,
+				1680A8F32243DF5A00B23A1B /* Tabbar.storyboard in Resources */,
 				9DB3ECC222415A7500BE1A62 /* FiraSans-LightItalic.ttf in Resources */,
 				9DB3ECDC22415A7500BE1A62 /* FiraSans-ExtraBoldItalic.ttf in Resources */,
 				9DB3ECD022415A7500BE1A62 /* FiraSans-BlackItalic.ttf in Resources */,
@@ -1257,6 +1279,7 @@
 				9DB3EC2E2241582400BE1A62 /* User.xcdatamodeld in Sources */,
 				9DB3ED1022415AB500BE1A62 /* ClassDetailViewController.swift in Sources */,
 				9DB4ADFD22419BF0009A74C2 /* TimeStamp.swift in Sources */,
+				1680A8F52243E6F300B23A1B /* TabBarViewController.swift in Sources */,
 				9DB3ECF322415A8700BE1A62 /* CustomEnum.swift in Sources */,
 				16E4382E22429F8E00EF8771 /* AlwaysShowPopup.swift in Sources */,
 				9DB3ED0F22415AB500BE1A62 /* CustomCalenderCell.swift in Sources */,
@@ -1266,6 +1289,7 @@
 				16644461224303C20063E3D4 /* BookingViewController.swift in Sources */,
 				9DB3EC282241582400BE1A62 /* ViewController.swift in Sources */,
 				9DB3EC9A22415A4700BE1A62 /* UIViewController+StoryboardIdentifier.swift in Sources */,
+				165CF29122438F6F00953E73 /* BookingCell.swift in Sources */,
 				9DB3EC262241582400BE1A62 /* AppDelegate.swift in Sources */,
 				9DB3ECF122415A8700BE1A62 /* CameraHandler.swift in Sources */,
 				9DB3EC9622415A4700BE1A62 /* UIStoryboard+Storyboards.swift in Sources */,
@@ -1550,6 +1574,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VH8R5WZUX;
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/User/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1568,6 +1593,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VH8R5WZUX;
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/User/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
