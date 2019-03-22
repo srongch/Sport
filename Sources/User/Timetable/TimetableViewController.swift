@@ -113,3 +113,10 @@ extension TimetableViewController : UICollectionViewDelegateFlowLayout, UICollec
 }
 
 
+extension TimetableViewController {
+    
+    static func instance ()-> UINavigationController {
+        return UIStoryboard.storyboard(.timetable).instantiateViewController(withIdentifier:"TimeTableNavigation") as! UINavigationController
+    }
+}
+

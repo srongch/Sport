@@ -1,27 +1,19 @@
 //
-//  TabBarViewController.swift
-//  User
+//  DetailActivityViewController.swift
+//  SportShare
 //
-//  Created by Chhem Sronglong on 21/03/2019.
-//  Copyright © 2019 100456065. All rights reserved.
+//  Created by 100456065 on 02/03/2019.
+//  Copyright © 2019 Chhem Sronglong. All rights reserved.
 //
 
 import UIKit
 
-
-class TabBarViewController: ESTabBarController {
+class DetailActivityViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        
-        super.init(coder: aDecoder)
-//        self.viewControllers  = [BookingViewController.instacnce()]
     }
     
 

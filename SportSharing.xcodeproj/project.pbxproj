@@ -7,11 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		164A2F3B2244EEFD00B42AF4 /* ESTabBarItemBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F342244EEFC00B42AF4 /* ESTabBarItemBadgeView.swift */; };
+		164A2F3C2244EEFD00B42AF4 /* ESTabBarItemBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F342244EEFC00B42AF4 /* ESTabBarItemBadgeView.swift */; };
+		164A2F3D2244EEFD00B42AF4 /* ESTabBarItemContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F352244EEFC00B42AF4 /* ESTabBarItemContainer.swift */; };
+		164A2F3E2244EEFD00B42AF4 /* ESTabBarItemContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F352244EEFC00B42AF4 /* ESTabBarItemContainer.swift */; };
+		164A2F3F2244EEFD00B42AF4 /* ESTabBarItemMoreContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F362244EEFC00B42AF4 /* ESTabBarItemMoreContentView.swift */; };
+		164A2F402244EEFD00B42AF4 /* ESTabBarItemMoreContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F362244EEFC00B42AF4 /* ESTabBarItemMoreContentView.swift */; };
+		164A2F412244EEFD00B42AF4 /* ESTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F372244EEFC00B42AF4 /* ESTabBarItem.swift */; };
+		164A2F422244EEFD00B42AF4 /* ESTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F372244EEFC00B42AF4 /* ESTabBarItem.swift */; };
+		164A2F432244EEFD00B42AF4 /* ESTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F382244EEFC00B42AF4 /* ESTabBar.swift */; };
+		164A2F442244EEFD00B42AF4 /* ESTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F382244EEFC00B42AF4 /* ESTabBar.swift */; };
+		164A2F452244EEFD00B42AF4 /* ESTabBarItemContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F392244EEFD00B42AF4 /* ESTabBarItemContentView.swift */; };
+		164A2F462244EEFD00B42AF4 /* ESTabBarItemContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F392244EEFD00B42AF4 /* ESTabBarItemContentView.swift */; };
+		164A2F472244EEFD00B42AF4 /* ESTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F3A2244EEFD00B42AF4 /* ESTabBarController.swift */; };
+		164A2F482244EEFD00B42AF4 /* ESTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F3A2244EEFD00B42AF4 /* ESTabBarController.swift */; };
+		164A2F4A2244F2BC00B42AF4 /* TabbarEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F492244F2BC00B42AF4 /* TabbarEnum.swift */; };
+		164A2F4D2244F3E100B42AF4 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F4C2244F3E100B42AF4 /* SplashScreenViewController.swift */; };
+		164A2F502244FED900B42AF4 /* ExampleBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F4F2244FED900B42AF4 /* ExampleBasicContentView.swift */; };
+		164A2F512244FED900B42AF4 /* ExampleBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F4F2244FED900B42AF4 /* ExampleBasicContentView.swift */; };
+		164A2F532244FFE500B42AF4 /* ExampleBackgroundContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F522244FFE500B42AF4 /* ExampleBackgroundContentView.swift */; };
+		164A2F542244FFE500B42AF4 /* ExampleBackgroundContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F522244FFE500B42AF4 /* ExampleBackgroundContentView.swift */; };
+		164A2F5A224516DF00B42AF4 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F56224516DF00B42AF4 /* HomeCollectionViewCell.swift */; };
+		164A2F5B224516DF00B42AF4 /* HomeCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F57224516DF00B42AF4 /* HomeCollectionReusableView.swift */; };
+		164A2F5C224516DF00B42AF4 /* HomeCollectionFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F58224516DF00B42AF4 /* HomeCollectionFooter.swift */; };
+		164A2F5D224516DF00B42AF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F59224516DF00B42AF4 /* HomeViewController.swift */; };
+		164A2F602245172F00B42AF4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F5F2245172F00B42AF4 /* ProfileViewController.swift */; };
+		164A2F642245174600B42AF4 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164A2F622245174600B42AF4 /* Profile.storyboard */; };
+		164A2F652245174600B42AF4 /* Review.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164A2F632245174600B42AF4 /* Review.storyboard */; };
+		164A2F732245181B00B42AF4 /* FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F6F2245181B00B42AF4 /* FlickrPhoto.swift */; };
+		164A2F742245181B00B42AF4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F702245181B00B42AF4 /* Result.swift */; };
+		164A2F752245181B00B42AF4 /* FlickrSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F712245181B00B42AF4 /* FlickrSearchResults.swift */; };
+		164A2F762245181B00B42AF4 /* Flickr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F722245181B00B42AF4 /* Flickr.swift */; };
+		164A2F79224518CD00B42AF4 /* DetailActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F78224518CD00B42AF4 /* DetailActivityViewController.swift */; };
+		164A2F7D224518E500B42AF4 /* AcitivityListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F7B224518E500B42AF4 /* AcitivityListTableViewCell.swift */; };
+		164A2F7E224518E500B42AF4 /* ActivityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F7C224518E500B42AF4 /* ActivityListViewController.swift */; };
+		164A2F802245199A00B42AF4 /* Views.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164A2F7F2245199900B42AF4 /* Views.storyboard */; };
+		164A2F8222451EF000B42AF4 /* ProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 164A2F8122451EF000B42AF4 /* ProfileHeaderView.xib */; };
+		164A2F8422451F0A00B42AF4 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F8322451F0A00B42AF4 /* ProfileHeaderView.swift */; };
+		164A2F862245230500B42AF4 /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F852245230500B42AF4 /* ProfileViewCell.swift */; };
+		164A2F8822452CD200B42AF4 /* ProfileFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 164A2F8722452CD200B42AF4 /* ProfileFooterView.xib */; };
 		165CF28F22438F3C00953E73 /* BookingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 165CF28E22438F3C00953E73 /* BookingCell.xib */; };
 		165CF29122438F6F00953E73 /* BookingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165CF29022438F6F00953E73 /* BookingCell.swift */; };
 		1664445D224303770063E3D4 /* Bookings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1664445C224303770063E3D4 /* Bookings.storyboard */; };
 		16644461224303C20063E3D4 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16644460224303C20063E3D4 /* BookingViewController.swift */; };
-		1680A8F32243DF5A00B23A1B /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1680A8F22243DF5A00B23A1B /* Tabbar.storyboard */; };
 		1680A8F52243E6F300B23A1B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1680A8F42243E6F300B23A1B /* TabBarViewController.swift */; };
 		16AC45BC22427EB100E9B351 /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AC45BB22427EB100E9B351 /* Timetable.storyboard */; };
 		16AC45BE22427EED00E9B351 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AC45BD22427EED00E9B351 /* TimetableViewController.swift */; };
@@ -196,11 +234,40 @@
 
 /* Begin PBXFileReference section */
 		0E9687BA0A334C4101B43DB8 /* Pods-UserUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserUITests.debug.xcconfig"; path = "Target Support Files/Pods-UserUITests/Pods-UserUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		164A2F342244EEFC00B42AF4 /* ESTabBarItemBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItemBadgeView.swift; sourceTree = "<group>"; };
+		164A2F352244EEFC00B42AF4 /* ESTabBarItemContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItemContainer.swift; sourceTree = "<group>"; };
+		164A2F362244EEFC00B42AF4 /* ESTabBarItemMoreContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItemMoreContentView.swift; sourceTree = "<group>"; };
+		164A2F372244EEFC00B42AF4 /* ESTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItem.swift; sourceTree = "<group>"; };
+		164A2F382244EEFC00B42AF4 /* ESTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBar.swift; sourceTree = "<group>"; };
+		164A2F392244EEFD00B42AF4 /* ESTabBarItemContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItemContentView.swift; sourceTree = "<group>"; };
+		164A2F3A2244EEFD00B42AF4 /* ESTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarController.swift; sourceTree = "<group>"; };
+		164A2F492244F2BC00B42AF4 /* TabbarEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarEnum.swift; sourceTree = "<group>"; };
+		164A2F4C2244F3E100B42AF4 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		164A2F4F2244FED900B42AF4 /* ExampleBasicContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBasicContentView.swift; sourceTree = "<group>"; };
+		164A2F522244FFE500B42AF4 /* ExampleBackgroundContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBackgroundContentView.swift; sourceTree = "<group>"; };
+		164A2F56224516DF00B42AF4 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		164A2F57224516DF00B42AF4 /* HomeCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionReusableView.swift; sourceTree = "<group>"; };
+		164A2F58224516DF00B42AF4 /* HomeCollectionFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionFooter.swift; sourceTree = "<group>"; };
+		164A2F59224516DF00B42AF4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		164A2F5F2245172F00B42AF4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		164A2F622245174600B42AF4 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		164A2F632245174600B42AF4 /* Review.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Review.storyboard; sourceTree = "<group>"; };
+		164A2F6F2245181B00B42AF4 /* FlickrPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrPhoto.swift; sourceTree = "<group>"; };
+		164A2F702245181B00B42AF4 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		164A2F712245181B00B42AF4 /* FlickrSearchResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrSearchResults.swift; sourceTree = "<group>"; };
+		164A2F722245181B00B42AF4 /* Flickr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flickr.swift; sourceTree = "<group>"; };
+		164A2F78224518CD00B42AF4 /* DetailActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailActivityViewController.swift; sourceTree = "<group>"; };
+		164A2F7B224518E500B42AF4 /* AcitivityListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcitivityListTableViewCell.swift; sourceTree = "<group>"; };
+		164A2F7C224518E500B42AF4 /* ActivityListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityListViewController.swift; sourceTree = "<group>"; };
+		164A2F7F2245199900B42AF4 /* Views.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Views.storyboard; sourceTree = "<group>"; };
+		164A2F8122451EF000B42AF4 /* ProfileHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderView.xib; sourceTree = "<group>"; };
+		164A2F8322451F0A00B42AF4 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		164A2F852245230500B42AF4 /* ProfileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
+		164A2F8722452CD200B42AF4 /* ProfileFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFooterView.xib; sourceTree = "<group>"; };
 		165CF28E22438F3C00953E73 /* BookingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingCell.xib; sourceTree = "<group>"; };
 		165CF29022438F6F00953E73 /* BookingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingCell.swift; sourceTree = "<group>"; };
 		1664445C224303770063E3D4 /* Bookings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bookings.storyboard; sourceTree = "<group>"; };
 		16644460224303C20063E3D4 /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
-		1680A8F22243DF5A00B23A1B /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		1680A8F42243E6F300B23A1B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		16AC45BB22427EB100E9B351 /* Timetable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timetable.storyboard; sourceTree = "<group>"; };
 		16AC45BD22427EED00E9B351 /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
@@ -394,6 +461,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		164A2F332244EEE800B42AF4 /* CustomTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				164A2F522244FFE500B42AF4 /* ExampleBackgroundContentView.swift */,
+				164A2F4F2244FED900B42AF4 /* ExampleBasicContentView.swift */,
+				164A2F382244EEFC00B42AF4 /* ESTabBar.swift */,
+				164A2F3A2244EEFD00B42AF4 /* ESTabBarController.swift */,
+				164A2F372244EEFC00B42AF4 /* ESTabBarItem.swift */,
+				164A2F342244EEFC00B42AF4 /* ESTabBarItemBadgeView.swift */,
+				164A2F352244EEFC00B42AF4 /* ESTabBarItemContainer.swift */,
+				164A2F392244EEFD00B42AF4 /* ESTabBarItemContentView.swift */,
+				164A2F362244EEFC00B42AF4 /* ESTabBarItemMoreContentView.swift */,
+			);
+			path = CustomTabbar;
+			sourceTree = "<group>";
+		};
+		164A2F55224516DF00B42AF4 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				164A2F722245181B00B42AF4 /* Flickr.swift */,
+				164A2F6F2245181B00B42AF4 /* FlickrPhoto.swift */,
+				164A2F712245181B00B42AF4 /* FlickrSearchResults.swift */,
+				164A2F702245181B00B42AF4 /* Result.swift */,
+				164A2F56224516DF00B42AF4 /* HomeCollectionViewCell.swift */,
+				164A2F57224516DF00B42AF4 /* HomeCollectionReusableView.swift */,
+				164A2F58224516DF00B42AF4 /* HomeCollectionFooter.swift */,
+				164A2F59224516DF00B42AF4 /* HomeViewController.swift */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		164A2F5E2245172F00B42AF4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				164A2F5F2245172F00B42AF4 /* ProfileViewController.swift */,
+				164A2F8122451EF000B42AF4 /* ProfileHeaderView.xib */,
+				164A2F8322451F0A00B42AF4 /* ProfileHeaderView.swift */,
+				164A2F852245230500B42AF4 /* ProfileViewCell.swift */,
+				164A2F8722452CD200B42AF4 /* ProfileFooterView.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		164A2F612245174600B42AF4 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				164A2F622245174600B42AF4 /* Profile.storyboard */,
+				164A2F632245174600B42AF4 /* Review.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		164A2F77224518CD00B42AF4 /* Detail Activity */ = {
+			isa = PBXGroup;
+			children = (
+				164A2F78224518CD00B42AF4 /* DetailActivityViewController.swift */,
+			);
+			path = "Detail Activity";
+			sourceTree = "<group>";
+		};
+		164A2F7A224518E500B42AF4 /* Activity List */ = {
+			isa = PBXGroup;
+			children = (
+				164A2F7B224518E500B42AF4 /* AcitivityListTableViewCell.swift */,
+				164A2F7C224518E500B42AF4 /* ActivityListViewController.swift */,
+			);
+			path = "Activity List";
+			sourceTree = "<group>";
+		};
 		1664445B224303620063E3D4 /* Booking */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,7 +544,7 @@
 		1680A8F12243DF4700B23A1B /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				1680A8F22243DF5A00B23A1B /* Tabbar.storyboard */,
+				164A2F492244F2BC00B42AF4 /* TabbarEnum.swift */,
 				1680A8F42243E6F300B23A1B /* TabBarViewController.swift */,
 			);
 			path = Tabbar;
@@ -479,6 +615,12 @@
 		9DB3EC242241582400BE1A62 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				164A2F7F2245199900B42AF4 /* Views.storyboard */,
+				164A2F7A224518E500B42AF4 /* Activity List */,
+				164A2F77224518CD00B42AF4 /* Detail Activity */,
+				164A2F612245174600B42AF4 /* Storyboard */,
+				164A2F5E2245172F00B42AF4 /* Profile */,
+				164A2F55224516DF00B42AF4 /* HomeViewController */,
 				1680A8F12243DF4700B23A1B /* Tabbar */,
 				1664445B224303620063E3D4 /* Booking */,
 				16AC45BA22427E8D00E9B351 /* Timetable */,
@@ -497,6 +639,7 @@
 				9DB3EC312241582500BE1A62 /* LaunchScreen.storyboard */,
 				9DB3EC342241582500BE1A62 /* Info.plist */,
 				9DB3EC2C2241582400BE1A62 /* User.xcdatamodeld */,
+				164A2F4C2244F3E100B42AF4 /* SplashScreenViewController.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -561,6 +704,7 @@
 		9DB3EC8C2241596B00BE1A62 /* Shared Resource */ = {
 			isa = PBXGroup;
 			children = (
+				164A2F332244EEE800B42AF4 /* CustomTabbar */,
 				9DB4ADF922419B13009A74C2 /* Date */,
 				9DB3ECEF22415A8700BE1A62 /* CameraHandler.swift */,
 				9DB3ECF022415A8700BE1A62 /* CustomEnum.swift */,
@@ -956,14 +1100,15 @@
 				9DB3ECCA22415A7500BE1A62 /* FiraSans-ExtraLight.ttf in Resources */,
 				9DB3ECBE22415A7500BE1A62 /* FiraSans-Thin.ttf in Resources */,
 				9DB3EC332241582500BE1A62 /* LaunchScreen.storyboard in Resources */,
+				164A2F8822452CD200B42AF4 /* ProfileFooterView.xib in Resources */,
 				9DB3ED0622415AAF00BE1A62 /* beautiful-beauty-blurred-background-1239288.jpg in Resources */,
+				164A2F652245174600B42AF4 /* Review.storyboard in Resources */,
 				165CF28F22438F3C00953E73 /* BookingCell.xib in Resources */,
 				1664445D224303770063E3D4 /* Bookings.storyboard in Resources */,
 				9DB3ECD222415A7500BE1A62 /* FiraSans-Light.ttf in Resources */,
 				9DB3ECCE22415A7500BE1A62 /* FiraSans-MediumItalic.ttf in Resources */,
 				16AC45CA2242953000E9B351 /* ScheduleCell.xib in Resources */,
 				9DB3ECDE22415A7500BE1A62 /* FiraSans-Regular.ttf in Resources */,
-				1680A8F32243DF5A00B23A1B /* Tabbar.storyboard in Resources */,
 				9DB3ECC222415A7500BE1A62 /* FiraSans-LightItalic.ttf in Resources */,
 				9DB3ECDC22415A7500BE1A62 /* FiraSans-ExtraBoldItalic.ttf in Resources */,
 				9DB3ECD022415A7500BE1A62 /* FiraSans-BlackItalic.ttf in Resources */,
@@ -982,9 +1127,12 @@
 				9DB3ECEB22415A7D00BE1A62 /* CategoryButton.xib in Resources */,
 				9DB3ECD822415A7500BE1A62 /* FiraSans-SemiBold.ttf in Resources */,
 				9DB3ECF922415A9700BE1A62 /* NaviBar.xib in Resources */,
+				164A2F642245174600B42AF4 /* Profile.storyboard in Resources */,
 				9DB3ECE022415A7500BE1A62 /* FiraSans-Italic.ttf in Resources */,
+				164A2F802245199A00B42AF4 /* Views.storyboard in Resources */,
 				9DB3ECC622415A7500BE1A62 /* FiraSans-BoldItalic.ttf in Resources */,
 				9DB3EC2B2241582400BE1A62 /* Main.storyboard in Resources */,
+				164A2F8222451EF000B42AF4 /* ProfileHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1271,10 +1419,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				164A2F7D224518E500B42AF4 /* AcitivityListTableViewCell.swift in Sources */,
+				164A2F412244EEFD00B42AF4 /* ESTabBarItem.swift in Sources */,
 				9DB3ED0122415AA800BE1A62 /* ClassService.swift in Sources */,
 				9DB3EC9C22415A4700BE1A62 /* PercentLayoutConstraint.swift in Sources */,
+				164A2F3D2244EEFD00B42AF4 /* ESTabBarItemContainer.swift in Sources */,
 				16AC45C4224284D300E9B351 /* TimetableCell.swift in Sources */,
 				16E438332242AD3500EF8771 /* ClassRegisterModel.swift in Sources */,
+				164A2F472244EEFD00B42AF4 /* ESTabBarController.swift in Sources */,
 				16AC45BE22427EED00E9B351 /* TimetableViewController.swift in Sources */,
 				9DB3EC2E2241582400BE1A62 /* User.xcdatamodeld in Sources */,
 				9DB3ED1022415AB500BE1A62 /* ClassDetailViewController.swift in Sources */,
@@ -1284,17 +1436,30 @@
 				16E4382E22429F8E00EF8771 /* AlwaysShowPopup.swift in Sources */,
 				9DB3ED0F22415AB500BE1A62 /* CustomCalenderCell.swift in Sources */,
 				9DB4ADFB22419B2C009A74C2 /* Date.swift in Sources */,
+				164A2F732245181B00B42AF4 /* FlickrPhoto.swift in Sources */,
+				164A2F502244FED900B42AF4 /* ExampleBasicContentView.swift in Sources */,
 				9DB3ED0E22415AB500BE1A62 /* SlideImageCollectionViewCell.swift in Sources */,
 				16E438312242A9BC00EF8771 /* LevelColor.swift in Sources */,
+				164A2F3F2244EEFD00B42AF4 /* ESTabBarItemMoreContentView.swift in Sources */,
 				16644461224303C20063E3D4 /* BookingViewController.swift in Sources */,
+				164A2F762245181B00B42AF4 /* Flickr.swift in Sources */,
+				164A2F7E224518E500B42AF4 /* ActivityListViewController.swift in Sources */,
 				9DB3EC282241582400BE1A62 /* ViewController.swift in Sources */,
 				9DB3EC9A22415A4700BE1A62 /* UIViewController+StoryboardIdentifier.swift in Sources */,
+				164A2F742245181B00B42AF4 /* Result.swift in Sources */,
+				164A2F79224518CD00B42AF4 /* DetailActivityViewController.swift in Sources */,
+				164A2F532244FFE500B42AF4 /* ExampleBackgroundContentView.swift in Sources */,
+				164A2F5B224516DF00B42AF4 /* HomeCollectionReusableView.swift in Sources */,
 				165CF29122438F6F00953E73 /* BookingCell.swift in Sources */,
 				9DB3EC262241582400BE1A62 /* AppDelegate.swift in Sources */,
 				9DB3ECF122415A8700BE1A62 /* CameraHandler.swift in Sources */,
 				9DB3EC9622415A4700BE1A62 /* UIStoryboard+Storyboards.swift in Sources */,
+				164A2F752245181B00B42AF4 /* FlickrSearchResults.swift in Sources */,
 				9DB3ED1222415AB500BE1A62 /* CalenderViewController.swift in Sources */,
 				16E4382F22429F8E00EF8771 /* ArrayChoiceTableViewController.swift in Sources */,
+				164A2F4A2244F2BC00B42AF4 /* TabbarEnum.swift in Sources */,
+				164A2F8422451F0A00B42AF4 /* ProfileHeaderView.swift in Sources */,
+				164A2F5A224516DF00B42AF4 /* HomeCollectionViewCell.swift in Sources */,
 				9DB3ECED22415A7D00BE1A62 /* CategoryButton.swift in Sources */,
 				9DB3ECFE22415AA300BE1A62 /* ClassModel.swift in Sources */,
 				9DB3EC9722415A4700BE1A62 /* ColorExtension.swift in Sources */,
@@ -1302,14 +1467,22 @@
 				9DB3EC9822415A4700BE1A62 /* UIView+IBDesignable.swift in Sources */,
 				9DB3ECA922415A6D00BE1A62 /* ModeltoDictionary.swift in Sources */,
 				9DB3ECA722415A6D00BE1A62 /* StoryboardIdentifiable.swift in Sources */,
+				164A2F5D224516DF00B42AF4 /* HomeViewController.swift in Sources */,
+				164A2F862245230500B42AF4 /* ProfileViewCell.swift in Sources */,
 				9DB3ECE922415A7D00BE1A62 /* UIView+XIB.swift in Sources */,
+				164A2F4D2244F3E100B42AF4 /* SplashScreenViewController.swift in Sources */,
 				9DB4AE012241CAEA009A74C2 /* ConfirmBookingViewController.swift in Sources */,
 				16AC45C82242951E00E9B351 /* ScheduleCell.swift in Sources */,
+				164A2F432244EEFD00B42AF4 /* ESTabBar.swift in Sources */,
+				164A2F602245172F00B42AF4 /* ProfileViewController.swift in Sources */,
 				9DB3ECE722415A7D00BE1A62 /* NibView.swift in Sources */,
 				16E438352242AF3400EF8771 /* ActivityImages.swift in Sources */,
+				164A2F5C224516DF00B42AF4 /* HomeCollectionFooter.swift in Sources */,
 				9DB3ECF822415A9700BE1A62 /* NaviBar.swift in Sources */,
+				164A2F452244EEFD00B42AF4 /* ESTabBarItemContentView.swift in Sources */,
 				9DB3EC9B22415A4700BE1A62 /* PopupAttribute.swift in Sources */,
 				9DB3EC9922415A4700BE1A62 /* Object+ClassName.swift in Sources */,
+				164A2F3B2244EEFD00B42AF4 /* ESTabBarItemBadgeView.swift in Sources */,
 				16AC45C22242825400E9B351 /* TimetableMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1338,10 +1511,13 @@
 				9DB3ECA322415A6400BE1A62 /* PercentLayoutConstraint.swift in Sources */,
 				9DB3EC652241586600BE1A62 /* Trainer.xcdatamodeld in Sources */,
 				9DB3ED5022415B1500BE1A62 /* AddImageCollectionViewCell.swift in Sources */,
+				164A2F3E2244EEFD00B42AF4 /* ESTabBarItemContainer.swift in Sources */,
+				164A2F442244EEFD00B42AF4 /* ESTabBar.swift in Sources */,
 				9DB3ED1B22415AFD00BE1A62 /* UserService.swift in Sources */,
 				9DB3ECF422415A8700BE1A62 /* CustomEnum.swift in Sources */,
 				9DB3ED2422415B0700BE1A62 /* ClassModel.swift in Sources */,
 				9DB3EC5F2241586600BE1A62 /* ViewController.swift in Sources */,
+				164A2F542244FFE500B42AF4 /* ExampleBackgroundContentView.swift in Sources */,
 				9DB3ED5422415B1500BE1A62 /* AddClassDateViewController.swift in Sources */,
 				9DB3ECA122415A6000BE1A62 /* UIViewController+StoryboardIdentifier.swift in Sources */,
 				9DB3EC5D2241586600BE1A62 /* AppDelegate.swift in Sources */,
@@ -1355,21 +1531,27 @@
 				9DB3ED4E22415B1500BE1A62 /* MapViewController.swift in Sources */,
 				9DB3EC9D22415A5800BE1A62 /* UIStoryboard+Storyboards.swift in Sources */,
 				9DB3ED4422415B1000BE1A62 /* DatePickerPopup.swift in Sources */,
+				164A2F3C2244EEFD00B42AF4 /* ESTabBarItemBadgeView.swift in Sources */,
 				9DB3ED3722415B1000BE1A62 /* AddClassDateSectionView.swift in Sources */,
 				9DB3ECEE22415A7D00BE1A62 /* CategoryButton.swift in Sources */,
 				9DB3ED1D22415AFD00BE1A62 /* FirebaseClassModel.swift in Sources */,
 				9DB3EC9E22415A5A00BE1A62 /* ColorExtension.swift in Sources */,
 				9DB3EC9F22415A5C00BE1A62 /* UIView+IBDesignable.swift in Sources */,
+				164A2F422244EEFD00B42AF4 /* ESTabBarItem.swift in Sources */,
 				9DB3ECAA22415A6D00BE1A62 /* ModeltoDictionary.swift in Sources */,
 				9DB3ED3F22415B1000BE1A62 /* AddImageView.swift in Sources */,
+				164A2F402244EEFD00B42AF4 /* ESTabBarItemMoreContentView.swift in Sources */,
 				9DB3ECA822415A6D00BE1A62 /* StoryboardIdentifiable.swift in Sources */,
+				164A2F512244FED900B42AF4 /* ExampleBasicContentView.swift in Sources */,
 				9DB3ED5122415B1500BE1A62 /* AddClassViewController.swift in Sources */,
 				9DB3ECEA22415A7D00BE1A62 /* UIView+XIB.swift in Sources */,
 				9DB3ECE822415A7D00BE1A62 /* NibView.swift in Sources */,
+				164A2F482244EEFD00B42AF4 /* ESTabBarController.swift in Sources */,
 				9DB3ED5322415B1500BE1A62 /* AddClassTextViewController.swift in Sources */,
 				9DB3ED2522415B0700BE1A62 /* AddClassViewModel.swift in Sources */,
 				9DB3ED3D22415B1000BE1A62 /* TestView.swift in Sources */,
 				9DB3ED5522415B1500BE1A62 /* RegisterViewController.swift in Sources */,
+				164A2F462244EEFD00B42AF4 /* ESTabBarItemContentView.swift in Sources */,
 				9DB3ECA222415A6200BE1A62 /* PopupAttribute.swift in Sources */,
 				9DB3ECA022415A5E00BE1A62 /* Object+ClassName.swift in Sources */,
 			);
@@ -1693,8 +1875,9 @@
 			baseConfigurationReference = C0486838420205001E9A12DE /* Pods-Trainer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VH8R5WZUX;
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Trainer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1713,8 +1896,9 @@
 			baseConfigurationReference = 9DADCD38A82746EFA12811BC /* Pods-Trainer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VH8R5WZUX;
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Trainer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

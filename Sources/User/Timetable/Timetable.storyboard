@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ubm-5q-Scj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cmC-oJ-qpS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -138,6 +138,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c4L-Pw-OeV"/>
                     </view>
+                    <navigationItem key="navigationItem" id="OqL-GM-cGH"/>
                     <connections>
                         <outlet property="menuView" destination="ePx-Fe-Hw3" id="w0t-Gu-5db"/>
                         <outlet property="monthButton" destination="W6t-em-F5b" id="VnI-Ao-95h"/>
@@ -146,6 +147,23 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YRb-vZ-i3p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="812" y="-58.020989505247378"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CgO-jo-UMH">
+            <objects>
+                <navigationController storyboardIdentifier="TimeTableNavigation" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="cmC-oJ-qpS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2DN-pW-vye">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ubm-5q-Scj" kind="relationship" relationship="rootViewController" id="zCc-VS-Yof"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sVs-g5-YQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-127.2" y="-58.020989505247378"/>
         </scene>

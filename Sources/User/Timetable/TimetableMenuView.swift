@@ -11,7 +11,7 @@ import UIKit
 typealias MenuDidSelectItemClosureType = (IndexPath) -> ()
 
 class TimetableMenuView: UICollectionView {
-    private let minimumLineAndInteritemSpacingForSection: CGFloat = 10
+    private let minimumLineAndInteritemSpacingForSection: CGFloat = 5
     private var didSelectItmeClosure: MenuDidSelectItemClosureType!
     private var data : [String]!
     private var selectedIndexPath : IndexPath!

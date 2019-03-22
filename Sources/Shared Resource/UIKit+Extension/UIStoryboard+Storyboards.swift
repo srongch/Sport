@@ -18,6 +18,9 @@ extension UIStoryboard {
         case gallery
         case views
         case registration
+        case bookings
+        case timetable
+        case profile
         
         var filename: String {
             return rawValue.capitalized

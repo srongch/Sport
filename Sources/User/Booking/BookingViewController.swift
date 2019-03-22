@@ -18,7 +18,7 @@ class BookingViewController: UIViewController {
         self.collectionView.delegate = self
         self.collectionView.dataSource  = self
         self.collectionView.register(UINib(nibName: BookingCell.className, bundle: nil), forCellWithReuseIdentifier: BookingCell.className)
-
+        self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
     }
     
@@ -37,7 +37,7 @@ class BookingViewController: UIViewController {
 
 extension BookingViewController : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -60,6 +60,16 @@ extension BookingViewController : UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
+    
+    
+}
+
+
+extension BookingViewController {
+    static func instance ()-> UINavigationController {
+        return UIStoryboard.storyboard(.bookings).instantiateViewController(withIdentifier:"BookingNavigationController") as! UINavigationController
+    }
+    
     
     
 }
