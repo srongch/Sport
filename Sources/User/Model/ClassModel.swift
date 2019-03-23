@@ -17,7 +17,8 @@ enum ActivityTypeEnum : String{
 }
 
 
-struct ClassModel : ModeltoDictionaryProtocol {
+struct ClassModel : ModeltoDictionaryProtocol, LevelColorProtocol {
+    var key : String = ""
     var activityType: Int = 0
     var levelType: Int = 0
     
@@ -40,6 +41,7 @@ struct ClassModel : ModeltoDictionaryProtocol {
     var startDate: Int64 = 0
     var endDate: Int64 = 0
     var timeStamp: Int64 = 0
+    var rating : Double = 0
     
     init(){}
     
@@ -56,10 +58,20 @@ struct ClassModel : ModeltoDictionaryProtocol {
     }
 
     init?(snapshot: DataSnapshot) {
-        print(snapshot)
+       // print(value)
+        
+        guard  let value = snapshot.value as? [String:AnyObject] else {
+            print("no value")
+            return nil
+        }
+        
+        guard  let ratingValue = value["rating"] as? Double else {
+            print("no rating value")
+            return nil
+        }
 //
         guard
-            let value = snapshot.value as? [String: AnyObject],
+            
             let activityType = value["activityType"] as? Int,
             let levelType = value["levelType"] as? Int,
             let classPrice = value["classPrice"] as? Double,
@@ -80,7 +92,7 @@ struct ClassModel : ModeltoDictionaryProtocol {
             
              let startDate = value["startDate"] as? Int64,
              let endDate = value["endDate"] as? Int64,
-            let timeStamp = value["timeStamp"] as? Int64 else {
+             let timeStamp = value["timeStamp"] as? Int64 else {
                 return nil
         }
         
@@ -105,7 +117,46 @@ struct ClassModel : ModeltoDictionaryProtocol {
         self.startDate = startDate
         self.endDate = endDate
         self.timeStamp = timeStamp
+        self.rating = ratingValue
+        self.key = snapshot.key
+    }
+    
+}
+
+extension ClassModel {
+    
+//    // 3
+//    for child in snapshot.children {
+//    // 4
+//    if let snapshot = child as? DataSnapshot,
+//    let groceryItem = GroceryItem(snapshot: snapshot) {
+//    newItems.append(groceryItem)
+//    }
+//    }
+    
+    static func classModelFromArray(snapshot: DataSnapshot)-> [ClassModel]? {
+        guard let dictionary = snapshot.value as? [String:Any] else {return nil}
         
+        var classArray = [ClassModel]()
+        
+         for child in snapshot.children {
+            if let snapshot = child as? DataSnapshot,
+             let model = ClassModel(snapshot: snapshot) {
+                classArray.append(model)
+          }
+        }
+//
+//
+//
+//        dictionary.forEach({ (key , value) in
+//            let model = ClassModel(key: key, value: value as AnyObject)
+//            if (model != nil){
+//
+//            }
+//            print("Key \(key), value \(value) ")
+//        })
+        
+        return classArray
     }
     
 }

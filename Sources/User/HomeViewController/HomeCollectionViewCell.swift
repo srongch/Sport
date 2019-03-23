@@ -7,7 +7,29 @@
 //
 
 import UIKit
+import SDWebImage
+
 
 class HomeCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var ratingLabel: UILabel!
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var classNameLabel: UILabel!
+    
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    internal func setupCell(model: ClassModel){
+        ratingLabel.text = "\(model.rating)"
+        imageView.sd_setImage(with: URL(string: model.imageArray.first!), completed: nil)
+        levelLabel.text = model.getLevelName()
+        levelLabel.textColor = model.getLevelColor()
+        classNameLabel.text = model.className
+        priceLabel.text = "$\(model.classPrice)"
+        
+    }
+    
     
 }

@@ -12,6 +12,8 @@ import Firebase
 import MapKit
 
 class ClassDetailViewController: UIViewController {
+    
+    var classID : String = ""
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -54,7 +56,7 @@ class ClassDetailViewController: UIViewController {
     
     func loadData() {
 
-        classService.getClassById(classId: "-LaBKTXLZLJStz33Ipfl") { (model) in
+        classService.getClassById(classId: classID) { (model) in
             guard let tempModel = model else {
                 //MARK : Data error
                 return
@@ -157,4 +159,14 @@ extension ClassDetailViewController : UIScrollViewDelegate{
             pageControl.currentPage = Int(pageIndex)
         }
     }
+}
+
+extension ClassDetailViewController {
+    static func instance (classId : String)-> ClassDetailViewController {
+        let view = UIStoryboard.storyboard(.classes).instantiateViewController(withIdentifier:"ClassDetailViewController") as! ClassDetailViewController
+        view.classID = classId
+        return view
+}
+    
+    
 }

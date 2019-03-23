@@ -51,6 +51,7 @@
 		1664445D224303770063E3D4 /* Bookings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1664445C224303770063E3D4 /* Bookings.storyboard */; };
 		16644461224303C20063E3D4 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16644460224303C20063E3D4 /* BookingViewController.swift */; };
 		1680A8F52243E6F300B23A1B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1680A8F42243E6F300B23A1B /* TabBarViewController.swift */; };
+		16A0869422464612007E378D /* UserClassesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A0869322464612007E378D /* UserClassesService.swift */; };
 		16AC45BC22427EB100E9B351 /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AC45BB22427EB100E9B351 /* Timetable.storyboard */; };
 		16AC45BE22427EED00E9B351 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AC45BD22427EED00E9B351 /* TimetableViewController.swift */; };
 		16AC45C22242825400E9B351 /* TimetableMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AC45C12242825400E9B351 /* TimetableMenuView.swift */; };
@@ -269,6 +270,7 @@
 		1664445C224303770063E3D4 /* Bookings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bookings.storyboard; sourceTree = "<group>"; };
 		16644460224303C20063E3D4 /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
 		1680A8F42243E6F300B23A1B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		16A0869322464612007E378D /* UserClassesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClassesService.swift; sourceTree = "<group>"; };
 		16AC45BB22427EB100E9B351 /* Timetable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timetable.storyboard; sourceTree = "<group>"; };
 		16AC45BD22427EED00E9B351 /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
 		16AC45C12242825400E9B351 /* TimetableMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableMenuView.swift; sourceTree = "<group>"; };
@@ -550,6 +552,14 @@
 			path = Tabbar;
 			sourceTree = "<group>";
 		};
+		16A08692224645AF007E378D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				16A0869322464612007E378D /* UserClassesService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		16AC45BA22427E8D00E9B351 /* Timetable */ = {
 			isa = PBXGroup;
 			children = (
@@ -615,6 +625,7 @@
 		9DB3EC242241582400BE1A62 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				16A08692224645AF007E378D /* Service */,
 				164A2F7F2245199900B42AF4 /* Views.storyboard */,
 				164A2F7A224518E500B42AF4 /* Activity List */,
 				164A2F77224518CD00B42AF4 /* Detail Activity */,
@@ -1446,6 +1457,7 @@
 				164A2F7E224518E500B42AF4 /* ActivityListViewController.swift in Sources */,
 				9DB3EC282241582400BE1A62 /* ViewController.swift in Sources */,
 				9DB3EC9A22415A4700BE1A62 /* UIViewController+StoryboardIdentifier.swift in Sources */,
+				16A0869422464612007E378D /* UserClassesService.swift in Sources */,
 				164A2F742245181B00B42AF4 /* Result.swift in Sources */,
 				164A2F79224518CD00B42AF4 /* DetailActivityViewController.swift in Sources */,
 				164A2F532244FFE500B42AF4 /* ExampleBackgroundContentView.swift in Sources */,

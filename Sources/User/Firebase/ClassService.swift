@@ -23,11 +23,28 @@ final class ClassService {
     func getClassById(classId : String, completionHandler: @escaping (_ model:  ClassModel?) -> Void) {
         classesRef.child(classId).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
-//            let value = snapshot.value as? NSDictionary
+            let user = ClassModel(snapshot: snapshot)
             
-//            let username = value?["username"] as? String ?? ""
-            let user = ClassModel(snapshot : snapshot)
             completionHandler(user ?? nil)
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+            completionHandler(nil)
+        }
+    }
+    
+    
+    func getHomeClass(completionHandler: @escaping (_ model:  [ClassModel]?) -> Void) {
+        classesRef.queryOrdered(byChild: "rating").queryLimited(toLast: 4).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            guard ((snapshot.value as? [String:Any]) != nil) else {
+                completionHandler(nil)
+                return
+            }
+            
+            var model = ClassModel.classModelFromArray(snapshot: snapshot)
+            model?.sort(by: {$0.rating > $1.rating})
+            completionHandler(model)
             // ...
         }) { (error) in
             print(error.localizedDescription)

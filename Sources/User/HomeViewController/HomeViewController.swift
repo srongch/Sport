@@ -14,6 +14,10 @@ class HomeViewController: UICollectionViewController {
 
 
     // MARK: - Properties
+    private let classService = ClassService()
+    private var classList : [ClassModel]?
+    
+    
     private let reuseIdentifier = "HomeCollectionViewCell"
     private let sectionInsets = UIEdgeInsets(top: 0.0,
                                              left: 15.0,
@@ -24,16 +28,25 @@ class HomeViewController: UICollectionViewController {
     private let flickr = Flickr()
     private let itemsPerRow: CGFloat = 2
     
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-      //  self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+        classService.getHomeClass {[weak self] (models) in
+            guard let temp = models else{
+                print("no data")
+                return
+            }
+            print(temp)
+            self?.classList = models
+            self?.collectionView.reloadData()
+        }
+    }
+    
+    func setupUserInfo() {
+        
     }
 
     /*
@@ -45,63 +58,8 @@ class HomeViewController: UICollectionViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-    // MARK: UICollectionViewDataSource
-
-//    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-//
-//
-//    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of items
-//        return 0
-//    }
-//
-//    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-//
-//        // Configure the cell
-//
-//        return cell
-//    }
-    
-    
-
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-
 }
+
 
 // MARK: - Private
 private extension HomeViewController {
@@ -123,7 +81,7 @@ extension HomeViewController : CategoryButtonPressedProtocol {
     //2
     override func collectionView(_ collectionView: UICollectionView,
                                  numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return classList?.count ?? 0
     }
     
     //3
@@ -133,8 +91,7 @@ extension HomeViewController : CategoryButtonPressedProtocol {
         ) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
                                                       for: indexPath) as! HomeCollectionViewCell
-//        cell.backgroundColor = .red
-        // Configure the cell
+        cell.setupCell(model: classList![indexPath.row])
         return cell
     }
     
@@ -190,6 +147,11 @@ extension HomeViewController : CategoryButtonPressedProtocol {
         let viewController = UIStoryboard.storyboard(.views).instantiateViewController(withIdentifier:ActivityListViewController.storyboardIdentifier) as! ActivityListViewController
         viewController.activityType = buttonType
         self.navigationController?.pushViewController(viewController, animated:true)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let model = classList![indexPath.row]
+        self.navigationController?.pushViewController(ClassDetailViewController.instance(classId: model.key), animated: true)
     }
     
 }
