@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5RQ-DU-c8T">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5RQ-DU-c8T">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -519,19 +519,19 @@ what you wanna do today?</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="LI1-RC-xvn">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="225.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MqA-iN-pmi">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="156.5"/>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJm-NE-PMB">
-                                                <rect key="frame" x="0.0" y="167.5" width="414" height="29"/>
+                                                <rect key="frame" x="0.0" y="167.5" width="414" height="28"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="24"/>
                                                 <color key="textColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Signin to your account to continue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdC-FI-TE9">
-                                                <rect key="frame" x="0.0" y="207.5" width="414" height="18"/>
+                                                <rect key="frame" x="0.0" y="206.5" width="414" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="15"/>
                                                 <color key="textColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -539,16 +539,16 @@ what you wanna do today?</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="AeR-PD-u85">
-                                        <rect key="frame" x="30" y="285.5" width="354" height="66"/>
+                                        <rect key="frame" x="30" y="284" width="354" height="65.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l12-BJ-UtT">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="18"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="15"/>
                                                 <color key="textColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="example@email.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GE8-Bd-7ge">
-                                                <rect key="frame" x="0.0" y="24" width="354" height="35"/>
+                                                <rect key="frame" x="0.0" y="23.5" width="354" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="yT1-HS-eyT"/>
                                                 </constraints>
@@ -557,7 +557,7 @@ what you wanna do today?</string>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAE-iJ-nh9">
-                                                <rect key="frame" x="0.0" y="65" width="354" height="1"/>
+                                                <rect key="frame" x="0.0" y="64.5" width="354" height="1"/>
                                                 <color key="backgroundColor" red="0.67144942279999997" green="0.68512862919999995" blue="0.75295090679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="UwE-lt-inv"/>
@@ -566,22 +566,22 @@ what you wanna do today?</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="qgM-Cn-xnR">
-                                        <rect key="frame" x="30" y="359.5" width="354" height="66"/>
+                                        <rect key="frame" x="30" y="357.5" width="354" height="65.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxI-mU-5qT">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="18"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="15"/>
                                                 <color key="textColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="12345" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oIb-ZC-mCM">
-                                                <rect key="frame" x="0.0" y="24" width="354" height="35"/>
+                                                <rect key="frame" x="0.0" y="23.5" width="354" height="35"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uIu-gL-6QQ">
-                                                <rect key="frame" x="0.0" y="65" width="354" height="1"/>
+                                                <rect key="frame" x="0.0" y="64.5" width="354" height="1"/>
                                                 <color key="backgroundColor" red="0.67144942279999997" green="0.68512862919999995" blue="0.75295090679999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="Zj1-gw-qAg"/>
@@ -612,7 +612,7 @@ what you wanna do today?</string>
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEI-9z-atj">
-                                <rect key="frame" x="65" y="754" width="284" height="40"/>
+                                <rect key="frame" x="65" y="754.5" width="284" height="40"/>
                                 <color key="backgroundColor" red="0.20898550748825073" green="0.22602123022079468" blue="0.30197033286094666" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="0ZL-RV-R5g"/>
@@ -634,13 +634,13 @@ what you wanna do today?</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not yet a user?  Register now  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hA-Gh-T6d">
-                                <rect key="frame" x="104.5" y="814" width="205.5" height="18"/>
+                                <rect key="frame" x="103.5" y="814.5" width="207" height="17.5"/>
                                 <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="15"/>
                                 <color key="textColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6S-db-9zb">
-                                <rect key="frame" x="220" y="814" width="90" height="20"/>
+                                <rect key="frame" x="220.5" y="814.5" width="90" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="6r0-6G-BCe"/>
                                     <constraint firstAttribute="width" constant="90" id="EFI-3c-kd3"/>
@@ -826,9 +826,32 @@ Requiement Retal not included</string>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZNk-Bp-mXD">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <color key="backgroundColor" red="0.95051408680000005" green="0.91752828310000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVx-bo-XaF">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="hWY-YZ-jFd"/>
+                                        </constraints>
+                                        <state key="normal" image="back_button_blue"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="OQg-QQ-89j" eventType="touchUpInside" id="eVG-SD-Obp"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2Q-eP-E9D">
+                                        <rect key="frame" x="186" y="12" width="42.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="17"/>
+                                        <color key="textColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstItem="iVx-bo-XaF" firstAttribute="leading" secondItem="ZNk-Bp-mXD" secondAttribute="leading" id="2E3-ec-BD3"/>
+                                    <constraint firstItem="iVx-bo-XaF" firstAttribute="top" secondItem="ZNk-Bp-mXD" secondAttribute="top" id="UB3-Ca-LkC"/>
+                                    <constraint firstItem="t2Q-eP-E9D" firstAttribute="centerX" secondItem="ZNk-Bp-mXD" secondAttribute="centerX" id="UG3-gA-YsO"/>
                                     <constraint firstAttribute="height" constant="44" id="ih3-oo-LZI"/>
+                                    <constraint firstItem="t2Q-eP-E9D" firstAttribute="centerY" secondItem="ZNk-Bp-mXD" secondAttribute="centerY" id="wU1-Zg-pxc"/>
+                                    <constraint firstAttribute="bottom" secondItem="iVx-bo-XaF" secondAttribute="bottom" id="zT5-aM-sBq"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dkc-wV-Dd8">
@@ -872,12 +895,12 @@ Requiement Retal not included</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="85s-kn-JbO">
-                                <rect key="frame" x="25" y="185" width="331" height="30"/>
+                                <rect key="frame" x="25" y="185" width="292" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZg-Zs-wO0">
-                                        <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZg-Zs-wO0">
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="27"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="14"/>
                                         <inset key="contentEdgeInsets" minX="15" minY="5" maxX="15" maxY="5"/>
                                         <state key="normal" title="Biginner">
                                             <color key="titleColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -887,11 +910,14 @@ Requiement Retal not included</string>
                                                 <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="levelButtonPressed:" destination="OQg-QQ-89j" eventType="touchUpInside" id="Y6D-jW-SE8"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPL-yg-2PC">
-                                        <rect key="frame" x="101" y="0.0" width="130" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPL-yg-2PC">
+                                        <rect key="frame" x="90" y="0.0" width="113" height="27"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="14"/>
                                         <inset key="contentEdgeInsets" minX="15" minY="5" maxX="15" maxY="5"/>
                                         <state key="normal" title="Intermediate">
                                             <color key="titleColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -901,13 +927,16 @@ Requiement Retal not included</string>
                                                 <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="levelButtonPressed:" destination="OQg-QQ-89j" eventType="touchUpInside" id="3Og-ry-fFU"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AG-41-dmn">
-                                        <rect key="frame" x="237" y="0.0" width="94" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AG-41-dmn">
+                                        <rect key="frame" x="209" y="0.0" width="83" height="27"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="14"/>
                                         <inset key="contentEdgeInsets" minX="15" minY="5" maxX="15" maxY="5"/>
-                                        <state key="normal" title="advance">
+                                        <state key="normal" title="Advance">
                                             <color key="titleColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -915,6 +944,9 @@ Requiement Retal not included</string>
                                                 <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="levelButtonPressed:" destination="OQg-QQ-89j" eventType="touchUpInside" id="uep-3l-rV5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -941,6 +973,10 @@ Requiement Retal not included</string>
                         <viewLayoutGuide key="safeArea" id="pg2-ll-umm"/>
                     </view>
                     <connections>
+                        <outlet property="advance" destination="6AG-41-dmn" id="rh1-8J-2Bo"/>
+                        <outlet property="beginner" destination="gZg-Zs-wO0" id="VYc-gF-KCy"/>
+                        <outlet property="intermediate" destination="SPL-yg-2PC" id="0Kd-eu-AO5"/>
+                        <outlet property="naviTitle" destination="t2Q-eP-E9D" id="LPU-aU-Sil"/>
                         <outlet property="tableView" destination="nzQ-49-cQO" id="XtS-BZ-77V"/>
                     </connections>
                 </viewController>
@@ -986,7 +1022,7 @@ Requiement Retal not included</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Equiment rental needed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXD-WC-nJN">
-                                        <rect key="frame" x="17" y="525" width="321" height="18"/>
+                                        <rect key="frame" x="17" y="525" width="322.5" height="18"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="15"/>
                                         <color key="textColor" red="0.93312710519999997" green="0.93732923270000001" blue="0.93718898299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -998,7 +1034,7 @@ Requiement Retal not included</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About the program" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="540-os-awq">
-                                        <rect key="frame" x="17" y="671" width="380" height="18"/>
+                                        <rect key="frame" x="17" y="672.5" width="380" height="18"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="15"/>
                                         <color key="textColor" red="0.20683905480000001" green="0.22982683779999999" blue="0.30865281820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1016,19 +1052,19 @@ Requiement Retal not included</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BIGINNER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRp-bL-Wyk">
-                                        <rect key="frame" x="17" y="374" width="380" height="19"/>
+                                        <rect key="frame" x="17" y="373" width="380" height="19"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="16"/>
                                         <color key="textColor" red="0.93312710519999997" green="0.93732923270000001" blue="0.93718898299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One-day snowboard recreation on the slops. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UH-Er-Ncs">
-                                        <rect key="frame" x="17" y="400" width="380" height="47"/>
+                                        <rect key="frame" x="17" y="399" width="380" height="48"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="20"/>
                                         <color key="textColor" red="0.93312710519999997" green="0.93732923270000001" blue="0.93718898299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Az-5d-qrr">
-                                        <rect key="frame" x="348" y="516" width="49" height="39"/>
+                                        <rect key="frame" x="349.5" y="516" width="47.5" height="39"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="39" id="Ef4-uW-pin"/>
                                         </constraints>
@@ -1037,7 +1073,7 @@ Requiement Retal not included</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="rmR-WS-iaS">
-                                        <rect key="frame" x="336" y="356" width="71" height="37"/>
+                                        <rect key="frame" x="336" y="355" width="71" height="37"/>
                                     </pageControl>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beautiful-beauty-blurred-background-1239288.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OWG-rx-gfK">
                                         <rect key="frame" x="17" y="571" width="75" height="75"/>
@@ -1052,67 +1088,67 @@ Requiement Retal not included</string>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7u-Vs-xdh">
-                                        <rect key="frame" x="17" y="656" width="380" height="1"/>
+                                        <rect key="frame" x="17" y="657.5" width="380" height="1"/>
                                         <color key="backgroundColor" red="0.83912390470504761" green="0.83926850557327271" blue="0.83911478519439697" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="5Mb-80-5Lh"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A highly accomplished and renowned International Trainer and Tedx Speaker has an extensive work experience of 30 years." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOX-9e-cC8">
-                                        <rect key="frame" x="108" y="593" width="289" height="49"/>
+                                        <rect key="frame" x="108" y="593" width="289" height="50.5"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="14"/>
                                         <color key="textColor" red="0.23822164535522461" green="0.261229008436203" blue="0.34006279706954956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrQ-Pq-SzW">
-                                        <rect key="frame" x="17" y="700" width="380" height="114.5"/>
+                                        <rect key="frame" x="17" y="701.5" width="380" height="118"/>
                                         <string key="text">Benefit from a quicker learning experience over fewer visits. Perfect if you don’t have much time before you head out abroad. There are 2 fast track lessons to complete in order to reach the recreational standard. To enable family groups to learn together, lessons may be mixed adults and juniors. A fast track lesson lasts 3 hours and has a maximum of 6 per instructor.</string>
                                         <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="14"/>
                                         <color key="textColor" red="0.23822164539999999" green="0.26122900840000002" blue="0.34006279709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VYT-lv-knT">
-                                        <rect key="frame" x="17" y="825.5" width="380" height="1"/>
+                                        <rect key="frame" x="17" y="830.5" width="380" height="1"/>
                                         <color key="backgroundColor" red="0.83912390469999998" green="0.83926850559999999" blue="0.83911478520000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="k7Y-o0-tZH"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timetable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOS-UR-xnS">
-                                        <rect key="frame" x="17" y="840.5" width="380" height="18"/>
+                                        <rect key="frame" x="17" y="845.5" width="380" height="18"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="15"/>
                                         <color key="textColor" red="0.20683905480000001" green="0.22982683779999999" blue="0.30865281820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9la-LP-oKd">
-                                        <rect key="frame" x="17" y="932.5" width="380" height="1"/>
+                                        <rect key="frame" x="17" y="939" width="380" height="1"/>
                                         <color key="backgroundColor" red="0.83912390469999998" green="0.83926850559999999" blue="0.83911478520000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Iu7-JA-G98"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="156-PO-ear">
-                                        <rect key="frame" x="17" y="872.5" width="380" height="49"/>
+                                        <rect key="frame" x="17" y="877.5" width="380" height="50.5"/>
                                         <string key="text">This 3 hour lesson is for beginners progressing from fast track 1. The aim is that students learn to turn from the top of the slope and reach the recreational standard.</string>
                                         <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="14"/>
                                         <color key="textColor" red="0.23822164539999999" green="0.26122900840000002" blue="0.34006279709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Equment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JX-LM-0r4">
-                                        <rect key="frame" x="17" y="947.5" width="380" height="18"/>
+                                        <rect key="frame" x="17" y="954" width="380" height="18"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="15"/>
                                         <color key="textColor" red="0.20683905480000001" green="0.22982683779999999" blue="0.30865281820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OR2-n4-XJB">
-                                        <rect key="frame" x="17" y="1023.5" width="380" height="1"/>
+                                        <rect key="frame" x="17" y="1031" width="380" height="1"/>
                                         <color key="backgroundColor" red="0.83912390469999998" green="0.83926850559999999" blue="0.83911478520000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="lfj-lL-2ic"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ja6-mK-Zf6">
-                                        <rect key="frame" x="17" y="979.5" width="380" height="33"/>
+                                        <rect key="frame" x="17" y="986" width="380" height="34"/>
                                         <string key="text">- Please bring warth clothes.
 - Equiment is not inclouded. On-site rental available.</string>
                                         <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="14"/>
@@ -1120,39 +1156,39 @@ Requiement Retal not included</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNc-iJ-5kU">
-                                        <rect key="frame" x="17" y="1038.5" width="380" height="18"/>
+                                        <rect key="frame" x="17" y="1046" width="380" height="18"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="15"/>
                                         <color key="textColor" red="0.20683905480000001" green="0.22982683779999999" blue="0.30865281820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jsw-wf-Vds">
-                                        <rect key="frame" x="17" y="1240" width="380" height="1"/>
+                                        <rect key="frame" x="17" y="1248" width="380" height="1"/>
                                         <color key="backgroundColor" red="0.83912390469999998" green="0.83926850559999999" blue="0.83911478520000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="CVr-2u-suE"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please meet at 11:00 in front of tamworth snowdome." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9a-eK-riu">
-                                        <rect key="frame" x="17" y="1070.5" width="380" height="16.5"/>
+                                        <rect key="frame" x="17" y="1078" width="380" height="17"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="14"/>
                                         <color key="textColor" red="0.23822164539999999" green="0.26122900840000002" blue="0.34006279709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LvG-Pm-kQ0">
-                                        <rect key="frame" x="17" y="1098" width="380" height="128"/>
+                                        <rect key="frame" x="17" y="1106" width="380" height="128"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="128" id="2rz-qE-2M4"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KM1-uX-N9N">
-                                        <rect key="frame" x="17" y="1255" width="380" height="18"/>
+                                        <rect key="frame" x="17" y="1263" width="380" height="18"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="15"/>
                                         <color key="textColor" red="0.20683905480000001" green="0.22982683779999999" blue="0.30865281820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0aV-dd-DOy">
-                                        <rect key="frame" x="17" y="1284" width="380" height="277"/>
+                                        <rect key="frame" x="17" y="1292" width="380" height="277"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="277" id="CDf-B0-Vta"/>
@@ -1331,7 +1367,7 @@ Requiement Retal not included</string>
     <resources>
         <image name="Mask.png" width="414" height="531"/>
         <image name="Rectangle" width="92" height="92"/>
-        <image name="Screenshot 2019-03-02 at 4.34.08 pm.png" width="874" height="1258"/>
+        <image name="Screenshot 2019-03-02 at 4.34.08 pm.png" width="437" height="629"/>
         <image name="back_button_blue" width="27" height="21"/>
         <image name="back_button_white" width="27" height="21"/>
         <image name="beautiful-beauty-blurred-background-1239288.jpg" width="4000" height="6000"/>

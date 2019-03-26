@@ -144,9 +144,7 @@ extension HomeViewController : CategoryButtonPressedProtocol {
     
     func buttonDidPressed(buttonType: ButtonType) {
         print("Button Press \(buttonType.getTuple.name)")
-        let viewController = UIStoryboard.storyboard(.views).instantiateViewController(withIdentifier:ActivityListViewController.storyboardIdentifier) as! ActivityListViewController
-        viewController.activityType = buttonType
-        self.navigationController?.pushViewController(viewController, animated:true)
+        self.navigationController?.pushViewController(ActivityListViewController.instance(activitiesType: buttonType), animated:true)
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

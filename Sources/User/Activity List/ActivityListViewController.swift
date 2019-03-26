@@ -11,16 +11,35 @@ import UIKit
 class ActivityListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var naviTitle: UILabel!
+    
+    @IBOutlet weak var beginner: UIButton!
+    @IBOutlet weak var intermediate: UIButton!
+    @IBOutlet weak var advance: UIButton!
+    
+    var buttonArray : [UIButton]?
+   
     var activityType : ButtonType = .swimming
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-     //   tableView.rowHeight = UITableView.automaticDimension
-    //    tableView.estimatedRowHeight = 600
-        // Do any additional setup after loading the view.
+        naviTitle.text = activityType.getTuple.name
+        self.buttonArray = [beginner,intermediate,advance]
+        
     }
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func levelButtonPressed(_ sender: UIButton) {
+        sender.setLevelButtonSelected(buttons: [beginner,intermediate,advance])
+    }
+    
+    
+    
     
 
     /*
@@ -58,4 +77,14 @@ extension ActivityListViewController : UITableViewDelegate,UITableViewDataSource
     }
     
     
+}
+
+extension ActivityListViewController{
+    static func instance (activitiesType : ButtonType)-> ActivityListViewController {
+        
+        let view = UIStoryboard.storyboard(.views).instantiateViewController(withIdentifier:ActivityListViewController.storyboardIdentifier) as! ActivityListViewController
+        view.activityType = activitiesType
+        
+        return view
+    }
 }
