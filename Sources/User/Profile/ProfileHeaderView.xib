@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,7 +46,7 @@
                     </userDefinedRuntimeAttributes>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="gNW-8M-I5D">
-                    <rect key="frame" x="130" y="93" width="256" height="17"/>
+                    <rect key="frame" x="130" y="83" width="256" height="17"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email_icon" translatesAutoresizingMaskIntoConstraints="NO" id="fJM-8n-ieQ">
                             <rect key="frame" x="0.0" y="3.5" width="14" height="10"/>
@@ -69,7 +69,7 @@
             </subviews>
             <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="gNW-8M-I5D" firstAttribute="bottom" secondItem="Isy-3m-YqB" secondAttribute="bottom" constant="-10" id="27G-Vm-j3Z"/>
+                <constraint firstItem="gNW-8M-I5D" firstAttribute="bottom" secondItem="Isy-3m-YqB" secondAttribute="bottom" constant="-20" id="27G-Vm-j3Z"/>
                 <constraint firstItem="CXS-EO-hoc" firstAttribute="leading" secondItem="Isy-3m-YqB" secondAttribute="leading" id="43Z-7T-l9j"/>
                 <constraint firstItem="j3T-I0-49s" firstAttribute="leading" secondItem="Isy-3m-YqB" secondAttribute="trailing" constant="10" id="7Wu-oq-WMZ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dXQ-c6-Eaz" secondAttribute="bottom" constant="40" id="8P2-xp-YaB"/>
@@ -81,15 +81,19 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="j3T-I0-49s" secondAttribute="trailing" constant="20" id="WgB-sl-fzb"/>
                 <constraint firstItem="Isy-3m-YqB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="ZbB-mU-ir2"/>
                 <constraint firstItem="CXS-EO-hoc" firstAttribute="top" secondItem="Isy-3m-YqB" secondAttribute="bottom" constant="15" id="hxb-2X-sB9"/>
-                <constraint firstItem="gNW-8M-I5D" firstAttribute="top" secondItem="j3T-I0-49s" secondAttribute="bottom" constant="20" id="v2r-OA-sut"/>
+                <constraint firstItem="gNW-8M-I5D" firstAttribute="top" secondItem="j3T-I0-49s" secondAttribute="bottom" constant="10" id="v2r-OA-sut"/>
                 <constraint firstItem="3k0-To-Wvv" firstAttribute="trailing" secondItem="j3T-I0-49s" secondAttribute="trailing" id="vnC-LT-TCX"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="emailLable" destination="3k0-To-Wvv" id="Rog-UI-qOg"/>
+                <outlet property="imageView" destination="Isy-3m-YqB" id="IIR-uU-GSq"/>
                 <outlet property="memoLabel" destination="dXQ-c6-Eaz" id="DRW-nh-976"/>
+                <outlet property="nameLable" destination="j3T-I0-49s" id="KcY-i8-DBx"/>
+                <outlet property="quote_icon" destination="CXS-EO-hoc" id="gIh-jH-x4n"/>
             </connections>
-            <point key="canvasLocation" x="-446" y="-207"/>
+            <point key="canvasLocation" x="-446.39999999999998" y="-207.34632683658174"/>
         </view>
     </objects>
     <resources>

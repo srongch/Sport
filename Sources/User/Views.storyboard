@@ -708,14 +708,14 @@ what you wanna do today?</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nzQ-49-cQO">
-                                <rect key="frame" x="25" y="228" width="364" height="668"/>
+                                <rect key="frame" x="15" y="228" width="384" height="668"/>
                                 <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AcitivityListTableViewCell" rowHeight="195" id="ymS-fA-tmP" customClass="AcitivityListTableViewCell" customModule="User" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="364" height="195"/>
+                                        <rect key="frame" x="0.0" y="28" width="384" height="195"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ymS-fA-tmP" id="wJj-bQ-0ek">
-                                            <rect key="frame" x="0.0" y="0.0" width="364" height="195"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="195"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Byw-Tr-PIZ">
@@ -736,14 +736,6 @@ what you wanna do today?</string>
                                                                 <constraint firstAttribute="width" constant="10" id="xuN-e8-Mq2"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eix-0h-tQe">
-                                                            <rect key="frame" x="152.5" y="94" width="204.5" height="29"/>
-                                                            <string key="text">2 hours
-Requiement Retal not included</string>
-                                                            <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="12"/>
-                                                            <color key="textColor" red="0.20683905480000001" green="0.22982683779999999" blue="0.30865281820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <color key="highlightedColor" red="0.20683905480000001" green="0.22982683779999999" blue="0.30865281820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100 per lesson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vet-aN-Dml">
                                                             <rect key="frame" x="152.5" y="136" width="84.5" height="15"/>
                                                             <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="12"/>
@@ -776,7 +768,6 @@ Requiement Retal not included</string>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="W9X-mr-Tdb" secondAttribute="bottom" constant="8" id="7Wq-jx-2QJ"/>
                                                         <constraint firstAttribute="bottom" secondItem="SaN-H5-c6I" secondAttribute="bottom" constant="8" id="9Z6-UL-tAh"/>
-                                                        <constraint firstItem="eix-0h-tQe" firstAttribute="top" secondItem="zdE-9H-UFR" secondAttribute="bottom" constant="12" id="D4S-9v-fVo"/>
                                                         <constraint firstItem="W9X-mr-Tdb" firstAttribute="leading" secondItem="SaN-H5-c6I" secondAttribute="trailing" constant="7.5" id="F6T-x8-8ut"/>
                                                         <constraint firstAttribute="trailing" secondItem="0D7-bn-2ks" secondAttribute="trailing" constant="8" id="Sma-tz-euo"/>
                                                         <constraint firstItem="W9X-mr-Tdb" firstAttribute="top" secondItem="vet-aN-Dml" secondAttribute="bottom" constant="8" id="a6l-lh-BD1"/>
@@ -803,11 +794,9 @@ Requiement Retal not included</string>
                                                 <constraint firstItem="zdE-9H-UFR" firstAttribute="trailing" secondItem="Hby-ql-BLc" secondAttribute="trailing" id="5oM-0C-GAG"/>
                                                 <constraint firstItem="SaN-H5-c6I" firstAttribute="leading" secondItem="Hby-ql-BLc" secondAttribute="leading" id="7WD-Ih-rCl"/>
                                                 <constraint firstAttribute="bottom" secondItem="Byw-Tr-PIZ" secondAttribute="bottom" constant="13" id="9al-b0-TCx"/>
-                                                <constraint firstItem="eix-0h-tQe" firstAttribute="leading" secondItem="Hby-ql-BLc" secondAttribute="leading" id="Bf6-ow-hc2"/>
                                                 <constraint firstAttribute="trailing" secondItem="Byw-Tr-PIZ" secondAttribute="trailing" id="Bsh-NX-bmW"/>
                                                 <constraint firstItem="vet-aN-Dml" firstAttribute="leading" secondItem="Hby-ql-BLc" secondAttribute="leading" id="DCu-f4-mln"/>
                                                 <constraint firstItem="zdE-9H-UFR" firstAttribute="leading" secondItem="Hby-ql-BLc" secondAttribute="leading" id="Ffr-QG-dFO"/>
-                                                <constraint firstItem="eix-0h-tQe" firstAttribute="trailing" secondItem="Hby-ql-BLc" secondAttribute="trailing" id="I5T-gv-QNO"/>
                                                 <constraint firstItem="Hby-ql-BLc" firstAttribute="top" secondItem="wJj-bQ-0ek" secondAttribute="topMargin" id="LaP-fo-Mrq"/>
                                                 <constraint firstAttribute="trailing" secondItem="Hby-ql-BLc" secondAttribute="trailing" constant="7" id="Lg8-oZ-gBw"/>
                                                 <constraint firstAttribute="bottom" secondItem="oPU-tp-vRx" secondAttribute="bottom" constant="13" id="PGO-pY-S74"/>
@@ -821,6 +810,15 @@ Requiement Retal not included</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="classImage" destination="oPU-tp-vRx" id="ZmM-Ov-j2E"/>
+                                            <outlet property="classTitle" destination="Jhs-RT-ZFr" id="YO4-Kw-Ej8"/>
+                                            <outlet property="level" destination="Hby-ql-BLc" id="iaR-Xn-jyf"/>
+                                            <outlet property="likeButton" destination="0D7-bn-2ks" id="azM-XF-05D"/>
+                                            <outlet property="location" destination="zdE-9H-UFR" id="lha-qx-kSC"/>
+                                            <outlet property="price" destination="vet-aN-Dml" id="KQQ-da-inq"/>
+                                            <outlet property="rating" destination="W9X-mr-Tdb" id="GD8-ts-nv4"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -855,7 +853,7 @@ Requiement Retal not included</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dkc-wV-Dd8">
-                                <rect key="frame" x="25" y="108" width="364" height="47"/>
+                                <rect key="frame" x="15" y="108" width="384" height="47"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location_icon" translatesAutoresizingMaskIntoConstraints="NO" id="mlR-Pt-4c8">
                                         <rect key="frame" x="13" y="0.0" width="18" height="47"/>
@@ -864,13 +862,13 @@ Requiement Retal not included</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select gym or sport places…" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMg-iT-q1V">
-                                        <rect key="frame" x="41" y="0.0" width="323" height="47"/>
+                                        <rect key="frame" x="41" y="0.0" width="343" height="47"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="14"/>
                                         <color key="textColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n50-SY-D9L">
-                                        <rect key="frame" x="0.0" y="0.0" width="364" height="47"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="47"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -895,7 +893,7 @@ Requiement Retal not included</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="85s-kn-JbO">
-                                <rect key="frame" x="25" y="185" width="292" height="30"/>
+                                <rect key="frame" x="15" y="185" width="292" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZg-Zs-wO0">
                                         <rect key="frame" x="0.0" y="0.0" width="84" height="27"/>
@@ -953,18 +951,26 @@ Requiement Retal not included</string>
                                     <constraint firstAttribute="height" constant="30" id="aX5-E6-kph"/>
                                 </constraints>
                             </stackView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is no data. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fc-11-Lnn">
+                                <rect key="frame" x="146.5" y="438" width="121" height="20.5"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="17"/>
+                                <color key="textColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Dkc-wV-Dd8" firstAttribute="leading" secondItem="pg2-ll-umm" secondAttribute="leading" constant="25" id="0zA-ta-9UJ"/>
+                            <constraint firstItem="Dkc-wV-Dd8" firstAttribute="leading" secondItem="pg2-ll-umm" secondAttribute="leading" constant="15" id="0zA-ta-9UJ"/>
+                            <constraint firstItem="2Fc-11-Lnn" firstAttribute="centerY" secondItem="WSu-Qh-Itu" secondAttribute="centerY" id="35M-sh-PBE"/>
                             <constraint firstItem="ZNk-Bp-mXD" firstAttribute="top" secondItem="pg2-ll-umm" secondAttribute="top" id="Da5-QT-STg"/>
                             <constraint firstItem="85s-kn-JbO" firstAttribute="leading" secondItem="n50-SY-D9L" secondAttribute="leading" id="E83-yF-BzJ"/>
-                            <constraint firstItem="pg2-ll-umm" firstAttribute="trailing" secondItem="Dkc-wV-Dd8" secondAttribute="trailing" constant="25" id="GXj-Bt-jC2"/>
+                            <constraint firstItem="pg2-ll-umm" firstAttribute="trailing" secondItem="Dkc-wV-Dd8" secondAttribute="trailing" constant="15" id="GXj-Bt-jC2"/>
                             <constraint firstItem="85s-kn-JbO" firstAttribute="top" secondItem="n50-SY-D9L" secondAttribute="bottom" constant="30" id="HgG-tt-8wW"/>
                             <constraint firstItem="nzQ-49-cQO" firstAttribute="top" secondItem="85s-kn-JbO" secondAttribute="bottom" constant="13" id="NY4-vv-nk3"/>
-                            <constraint firstItem="pg2-ll-umm" firstAttribute="trailing" secondItem="nzQ-49-cQO" secondAttribute="trailing" constant="25" id="V6f-ub-ewc"/>
+                            <constraint firstItem="2Fc-11-Lnn" firstAttribute="centerX" secondItem="WSu-Qh-Itu" secondAttribute="centerX" id="PWl-g5-Kyo"/>
+                            <constraint firstItem="pg2-ll-umm" firstAttribute="trailing" secondItem="nzQ-49-cQO" secondAttribute="trailing" constant="15" id="V6f-ub-ewc"/>
                             <constraint firstItem="ZNk-Bp-mXD" firstAttribute="leading" secondItem="pg2-ll-umm" secondAttribute="leading" id="Wcw-l0-4cg"/>
-                            <constraint firstItem="nzQ-49-cQO" firstAttribute="leading" secondItem="pg2-ll-umm" secondAttribute="leading" constant="25" id="fDl-bz-aTN"/>
+                            <constraint firstItem="nzQ-49-cQO" firstAttribute="leading" secondItem="pg2-ll-umm" secondAttribute="leading" constant="15" id="fDl-bz-aTN"/>
                             <constraint firstItem="Dkc-wV-Dd8" firstAttribute="top" secondItem="ZNk-Bp-mXD" secondAttribute="bottom" constant="20" id="jDs-2G-EJn"/>
                             <constraint firstItem="ZNk-Bp-mXD" firstAttribute="trailing" secondItem="pg2-ll-umm" secondAttribute="trailing" id="llY-mH-6hI"/>
                             <constraint firstItem="pg2-ll-umm" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="85s-kn-JbO" secondAttribute="trailing" constant="20" id="rS7-sA-ugt"/>
@@ -977,6 +983,7 @@ Requiement Retal not included</string>
                         <outlet property="beginner" destination="gZg-Zs-wO0" id="VYc-gF-KCy"/>
                         <outlet property="intermediate" destination="SPL-yg-2PC" id="0Kd-eu-AO5"/>
                         <outlet property="naviTitle" destination="t2Q-eP-E9D" id="LPU-aU-Sil"/>
+                        <outlet property="noDataLabel" destination="2Fc-11-Lnn" id="clJ-i1-f52"/>
                         <outlet property="tableView" destination="nzQ-49-cQO" id="XtS-BZ-77V"/>
                     </connections>
                 </viewController>

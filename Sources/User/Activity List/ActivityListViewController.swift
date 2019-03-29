@@ -16,11 +16,15 @@ class ActivityListViewController: UIViewController {
     @IBOutlet weak var beginner: UIButton!
     @IBOutlet weak var intermediate: UIButton!
     @IBOutlet weak var advance: UIButton!
+    @IBOutlet weak var noDataLabel: UILabel!
     
     var buttonArray : [UIButton]?
    
     var activityType : ButtonType = .swimming
     
+    let classService = ClassService()
+    var classArray : [ClassModel]?
+    var filteredArray : [ClassModel]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +32,12 @@ class ActivityListViewController: UIViewController {
         naviTitle.text = activityType.getTuple.name
         self.buttonArray = [beginner,intermediate,advance]
         
+        classService.getClassByActivity(activity: activityType.getTuple.index) {classModel in
+            guard let model = classModel else {return}
+            self.classArray = model
+            self.filteredArray = model
+            self.tableView.reloadData()
+        }
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
@@ -36,6 +46,10 @@ class ActivityListViewController: UIViewController {
     
     @IBAction func levelButtonPressed(_ sender: UIButton) {
         sender.setLevelButtonSelected(buttons: [beginner,intermediate,advance])
+    }
+    
+    @objc func likeButtonPressed(_ sender : UIButton){
+        print("button tag is \(sender.tag)")
     }
     
     
@@ -56,19 +70,25 @@ class ActivityListViewController: UIViewController {
 
 extension ActivityListViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        guard let array = filteredArray else {
+            noDataLabel.isHidden = false
+            return 0
+        }
+        noDataLabel.isHidden = array.count > 0
+        
+        return array.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AcitivityListTableViewCell") as! AcitivityListTableViewCell
-       
-        //1.
         
-//        let text = data[indexPath.row] //2.
         
-//        cell.textLabel?.text = text //3.
-        
+       let model = filteredArray![indexPath.row]
+       cell.setupCell(model: model)
+       cell.likeButton.tag = indexPath.row
+        cell.likeButton.addTarget(self, action: #selector(likeButtonPressed), for: .touchUpInside)
+
         return cell //4.
     }
     

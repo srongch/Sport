@@ -12,7 +12,9 @@ import Firebase
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-
+    var settingArray: [Setting] {
+        return Setting.getSettingArray(isUser : true, isLogin : UserService.shared.isHaveUser)
+    }
     
     var text = ""
     
@@ -97,8 +99,14 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        text += "dgdfgfdgdfg dfgfdgdf fdgfdg fdg fdg"
-        tableView.reloadData()
+        let row = settingArray[indexPath.row]
+        switch row.settingType {
+        case .editProfile: print("edit profile")
+        case .favorite : print("favorite")
+        case .payment : print("payment")
+        default:
+            print("")
+        }
     }
     
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -106,24 +114,42 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return settingArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProfileViewCell.className, for: indexPath) as! ProfileViewCell
+        cell.setupCell(setting: settingArray[indexPath.row])
         return cell
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: ProfileHeaderView.className) as! ProfileHeaderView
-        headerView.memoLabel.text = text
+        if(UserService.shared.isHaveUser){
+            headerView.memoLabel.text = text
+        }else{
+            headerView.setupNoLogin()
+        }
+        
         return headerView
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: ProfileFooterView.className) as! ProfileFooterView
+        footerView.setupNoLogin(isLogin: UserService.shared.isHaveUser)
+        footerView.button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         return footerView
+    }
+    
+    @objc func buttonPressed(){
+        if (UserService.shared.isHaveUser){
+            print("log out")
+        }else{
+            self.navigationController?.present(LoginViewController.instance(), animated: true, completion: {
+                print("presented")
+            })
+        }
     }
     
      func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

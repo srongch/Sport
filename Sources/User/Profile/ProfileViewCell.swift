@@ -10,6 +10,9 @@ import UIKit
 
 class ProfileViewCell: UITableViewCell {
 
+    @IBOutlet weak var leftLabel: UILabel!
+    @IBOutlet weak var rightLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +22,15 @@ class ProfileViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setupCell(setting : Setting){
+        leftLabel.text = setting.text
+        if (setting.settingType == .editProfile){
+            rightLabel.isHidden = true
+        }else{
+            rightLabel.isHidden = false
+        }
     }
 
 }

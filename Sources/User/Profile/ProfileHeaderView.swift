@@ -10,8 +10,11 @@ import UIKit
 
 class ProfileHeaderView: UITableViewHeaderFooterView {
 
-    @IBOutlet weak var memo: UILabel!
+    @IBOutlet weak var nameLable: UILabel!
+    @IBOutlet weak var emailLable: UILabel!
     @IBOutlet weak var memoLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var quote_icon: UIImageView!
     //   @IBOutlet weak var memoLabel: UILabel!
     /*
     // Only override draw() if you perform custom drawing.
@@ -20,10 +23,21 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
         // Drawing code
     }
     */
+    func setupNoLogin (){
+        imageView.image = UIImage(named: "profile_placehold")
+        nameLable.text = "Jonh Doe"
+        emailLable.text = "email@example.com"
+        memoLabel.text = ""
+        quote_icon.isHidden = true
+    }
+    
+    
 
 }
 
 class ProfileFooterView : UITableViewHeaderFooterView {
     @IBOutlet weak var button: UIButton!
-    
+    func setupNoLogin (isLogin : Bool){
+        button.titleLabel?.text =  isLogin ? "Logout" : "Login"
+    }
 }

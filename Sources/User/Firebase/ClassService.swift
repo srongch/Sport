@@ -52,6 +52,26 @@ final class ClassService {
         }
     }
     
+    func getClassByActivity(activity : Int ,completionHandler: @escaping (_ model:  [ClassModel]?) -> Void) {
+        classesRef.queryOrdered(byChild: "activityType").queryEqual(toValue: activity).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            guard ((snapshot.value as? [String:Any]) != nil) else {
+                completionHandler(nil)
+                return
+            }
+            
+            var model = ClassModel.classModelFromArray(snapshot: snapshot)
+            model?.sort(by: {$0.timeStamp > $1.timeStamp})
+            completionHandler(model)
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+            completionHandler(nil)
+        }
+    }
+    
+//    func addLiketoClass
+    
 //    func addClasses(tuple : ([Data],FirebaseClassModel),completionHandler: @escaping (_ isError : Bool) -> Void) {
 //
 //        print(tuple.1.asDictionary)
