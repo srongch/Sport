@@ -64,6 +64,8 @@
 		16773A61224DA5FA00C6BBFB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16773A60224DA5FA00C6BBFB /* LoginViewController.swift */; };
 		16773A62224DA5FA00C6BBFB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16773A60224DA5FA00C6BBFB /* LoginViewController.swift */; };
 		1680A8F52243E6F300B23A1B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1680A8F42243E6F300B23A1B /* TabBarViewController.swift */; };
+		168B109B22505059006EE446 /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168B109A22505059006EE446 /* ReviewModel.swift */; };
+		168B109D2250509B006EE446 /* ReviewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168B109C2250509B006EE446 /* ReviewProtocol.swift */; };
 		16A0869422464612007E378D /* UserClassesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A0869322464612007E378D /* UserClassesService.swift */; };
 		16AC45BC22427EB100E9B351 /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AC45BB22427EB100E9B351 /* Timetable.storyboard */; };
 		16AC45BE22427EED00E9B351 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AC45BD22427EED00E9B351 /* TimetableViewController.swift */; };
@@ -77,6 +79,12 @@
 		16E438312242A9BC00EF8771 /* LevelColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E438302242A9BC00EF8771 /* LevelColor.swift */; };
 		16E438332242AD3500EF8771 /* ClassRegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E438322242AD3500EF8771 /* ClassRegisterModel.swift */; };
 		16E438352242AF3400EF8771 /* ActivityImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E438342242AF3400EF8771 /* ActivityImages.swift */; };
+		16EF374D224F937100E96F30 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EF374C224F937100E96F30 /* LoadingViewController.swift */; };
+		16EF374E224F937100E96F30 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EF374C224F937100E96F30 /* LoadingViewController.swift */; };
+		16EF3750224F9D4C00E96F30 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EF374F224F9D4C00E96F30 /* EmptyViewController.swift */; };
+		16EF3751224F9D4C00E96F30 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EF374F224F9D4C00E96F30 /* EmptyViewController.swift */; };
+		16EF3753224FBE2100E96F30 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EF3752224FBE2100E96F30 /* AuthService.swift */; };
+		16EF3754224FBE2100E96F30 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EF3752224FBE2100E96F30 /* AuthService.swift */; };
 		391803D976EC1A1D2FC2C118 /* Pods_TrainerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2236B7E9E68ABE9B5557AEB /* Pods_TrainerTests.framework */; };
 		434349F7933A4DAC6C7178FB /* Pods_UserUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AB35FA71AF9B35B063D3F6 /* Pods_UserUITests.framework */; };
 		68D2452D7D96AD7B5A062703 /* Pods_Trainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE60C42CA184B7F1A44F4A00 /* Pods_Trainer.framework */; };
@@ -288,6 +296,8 @@
 		16773A5D224DA5F600C6BBFB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		16773A60224DA5FA00C6BBFB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1680A8F42243E6F300B23A1B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		168B109A22505059006EE446 /* ReviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewModel.swift; sourceTree = "<group>"; };
+		168B109C2250509B006EE446 /* ReviewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewProtocol.swift; sourceTree = "<group>"; };
 		16A0869322464612007E378D /* UserClassesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClassesService.swift; sourceTree = "<group>"; };
 		16AC45BB22427EB100E9B351 /* Timetable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timetable.storyboard; sourceTree = "<group>"; };
 		16AC45BD22427EED00E9B351 /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
@@ -301,6 +311,9 @@
 		16E438302242A9BC00EF8771 /* LevelColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelColor.swift; sourceTree = "<group>"; };
 		16E438322242AD3500EF8771 /* ClassRegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassRegisterModel.swift; sourceTree = "<group>"; };
 		16E438342242AF3400EF8771 /* ActivityImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityImages.swift; sourceTree = "<group>"; };
+		16EF374C224F937100E96F30 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		16EF374F224F9D4C00E96F30 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		16EF3752224FBE2100E96F30 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		17477614BCB929C31E84549E /* Pods_UserTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D3B5B687F9C147999EF8E6C /* Pods-UserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserTests.debug.xcconfig"; path = "Target Support Files/Pods-UserTests/Pods-UserTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3FF8ED5872442A09920ACAD9 /* Pods-TrainerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainerUITests.release.xcconfig"; path = "Target Support Files/Pods-TrainerUITests/Pods-TrainerUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -567,6 +580,7 @@
 				16773A60224DA5FA00C6BBFB /* LoginViewController.swift */,
 				16773A5D224DA5F600C6BBFB /* RegisterViewController.swift */,
 				16773A5A224DA58400C6BBFB /* Registration.storyboard */,
+				16EF3752224FBE2100E96F30 /* AuthService.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -602,6 +616,15 @@
 				16AC45C92242953000E9B351 /* ScheduleCell.xib */,
 			);
 			path = Timetable;
+			sourceTree = "<group>";
+		};
+		16EF3748224F934800E96F30 /* PluginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				16EF374C224F937100E96F30 /* LoadingViewController.swift */,
+				16EF374F224F9D4C00E96F30 /* EmptyViewController.swift */,
+			);
+			path = PluginViewController;
 			sourceTree = "<group>";
 		};
 		446131617365F3EB1FA74508 /* Pods */ = {
@@ -743,6 +766,7 @@
 		9DB3EC8C2241596B00BE1A62 /* Shared Resource */ = {
 			isa = PBXGroup;
 			children = (
+				16EF3748224F934800E96F30 /* PluginViewController */,
 				16773A59224DA57300C6BBFB /* Registration */,
 				164A2F332244EEE800B42AF4 /* CustomTabbar */,
 				9DB4ADF922419B13009A74C2 /* Date */,
@@ -789,6 +813,7 @@
 				16E438302242A9BC00EF8771 /* LevelColor.swift */,
 				16E438342242AF3400EF8771 /* ActivityImages.swift */,
 				165F20A2224D14330077D663 /* UserProtocol.swift */,
+				168B109C2250509B006EE446 /* ReviewProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -844,6 +869,7 @@
 				165F20A4224D148A0077D663 /* User.swift */,
 				9DB3ECFD22415AA300BE1A62 /* ClassModel.swift */,
 				16E438322242AD3500EF8771 /* ClassRegisterModel.swift */,
+				168B109A22505059006EE446 /* ReviewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1484,6 +1510,7 @@
 				9DB4ADFB22419B2C009A74C2 /* Date.swift in Sources */,
 				164A2F732245181B00B42AF4 /* FlickrPhoto.swift in Sources */,
 				164A2F502244FED900B42AF4 /* ExampleBasicContentView.swift in Sources */,
+				16EF374D224F937100E96F30 /* LoadingViewController.swift in Sources */,
 				9DB3ED0E22415AB500BE1A62 /* SlideImageCollectionViewCell.swift in Sources */,
 				16E438312242A9BC00EF8771 /* LevelColor.swift in Sources */,
 				164A2F3F2244EEFD00B42AF4 /* ESTabBarItemMoreContentView.swift in Sources */,
@@ -1503,7 +1530,10 @@
 				9DB3EC262241582400BE1A62 /* AppDelegate.swift in Sources */,
 				9DB3ECF122415A8700BE1A62 /* CameraHandler.swift in Sources */,
 				9DB3EC9622415A4700BE1A62 /* UIStoryboard+Storyboards.swift in Sources */,
+				168B109B22505059006EE446 /* ReviewModel.swift in Sources */,
 				164A2F752245181B00B42AF4 /* FlickrSearchResults.swift in Sources */,
+				168B109D2250509B006EE446 /* ReviewProtocol.swift in Sources */,
+				16EF3750224F9D4C00E96F30 /* EmptyViewController.swift in Sources */,
 				9DB3ED1222415AB500BE1A62 /* CalenderViewController.swift in Sources */,
 				16E4382F22429F8E00EF8771 /* ArrayChoiceTableViewController.swift in Sources */,
 				165F20A1224D141C0077D663 /* UserService.swift in Sources */,
@@ -1524,6 +1554,7 @@
 				164A2F4D2244F3E100B42AF4 /* SplashScreenViewController.swift in Sources */,
 				9DB4AE012241CAEA009A74C2 /* ConfirmBookingViewController.swift in Sources */,
 				16AC45C82242951E00E9B351 /* ScheduleCell.swift in Sources */,
+				16EF3753224FBE2100E96F30 /* AuthService.swift in Sources */,
 				164A2F432244EEFD00B42AF4 /* ESTabBar.swift in Sources */,
 				164A2F602245172F00B42AF4 /* ProfileViewController.swift in Sources */,
 				9DB3ECE722415A7D00BE1A62 /* NibView.swift in Sources */,
@@ -1578,6 +1609,7 @@
 				9DB3ED4122415B1000BE1A62 /* SelectDateView.swift in Sources */,
 				9DB3ED1C22415AFD00BE1A62 /* ClassService.swift in Sources */,
 				9DB3ED3922415B1000BE1A62 /* TimePicker.swift in Sources */,
+				16EF3754224FBE2100E96F30 /* AuthService.swift in Sources */,
 				9DB3ED2722415B0B00BE1A62 /* AddClassNavi.swift in Sources */,
 				9DB3ECF222415A8700BE1A62 /* CameraHandler.swift in Sources */,
 				9DB3ED4E22415B1500BE1A62 /* MapViewController.swift in Sources */,
@@ -1586,6 +1618,7 @@
 				164A2F3C2244EEFD00B42AF4 /* ESTabBarItemBadgeView.swift in Sources */,
 				9DB3ED3722415B1000BE1A62 /* AddClassDateSectionView.swift in Sources */,
 				9DB3ECEE22415A7D00BE1A62 /* CategoryButton.swift in Sources */,
+				16EF3751224F9D4C00E96F30 /* EmptyViewController.swift in Sources */,
 				9DB3ED1D22415AFD00BE1A62 /* FirebaseClassModel.swift in Sources */,
 				9DB3EC9E22415A5A00BE1A62 /* ColorExtension.swift in Sources */,
 				16773A62224DA5FA00C6BBFB /* LoginViewController.swift in Sources */,
@@ -1598,6 +1631,7 @@
 				164A2F512244FED900B42AF4 /* ExampleBasicContentView.swift in Sources */,
 				9DB3ED5122415B1500BE1A62 /* AddClassViewController.swift in Sources */,
 				9DB3ECEA22415A7D00BE1A62 /* UIView+XIB.swift in Sources */,
+				16EF374E224F937100E96F30 /* LoadingViewController.swift in Sources */,
 				9DB3ECE822415A7D00BE1A62 /* NibView.swift in Sources */,
 				164A2F482244EEFD00B42AF4 /* ESTabBarController.swift in Sources */,
 				16773A5E224DA5F600C6BBFB /* RegisterViewController.swift in Sources */,

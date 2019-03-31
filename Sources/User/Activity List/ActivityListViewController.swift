@@ -17,6 +17,7 @@ class ActivityListViewController: UIViewController {
     @IBOutlet weak var intermediate: UIButton!
     @IBOutlet weak var advance: UIButton!
     @IBOutlet weak var noDataLabel: UILabel!
+    let emptyView = EmptyViewController(caseType: .noDataList)
     
     var buttonArray : [UIButton]?
    
@@ -71,10 +72,10 @@ class ActivityListViewController: UIViewController {
 extension ActivityListViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let array = filteredArray else {
-            noDataLabel.isHidden = false
+            add(emptyView)
             return 0
         }
-        noDataLabel.isHidden = array.count > 0
+        array.count > 0 ? emptyView.remove() : add(emptyView)
         
         return array.count
         

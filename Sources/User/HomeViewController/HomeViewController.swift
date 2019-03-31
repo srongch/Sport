@@ -34,7 +34,10 @@ class HomeViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let loadingVC = LoadingViewController.instance(self.view.frame)
+        add(loadingVC)
         classService.getHomeClass {[weak self] (models) in
+            loadingVC.remove()
             guard let temp = models else{
                 print("no data")
                 return
@@ -43,6 +46,12 @@ class HomeViewController: UICollectionViewController {
             self?.classList = models
             self?.collectionView.reloadData()
         }
+        
+        
+        
+       
+        
+        
     }
     
     func setupUserInfo() {

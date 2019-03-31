@@ -8,6 +8,7 @@ def share_resources
   pod 'Firebase/Storage'
   pod "TPKeyboardAvoidingSwift"
   pod 'SDWebImage', '~> 4.0'
+  pod 'Firebase/Functions'
   
   pod 'SwiftEntryKit'
 end

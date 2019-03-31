@@ -15,7 +15,20 @@ class SplashScreenViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.router()
+        var user = Auth.auth().currentUser;
+        
+        if ((user) != nil) {
+            // User is signed in.
+             UserService.shared.getUser(userID: user!.uid, email: "", completionHandler: { _ in })
+        }
+         self.router()
+        
+//        Auth.auth().addStateDidChangeListener() { auth, user in
+//            if user != nil {
+//
+//            }
+//
+//        }
         
     }
     

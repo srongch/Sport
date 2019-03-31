@@ -13,7 +13,7 @@ import Firebase
 final class UserService {
     
     static let shared: UserService = UserService()
-    var globalUser : User?
+    var globalUser : UserProtocol?
     
     var isHaveUser: Bool {
         get {
@@ -33,17 +33,38 @@ final class UserService {
     
     let USER_DB_REF: DatabaseReference = Database.database().reference().child("users")
     
-    func addUser(user : User,completionHandler: @escaping (_ isError : Bool) -> Void) {
+    func addUser(user : UserProtocol,completionHandler: @escaping (_ isError : Bool) -> Void) {
         let userID = user.uid
-        USER_DB_REF.child(userID).setValue(["email" :user.email,"uid" : user.uid]) {
+        USER_DB_REF.child(userID).setValue(["email" :user.email,
+                                            "uid" : user.uid,
+                                            "name": user.name,
+                                            "userType" :user.userType.rawValue,
+                                            "profile" : user.profile]) {
             (error:Error?, ref:DatabaseReference) in
             if let error = error {
                 print("Data could not be saved: \(error).")
                 completionHandler(true)
+                self.globalUser = user
             } else {
                 print("Data saved successfully!")
                 completionHandler(false)
             }
         }
+    }
+    
+    func getUser(userID : String,email : String, completionHandler: @escaping (_ user : UserProtocol) -> Void) {
+        USER_DB_REF.child(userID).observeSingleEvent(of: .value) { (snapshot) in
+            
+            if let user = CustomUser(snapshot: snapshot){
+                completionHandler(user)
+                self.globalUser = user
+                return
+            }else{
+                completionHandler(CustomUser(name: "Jonh Deo", profile: "", uid: userID, email:email , userType: .user))
+                return
+            }
+            
+        }
+    
     }
 }

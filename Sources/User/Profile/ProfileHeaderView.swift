@@ -31,6 +31,13 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
         quote_icon.isHidden = true
     }
     
+    func setupUser (user : UserProtocol){
+        imageView.image = UIImage(named: "profile_placehold")
+        nameLable.text = user.name
+        emailLable.text = user.email
+        memoLabel.text = ""
+        quote_icon.isHidden = true
+    }
     
 
 }
@@ -38,6 +45,6 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
 class ProfileFooterView : UITableViewHeaderFooterView {
     @IBOutlet weak var button: UIButton!
     func setupNoLogin (isLogin : Bool){
-        button.titleLabel?.text =  isLogin ? "Logout" : "Login"
+        button.setTitle(isLogin ? "Logout" : "Login", for: .normal)
     }
 }

@@ -42,6 +42,7 @@ struct ClassModel : ModeltoDictionaryProtocol, LevelColorProtocol {
     var endDate: Int64 = 0
     var timeStamp: Int64 = 0
     var rating : Double = 0
+    var reviews : Int = 0
     
     init(){}
     
@@ -57,6 +58,7 @@ struct ClassModel : ModeltoDictionaryProtocol, LevelColorProtocol {
         }
     }
 
+
     init?(snapshot: DataSnapshot) {
        // print(value)
         
@@ -64,12 +66,19 @@ struct ClassModel : ModeltoDictionaryProtocol, LevelColorProtocol {
             print("no value")
             return nil
         }
-        
+        setupData(value: value,key: snapshot.key)
+    }
+    
+    init?(value : [String:AnyObject] ) {
+        setupData(value: value, key: nil)
+    }
+    
+    mutating func setupData(value : [String:AnyObject] , key : String?){
         guard  let ratingValue = value["rating"] as? Double else {
             print("no rating value")
-            return nil
+            return
         }
-//
+        //
         guard
             
             let activityType = value["activityType"] as? Int,
@@ -77,23 +86,23 @@ struct ClassModel : ModeltoDictionaryProtocol, LevelColorProtocol {
             let classPrice = value["classPrice"] as? Double,
             
             let className = value["className"] as? String,
-             let classAbout = value["classAbout"] as? String,
-             let timeTable = value["timeTable"] as? String,
-             let equipment = value["equipment"] as? String,
+            let classAbout = value["classAbout"] as? String,
+            let timeTable = value["timeTable"] as? String,
+            let equipment = value["equipment"] as? String,
             
-             let times = value["times"] as? [Int64],
-             let dayoftheWeek = value["dayoftheWeek"] as? [Int],
-             let hours = value["hours"] as? [Int],
-             let imageArray = value["imageArray"] as? [String],
+            let times = value["times"] as? [Int64],
+            let dayoftheWeek = value["dayoftheWeek"] as? [Int],
+            let hours = value["hours"] as? [Int],
+            let imageArray = value["imageArray"] as? [String],
             
-             let location = value["location"] as? String,
-             let latitude = value["latitude"] as? Double,
-             let longtitude = value["longtitude"] as? Double,
+            let location = value["location"] as? String,
+            let latitude = value["latitude"] as? Double,
+            let longtitude = value["longtitude"] as? Double,
             
-             let startDate = value["startDate"] as? Int64,
-             let endDate = value["endDate"] as? Int64,
-             let timeStamp = value["timeStamp"] as? Int64 else {
-                return nil
+            let startDate = value["startDate"] as? Int64,
+            let endDate = value["endDate"] as? Int64,
+            let timeStamp = value["timeStamp"] as? Int64 else {
+                return
         }
         
         self.activityType = activityType
@@ -118,8 +127,10 @@ struct ClassModel : ModeltoDictionaryProtocol, LevelColorProtocol {
         self.endDate = endDate
         self.timeStamp = timeStamp
         self.rating = ratingValue
-        self.key = snapshot.key
+        self.key = key ?? ""
+        self.reviews = value["reviews"] as? Int ?? 0
     }
+    
     
 }
 

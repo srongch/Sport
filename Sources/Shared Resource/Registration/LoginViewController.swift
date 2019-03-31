@@ -25,15 +25,7 @@ class LoginViewController: UIViewController {
         }else{
             closeButton.isHidden = true
         }
-        
-        Auth.auth().addStateDidChangeListener() { auth, user in
-            if user != nil {
-                print("registered")
-                UIApplication.shared.keyWindow?.rootViewController = UIStoryboard.storyboard(.views).instantiateViewController(withIdentifier:"AddClassNavigationController")
-            }
-        }
-        
-//        viewController.printHeadline()
+
     }
     
     func printHeadline() {
@@ -46,6 +38,18 @@ class LoginViewController: UIViewController {
         }
     }
     
+    func loginSucces (){
+        
+        if(self.isModal()){
+            self.dismiss(animated: true) {
+                print("view dismissed")
+            }
+        }else{
+                                print("registered")
+                                UIApplication.shared.keyWindow?.rootViewController = UIStoryboard.storyboard(.views).instantiateViewController(withIdentifier:"AddClassNavigationController")
+        }
+
+    }
     
     
     @IBAction func loginpressed(_ sender: Any) {
@@ -61,32 +65,57 @@ class LoginViewController: UIViewController {
                 return
         }
         
-        // Perform login by calling Firebase APIs
-        Auth.auth().signIn(withEmail: emailAddress, password: password, completion: { (result, error) in
-            
-            if let error = error {
-                let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
-                let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                alertController.addAction(okayAction)
-                self.present(alertController, animated: true, completion: nil)
-                
-                return
+        AuthService().signInWith(email: emailAddress, password: password) { error  in
+            if (error!) {
+                print("login faild")
+            }else{
+                self.loginSucces()
             }
-            
-           
-            // Dismiss keyboard
-            self.view.endEditing(true)
-            
-            print("resut \(result?.user.email)")
-            
-            // Present the main view
-//            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
-//                UIApplication.shared.keyWindow?.rootViewController = viewController
-//                self.dismiss(animated: true, completion: nil)
-//            }
-            
-        })
+        }
         
+        
+        
+        
+//        UserService.shared.signInWith(email: emailAddress, password: password) { (result, error) in
+//            print("dfgfd")
+////                        if let error = error {
+////                            let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
+////                            let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+////                            alertController.addAction(okayAction)
+////                            self.present(alertController, animated: true, completion: nil)
+////
+////                            return
+////                        }
+//        }
+        
+
+        
+//        // Perform login by calling Firebase APIs
+//        Auth.auth().signIn(withEmail: emailAddress, password: password, completion: { (result, error) in
+//
+//            if let error = error {
+//                let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
+//                let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//                alertController.addAction(okayAction)
+//                self.present(alertController, animated: true, completion: nil)
+//
+//                return
+//            }
+//
+//
+//            // Dismiss keyboard
+//            self.view.endEditing(true)
+//
+//            print("resut \(result?.user.email)")
+//
+//            // Present the main view
+////            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
+////                UIApplication.shared.keyWindow?.rootViewController = viewController
+////                self.dismiss(animated: true, completion: nil)
+////            }
+//
+//        })
+//
     }
     
     
@@ -104,13 +133,27 @@ class LoginViewController: UIViewController {
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+//         Get the new view controller using segue.destination.
+//         Pass the selected object to the new view controller.
+        if segue.identifier == "registrationSegue"
+        {
+            if let destinationVC = segue.destination as? RegisterViewController {
+                destinationVC.delegate =  isModal() ? self : nil
+            }
+        }
+//
     }
-    */
+ 
 
+}
+
+extension LoginViewController : RegistrationDelegate{
+    func registrationDidFinish() {
+        print("registration finish")
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 extension LoginViewController {

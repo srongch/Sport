@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -163,7 +164,7 @@
                                 </constraints>
                                 <connections>
                                     <action selector="registerPressed:" destination="o6f-8b-ack" eventType="touchUpInside" id="2tY-b2-Vwc"/>
-                                    <segue destination="rje-DN-gBs" kind="show" id="GjS-0d-z6j"/>
+                                    <segue destination="rje-DN-gBs" kind="show" identifier="registrationSegue" id="GjS-0d-z6j"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXc-Us-DXC">

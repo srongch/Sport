@@ -9,24 +9,15 @@
 import Foundation
 import Firebase
 
-extension User : UserProtocol {
-    var profile: String {
-        get {
-            return self.profile
-        }
-        set(newValue) {
-            self.profile = newValue
-        }
-    }
-    
-    var name : String {
-        get {
-            return self.name
-        }
-        set(newValue) {
-            self.name =  newValue
-        }
-    }
-
-    
-}
+//final class ExtendUser : User, UserProtocol{
+//    var email: String
+//    
+//    var uid: String = ""
+//    
+//    var profile: String = ""
+//        //    var name : String
+//    var name : String = ""
+//
+//
+//    
+//}

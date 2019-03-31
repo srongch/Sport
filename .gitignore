@@ -1060,3 +1060,28 @@ Pods/FirebaseCore/Firebase/Core/Private/FIRComponentRegistrant.h
 Pods/FirebaseCore/Firebase/Core/Private/FIRCoreConfigurable.h
 Podfile.lock
 Podfile.lock
+Pods/FirebaseFunctions/Functions/FirebaseFunctions/FIRFunctions+Internal.h
+Pods/FirebaseFunctions/Functions/FirebaseFunctions/FIRFunctions.m
+Pods/FirebaseFunctions/Functions/FirebaseFunctions/FIRHTTPSCallable+Internal.h
+Pods/FirebaseFunctions/Functions/FirebaseFunctions/FIRHTTPSCallable.m
+Pods/FirebaseFunctions/Functions/FirebaseFunctions/FUNContext.h
+Pods/FirebaseFunctions/Functions/FirebaseFunctions/FUNContext.m
+Pods/FirebaseFunctions/Functions/FirebaseFunctions/FUNError.h
+Pods/FirebaseFunctions/Functions/FirebaseFunctions/FUNError.m
+Pods/FirebaseFunctions/Functions/FirebaseFunctions/FUNInstanceIDProxy.h
+Pods/FirebaseFunctions/Functions/FirebaseFunctions/FUNInstanceIDProxy.m
+Pods/FirebaseFunctions/Functions/FirebaseFunctions/FUNSerializer.h
+Pods/FirebaseFunctions/Functions/FirebaseFunctions/FUNSerializer.m
+Pods/FirebaseFunctions/Functions/FirebaseFunctions/FUNUsageValidation.h
+Pods/FirebaseFunctions/Functions/FirebaseFunctions/FUNUsageValidation.m
+Pods/FirebaseFunctions/Functions/FirebaseFunctions/Public/FirebaseFunctions.h
+Pods/FirebaseFunctions/Functions/FirebaseFunctions/Public/FIRError.h
+Pods/FirebaseFunctions/Functions/FirebaseFunctions/Public/FIRFunctions.h
+Pods/FirebaseFunctions/Functions/FirebaseFunctions/Public/FIRHTTPSCallable.h
+Pods/FirebaseFunctions/LICENSE
+Pods/FirebaseFunctions/README.md
+Pods/Target Support Files/FirebaseFunctions/FirebaseFunctions-dummy.m
+Pods/Target Support Files/FirebaseFunctions/FirebaseFunctions-Info.plist
+Pods/Target Support Files/FirebaseFunctions/FirebaseFunctions-umbrella.h
+Pods/Target Support Files/FirebaseFunctions/FirebaseFunctions.modulemap
+Pods/Target Support Files/FirebaseFunctions/FirebaseFunctions.xcconfig

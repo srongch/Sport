@@ -18,8 +18,10 @@ class ClassDetailViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    
     var classService = ClassService()
     var classModel = ClassModel()
+    var reviewModel = [ReviewModel]()
     
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var classTitle: UILabel!
@@ -55,16 +57,34 @@ class ClassDetailViewController: UIViewController {
     }
     
     func loadData() {
-
-        classService.getClassById(classId: classID) { (model) in
-            guard let tempModel = model else {
-                //MARK : Data error
-                return
+        
+        classService.classDetailById(classId: classID) { (classModel , reviews, isError) in
+            if(!isError){
+                            guard let tempModel = classModel else {
+                                //MARK : Data error
+                                return
+                            }
+                self.classModel = tempModel
+                
+                guard let review = reviews else{
+                    self.setupView()
+                    return
+                }
+                self.reviewModel = review
+                self.setupView()
             }
-            print(tempModel.asDictionary)
-            self.classModel = tempModel
-            self.setupView()
         }
+        
+
+//        classService.getClassById(classId: classID) { (model) in
+//            guard let tempModel = model else {
+//                //MARK : Data error
+//                return
+//            }
+//            print(tempModel.asDictionary)
+//            self.classModel = tempModel
+//            self.setupView()
+//        }
     }
     
     func setupView(){
@@ -101,6 +121,12 @@ class ClassDetailViewController: UIViewController {
                                                   latitudinalMeters: 1000, longitudinalMeters: 1000)
         mapView.setRegion(coordinateRegion, animated: true)
     }
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
     
 
     

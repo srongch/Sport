@@ -29,7 +29,7 @@ struct Setting {
 extension Setting {
    static func getSettingArray(isUser : Bool, isLogin : Bool)-> [Setting]{
         var array = [Setting]()
-        if (!isLogin){
+        if (isLogin){
             array.append(Setting(text: "Edit Profile", type: .editProfile))
         }
         

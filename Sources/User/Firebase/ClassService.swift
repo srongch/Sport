@@ -15,6 +15,8 @@ final class ClassService {
     lazy var classesRef: DatabaseReference = {
         return Database.database().reference(withPath: "classes")
     }()
+    
+    lazy var functions = Functions.functions()
 //    // MARK: - Firebase Storage Reference
 //    let PHOTO_STORAGE_REF: StorageReference = Storage.storage().reference().child("photos")
     
@@ -68,6 +70,43 @@ final class ClassService {
             print(error.localizedDescription)
             completionHandler(nil)
         }
+    }
+    
+    
+    func classDetailById(classId : String, completionHandler: @escaping (_ classModel:ClassModel?,_ reviewArry : [ReviewModel]?, _ isError : Bool) -> Void){
+        // [START function_add_numbers]
+        functions.httpsCallable("getClassById").call(["classId": classId]) { (result, error) in
+            // [START function_error]
+            if let error = error as NSError? {
+                if error.domain == FunctionsErrorDomain {
+                    let code = FunctionsErrorCode(rawValue: error.code)
+                    let message = error.localizedDescription
+                    let details = error.userInfo[FunctionsErrorDetailsKey]
+                }
+                // [START_EXCLUDE]
+                print(error.localizedDescription)
+                return completionHandler(nil,nil,true)
+                // [END_EXCLUDE]
+            }
+            // [END function_error]
+            guard let value = (result?.data as? [String: AnyObject]),
+                let classes = value["classes"] as?  [String : AnyObject] else{
+                    completionHandler(nil,nil,true)
+                return
+            }
+            
+            guard let reviews = value["reviews"] as? Dictionary<String, AnyObject> else {
+                completionHandler( ClassModel(value: classes ), nil,false)
+                return
+            }
+            
+            let reviewArray = ReviewModel.getReviews(data: reviews )
+            
+             return completionHandler(ClassModel(value: classes ),reviewArray,false)
+           
+            
+        }
+        // [END function_add_numbers]
     }
     
 //    func addLiketoClass

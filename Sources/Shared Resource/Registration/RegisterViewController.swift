@@ -9,6 +9,10 @@
 import UIKit
 import Firebase
 
+protocol  RegistrationDelegate{
+    func registrationDidFinish()
+}
+
 class RegisterViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
@@ -16,23 +20,11 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confrimPasswordTextField: UITextField!
     
+     var delegate : RegistrationDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        Auth.auth().addStateDidChangeListener() { auth, user in
-            if user != nil {
-                print("registered")
-
-                UserService.shared.addUser (user: user!) { isError in
-                    if (!isError) {
-                        UIApplication.shared.keyWindow?.rootViewController = UIStoryboard.storyboard(.views).instantiateViewController(withIdentifier:"AddClassNavigationController")
-                    }
-                }
-            }
-        }
-        
-       
     }
     
     @IBAction func registerPressed(_ sender: Any) {
@@ -41,7 +33,7 @@ class RegisterViewController: UIViewController {
         let emailAddress = emailTextField.text, emailAddress != "",
         let password = passwordTextField.text, password != "",
         let confirmPwd = confrimPasswordTextField.text, confirmPwd != "" else {
-            let alertController = UIAlertController(title: "Registration Error",
+        let alertController = UIAlertController(title: "Registration Error",
                                                     message: "Please make sure you provide your name, email address and password to complete the registration.", preferredStyle: .alert)
             let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(okayAction)
@@ -50,26 +42,32 @@ class RegisterViewController: UIViewController {
         }
         
         // Register the user account on Firebase
-        Auth.auth().createUser(withEmail: emailAddress, password: password, completion
-            : { (user, error) in
-                if let error = error {
-                    let alertController = UIAlertController(title: "Registration Error", message: error.localizedDescription, preferredStyle: .alert)
-                    let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    alertController.addAction(okayAction)
-                    self.present(alertController, animated: true, completion: nil)
-                    return
+        AuthService().signUpWith(email: emailAddress, password: password, name: password, userType :.user ) { (user, error,errorMsg) in
+            if (error){
+                let alertController = UIAlertController(title: "Registration Error", message: errorMsg, preferredStyle: .alert)
+                let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(okayAction)
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
+            
+            // Dismiss keyboard
+            self.view.endEditing(true)
+            
+//            print("registreation with name\(user?.name) and password : \(user?.uid)" )
+            
+            if(self.isModal()){
+                if let delegate = self.delegate {
+                    delegate.registrationDidFinish()
                 }
-                
-                Auth.auth().signIn(withEmail: self.emailTextField.text!,
-                                   password: self.passwordTextField.text!)
-              
-                print(user ?? "default value")
-                // Dismiss keyboard
-                self.view.endEditing(true)
+                return
+            }
+            
+            
         }
-         )
     
     }
+    
     @IBAction func loginPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
