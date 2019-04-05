@@ -30,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enV-zU-Ptf">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1592.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1828.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="beautiful-beauty-blurred-background-1239288.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xIM-bh-DMQ">
                                                 <rect key="frame" x="20" y="546" width="75" height="75"/>
@@ -45,16 +45,16 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gC7-BD-KMn">
-                                                <rect key="frame" x="105" y="546" width="289" height="136"/>
+                                                <rect key="frame" x="105" y="546" width="289" height="140"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meet your instructor,  Danny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YV-Zj-mlj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="289" height="16.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="289" height="17"/>
                                                         <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="14"/>
                                                         <color key="textColor" red="0.20683905480000001" green="0.22982683779999999" blue="0.30865281820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="753" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bF0-yo-DYc">
-                                                        <rect key="frame" x="0.0" y="21.5" width="289" height="114.5"/>
+                                                        <rect key="frame" x="0.0" y="22" width="289" height="118"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="TfZ-dh-Qwi"/>
                                                         </constraints>
@@ -118,37 +118,37 @@
                                                 </connections>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Equiment rental needed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQq-3h-Amb">
-                                                <rect key="frame" x="20" y="503.5" width="315" height="17.5"/>
+                                                <rect key="frame" x="20" y="503" width="316.5" height="18"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="15"/>
                                                 <color key="textColor" red="0.93312710519999997" green="0.93732923270000001" blue="0.93718898299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full-day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bi9-Th-0Vp">
-                                                <rect key="frame" x="20" y="476" width="374" height="17.5"/>
+                                                <rect key="frame" x="20" y="475" width="374" height="18"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="15"/>
                                                 <color key="textColor" red="0.93312710519999997" green="0.93732923270000001" blue="0.93718898299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valthoren, France" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lz7-9i-GWc">
-                                                <rect key="frame" x="20" y="448.5" width="374" height="17.5"/>
+                                                <rect key="frame" x="20" y="447" width="374" height="18"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="15"/>
                                                 <color key="textColor" red="0.93312710519999997" green="0.93732923270000001" blue="0.93718898299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BIGINNER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ev-Eb-y4T">
-                                                <rect key="frame" x="20" y="362.5" width="374" height="19"/>
+                                                <rect key="frame" x="20" y="359.5" width="374" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="16"/>
                                                 <color key="textColor" red="0.93312710519999997" green="0.93732923270000001" blue="0.93718898299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One-day snowboard recreation on the slops. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmh-eU-JfS">
-                                                <rect key="frame" x="20" y="391.5" width="374" height="47"/>
+                                                <rect key="frame" x="20" y="389" width="374" height="48"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="20"/>
                                                 <color key="textColor" red="0.93312710519999997" green="0.93732923270000001" blue="0.93718898299999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLx-IQ-Rcw">
-                                                <rect key="frame" x="345" y="482" width="49" height="39"/>
+                                                <rect key="frame" x="346.5" y="482" width="47.5" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="39" id="vLb-sI-fCc"/>
                                                 </constraints>
@@ -157,56 +157,56 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="XFy-Kb-kVy">
-                                                <rect key="frame" x="355" y="354.5" width="39" height="37"/>
+                                                <rect key="frame" x="355" y="352" width="39" height="37"/>
                                             </pageControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About the program" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fR-L3-oAb">
-                                                <rect key="frame" x="20" y="708" width="126.5" height="17.5"/>
+                                                <rect key="frame" x="20" y="712" width="129" height="18"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="15"/>
                                                 <color key="textColor" red="0.20683905480000001" green="0.22982683779999999" blue="0.30865281820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ns5-hR-8vB">
-                                                <rect key="frame" x="20" y="735.5" width="374" height="114.5"/>
+                                                <rect key="frame" x="20" y="740" width="374" height="118"/>
                                                 <string key="text">Benefit from a quicker learning experience over fewer visits. Perfect if you don’t have much time before you head out abroad. There are 2 fast track lessons to complete in order to reach the recreational standard. To enable family groups to learn together, lessons may be mixed adults and juniors. A fast track lesson lasts 3 hours and has a maximum of 6 per instructor.</string>
                                                 <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="14"/>
                                                 <color key="textColor" red="0.23822164539999999" green="0.26122900840000002" blue="0.34006279709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6c-Vo-ivt">
-                                                <rect key="frame" x="20" y="860" width="374" height="1"/>
+                                                <rect key="frame" x="20" y="868" width="374" height="1"/>
                                                 <color key="backgroundColor" red="0.83912390469999998" green="0.83926850559999999" blue="0.83911478520000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="eyJ-ad-KuA"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timetable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nza-j7-iWX">
-                                                <rect key="frame" x="20" y="876" width="66" height="17.5"/>
+                                                <rect key="frame" x="20" y="884" width="69" height="18"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="15"/>
                                                 <color key="textColor" red="0.20683905480000001" green="0.22982683779999999" blue="0.30865281820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRO-aG-lIE">
-                                                <rect key="frame" x="20" y="903.5" width="374" height="49"/>
+                                                <rect key="frame" x="20" y="912" width="374" height="50.5"/>
                                                 <string key="text">This 3 hour lesson is for beginners progressing from fast track 1. The aim is that students learn to turn from the top of the slope and reach the recreational standard.</string>
                                                 <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="14"/>
                                                 <color key="textColor" red="0.23822164539999999" green="0.26122900840000002" blue="0.34006279709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wji-k4-VrD">
-                                                <rect key="frame" x="20" y="962.5" width="374" height="1"/>
+                                                <rect key="frame" x="20" y="972.5" width="374" height="1"/>
                                                 <color key="backgroundColor" red="0.83912390469999998" green="0.83926850559999999" blue="0.83911478520000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="193-7v-kOO"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Equipment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNb-Ze-jZu">
-                                                <rect key="frame" x="20" y="978.5" width="73" height="17.5"/>
+                                                <rect key="frame" x="20" y="988.5" width="74" height="18"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="15"/>
                                                 <color key="textColor" red="0.20683905480000001" green="0.22982683779999999" blue="0.30865281820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOg-jz-aQC">
-                                                <rect key="frame" x="20" y="1006" width="374" height="33"/>
+                                                <rect key="frame" x="20" y="1016.5" width="374" height="34"/>
                                                 <string key="text">- Please bring warth clothes.
 - Equiment is not inclouded. On-site rental available.</string>
                                                 <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="14"/>
@@ -214,59 +214,59 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UD7-4N-Ck6">
-                                                <rect key="frame" x="20" y="1049" width="374" height="1"/>
+                                                <rect key="frame" x="20" y="1060.5" width="374" height="1"/>
                                                 <color key="backgroundColor" red="0.83912390469999998" green="0.83926850559999999" blue="0.83911478520000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="dAB-SH-32v"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGF-wC-KVt">
-                                                <rect key="frame" x="20" y="1065" width="58.5" height="17.5"/>
+                                                <rect key="frame" x="20" y="1076.5" width="59" height="18"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="15"/>
                                                 <color key="textColor" red="0.20683905480000001" green="0.22982683779999999" blue="0.30865281820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please meet at 11:00 in front of tamworth snowdome." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtV-Aq-Gas">
-                                                <rect key="frame" x="20" y="1092.5" width="374" height="16.5"/>
+                                                <rect key="frame" x="20" y="1104.5" width="374" height="17"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="14"/>
                                                 <color key="textColor" red="0.23822164539999999" green="0.26122900840000002" blue="0.34006279709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cMf-d5-Sjl">
-                                                <rect key="frame" x="20" y="1119" width="374" height="128"/>
+                                                <rect key="frame" x="20" y="1131.5" width="374" height="128"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="A8c-Mb-bfT"/>
                                                 </constraints>
                                             </mapView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tO4-xw-YKf">
-                                                <rect key="frame" x="20" y="1257" width="374" height="1"/>
+                                                <rect key="frame" x="20" y="1269.5" width="374" height="1"/>
                                                 <color key="backgroundColor" red="0.83912390469999998" green="0.83926850559999999" blue="0.83911478520000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="4Rb-RV-Mug"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3p-iB-siW">
-                                                <rect key="frame" x="20" y="1273" width="56.5" height="17.5"/>
+                                                <rect key="frame" x="20" y="1285.5" width="56" height="18"/>
                                                 <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="15"/>
                                                 <color key="textColor" red="0.20683905480000001" green="0.22982683779999999" blue="0.30865281820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7d2-8s-axU">
-                                                <rect key="frame" x="20" y="1300.5" width="374" height="277"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7d2-8s-axU">
+                                                <rect key="frame" x="20" y="1313.5" width="374" height="500"/>
+                                                <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="277" id="no1-YG-JoL"/>
+                                                    <constraint firstAttribute="height" constant="500" id="no1-YG-JoL"/>
                                                 </constraints>
                                             </tableView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hoo-Lk-723">
-                                                <rect key="frame" x="20" y="692" width="374" height="1"/>
+                                                <rect key="frame" x="20" y="696" width="374" height="1"/>
                                                 <color key="backgroundColor" red="0.83912390469999998" green="0.83926850559999999" blue="0.83911478520000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="ITI-Tc-Fs1"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.96047002079999999" green="0.96871930360000003" blue="0.96860390900000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="Lz7-9i-GWc" firstAttribute="leading" secondItem="enV-zU-Ptf" secondAttribute="leading" constant="20" id="0Ze-eL-Nsw"/>
                                             <constraint firstItem="tO4-xw-YKf" firstAttribute="trailing" secondItem="cMf-d5-Sjl" secondAttribute="trailing" id="0a1-4g-eqU"/>
@@ -342,6 +342,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="enV-zU-Ptf" secondAttribute="trailing" id="0iL-tm-Xhs"/>
                                     <constraint firstItem="enV-zU-Ptf" firstAttribute="leading" secondItem="GC0-qb-Ekz" secondAttribute="leading" id="TVo-up-ii0"/>
@@ -404,6 +405,7 @@
                         <outlet property="priceLabel" destination="XLx-IQ-Rcw" id="BFb-Wk-McZ"/>
                         <outlet property="programLabel" destination="ns5-hR-8vB" id="A4Q-jW-DnW"/>
                         <outlet property="reviewTableView" destination="7d2-8s-axU" id="05l-cD-AH7"/>
+                        <outlet property="reviewTableViewHeightConstraint" destination="no1-YG-JoL" id="a9I-yV-FbR"/>
                         <outlet property="scrollView" destination="GC0-qb-Ekz" id="yNm-qm-l7M"/>
                         <outlet property="timeLabel" destination="bi9-Th-0Vp" id="pfJ-ty-7F4"/>
                         <outlet property="timetableLabel" destination="fRO-aG-lIE" id="3fL-lY-lbr"/>
@@ -749,7 +751,7 @@
                                     <constraint firstItem="j09-39-onh" firstAttribute="leading" secondItem="JkK-Xq-pik" secondAttribute="leading" id="QUI-0x-7kx"/>
                                     <constraint firstItem="2tr-AF-xVZ" firstAttribute="centerX" secondItem="JkK-Xq-pik" secondAttribute="centerX" id="Qjw-xT-uUa"/>
                                     <constraint firstItem="j09-39-onh" firstAttribute="width" secondItem="JkK-Xq-pik" secondAttribute="width" id="XK6-VT-qpt"/>
-                                    <constraint firstAttribute="bottom" secondItem="j09-39-onh" secondAttribute="bottom" id="ZtJ-ee-IRh"/>
+                                    <constraint firstAttribute="bottom" secondItem="j09-39-onh" secondAttribute="bottom" constant="40" id="ZtJ-ee-IRh"/>
                                     <constraint firstAttribute="trailing" secondItem="j09-39-onh" secondAttribute="trailing" id="dE4-cJ-w6t"/>
                                     <constraint firstItem="JkF-iM-83x" firstAttribute="top" secondItem="Y6f-V7-hu6" secondAttribute="bottom" constant="20" id="orb-zv-wwv"/>
                                     <constraint firstItem="2tr-AF-xVZ" firstAttribute="top" secondItem="XcW-GB-Wfh" secondAttribute="bottom" constant="25" id="t1M-Dy-PXT"/>
@@ -767,10 +769,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfj-Eh-LwT">
-                                <rect key="frame" x="103" y="916" width="208" height="80"/>
+                                <rect key="frame" x="103" y="886" width="208" height="80"/>
                                 <state key="normal" image="book"/>
                                 <connections>
-                                    <action selector="bookButtonPressed:" destination="9t2-zL-Qvq" eventType="touchUpInside" id="JZT-XB-wR4"/>
+                                    <segue destination="9ko-mi-tOf" kind="show" identifier="comfirmbookingseque" id="D4C-PE-amQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -781,7 +783,7 @@
                             <constraint firstItem="ebH-o8-uPX" firstAttribute="top" secondItem="WF7-Ac-uJ7" secondAttribute="top" id="7rp-kO-Zyv"/>
                             <constraint firstItem="ebH-o8-uPX" firstAttribute="trailing" secondItem="WF7-Ac-uJ7" secondAttribute="trailing" id="8ol-bA-UcG"/>
                             <constraint firstItem="JkK-Xq-pik" firstAttribute="trailing" secondItem="WF7-Ac-uJ7" secondAttribute="trailing" id="9uA-gn-76Z"/>
-                            <constraint firstItem="JkK-Xq-pik" firstAttribute="bottom" secondItem="kfj-Eh-LwT" secondAttribute="bottom" constant="-30" id="Fsc-XH-ohh"/>
+                            <constraint firstItem="JkK-Xq-pik" firstAttribute="bottom" secondItem="kfj-Eh-LwT" secondAttribute="bottom" id="Fsc-XH-ohh"/>
                             <constraint firstItem="WF7-Ac-uJ7" firstAttribute="bottom" secondItem="JkK-Xq-pik" secondAttribute="bottom" id="Max-Ah-tlK"/>
                             <constraint firstItem="JkK-Xq-pik" firstAttribute="leading" secondItem="WF7-Ac-uJ7" secondAttribute="leading" id="RcA-l2-6Wt"/>
                             <constraint firstItem="JkK-Xq-pik" firstAttribute="top" secondItem="WF7-Ac-uJ7" secondAttribute="top" id="cpv-22-jOx"/>
@@ -795,11 +797,13 @@
                         <outlet property="calenderView" destination="XcW-GB-Wfh" id="HfB-2V-fHY"/>
                         <outlet property="minusButton" destination="dOP-Sj-8kH" id="JpW-OU-13m"/>
                         <outlet property="monthText" destination="J1Q-Xc-uPR" id="rfT-Uj-EvI"/>
+                        <outlet property="naviBar" destination="ebH-o8-uPX" id="DI8-fI-ixs"/>
                         <outlet property="nextMonth" destination="FZP-nq-Udx" id="LY4-tg-CEk"/>
                         <outlet property="numberLabel" destination="g9G-A0-VVv" id="QsW-Fk-K0j"/>
                         <outlet property="plusButton" destination="n9B-J0-uhq" id="GZq-kf-uDN"/>
                         <outlet property="previousMonth" destination="UVK-C8-90M" id="23T-Wi-5RA"/>
                         <outlet property="timeCollectionView" destination="Y6f-V7-hu6" id="OQp-xf-unD"/>
+                        <outlet property="timeViewWrapperieghtConstrain" destination="Kst-hb-5s5" id="QkM-OE-ry1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7H-6E-Nsj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -818,7 +822,7 @@
                                 <rect key="frame" x="0.0" y="89" width="414" height="807"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="muO-1p-Fnm">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="609.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="554.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7m-oR-cBm">
                                                 <rect key="frame" x="20" y="30" width="374" height="128"/>
@@ -985,22 +989,30 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSn-Jc-OU7">
-                                                <rect key="frame" x="79.5" y="499.5" width="255" height="80"/>
-                                                <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="17"/>
-                                                <inset key="titleEdgeInsets" minX="0.0" minY="-7" maxX="0.0" maxY="0.0"/>
-                                                <state key="normal" title="Confirm bookin" backgroundImage="confirm_booking_button"/>
-                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zE-De-pU2" customClass="LoadingButton" customModule="User" customModuleProvider="target">
+                                                <rect key="frame" x="57" y="489.5" width="300" height="45"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" priority="250" constant="300" id="0e8-C6-Eg2"/>
+                                                    <constraint firstAttribute="height" constant="45" id="Igv-sP-Hv6"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Confirm"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.96047002079999999" green="0.96871930360000003" blue="0.96860390900000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="wSn-Jc-OU7" firstAttribute="centerX" secondItem="muO-1p-Fnm" secondAttribute="centerX" id="6ho-J3-1J1"/>
+                                            <constraint firstItem="1zE-De-pU2" firstAttribute="top" secondItem="fi8-hw-zvJ" secondAttribute="bottom" constant="20" id="4xW-fB-gMx"/>
                                             <constraint firstItem="g7m-oR-cBm" firstAttribute="leading" secondItem="muO-1p-Fnm" secondAttribute="leading" constant="20" id="CCN-RH-lpA"/>
-                                            <constraint firstAttribute="bottom" secondItem="wSn-Jc-OU7" secondAttribute="bottom" constant="30" id="Mci-ll-Q5k"/>
                                             <constraint firstAttribute="trailing" secondItem="g7m-oR-cBm" secondAttribute="trailing" constant="20" id="MvF-IF-93Z"/>
                                             <constraint firstItem="fi8-hw-zvJ" firstAttribute="leading" secondItem="muO-1p-Fnm" secondAttribute="leading" constant="20" id="NkH-vW-Igl"/>
+                                            <constraint firstAttribute="bottom" secondItem="1zE-De-pU2" secondAttribute="bottom" constant="20" id="OT4-Fp-R0V"/>
                                             <constraint firstAttribute="trailing" secondItem="fi8-hw-zvJ" secondAttribute="trailing" constant="20" id="Ppb-rg-mMv"/>
-                                            <constraint firstItem="wSn-Jc-OU7" firstAttribute="top" secondItem="fi8-hw-zvJ" secondAttribute="bottom" constant="30" id="UFu-4w-If9"/>
+                                            <constraint firstItem="1zE-De-pU2" firstAttribute="centerX" secondItem="muO-1p-Fnm" secondAttribute="centerX" id="UzR-k2-e5A"/>
                                             <constraint firstItem="fi8-hw-zvJ" firstAttribute="top" secondItem="g7m-oR-cBm" secondAttribute="bottom" constant="30" id="uTx-Wi-f8A"/>
                                         </constraints>
                                     </view>
@@ -1039,6 +1051,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hUg-vd-DmH"/>
                     </view>
+                    <connections>
+                        <outlet property="classImage" destination="BfB-lP-eAX" id="HFb-Vs-PuF"/>
+                        <outlet property="classTitle" destination="3Kd-fM-obX" id="FYc-Vo-rTZ"/>
+                        <outlet property="confirmButton" destination="1zE-De-pU2" id="7kk-Fs-yqh"/>
+                        <outlet property="dateLabel" destination="LXL-QW-C9V" id="a5i-gQ-1WB"/>
+                        <outlet property="naviBar" destination="pe0-gY-jae" id="5Dm-Sp-dYx"/>
+                        <outlet property="numberofPeopleLeft" destination="ac8-5b-58q" id="8rV-A7-BSi"/>
+                        <outlet property="numberofPeopleRight" destination="WFl-pt-uOa" id="GDK-iZ-E5e"/>
+                        <outlet property="timeLabel" destination="HpL-1l-4z4" id="8OG-lz-MSs"/>
+                        <outlet property="totalPriceLabel" destination="6Kp-fr-rMQ" id="khs-oO-Eec"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9GP-4t-Vzt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1070,7 +1093,6 @@
         <image name="book" width="208" height="80"/>
         <image name="calender-stripe" width="40" height="40"/>
         <image name="check_date" width="208" height="80"/>
-        <image name="confirm_booking_button" width="255" height="80"/>
         <image name="detail_shodow" width="413" height="265"/>
         <image name="left_arrow" width="15" height="20"/>
         <image name="minus_icon" width="24" height="24"/>

@@ -35,6 +35,25 @@ extension UIViewController {
         view.removeFromSuperview()
         removeFromParent()
     }
+    
+//    https://gist.github.com/evgeniyd/c534c028d6b4478800dcacd06a382051
+    //MARK : Present Alert view
+    func presentAlertView(with message : String, isOneButton : Bool, onDone: @escaping  ()->Void, onCancel: @escaping ()->Void){
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+           onDone()
+            }))
+    
+        if (!isOneButton) {
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
+            onCancel()
+            }))
+        }
+
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 }
 
 

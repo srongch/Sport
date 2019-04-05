@@ -51,7 +51,9 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate{
         switch row.settingType {
         case .editProfile: print("edit profile")
         case .favorite : print("favorite")
-        case .payment : print("payment")
+        case .payment :
+            print("payment")
+            self.navigationController?.pushViewController(BookingViewController.instance(), animated: true)
         default:
             print("")
         }

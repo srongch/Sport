@@ -8,18 +8,33 @@
 
 import UIKit
 
-class BookingViewController: UIViewController {
+class BookingViewController: UIViewController, NaviBarProtocol{
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var naviView: NaviBar!
     
+    private var list : [BookingModel]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.naviView.delegate = self
         self.collectionView.delegate = self
         self.collectionView.dataSource  = self
         self.collectionView.register(UINib(nibName: BookingCell.className, bundle: nil), forCellWithReuseIdentifier: BookingCell.className)
         self.view.backgroundColor = UIColor.white
+       
         // Do any additional setup after loading the view.
+        let vc = LoadingViewController.instance(self.view.frame)
+        add(vc)
+        ClassService().bookingList(userId: "98tKelkTBGcaQOG5157Q2Lv5mgm2") {[weak self] (models, isError) in
+            self?.list = models
+            self?.collectionView.reloadData()
+            vc.remove()
+        }
+    }
+    
+    func buttonBackPressed(){
+        self.navigationController?.popViewController(animated: true)
     }
     
 
@@ -37,7 +52,7 @@ class BookingViewController: UIViewController {
 
 extension BookingViewController : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return self.list?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -60,14 +75,12 @@ extension BookingViewController : UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
-    
-    
 }
 
 
 extension BookingViewController {
-    static func instance ()-> UINavigationController {
-        return UIStoryboard.storyboard(.bookings).instantiateViewController(withIdentifier:"BookingNavigationController") as! UINavigationController
+    static func instance ()-> BookingViewController {
+        return UIStoryboard.storyboard(.bookings).instantiateViewController(withIdentifier:"BookingViewController") as! BookingViewController
     }
     
     

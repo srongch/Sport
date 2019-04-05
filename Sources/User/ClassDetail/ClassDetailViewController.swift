@@ -13,7 +13,8 @@ import MapKit
 
 class ClassDetailViewController: UIViewController {
     
-    var classID : String = ""
+    private var classID : String = ""
+    private var authorID : String = ""
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -41,29 +42,48 @@ class ClassDetailViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     @IBOutlet weak var reviewTableView: UITableView!
+    @IBOutlet weak var reviewTableViewHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var checkDateButton: UIButton!
+    
+    var previousTableViewYOffset : CGFloat = 0
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.isPagingEnabled = true
 //        scrollView.adjustedContentInset
         scrollView.contentInsetAdjustmentBehavior = .never
-        // Do any additional setup after loading the view.
         scrollView.contentInset = .init(top: -45, left: 0, bottom: 0, right: 0)
         
+        self.scrollView.delegate = self
+        
+        let nib = UINib(nibName: "ReviewTableViewCell", bundle: nil)
+        reviewTableView.register(nib, forCellReuseIdentifier: "ReviewCell")
+        reviewTableView.estimatedRowHeight = 85.0
+        reviewTableView.rowHeight = UITableView.automaticDimension
+        reviewTableView.delegate = self
+        reviewTableView.dataSource = self
+        
         loadData()
-    //     let classesRef = Database.database().reference(withPath: "classes")
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+     //   reviewTableViewHeightConstraint.constant = self.cellSize
     }
     
     func loadData() {
-        
-        classService.classDetailById(classId: classID) { (classModel , reviews, isError) in
+        let loadingVC = LoadingViewController.instance(self.view.frame)
+        add(loadingVC)
+        classService.classDetailById(classId: classID, authorId : authorID) { (classModel , reviews, isError) in
+            loadingVC.remove()
             if(!isError){
-                            guard let tempModel = classModel else {
+               guard let tempModel = classModel else {
                                 //MARK : Data error
+                                //show error and go back
                                 return
-                            }
+                }
                 self.classModel = tempModel
                 
                 guard let review = reviews else{
@@ -72,19 +92,15 @@ class ClassDetailViewController: UIViewController {
                 }
                 self.reviewModel = review
                 self.setupView()
+            }else {
+                self.presentAlertView(with: "Error", isOneButton : true, onDone: {
+                    self.navigationController?.popViewController(animated: true)
+                }, onCancel: {})
             }
         }
         
-
-//        classService.getClassById(classId: classID) { (model) in
-//            guard let tempModel = model else {
-//                //MARK : Data error
-//                return
-//            }
-//            print(tempModel.asDictionary)
-//            self.classModel = tempModel
-//            self.setupView()
-//        }
+        
+        
     }
     
     func setupView(){
@@ -99,9 +115,9 @@ class ClassDetailViewController: UIViewController {
         
         priceLabel.text = "£\(classModel.classPrice)"
         
-        imageView.sd_setImage(with: URL(string:"https://images.unsplash.com/photo-1517070208541-6ddc4d3efbcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"), completed: nil)
-        instructorName.text = "ffghhfghgfh"
-        instructorDetail.text = "A highly accomplished and renowned International Trainer and Tedx Speaker has an extensive work experience of 30 years.A highly accomplished and renowned International Trainer and Tedx Speaker has an extensive work experience of 30 years.A highly accomplished and renowned International Trainer and Tedx Speaker has an extensive work experience of 30 years."
+        imageView.sd_setImage(with: URL(string:classModel.getImageFromArray), completed: nil)
+        instructorName.text = "Meet your instructor,  \(classModel.authorName)"
+        instructorDetail.text = classModel.authorDesc
         
         programLabel.text = classModel.className
         timeLabel.text = classModel.timeTable
@@ -113,6 +129,7 @@ class ClassDetailViewController: UIViewController {
         location.title = classModel.location
         location.coordinate = CLLocationCoordinate2D(latitude: classModel.latitude, longitude: classModel.longtitude)
         self.centerMapOnLocation(annotation: location)
+        reviewTableView.reloadData()
     }
     
     func centerMapOnLocation(annotation: MKPointAnnotation) {
@@ -139,6 +156,7 @@ class ClassDetailViewController: UIViewController {
         if (segue.identifier == "checkdateidentifier") {
             if let destinationVC = segue.destination as? CalenderViewController {
                 destinationVC.classModel = classModel
+                destinationVC.classModel?.key = classID
             }
         }
     }
@@ -184,13 +202,46 @@ extension ClassDetailViewController : UIScrollViewDelegate{
             print("page : \(pageIndex)")
             pageControl.currentPage = Int(pageIndex)
         }
+        
+        if scrollView == scrollView {
+            var scrollSpeed = scrollView.contentOffset.y - previousTableViewYOffset
+            previousTableViewYOffset = scrollView.contentOffset.y
+            print("scroll speed \(scrollSpeed)")
+        }
     }
+    
 }
 
+extension ClassDetailViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return reviewModel.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell") as! ReviewTableViewCell
+        cell.setupCell(model: reviewModel[indexPath.row])
+        print("cell size : \(cell.frame.size)")
+        if(indexPath.row == reviewModel.count - 1){
+            UIView.animate(withDuration: 0, animations: {
+//               tableView.layoutIfNeeded()
+            }) { complete in
+                // Edit heightOfTableViewConstraint's constant to update height of table view
+                self.reviewTableViewHeightConstraint.constant = tableView.heightOfVisibleCells() + 40
+            }
+            
+        }
+        return cell
+    }
+    
+}
+
+
 extension ClassDetailViewController {
-    static func instance (classId : String)-> ClassDetailViewController {
+    static func instance (classId : String, authorId : String)-> ClassDetailViewController {
         let view = UIStoryboard.storyboard(.classes).instantiateViewController(withIdentifier:"ClassDetailViewController") as! ClassDetailViewController
         view.classID = classId
+        view.authorID = authorId
         return view
 }
     

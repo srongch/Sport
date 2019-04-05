@@ -73,9 +73,9 @@ final class ClassService {
     }
     
     
-    func classDetailById(classId : String, completionHandler: @escaping (_ classModel:ClassModel?,_ reviewArry : [ReviewModel]?, _ isError : Bool) -> Void){
+    func classDetailById(classId : String, authorId : String, completionHandler: @escaping (_ classModel:ClassModel?,_ reviewArry : [ReviewModel]?, _ isError : Bool) -> Void){
         // [START function_add_numbers]
-        functions.httpsCallable("getClassById").call(["classId": classId]) { (result, error) in
+        functions.httpsCallable("getClassById").call(["classId": classId,"authorId" : authorId]) { (result, error) in
             // [START function_error]
             if let error = error as NSError? {
                 if error.domain == FunctionsErrorDomain {
@@ -107,6 +107,38 @@ final class ClassService {
             
         }
         // [END function_add_numbers]
+    }
+    
+    func doBooking(bookingModel : BookingModel, completionHandler: @escaping (_ isError : Bool) -> Void){
+        functions.httpsCallable("userBooking").call(bookingModel.asDictionary) { (result, error) in
+            print(bookingModel.asDictionary)
+            return  completionHandler((error != nil) ? true : false)
+        }
+    }
+    
+    
+    func bookingList(userId : String, completionHandler: @escaping (_ result : [BookingModel]? ,_ isError : Bool) -> Void){
+        functions.httpsCallable("userBookingList").call(["userId" : "98tKelkTBGcaQOG5157Q2Lv5mgm2"]) { (result, error) in
+        //    print("\(result?.data )")
+            
+            if (error != nil){
+                print("no nil")
+                return  completionHandler(nil, true)
+            }
+            
+//            guard let error1 = error else{
+//                return  completionHandler(nil, true)
+//            }
+//
+            guard let value = (result?.data as? [String: AnyObject]),
+                  let data = value["data"] as? Dictionary<String, AnyObject> else {
+               return  completionHandler(nil, true)
+            }
+            print("\(data)")
+            
+            return  completionHandler(BookingModel.getBookingModels(data: data).sorted(by: {$0.timeStamp > $1.timeStamp}),false)
+        }
+        
     }
     
 //    func addLiketoClass

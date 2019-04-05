@@ -43,6 +43,9 @@ struct ClassModel : ModeltoDictionaryProtocol, LevelColorProtocol {
     var timeStamp: Int64 = 0
     var rating : Double = 0
     var reviews : Int = 0
+    var authorId : String = ""
+    var authorName : String = ""
+    var authorDesc : String = ""
     
     init(){}
     
@@ -129,6 +132,9 @@ struct ClassModel : ModeltoDictionaryProtocol, LevelColorProtocol {
         self.rating = ratingValue
         self.key = key ?? ""
         self.reviews = value["reviews"] as? Int ?? 0
+        self.authorId = value["authorId"] as? String ?? ""
+        self.authorName = value["authorName"] as? String ?? ""
+        self.authorDesc = value["description"] as? String ?? ""
     }
     
     
@@ -168,6 +174,13 @@ extension ClassModel {
 //        })
         
         return classArray
+    }
+    
+    var getImageFromArray: String {
+        get {
+            return self.imageArray[0]
+            
+        }
     }
     
 }

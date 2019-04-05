@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GDb-uZ-SPJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,15 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Qg-ZQ-FIF">
-                                <rect key="frame" x="0.0" y="64" width="375" height="45"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Qg-ZQ-FIF" customClass="NaviBar" customModule="User" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="6LT-fE-nvM"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Booking List"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Cie-su-f6d">
-                                <rect key="frame" x="0.0" y="109" width="375" height="558"/>
+                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
                                 <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="p46-66-GiN">
                                     <size key="itemSize" width="50" height="50"/>
@@ -46,7 +49,7 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Cie-su-f6d" firstAttribute="bottom" secondItem="cci-Zq-CY5" secondAttribute="bottom" id="6Ya-ZF-siH"/>
                             <constraint firstItem="Cie-su-f6d" firstAttribute="trailing" secondItem="cci-Zq-CY5" secondAttribute="trailing" id="INi-Lb-db4"/>
@@ -58,32 +61,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cci-Zq-CY5"/>
                     </view>
-                    <navigationItem key="navigationItem" id="HAJ-g8-MOU"/>
                     <connections>
                         <outlet property="collectionView" destination="Cie-su-f6d" id="Oef-M0-0dH"/>
+                        <outlet property="naviView" destination="8Qg-ZQ-FIF" id="38F-bA-h9S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qal-z4-io5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1065" y="-145"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="QG1-rv-GPt">
-            <objects>
-                <navigationController storyboardIdentifier="BookingNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="GDb-uZ-SPJ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w4g-YP-wN9">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="enf-LO-cog" kind="relationship" relationship="rootViewController" id="QG7-YT-ikn"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LS6-PS-hB0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="160.80000000000001" y="-145.27736131934034"/>
+            <point key="canvasLocation" x="-559" y="-509"/>
         </scene>
     </scenes>
 </document>

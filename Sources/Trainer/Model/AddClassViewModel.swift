@@ -81,7 +81,7 @@ class AddClassViewModel {
         firebasemodel.dayoftheWeek = Array(tempModel.dayoftheWeek)
         firebasemodel.hours = tempModel.hours
         firebasemodel.times = tempModel.times.map( {value in value.toMillis()})
-        
+        firebasemodel.authorId = UserService.shared.globalUser?.uid ?? ""
         return (tempModel.imageArray.map({$0.jpegData(compressionQuality: 0.9)!}),firebasemodel)
         
 //          need to setup the follow

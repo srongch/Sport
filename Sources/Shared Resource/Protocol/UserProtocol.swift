@@ -12,6 +12,14 @@ import Firebase
 enum UserType : String {
     case user = "user"
     case trainer = "trainer"
+    
+}
+
+extension UserType {
+    static func getType()->UserType {
+        let bundle = Bundle.main.bundleIdentifier
+        return bundle! == "trainer.sronglong.me" ? UserType.trainer : UserType.user
+    }
 }
 
 protocol UserProtocol {

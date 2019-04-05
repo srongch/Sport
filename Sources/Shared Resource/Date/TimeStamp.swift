@@ -9,8 +9,10 @@
 import Foundation
 
 extension Int64 {
-    func toDateWithFormate(formate: String) -> String {
-        return ""
+    func toDateWithFormate(format: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from:self.toDate())
     }
     
     func toDate() -> Date{

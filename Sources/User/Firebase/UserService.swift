@@ -25,7 +25,9 @@ final class UserService {
         }
     }
     
-    private init() { }
+    private init() {
+        
+    }
     
     // MARK: - Firebase Database References
     
@@ -44,9 +46,10 @@ final class UserService {
             if let error = error {
                 print("Data could not be saved: \(error).")
                 completionHandler(true)
-                self.globalUser = user
+                
             } else {
                 print("Data saved successfully!")
+                self.globalUser = user
                 completionHandler(false)
             }
         }

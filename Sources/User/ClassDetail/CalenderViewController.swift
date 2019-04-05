@@ -9,9 +9,12 @@
 import UIKit
 import JTAppleCalendar
 
-class CalenderViewController: UIViewController {
+class CalenderViewController: UIViewController,NaviBarProtocol {
 
+    
+    @IBOutlet weak var naviBar: NaviBar!
     @IBOutlet weak var calenderView: JTAppleCalendarView!
+    @IBOutlet weak var timeViewWrapperieghtConstrain: NSLayoutConstraint!
     
     @IBOutlet weak var monthText: UILabel!
     @IBOutlet weak var nextMonth: UIButton!
@@ -30,7 +33,7 @@ class CalenderViewController: UIViewController {
     
     var classModel : ClassModel?
     var selectDate : Date?
-    var selectTime : Int64?
+    var selectTime : Int?
     var numberofPerson : Int = 0
     
     let formatter = DateFormatter()
@@ -44,9 +47,19 @@ class CalenderViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        timeViewWrapperieghtConstrain.constant =  (CGFloat(classModel!.times.count)/CGFloat(itemsPerRow)) * 60
+    }
+    
     func setupCollectionView(){
         timeCollectionView.delegate = self
         timeCollectionView.dataSource = self
+        naviBar.delegate = self
+    }
+    
+    func buttonBackPressed() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func setupCalenderView (){
@@ -136,6 +149,23 @@ class CalenderViewController: UIViewController {
     }
     
     @IBAction func bookButtonPressed(_ sender: Any) {
+        print("book button pressed")
+        guard let selectedDate = self.selectDate  else{
+            print("date not selected")
+            presentAlertView(with: "Select a date.", isOneButton: true, onDone: {}, onCancel: {})
+            return
+        }
+        
+        guard let selectedTime = self.selectTime else {
+            presentAlertView(with: "Select a time.", isOneButton: true, onDone: {}, onCancel: {})
+            return
+        }
+        
+        if (self.numberofPerson <= 0){
+            presentAlertView(with: "Select number of people.", isOneButton: true, onDone: {}, onCancel: {})
+            return
+        }
+        
     }
     
     
@@ -143,12 +173,51 @@ class CalenderViewController: UIViewController {
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+//         Get the new view controller using segue.destination.
+//         Pass the selected object to the new view controller.
+        
+        if (segue.identifier == "comfirmbookingseque"){
+            print("ready to go")
+            let vc = segue.destination as! ConfirmBookingViewController
+            vc.bookingModel = BookingModel(userid: UserService.shared.globalUser?.uid ?? "98tKelkTBGcaQOG5157Q2Lv5mgm2",
+                                           classId: classModel!.key, className: classModel!.className, classImage: classModel!.imageArray[0],
+                                           classDate: self.selectDate!,
+                                           classTime: (self.classModel?.times[self.selectTime!])!,
+                                           classHour: (self.classModel?.hours[self.selectTime!])!,
+                                           numberofPeople: numberofPerson,
+                                           price: self.classModel!.classPrice,
+                                           activityType: classModel!.activityType,
+                                           levelType: classModel!.levelType)
+        }
+        
+        
     }
-    */
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if (identifier == "comfirmbookingseque"){
+            guard let selectedDate = self.selectDate  else{
+                print("date not selected")
+                presentAlertView(with: "Select a date.", isOneButton: true, onDone: {}, onCancel: {})
+                return false
+            }
+            
+            guard let selectedTime = self.selectTime else {
+                presentAlertView(with: "Select a time.", isOneButton: true, onDone: {}, onCancel: {})
+                return false
+            }
+            
+            if (self.numberofPerson <= 0){
+                presentAlertView(with: "Select number of people.", isOneButton: true, onDone: {}, onCancel: {})
+                return false
+            }
+            
+            return true
+        }
+        return false
+    }
+ 
 
 }
 
@@ -245,7 +314,7 @@ extension CalenderViewController : UICollectionViewDelegate, UICollectionViewDat
         
         cell.textLabel.text = "\(timeStr) - \(time.hours[indexPath.row]) hour\(time.hours[indexPath.row] == 1 ? "" : "s")"
         
-        if(time.times[indexPath.row] == selectTime){
+        if(indexPath.row == selectTime){
             cell.wrapView.layer.borderWidth = 1
             cell.wrapView.layer.borderColor = UIColor.blueColor.cgColor
 //           cell.wrapView.backgroundColor = UIColor.blueColor
@@ -264,7 +333,7 @@ extension CalenderViewController : UICollectionViewDelegate, UICollectionViewDat
         guard let time = classModel else {
             return 
         }
-        selectTime = time.times[indexPath.row]
+        selectTime = indexPath.row
         timeCollectionView.reloadData()
     }
 
