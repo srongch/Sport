@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FiraSans-Regular.ttf">
+            <string>FiraSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="HomeTabCell" id="iN0-l3-epB" customClass="HomeTabCell" customModule="Trainer">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="173"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TwO-iS-ma2">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="173"/>
+                    <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot 2019-03-02 at 4.34.08 pm.png" translatesAutoresizingMaskIntoConstraints="NO" id="sxm-Qq-DeE">
+                    <rect key="frame" x="20" y="64.5" width="44" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="A9P-mP-Eci"/>
+                        <constraint firstAttribute="height" constant="44" id="rnA-iK-mzz"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="GaG-tJ-WhT">
+                    <rect key="frame" x="80" y="61.5" width="246" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raE-Fk-Uvt">
+                            <rect key="frame" x="0.0" y="0.0" width="246" height="20.5"/>
+                            <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="17"/>
+                            <color key="textColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9L-Jn-RuH">
+                            <rect key="frame" x="0.0" y="29.5" width="246" height="20.5"/>
+                            <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="17"/>
+                            <color key="textColor" red="0.52549391980000004" green="0.52548360819999995" blue="0.52549058199999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuV-ft-nLK">
+                    <rect key="frame" x="342" y="74" width="52" height="25.5"/>
+                    <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="21"/>
+                    <color key="textColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="TwO-iS-ma2" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="0oV-dQ-bhK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MuV-ft-nLK" secondAttribute="trailing" constant="20" id="7zP-LU-bit"/>
+                <constraint firstItem="TwO-iS-ma2" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="8be-5Z-eiR"/>
+                <constraint firstItem="GaG-tJ-WhT" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Bfy-gR-ogA"/>
+                <constraint firstItem="MuV-ft-nLK" firstAttribute="leading" secondItem="GaG-tJ-WhT" secondAttribute="trailing" constant="16" id="EMK-xs-Dxa"/>
+                <constraint firstItem="sxm-Qq-DeE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Rbl-09-o3g"/>
+                <constraint firstItem="TwO-iS-ma2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fZN-Qh-TjB"/>
+                <constraint firstItem="sxm-Qq-DeE" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="g2i-lZ-WNo"/>
+                <constraint firstItem="MuV-ft-nLK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="mbe-ov-Fob"/>
+                <constraint firstItem="TwO-iS-ma2" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="oWC-5f-2Nm"/>
+                <constraint firstItem="GaG-tJ-WhT" firstAttribute="leading" secondItem="sxm-Qq-DeE" secondAttribute="trailing" constant="16" id="rQK-VF-Goj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="amount" destination="MuV-ft-nLK" id="gYZ-hE-zQb"/>
+                <outlet property="classTitle" destination="a9L-Jn-RuH" id="lVZ-Ub-yTR"/>
+                <outlet property="name" destination="raE-Fk-Uvt" id="EX2-gp-h1M"/>
+                <outlet property="profileView" destination="sxm-Qq-DeE" id="Xz3-xy-Qs0"/>
+            </connections>
+            <point key="canvasLocation" x="-82" y="-597"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Screenshot 2019-03-02 at 4.34.08 pm.png" width="437" height="629"/>
+    </resources>
+</document>

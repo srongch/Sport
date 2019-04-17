@@ -16,13 +16,20 @@ class TimetableViewController: UIViewController {
     @IBOutlet weak var monthButton: UIButton!
     @IBOutlet weak var yearButton: UIButton!
     
+    var dataService : TimeTableCoreData?
+    var selectIndex : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupCollectionView()
         menuView.setDidSelectItemClosure { [weak self] indexPath in
-            
+            self?.selectIndex = indexPath.row
+            self?.scheduleCollectionView.reloadData()
         }
+        
+        dataService = TimeTableCoreData(userId: UserService.shared.globalUser?.uid, delegate : self)
+//        dataService?.delegate = self
+        print("user is : \(UserService.shared.globalUser?.uid)")
 
         // Do any additional setup after loading the view.
     }
@@ -74,7 +81,7 @@ class TimetableViewController: UIViewController {
 
 extension TimetableViewController : UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return dataService?.getDetailDataByIndex(index:selectIndex)?.details.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -82,11 +89,7 @@ extension TimetableViewController : UICollectionViewDelegateFlowLayout, UICollec
         
         let classRegister = ClassRegistration(level: Int.random(in: 0...2), activity : Int.random(in: 0...5))
         
-        cell.levelButton.setTitle(classRegister.getLevelName().uppercased(), for: .normal)
-        cell.levelButton.backgroundColor = classRegister.getLevelColor()
-        cell.lineView.backgroundColor = classRegister.getLevelColor()
-        cell.activityImage.image = UIImage(named: classRegister.getActivityIconName())
-        
+        cell.setupCell(model : dataService!.getDetailDataByIndex(index: selectIndex)!.details[indexPath.row])
 //        cell.setupView(isSelected: selectedIndexPath == indexPath)
         
         return cell
@@ -110,6 +113,12 @@ extension TimetableViewController : UICollectionViewDelegateFlowLayout, UICollec
     
     
     
+}
+
+extension TimetableViewController : TitmeTableProtocol {
+    func timeTableDidUpdate(data: [TimeTableDate]){
+        self.menuView.setDataSource(data: data)
+    }
 }
 
 

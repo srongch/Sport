@@ -20,4 +20,17 @@ class ScheduleCell: UICollectionViewCell {
     @IBOutlet weak var classTitle: UILabel!
     @IBOutlet weak var classAddress: UILabel!
     
+    func setupCell(model : TimeTable){
+        self.levelButton.setTitle(model.getLevelName().uppercased(), for: .normal)
+        self.levelButton.backgroundColor = model.getLevelColor()
+        self.lineView.backgroundColor = model.getLevelColor()
+        self.activityImage.image = UIImage(named: model.getActivityIconName())
+        
+        hourLabel.text = model.time.toDateWithFormate(format: "HH:ss")
+        classTitle.text = model.title
+        classAddress.text = model.location
+        
+    }
+    
+    
 }

@@ -32,5 +32,9 @@ class ProfileViewCell: UITableViewCell {
             rightLabel.isHidden = false
         }
     }
+    
+    func setRightText(text : String){
+        rightLabel.text = text
+    }
 
 }

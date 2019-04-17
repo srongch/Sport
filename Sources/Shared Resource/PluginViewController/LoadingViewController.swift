@@ -10,18 +10,29 @@ import UIKit
 
 class LoadingViewController: UIViewController {
     
-    private lazy var activityIndicator = UIActivityIndicatorView(style: .gray)
+    let backgroundView = UIView()
+    private lazy var activityIndicator = UIActivityIndicatorView(style: .white)
     var superViewFrame : CGRect = .zero
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        backgroundView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        backgroundView.backgroundColor = UIColor.gray.withAlphaComponent(0.4)
+        backgroundView.layer.cornerRadius = 25
+        backgroundView.clipsToBounds = true
+        
+        
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(activityIndicator)
-        self.view.backgroundColor = .green
-        self.view.frame.size = CGSize(width: 50, height: 50)
+        backgroundView.addSubview(activityIndicator)
+        self.view.addSubview(backgroundView)
+        self.view.backgroundColor = .clear
+        self.view.frame.size = backgroundView.frame.size
+        
         NSLayoutConstraint.activate([
-            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            activityIndicator.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor),
+            backgroundView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
             ])
         
     }
@@ -31,7 +42,7 @@ class LoadingViewController: UIViewController {
         
         // We use a 0.5 second delay to not show an activity indicator
         // in case our data loads very quickly.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
             self?.activityIndicator.startAnimating()
         }
     }

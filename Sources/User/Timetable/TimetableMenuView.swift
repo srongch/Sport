@@ -13,7 +13,7 @@ typealias MenuDidSelectItemClosureType = (IndexPath) -> ()
 class TimetableMenuView: UICollectionView {
     private let minimumLineAndInteritemSpacingForSection: CGFloat = 5
     private var didSelectItmeClosure: MenuDidSelectItemClosureType!
-    private var data : [String]!
+    private var data : [TimeTableDate]!
     private var selectedIndexPath : IndexPath!
     /*
     // Only override draw() if you perform custom drawing.
@@ -44,7 +44,7 @@ class TimetableMenuView: UICollectionView {
         self.didSelectItmeClosure = closure
     }
     
-    public func setDataSource (data : [String]){
+    public func setDataSource (data : [TimeTableDate]){
         self.data = data
         self.reloadData()
     }
@@ -54,13 +54,13 @@ class TimetableMenuView: UICollectionView {
 
 extension TimetableMenuView : UICollectionViewDelegate,  UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.data?.count ?? 20
+        return self.data?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: TimetableCell = self.dequeueReusableCell(withReuseIdentifier: "TimetableCell", for: indexPath) as! TimetableCell
         
-        cell.setupView(isSelected: selectedIndexPath == indexPath)
+        cell.setupView(isSelected: selectedIndexPath == indexPath,model: data[indexPath.row])
     
         return cell
     }

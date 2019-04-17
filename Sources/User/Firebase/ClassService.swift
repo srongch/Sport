@@ -118,18 +118,14 @@ final class ClassService {
     
     
     func bookingList(userId : String, completionHandler: @escaping (_ result : [BookingModel]? ,_ isError : Bool) -> Void){
-        functions.httpsCallable("userBookingList").call(["userId" : "98tKelkTBGcaQOG5157Q2Lv5mgm2"]) { (result, error) in
+        functions.httpsCallable("userBookingList").call(["userId" : userId]) { (result, error) in
         //    print("\(result?.data )")
             
             if (error != nil){
                 print("no nil")
                 return  completionHandler(nil, true)
             }
-            
-//            guard let error1 = error else{
-//                return  completionHandler(nil, true)
-//            }
-//
+
             guard let value = (result?.data as? [String: AnyObject]),
                   let data = value["data"] as? Dictionary<String, AnyObject> else {
                return  completionHandler(nil, true)
@@ -141,6 +137,33 @@ final class ClassService {
         
     }
     
+    
+    func profileState(userId : String, completionHandler: @escaping (_ result : ProfileState? ,_ isError : Bool) -> Void){
+        functions.httpsCallable("userProfile").call(["userId" : userId]) { (result, error) in
+            //    print("\(result?.data )")
+            if (error != nil){
+                print("no nil")
+                return  completionHandler(nil, true)
+            }
+            
+            guard let value = result?.data else {
+                    return  completionHandler(nil, true)
+            }
+            return  completionHandler(ProfileState.parse(from: value) ,false)
+           
+            
+//            let encoder = JSONEncoder()
+//
+//            let productData = try! encoder.encode(model.self)
+//
+//            let productStr = String.init(data: productData, encoding: .utf8)
+//            print("String from Product data is \(productStr ?? "No data")")
+           
+            
+        }
+        
+    }
+
 //    func addLiketoClass
     
 //    func addClasses(tuple : ([Data],FirebaseClassModel),completionHandler: @escaping (_ isError : Bool) -> Void) {

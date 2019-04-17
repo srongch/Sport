@@ -14,10 +14,12 @@ class TimetableCell: UICollectionViewCell {
     @IBOutlet weak var dayNumberLabel: UILabel!
     @IBOutlet weak var dayofWeekLabel: UILabel!
     
-    public func setupView(isSelected : Bool){
+    public func setupView(isSelected : Bool, model : TimeTableDate){
         self.view.backgroundColor = isSelected ? UIColor.blueColor : UIColor.white
         self.dayNumberLabel.textColor = isSelected ? UIColor.white : UIColor.blueColor
         self.dayofWeekLabel.textColor = isSelected ? UIColor.white : UIColor.blueColor
+        self.dayNumberLabel.text = model.day
+        self.dayofWeekLabel.text = model.dayoftheWeek.uppercased()
     }
     
 }

@@ -26,7 +26,7 @@ class BookingViewController: UIViewController, NaviBarProtocol{
         // Do any additional setup after loading the view.
         let vc = LoadingViewController.instance(self.view.frame)
         add(vc)
-        ClassService().bookingList(userId: "98tKelkTBGcaQOG5157Q2Lv5mgm2") {[weak self] (models, isError) in
+        ClassService().bookingList(userId: UserService.shared.globalUser!.uid) {[weak self] (models, isError) in
             self?.list = models
             self?.collectionView.reloadData()
             vc.remove()
@@ -57,6 +57,7 @@ extension BookingViewController : UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: BookingCell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "BookingCell", for: indexPath) as! BookingCell
+        cell.setupCell(model: (list![indexPath.row]))
         return cell
     }
     

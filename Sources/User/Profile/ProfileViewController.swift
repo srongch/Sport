@@ -15,6 +15,7 @@ class ProfileViewController: UIViewController {
     var settingArray: [Setting] {
         return Setting.getSettingArray(isUser : true, isLogin : UserService.shared.isHaveUser)
     }
+    var profileState : ProfileState?
     
     var text = ""
     var isViewIsFirst = false
@@ -33,14 +34,38 @@ class ProfileViewController: UIViewController {
         let footerNib = UINib.init(nibName: ProfileFooterView.className, bundle: Bundle.main)
         tableView.register(footerNib, forHeaderFooterViewReuseIdentifier: ProfileFooterView.className)
         isViewIsFirst = true
+        
+        loadData()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if (isViewIsFirst){
+        if (!isViewIsFirst){
+            isViewIsFirst = false
             tableView.reloadData()
+            loadData()
         }
     }
+    
+    func loadData(){
+        if (UserService.shared.isHaveUser){
+            let vc = LoadingViewController.instance(self.view.frame)
+            add(vc)
+            ClassService().profileState(userId:  UserService.shared.globalUser!.uid) {[weak self] model, isError in
+              //  vc.remove()
+                if (isError){
+                    //do sth
+                    self?.presentAlertView(with: "Some worng", isOneButton: true, onDone: {}, onCancel: {})
+                }else{
+                    self?.profileState = model
+                    self?.tableView.reloadData()
+                }
+            }
+        }
+    }
+    
+    
 
 }
 
@@ -69,7 +94,22 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProfileViewCell.className, for: indexPath) as! ProfileViewCell
-        cell.setupCell(setting: settingArray[indexPath.row])
+        
+        let rowSetting = settingArray[indexPath.row]
+        cell.setupCell(setting: rowSetting)
+        
+        guard let state = profileState else {
+            return cell
+        }
+        switch rowSetting.settingType {
+        case .favorite:
+            cell.setRightText(text: "\(state.like_count)")
+        case .payment:
+            cell.setRightText(text: "\(state.booking_count)")
+        default: break
+            
+        }
+        
         return cell
     }
     

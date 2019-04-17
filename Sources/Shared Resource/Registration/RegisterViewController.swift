@@ -42,7 +42,7 @@ class RegisterViewController: UIViewController {
         }
         
         // Register the user account on Firebase
-        AuthService().signUpWith(email: emailAddress, password: password, name: password, userType :UserType.getType()) { (user, error,errorMsg) in
+        AuthService().signUpWith(email: emailAddress, password: password, name: name, userType :UserType.getType()) { (user, error,errorMsg) in
             if (error){
                 let alertController = UIAlertController(title: "Registration Error", message: errorMsg, preferredStyle: .alert)
                 let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jqp-jB-b9d">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FiraSans-Bold.ttf">
+            <string>FiraSans-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="wDd-UP-RAl">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="jqp-jB-b9d" customClass="HomeViewController" customModule="Trainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SaI-HK-25I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="eDk-7Q-8fb">
+                                <rect key="frame" x="139.5" y="65" width="135.5" height="70.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2b-mu-04p">
+                                        <rect key="frame" x="17" y="0.0" width="101.5" height="48"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="40"/>
+                                        <color key="textColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in USD • US dollar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nV-i1-hiu">
+                                        <rect key="frame" x="0.0" y="50" width="135.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="17"/>
+                                        <color key="textColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rBV-Fl-IFf">
+                                <rect key="frame" x="0.0" y="135.5" width="414" height="760.5"/>
+                                <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="eDk-7Q-8fb" firstAttribute="centerX" secondItem="SaI-HK-25I" secondAttribute="centerX" id="JDm-1Q-l3T"/>
+                            <constraint firstItem="rBV-Fl-IFf" firstAttribute="top" secondItem="eDk-7Q-8fb" secondAttribute="bottom" id="Q3k-3o-0P8"/>
+                            <constraint firstAttribute="bottom" secondItem="rBV-Fl-IFf" secondAttribute="bottom" id="QuF-8o-oIL"/>
+                            <constraint firstItem="rBV-Fl-IFf" firstAttribute="trailing" secondItem="7nW-jc-6ah" secondAttribute="trailing" id="XTw-o7-Gal"/>
+                            <constraint firstItem="eDk-7Q-8fb" firstAttribute="top" secondItem="7nW-jc-6ah" secondAttribute="top" constant="21" id="i3l-Fk-PwA"/>
+                            <constraint firstItem="rBV-Fl-IFf" firstAttribute="leading" secondItem="7nW-jc-6ah" secondAttribute="leading" id="s2w-7R-8Ji"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7nW-jc-6ah"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="rBV-Fl-IFf" id="Zax-QJ-gdb"/>
+                        <outlet property="totalDesc" destination="4nV-i1-hiu" id="geL-gi-E50"/>
+                        <outlet property="totalLabel" destination="P2b-mu-04p" id="jQJ-Nt-rOf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fHi-wJ-hUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-215.94202898550725" y="-197.54464285714286"/>
+        </scene>
+    </scenes>
+</document>
