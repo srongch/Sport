@@ -16,6 +16,8 @@ class TimetableViewController: UIViewController {
     @IBOutlet weak var monthButton: UIButton!
     @IBOutlet weak var yearButton: UIButton!
     
+    private var notLoginVC : NotLoginViewController?
+    
     var dataService : TimeTableCoreData?
     var selectIndex : Int = 0
     
@@ -26,12 +28,35 @@ class TimetableViewController: UIViewController {
             self?.selectIndex = indexPath.row
             self?.scheduleCollectionView.reloadData()
         }
-        
-        dataService = TimeTableCoreData(userId: UserService.shared.globalUser?.uid, delegate : self)
-//        dataService?.delegate = self
-        print("user is : \(UserService.shared.globalUser?.uid)")
-
+    
+        self.validateView()
         // Do any additional setup after loading the view.
+    }
+    
+
+    
+    func validateView(){
+        if UserService.shared.isHaveUser {
+            
+            guard let vc = notLoginVC else{
+                return
+            }
+            vc.remove()
+            self.loadData()
+        }else{
+            self.showNotLogin()
+        }
+    }
+    
+    func showNotLogin(){
+        notLoginVC = NotLoginViewController.instance()
+        add(notLoginVC!)
+    }
+    
+    func loadData(){
+        dataService = TimeTableCoreData(userId: UserService.shared.globalUser?.uid, delegate : self)
+        //        dataService?.delegate = self
+        print("user is : \(UserService.shared.globalUser?.uid)")
     }
     
     func setupCollectionView(){

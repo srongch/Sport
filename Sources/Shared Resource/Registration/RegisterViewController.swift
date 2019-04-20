@@ -42,28 +42,28 @@ class RegisterViewController: UIViewController {
         }
         
         // Register the user account on Firebase
-        AuthService().signUpWith(email: emailAddress, password: password, name: name, userType :UserType.getType()) { (user, error,errorMsg) in
+        AuthService().signUpWith(email: emailAddress, password: password, name: name, userType :UserType.getType()) {[weak self] (user, error,errorMsg) in
             if (error){
                 let alertController = UIAlertController(title: "Registration Error", message: errorMsg, preferredStyle: .alert)
                 let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                 alertController.addAction(okayAction)
-                self.present(alertController, animated: true, completion: nil)
+                self?.present(alertController, animated: true, completion: nil)
                 return
             }
             
             // Dismiss keyboard
-            self.view.endEditing(true)
+            self?.view.endEditing(true)
             
 //            print("registreation with name\(user?.name) and password : \(user?.uid)" )
-            
-            if(self.isModal()){
-                if let delegate = self.delegate {
-                    delegate.registrationDidFinish()
-                }
-                return
-            }else{
-                UIApplication.shared.keyWindow?.rootViewController = UIStoryboard.storyboard(.views).instantiateViewController(withIdentifier:"AddClassNavigationController")
-            }
+            self?.delegate?.registrationDidFinish()
+//            if(self.isModal()){
+//                if let delegate = self.delegate {
+//                    delegate.registrationDidFinish()
+//                }
+//                return
+//            }else{
+//                UIApplication.shared.keyWindow?.rootViewController = UIStoryboard.storyboard(.views).instantiateViewController(withIdentifier:"AddClassNavigationController")
+//            }
             
             
         }

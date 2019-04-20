@@ -9,6 +9,8 @@
 import Foundation
 
 struct ReviewModel : UserProtocol, ReviewProtocol {
+    var memo: String = ""
+    
     var timeStamp: Int64 = 0
     
     var text: String = ""

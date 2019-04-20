@@ -115,6 +115,17 @@
 		16B971DA22579BDE0013169F /* LoadingButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16B971D922579BDE0013169F /* LoadingButton.xib */; };
 		16B971DC22579F0E0013169F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16B971DB22579F0D0013169F /* Assets.xcassets */; };
 		16B971DE2257B0ED0013169F /* UIView+StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B971DD2257B0ED0013169F /* UIView+StackView.swift */; };
+		16DEF6AE226B6A8B0068D3E4 /* TrainerEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DEF6AD226B6A8B0068D3E4 /* TrainerEditViewController.swift */; };
+		16DEF6B1226B74510068D3E4 /* UploadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DEF6B0226B74510068D3E4 /* UploadTask.swift */; };
+		16DEF6B2226B74950068D3E4 /* UploadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DEF6B0226B74510068D3E4 /* UploadTask.swift */; };
+		16DEF6B4226B80CF0068D3E4 /* UserEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DEF6B3226B80CF0068D3E4 /* UserEditProfileViewController.swift */; };
+		16DEF6B5226B80FA0068D3E4 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1656269D226AB0A70065F52F /* EditProfileViewController.swift */; };
+		16DEF6B6226B81860068D3E4 /* AddClassNavi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ED2622415B0B00BE1A62 /* AddClassNavi.swift */; };
+		16DEF6B9226B83A20068D3E4 /* Profiles.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DEF6B8226B83A20068D3E4 /* Profiles.storyboard */; };
+		16DEF6BA226B83A70068D3E4 /* Profiles.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DEF6B8226B83A20068D3E4 /* Profiles.storyboard */; };
+		16DEF6BB226B84DE0068D3E4 /* AddClassNavi.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DB3ED3422415B1000BE1A62 /* AddClassNavi.xib */; };
+		16DEF6BE226B8AD40068D3E4 /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DEF6BD226B8AD40068D3E4 /* UserLoginViewController.swift */; };
+		16DEF6C0226B96560068D3E4 /* NotLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DEF6BF226B96560068D3E4 /* NotLoginViewController.swift */; };
 		16E4382E22429F8E00EF8771 /* AlwaysShowPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E4382C22429F8D00EF8771 /* AlwaysShowPopup.swift */; };
 		16E4382F22429F8E00EF8771 /* ArrayChoiceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E4382D22429F8D00EF8771 /* ArrayChoiceTableViewController.swift */; };
 		16E438312242A9BC00EF8771 /* LevelColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E438302242A9BC00EF8771 /* LevelColor.swift */; };
@@ -375,6 +386,12 @@
 		16B971D922579BDE0013169F /* LoadingButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingButton.xib; sourceTree = "<group>"; };
 		16B971DB22579F0D0013169F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16B971DD2257B0ED0013169F /* UIView+StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+StackView.swift"; sourceTree = "<group>"; };
+		16DEF6AD226B6A8B0068D3E4 /* TrainerEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerEditViewController.swift; sourceTree = "<group>"; };
+		16DEF6B0226B74510068D3E4 /* UploadTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTask.swift; sourceTree = "<group>"; };
+		16DEF6B3226B80CF0068D3E4 /* UserEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditProfileViewController.swift; sourceTree = "<group>"; };
+		16DEF6B8226B83A20068D3E4 /* Profiles.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profiles.storyboard; sourceTree = "<group>"; };
+		16DEF6BD226B8AD40068D3E4 /* UserLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewController.swift; sourceTree = "<group>"; };
+		16DEF6BF226B96560068D3E4 /* NotLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotLoginViewController.swift; sourceTree = "<group>"; };
 		16E4382C22429F8D00EF8771 /* AlwaysShowPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlwaysShowPopup.swift; sourceTree = "<group>"; };
 		16E4382D22429F8D00EF8771 /* ArrayChoiceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayChoiceTableViewController.swift; sourceTree = "<group>"; };
 		16E438302242A9BC00EF8771 /* LevelColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelColor.swift; sourceTree = "<group>"; };
@@ -613,6 +630,7 @@
 				164A2F8322451F0A00B42AF4 /* ProfileHeaderView.swift */,
 				164A2F852245230500B42AF4 /* ProfileViewCell.swift */,
 				164A2F8722452CD200B42AF4 /* ProfileFooterView.xib */,
+				16DEF6B3226B80CF0068D3E4 /* UserEditProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -650,7 +668,7 @@
 			children = (
 				164A2F622245174600B42AF4 /* Profile.storyboard */,
 				165626772268E9980065F52F /* TrainerProfileViewController.swift */,
-				1656269D226AB0A70065F52F /* EditProfileViewController.swift */,
+				16DEF6AD226B6A8B0068D3E4 /* TrainerEditViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -734,8 +752,34 @@
 				16FED378225C9AAB009EDB77 /* TimeTableCoreData.swift */,
 				16FED37A225C9B96009EDB77 /* TimeTable.xcdatamodeld */,
 				16844C95225CF1D400D89644 /* TimeTableDate.swift */,
+				16DEF6BF226B96560068D3E4 /* NotLoginViewController.swift */,
 			);
 			path = Timetable;
+			sourceTree = "<group>";
+		};
+		16DEF6AF226B74400068D3E4 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				16DEF6B0226B74510068D3E4 /* UploadTask.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		16DEF6B7226B838F0068D3E4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1656269D226AB0A70065F52F /* EditProfileViewController.swift */,
+				16DEF6B8226B83A20068D3E4 /* Profiles.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		16DEF6BC226B8ABD0068D3E4 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				16DEF6BD226B8AD40068D3E4 /* UserLoginViewController.swift */,
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 		16EF3748224F934800E96F30 /* PluginViewController */ = {
@@ -796,6 +840,7 @@
 		9DB3EC242241582400BE1A62 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				16DEF6BC226B8ABD0068D3E4 /* Registration */,
 				16B971DB22579F0D0013169F /* Assets.xcassets */,
 				162E794722521D4B00C5E5A2 /* Reviews */,
 				16A08692224645AF007E378D /* Service */,
@@ -891,6 +936,8 @@
 		9DB3EC8C2241596B00BE1A62 /* Shared Resource */ = {
 			isa = PBXGroup;
 			children = (
+				16DEF6B7226B838F0068D3E4 /* Storyboards */,
+				16DEF6AF226B74400068D3E4 /* Firebase */,
 				16EF3748224F934800E96F30 /* PluginViewController */,
 				16773A59224DA57300C6BBFB /* Registration */,
 				164A2F332244EEE800B42AF4 /* CustomTabbar */,
@@ -1318,6 +1365,7 @@
 				9DB3ECC222415A7500BE1A62 /* FiraSans-LightItalic.ttf in Resources */,
 				9DB3ECDC22415A7500BE1A62 /* FiraSans-ExtraBoldItalic.ttf in Resources */,
 				9DB3ECD022415A7500BE1A62 /* FiraSans-BlackItalic.ttf in Resources */,
+				16DEF6BB226B84DE0068D3E4 /* AddClassNavi.xib in Resources */,
 				9DB3ECD422415A7500BE1A62 /* FiraSans-Black.ttf in Resources */,
 				9DB3ECC422415A7500BE1A62 /* FiraSans-Medium.ttf in Resources */,
 				9DB3ED0522415AAF00BE1A62 /* Screenshot 2019-03-02 at 4.34.08 pm.png in Resources */,
@@ -1332,6 +1380,7 @@
 				9DB3ECFB22415A9E00BE1A62 /* GoogleService-Info.plist in Resources */,
 				9DB3ECEB22415A7D00BE1A62 /* CategoryButton.xib in Resources */,
 				9DB3ECD822415A7500BE1A62 /* FiraSans-SemiBold.ttf in Resources */,
+				16DEF6B9226B83A20068D3E4 /* Profiles.storyboard in Resources */,
 				9DB3ECF922415A9700BE1A62 /* NaviBar.xib in Resources */,
 				9DB3ECE022415A7500BE1A62 /* FiraSans-Italic.ttf in Resources */,
 				164A2F802245199A00B42AF4 /* Views.storyboard in Resources */,
@@ -1376,6 +1425,7 @@
 				9DB3ECC322415A7500BE1A62 /* FiraSans-LightItalic.ttf in Resources */,
 				9DB3ED5922415B1900BE1A62 /* Views.storyboard in Resources */,
 				9DB3ECDD22415A7500BE1A62 /* FiraSans-ExtraBoldItalic.ttf in Resources */,
+				16DEF6BA226B83A70068D3E4 /* Profiles.storyboard in Resources */,
 				9DB3ED3B22415B1000BE1A62 /* AddImageView.xib in Resources */,
 				9DB3ECD122415A7500BE1A62 /* FiraSans-BlackItalic.ttf in Resources */,
 				9DB3ECD522415A7500BE1A62 /* FiraSans-Black.ttf in Resources */,
@@ -1634,10 +1684,12 @@
 			files = (
 				16032D732258FAFD0023BFFB /* ProfileState.swift in Sources */,
 				164A2F412244EEFD00B42AF4 /* ESTabBarItem.swift in Sources */,
+				16DEF6B5226B80FA0068D3E4 /* EditProfileViewController.swift in Sources */,
 				9DB3ED0122415AA800BE1A62 /* ClassService.swift in Sources */,
 				9DB3EC9C22415A4700BE1A62 /* PercentLayoutConstraint.swift in Sources */,
 				16844C96225CF1D400D89644 /* TimeTableDate.swift in Sources */,
 				164A2F3D2244EEFD00B42AF4 /* ESTabBarItemContainer.swift in Sources */,
+				16DEF6C0226B96560068D3E4 /* NotLoginViewController.swift in Sources */,
 				16AC45C4224284D300E9B351 /* TimetableCell.swift in Sources */,
 				16E438332242AD3500EF8771 /* ClassRegisterModel.swift in Sources */,
 				164A2F472244EEFD00B42AF4 /* ESTabBarController.swift in Sources */,
@@ -1646,6 +1698,7 @@
 				16AC45BE22427EED00E9B351 /* TimetableViewController.swift in Sources */,
 				9DB3EC2E2241582400BE1A62 /* User.xcdatamodeld in Sources */,
 				9DB3ED1022415AB500BE1A62 /* ClassDetailViewController.swift in Sources */,
+				16DEF6BE226B8AD40068D3E4 /* UserLoginViewController.swift in Sources */,
 				9DB4ADFD22419BF0009A74C2 /* TimeStamp.swift in Sources */,
 				16B971DE2257B0ED0013169F /* UIView+StackView.swift in Sources */,
 				1680A8F52243E6F300B23A1B /* TabBarViewController.swift in Sources */,
@@ -1666,6 +1719,7 @@
 				16773A5F224DA5F600C6BBFB /* RegisterViewController.swift in Sources */,
 				9DB3EC282241582400BE1A62 /* ViewController.swift in Sources */,
 				16773A61224DA5FA00C6BBFB /* LoginViewController.swift in Sources */,
+				16DEF6B4226B80CF0068D3E4 /* UserEditProfileViewController.swift in Sources */,
 				9DB3EC9A22415A4700BE1A62 /* UIViewController+StoryboardIdentifier.swift in Sources */,
 				16A0869422464612007E378D /* UserClassesService.swift in Sources */,
 				16562692226A2A730065F52F /* AcitivityListTableViewCell.swift in Sources */,
@@ -1695,6 +1749,7 @@
 				162E794B22521D5E00C5E5A2 /* ReviewViewController.swift in Sources */,
 				9DB3EC9722415A4700BE1A62 /* ColorExtension.swift in Sources */,
 				165F20A5224D148A0077D663 /* User.swift in Sources */,
+				16DEF6B2226B74950068D3E4 /* UploadTask.swift in Sources */,
 				9DB4ADFF2241B392009A74C2 /* SelectTimesCollectionViewCell.swift in Sources */,
 				162E794C22521D5E00C5E5A2 /* ReviewTableViewCell.swift in Sources */,
 				1657087B2256672900DF0BC2 /* BookingModel.swift in Sources */,
@@ -1709,6 +1764,7 @@
 				16AC45C82242951E00E9B351 /* ScheduleCell.swift in Sources */,
 				16EF3753224FBE2100E96F30 /* AuthService.swift in Sources */,
 				165626742268DC190065F52F /* UIAppDelegate+View.swift in Sources */,
+				16DEF6B6226B81860068D3E4 /* AddClassNavi.swift in Sources */,
 				164A2F432244EEFD00B42AF4 /* ESTabBar.swift in Sources */,
 				164A2F602245172F00B42AF4 /* ProfileViewController.swift in Sources */,
 				9DB3ECE722415A7D00BE1A62 /* NibView.swift in Sources */,
@@ -1795,7 +1851,9 @@
 				165626792268E9980065F52F /* TrainerProfileViewController.swift in Sources */,
 				165CD0BE22676E25002519DE /* LevelColor.swift in Sources */,
 				1656269E226AB0A70065F52F /* EditProfileViewController.swift in Sources */,
+				16DEF6AE226B6A8B0068D3E4 /* TrainerEditViewController.swift in Sources */,
 				164A2F402244EEFD00B42AF4 /* ESTabBarItemMoreContentView.swift in Sources */,
+				16DEF6B1226B74510068D3E4 /* UploadTask.swift in Sources */,
 				9DB3ECA822415A6D00BE1A62 /* StoryboardIdentifiable.swift in Sources */,
 				1649A515225E464D00DDF6AA /* HomeTabCell.swift in Sources */,
 				164A2F512244FED900B42AF4 /* ExampleBasicContentView.swift in Sources */,

@@ -41,7 +41,8 @@ final class UserService {
                                             "uid" : user.uid,
                                             "name": user.name,
                                             "userType" :user.userType.rawValue,
-                                            "profile" : user.profile]) {
+                                            "profile" : user.profile,
+                                            "memo" : user.memo]) {
             (error:Error?, ref:DatabaseReference) in
             if let error = error {
                 print("Data could not be saved: \(error).")
@@ -53,6 +54,50 @@ final class UserService {
                 completionHandler(false)
             }
         }
+    }
+    
+    func editUser(user : UserProtocol,image: Data?,completionHandler: @escaping (_ isError : Bool) -> Void) {
+        let userID = user.uid
+        
+        guard let tempImage = image else{
+            self.addUser(user: user) { isError in
+                completionHandler(isError)
+            }
+            return
+        }
+        
+        UploadTask.init().uploadImage(dataArray: [tempImage]) { imageStrings in
+            print("\(imageStrings)")
+            var model = user
+            model.profile = imageStrings[0]
+            self.addUser(user: model) { isError in
+                completionHandler(isError)
+            }
+        }
+//
+//        self.addUser(user: user) { isError in
+//            completionHandler(isError)
+//        }
+//
+        
+        
+        
+//        USER_DB_REF.child(userID).setValue(["email" :user.email,
+//                                            "uid" : user.uid,
+//                                            "name": user.name,
+//                                            "userType" :user.userType.rawValue,
+//                                            "profile" : user.profile]) {
+//                                                (error:Error?, ref:DatabaseReference) in
+//                                                if let error = error {
+//                                                    print("Data could not be saved: \(error).")
+//                                                    completionHandler(true)
+//
+//                                                } else {
+//                                                    print("Data saved successfully!")
+//                                                    self.globalUser = user
+//                                                    completionHandler(false)
+//                                                }
+//        }
     }
     
     func getUser(userID : String,email : String, completionHandler: @escaping (_ user : UserProtocol) -> Void) {

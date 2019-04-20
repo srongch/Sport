@@ -33,8 +33,8 @@ final class AuthService {
         Auth.auth().createUser(withEmail: email, password: password, completion
             : { (result, error) in
                 if error != nil {
-                 //   print("\(error?.localizedDescription)")
-                    handler(result?.user, true,nil)
+                    print("\(error?.localizedDescription)")
+                    handler(result?.user, true,error?.localizedDescription)
                     return
                 }
 //                localizedDescription

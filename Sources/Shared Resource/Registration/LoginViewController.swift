@@ -9,23 +9,22 @@
 import UIKit
 import Firebase
 
+protocol LoginViewControllerProtocol {
+    func loginDidSucess()
+}
+
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passWordTextField: UITextField!
     @IBOutlet weak var closeButton: UIButton!
+    var delegate : LoginViewControllerProtocol?
     
-    
+    var isModal : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if (self.isModal()){
-            closeButton.isHidden = false
-        }else{
-            closeButton.isHidden = true
-        }
-
+        self.closeButton.isHidden = !isModal
     }
     
     func printHeadline() {
@@ -40,19 +39,21 @@ class LoginViewController: UIViewController {
     
     func loginSucces (){
         
-        if(self.isModal()){
-            self.dismiss(animated: true) {
-                print("view dismissed")
-            }
-        }else{
-            
-//            print("login user is: \()")
-            
-            AppDelegate.shared.gotoView(view: SplashScreenViewController.trainerTabbar())
-//                                print("registered")
+        self.delegate?.loginDidSucess()
+        
+//        if(self.isModal()){
+//            self.dismiss(animated: true) {
+//                print("view dismissed")
+//            }
+//        }else{
 //
-//                                UIApplication.shared.keyWindow?.rootViewController = UIStoryboard.storyboard(.views).instantiateViewController(withIdentifier:"AddClassNavigationController")
-        }
+////            print("login user is: \()")
+//
+//        //    AppDelegate.shared.gotoView(view: SplashScreenViewController.trainerTabbar())
+////                                print("registered")
+////
+////                                UIApplication.shared.keyWindow?.rootViewController = UIStoryboard.storyboard(.views).instantiateViewController(withIdentifier:"AddClassNavigationController")
+//        }
 
     }
     
@@ -150,7 +151,7 @@ class LoginViewController: UIViewController {
         if segue.identifier == "registrationSegue"
         {
             if let destinationVC = segue.destination as? RegisterViewController {
-                destinationVC.delegate =  isModal() ? self : nil
+                destinationVC.delegate =  self
             }
         }
 //
@@ -162,7 +163,8 @@ class LoginViewController: UIViewController {
 extension LoginViewController : RegistrationDelegate{
     func registrationDidFinish() {
         print("registration finish")
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
+        self.delegate?.loginDidSucess()
     }
 }
 

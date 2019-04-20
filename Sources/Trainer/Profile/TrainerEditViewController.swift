@@ -1,5 +1,5 @@
 //
-//  EditProfileViewController.swift
+//  TrainerEditViewController.swift
 //  Trainer
 //
 //  Created by Chhem Sronglong on 20/04/2019.
@@ -8,20 +8,30 @@
 
 import UIKit
 
-class EditProfileViewController: UIViewController {
 
-    @IBOutlet weak var naviView: AddClassNavi!
-    
+
+class TrainerEditViewController: UIViewController {
+
+    let vc =  EditProfileViewController.instance()
+     var delegate : EditProfileProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self .setupView()
+        self.setupView()
+        self.vc.delegate = self
+        self.loadData()
     }
     
     func setupView(){
-        naviView.delegate = self
+        add(vc)
+    }
+    
+    func loadData(){
+        UserService.shared.getUser(userID: UserService.shared.globalUser!.uid , email: "") { userModel in
+            self.vc.setupData(userModel: userModel)
+        }
     }
     
 
@@ -37,14 +47,15 @@ class EditProfileViewController: UIViewController {
 
 }
 
-extension EditProfileViewController : AddClassNaviProtocol{
-    func closeButtonDidPressed() {
+extension TrainerEditViewController : EditProfileProtocol{
+    func editProfileBackPressed() {
         self.navigationController?.popViewController(animated: true)
     }
-}
-
-extension EditProfileViewController  {
-    static func instance ()-> EditProfileViewController {
-        return UIStoryboard.storyboard(.profile).instantiateViewController(withIdentifier:"EditProfileViewController") as! EditProfileViewController
+    
+    func editProfileSaveComplete() {
+        self.navigationController?.popViewController(animated: true)
+        self.delegate?.editProfileSaveComplete()
     }
+    
+    
 }

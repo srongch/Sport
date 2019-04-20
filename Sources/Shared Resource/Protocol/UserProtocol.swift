@@ -28,6 +28,7 @@ protocol UserProtocol {
     var uid : String {get set}
     var email : String {get set}
     var userType : UserType {get set}
+    var memo : String {get set}
 }
 
 struct CustomUser: UserProtocol {
@@ -41,15 +42,16 @@ struct CustomUser: UserProtocol {
     
     var uid: String
     
+    var memo: String
     
 
-    init(name : String, profile : String, uid : String, email : String, userType : UserType) {
+    init(name : String, profile : String, uid : String, email : String, userType : UserType, memo: String = "") {
         self.name = name
         self.profile = profile
         self.uid = uid
         self.email = email
         self.userType = userType
-        
+        self.memo = memo
     }
     
     init?(snapshot: DataSnapshot) {
@@ -69,7 +71,7 @@ struct CustomUser: UserProtocol {
         self.uid = uid
         self.email = email
         self.userType = UserType(rawValue: userType)!
-        
+        self.memo = value["memo"] as? String ?? ""
     }
     
     

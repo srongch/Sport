@@ -32,15 +32,20 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
     }
     
     func setupUser (user : UserProtocol){
-        imageView.image = UIImage(named: "profile_placehold")
+        self.imageView.sd_setImage(with: URL(string: user.profile), completed: { [weak self] (image, error, cacheType, imageURL) in
+            guard let image = image else{
+                self?.imageView.image = UIImage(named: "profile_placehold")
+                return
+            }
+            self?.imageView.image = image
+        })
         nameLable.text = user.name
         emailLable.text = user.email
-        memoLabel.text = ""
+        memoLabel.text = user.memo
         quote_icon.isHidden = true
     }
     
     func setupForTrainer(){
-        memoLabel.text = "No memo available"
         quote_icon.isHidden = false
     }
     

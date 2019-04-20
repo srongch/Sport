@@ -189,7 +189,7 @@ class CalenderViewController: UIViewController,NaviBarProtocol {
                                            numberofPeople: numberofPerson,
                                            price: self.classModel!.classPrice,
                                            activityType: classModel!.activityType,
-                                           levelType: classModel!.levelType)
+                                           levelType: classModel!.levelType,authorId: self.classModel!.authorId)
         }
         
         

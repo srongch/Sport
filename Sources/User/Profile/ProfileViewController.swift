@@ -42,9 +42,10 @@ class ProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if (!isViewIsFirst){
-            isViewIsFirst = false
             tableView.reloadData()
             loadData()
+        }else{
+            isViewIsFirst = false
         }
     }
     
@@ -53,7 +54,7 @@ class ProfileViewController: UIViewController {
             let vc = LoadingViewController.instance(self.view.frame)
             add(vc)
             ClassService().profileState(userId:  UserService.shared.globalUser!.uid) {[weak self] model, isError in
-              //  vc.remove()
+                vc.remove()
                 if (isError){
                     //do sth
                     self?.presentAlertView(with: "Some worng", isOneButton: true, onDone: {}, onCancel: {})
@@ -74,7 +75,11 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = settingArray[indexPath.row]
         switch row.settingType {
-        case .editProfile: print("edit profile")
+        case .editProfile:
+            print("edit profile")
+            let vc = UserEditProfileViewController.init()
+            vc.delegate = self
+            self.navigationController?.pushViewController(vc, animated: true)
         case .favorite : print("favorite")
         case .payment :
             print("payment")
@@ -142,7 +147,7 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate{
                 }
             }
         }else{
-            self.navigationController?.present(LoginViewController.instance(), animated: true, completion: {
+            self.navigationController?.present(UserLoginViewController.init(), animated: true, completion: {
                 print("presented")
             })
         }
@@ -151,6 +156,17 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate{
      func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 50 + 20 + 20
     }
+}
+
+extension ProfileViewController : EditProfileProtocol{
+    func editProfileBackPressed() {
+        
+    }
+    
+    func editProfileSaveComplete() {
+        self.tableView.reloadData()
+    }
+
 }
 
 

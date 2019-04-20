@@ -57,7 +57,9 @@ extension TrainerProfileViewController : UITableViewDataSource, UITableViewDeleg
         switch row.settingType {
         case .editProfile:
             print("edit profile")
-            self.navigationController?.pushViewController(EditProfileViewController.instance(), animated: true)
+            let vc = TrainerEditViewController.init()
+            vc.delegate = self
+            self.navigationController?.pushViewController(vc, animated: true)
         default:
             print("")
         }
@@ -118,7 +120,7 @@ extension TrainerProfileViewController : UITableViewDataSource, UITableViewDeleg
             print("log out")
             AuthService().signOut{ isComplete in
                 if (isComplete) {
-                    self.tableView.reloadData()
+                   AppDelegate.shared.gotoView(view: LoginViewController.instance())
                 }
             }
         }else{
@@ -131,6 +133,18 @@ extension TrainerProfileViewController : UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 50 + 20 + 20
     }
+}
+
+extension TrainerProfileViewController : EditProfileProtocol{
+    func editProfileBackPressed() {
+        //
+    }
+    
+    func editProfileSaveComplete() {
+        self.tableView.reloadData()
+    }
+    
+    
 }
 
 extension TrainerProfileViewController  {

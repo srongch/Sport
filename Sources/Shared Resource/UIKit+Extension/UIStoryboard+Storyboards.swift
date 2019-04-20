@@ -21,6 +21,7 @@ extension UIStoryboard {
         case bookings
         case timetable
         case profile
+        case profiles
         case classes
         case tabbar
         
