@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FiraSans-Bold.ttf">
+            <string>FiraSans-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Class List View Controller-->
+        <scene sceneID="jg5-K3-FNo">
+            <objects>
+                <viewController storyboardIdentifier="ClassListViewController" id="JZ9-dg-LwU" customClass="ClassListViewController" customModule="Trainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TVJ-Ci-HOq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Rf-oc-Clu" customClass="AddClassNavi" customModule="Trainer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="45"/>
+                                <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="lrn-HO-Gy3"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Classes"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="naviTitle" value="Your Class"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="naviStep" value=" "/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dsE-NE-aN9">
+                                <rect key="frame" x="0.0" y="89" width="414" height="807"/>
+                                <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start you first class here!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydb-2r-xG5">
+                                <rect key="frame" x="20" y="803" width="298" height="22"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="18"/>
+                                <color key="textColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sr1-hH-PEZ">
+                                <rect key="frame" x="338" y="786" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="UTV-RO-hD6"/>
+                                    <constraint firstAttribute="width" constant="56" id="poP-pX-eXM"/>
+                                </constraints>
+                                <state key="normal" image="add_class_icon"/>
+                                <connections>
+                                    <action selector="addClassPressed:" destination="JZ9-dg-LwU" eventType="touchUpInside" id="ZSv-bk-49b"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="1Rf-oc-Clu" firstAttribute="leading" secondItem="aGs-P5-ZNd" secondAttribute="leading" id="27J-KE-cLb"/>
+                            <constraint firstItem="1Rf-oc-Clu" firstAttribute="top" secondItem="aGs-P5-ZNd" secondAttribute="top" id="8Jr-GI-8Xg"/>
+                            <constraint firstItem="dsE-NE-aN9" firstAttribute="leading" secondItem="aGs-P5-ZNd" secondAttribute="leading" id="EGR-8a-mIY"/>
+                            <constraint firstItem="ydb-2r-xG5" firstAttribute="leading" secondItem="aGs-P5-ZNd" secondAttribute="leading" constant="20" id="FSd-JT-OB1"/>
+                            <constraint firstItem="1Rf-oc-Clu" firstAttribute="trailing" secondItem="aGs-P5-ZNd" secondAttribute="trailing" id="FXM-U6-fkc"/>
+                            <constraint firstItem="dsE-NE-aN9" firstAttribute="trailing" secondItem="aGs-P5-ZNd" secondAttribute="trailing" id="Kcx-oQ-Oim"/>
+                            <constraint firstItem="sr1-hH-PEZ" firstAttribute="leading" secondItem="ydb-2r-xG5" secondAttribute="trailing" constant="20" id="ayp-3O-PFa"/>
+                            <constraint firstItem="aGs-P5-ZNd" firstAttribute="trailing" secondItem="sr1-hH-PEZ" secondAttribute="trailing" constant="20" id="dGR-AH-GM2"/>
+                            <constraint firstAttribute="bottom" secondItem="dsE-NE-aN9" secondAttribute="bottom" id="gRX-w5-XzN"/>
+                            <constraint firstItem="dsE-NE-aN9" firstAttribute="top" secondItem="1Rf-oc-Clu" secondAttribute="bottom" id="jdE-xv-yFq"/>
+                            <constraint firstItem="aGs-P5-ZNd" firstAttribute="bottom" secondItem="sr1-hH-PEZ" secondAttribute="bottom" constant="20" id="qXT-L5-5yV"/>
+                            <constraint firstItem="ydb-2r-xG5" firstAttribute="centerY" secondItem="sr1-hH-PEZ" secondAttribute="centerY" id="uT5-xD-tuX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aGs-P5-ZNd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4FN-bq-5KH"/>
+                    <connections>
+                        <outlet property="noDataLabel" destination="ydb-2r-xG5" id="Aq0-T9-GiI"/>
+                        <outlet property="tableView" destination="dsE-NE-aN9" id="opN-xW-mh0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vJk-5g-VBv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1233" y="121"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ddz-n0-RyX">
+            <objects>
+                <navigationController storyboardIdentifier="ClassListViewNavi" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Bdx-ky-EcJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LOx-OT-Y63">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JZ9-dg-LwU" kind="relationship" relationship="rootViewController" id="pYM-bx-6wo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zmt-2i-edR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1946.376811594203" y="120.53571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add_class_icon" width="57" height="56"/>
+    </resources>
+</document>

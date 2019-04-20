@@ -1,30 +1,32 @@
 //
-//  ProfileViewController.swift
-//  SportShare
+//  TrainerProfileViewController.swift
+//  SportSharing
 //
-//  Created by Chhem Sronglong on 04/03/2019.
-//  Copyright © 2019 Chhem Sronglong. All rights reserved.
+//  Created by Chhem Sronglong on 18/04/2019.
+//  Copyright © 2019 100456065. All rights reserved.
 //
 
 import UIKit
-import Firebase
 
-class ProfileViewController: UIViewController {
+class TrainerProfileViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var settingArray: [Setting] {
-        return Setting.getSettingArray(isUser : true, isLogin : UserService.shared.isHaveUser)
-    }
-    var profileState : ProfileState?
     
-    var text = ""
-    var isViewIsFirst = false
+    var settingArray: [Setting] {
+        return Setting.getSettingArray(isUser : false, isLogin : UserService.shared.isHaveUser)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        self.setupView()
+    }
+    
+    func setupView(){
         tableView.delegate = self
         tableView.dataSource = self
-
+        
         self.tableView.sectionHeaderHeight = UITableView.automaticDimension
         self.tableView.sectionFooterHeight = UITableView.automaticDimension
         self.tableView.estimatedSectionHeaderHeight = 200 //a rough estimate, doesn't need to be
@@ -33,58 +35,35 @@ class ProfileViewController: UIViewController {
         tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: ProfileHeaderView.className)
         let footerNib = UINib.init(nibName: ProfileFooterView.className, bundle: Bundle.main)
         tableView.register(footerNib, forHeaderFooterViewReuseIdentifier: ProfileFooterView.className)
-        isViewIsFirst = true
-        
-        loadData()
-        
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if (!isViewIsFirst){
-            isViewIsFirst = false
-            tableView.reloadData()
-            loadData()
-        }
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-    
-    func loadData(){
-        if (UserService.shared.isHaveUser){
-            let vc = LoadingViewController.instance(self.view.frame)
-            add(vc)
-            ClassService().profileState(userId:  UserService.shared.globalUser!.uid) {[weak self] model, isError in
-              //  vc.remove()
-                if (isError){
-                    //do sth
-                    self?.presentAlertView(with: "Some worng", isOneButton: true, onDone: {}, onCancel: {})
-                }else{
-                    self?.profileState = model
-                    self?.tableView.reloadData()
-                }
-            }
-        }
-    }
-    
-    
+    */
 
 }
 
-extension ProfileViewController : UITableViewDataSource, UITableViewDelegate{
+
+extension TrainerProfileViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = settingArray[indexPath.row]
         switch row.settingType {
-        case .editProfile: print("edit profile")
-        case .favorite : print("favorite")
-        case .payment :
-            print("payment")
-            self.navigationController?.pushViewController(BookingViewController.instance(), animated: true)
+        case .editProfile:
+            print("edit profile")
+            self.navigationController?.pushViewController(EditProfileViewController.instance(), animated: true)
         default:
             print("")
         }
     }
     
-     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 45
     }
     
@@ -97,28 +76,29 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate{
         
         let rowSetting = settingArray[indexPath.row]
         cell.setupCell(setting: rowSetting)
-        
-        guard let state = profileState else {
-            return cell
-        }
-        switch rowSetting.settingType {
-        case .favorite:
-            cell.setRightText(text: "\(state.like_count)")
-        case .payment:
-            cell.setRightText(text: "\(state.booking_count)")
-        default: break
-            
-        }
+//
+//        guard let state = profileState else {
+//            return cell
+//        }
+//        switch rowSetting.settingType {
+//        case .favorite:
+//            cell.setRightText(text: "\(state.like_count)")
+//        case .payment:
+//            cell.setRightText(text: "\(state.booking_count)")
+//        default: break
+//
+//        }
         
         return cell
     }
     
- 
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: ProfileHeaderView.className) as! ProfileHeaderView
         if(UserService.shared.isHaveUser){
             headerView.setupUser(user:UserService.shared.globalUser!)
+            headerView.setupForTrainer()
         }else{
             headerView.setupNoLogin()
         }
@@ -148,19 +128,15 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate{
         }
     }
     
-     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 50 + 20 + 20
     }
 }
 
-
-extension ProfileViewController {
+extension TrainerProfileViewController  {
     static func instance ()-> UINavigationController {
         return UIStoryboard.storyboard(.profile).instantiateViewController(withIdentifier:"ProfileNavigation") as! UINavigationController
     }
-    
-    static func instancedView ()-> ProfileViewController {
-        return UIStoryboard.storyboard(.profile).instantiateViewController(withIdentifier:"ProfileViewController") as! ProfileViewController
-    }
-    
 }
+
+

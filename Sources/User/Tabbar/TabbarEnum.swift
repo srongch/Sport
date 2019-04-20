@@ -12,7 +12,6 @@ import UIKit
 enum TabbarEnum {
     static func userTabbar() -> ESTabBarController {
         let tabBarController = ESTabBarController()
-//        tabBarController.view.backgroundColor = UIColor.green
         
         let tabbar = tabBarController.tabBar as! ESTabBar
         
@@ -22,8 +21,7 @@ enum TabbarEnum {
         tabbar.backgroundColor = UIColor.background_color
         tabbar.isTranslucent = false
         tabbar.itemCustomPositioning = .centered
-        //        tabBarController.bac
-//        tabBarController.ite
+        
         let v1 = HomeViewController.instance()
         let v2 = TimetableViewController.instance()
         let v3 = ProfileViewController.instance()

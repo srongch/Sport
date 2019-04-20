@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 enum DayoftheWeek {
     case monday
@@ -20,7 +21,7 @@ enum DayoftheWeek {
 }
 
 
-struct ClassModel {
+struct ClassModel1 {
     
     var activityType : Int
     var levelType : Int
@@ -86,3 +87,4 @@ struct ClassModel {
     }
     
 }
+

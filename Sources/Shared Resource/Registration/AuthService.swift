@@ -15,7 +15,8 @@ final class AuthService {
 //        handler(result?.user,error)
         
         if let error = error {
-            handler(false)
+            print("\(error.localizedDescription)")
+            handler(true)
             return
         }
         

@@ -45,8 +45,13 @@ class LoginViewController: UIViewController {
                 print("view dismissed")
             }
         }else{
-                                print("registered")
-                                UIApplication.shared.keyWindow?.rootViewController = UIStoryboard.storyboard(.views).instantiateViewController(withIdentifier:"AddClassNavigationController")
+            
+//            print("login user is: \()")
+            
+            AppDelegate.shared.gotoView(view: SplashScreenViewController.trainerTabbar())
+//                                print("registered")
+//
+//                                UIApplication.shared.keyWindow?.rootViewController = UIStoryboard.storyboard(.views).instantiateViewController(withIdentifier:"AddClassNavigationController")
         }
 
     }
@@ -65,9 +70,14 @@ class LoginViewController: UIViewController {
                 return
         }
         
+        let vc = LoadingViewController.instance(self.view.frame)
+        add(vc)
+        
         AuthService().signInWith(email: emailAddress, password: password) { error  in
+            vc.remove()
             if (error!) {
                 print("login faild")
+                self.presentAlertView(with: "Login Failed.", isOneButton: true, onDone: {}, onCancel: {})
             }else{
                 self.loginSucces()
             }

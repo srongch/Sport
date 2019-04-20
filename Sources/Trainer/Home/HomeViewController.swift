@@ -15,6 +15,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var bookingList = [Transactions]()
     var totalEarn : Double = 0
+    @IBOutlet weak var noDataStackView: UIStackView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,15 +45,22 @@ class HomeViewController: UIViewController {
         let vc = LoadingViewController.instance(self.view.frame)
         add(vc)
         
-        ClassService().bookingList(authorId: "yi9L3erhzaT8UPqwn9rGcwaTD1v2") { (models, isError) in
+        ClassService().bookingList(authorId: UserService.shared.globalUser?.uid ?? "") { (models, isError) in
             print("size is : \(models?.count)")
-            
-            guard let  models = models, !isError else{
+            vc.remove()
+            guard !isError else{
                 self.presentAlertView(with: "Data Load Error! Retry?", isOneButton: false, onDone: {
                     self.loadData()
                 }, onCancel: {})
                 return
             }
+            
+            guard let  models = models else{
+                // no data.
+                self.noDataStackView.isHidden = false
+                return
+            }
+            self.noDataStackView.isHidden = true
             
             models.forEach({ model in
                 if let index = self.bookingList.index(where: {$0.isTheSameDate(date: model.timeStamp)}) {
@@ -66,7 +75,7 @@ class HomeViewController: UIViewController {
                     self.totalEarn += model.price * Double(model.numberofPeople)
                 }
             })
-            vc.remove()
+            
             self.updateView()
             
         }
@@ -116,4 +125,10 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     
+}
+
+extension HomeViewController  {
+    static func instance ()-> UINavigationController {
+        return UIStoryboard.storyboard(.tabbar).instantiateViewController(withIdentifier:"HomeViewControllerNavi") as! UINavigationController
+    }
 }

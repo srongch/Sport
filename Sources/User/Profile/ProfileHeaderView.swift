@@ -39,6 +39,11 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
         quote_icon.isHidden = true
     }
     
+    func setupForTrainer(){
+        memoLabel.text = "No memo available"
+        quote_icon.isHidden = false
+    }
+    
 
 }
 

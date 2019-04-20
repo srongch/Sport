@@ -22,6 +22,7 @@ extension UIStoryboard {
         case timetable
         case profile
         case classes
+        case tabbar
         
         var filename: String {
             return rawValue.capitalized

@@ -40,20 +40,36 @@
 		164A2F5C224516DF00B42AF4 /* HomeCollectionFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F58224516DF00B42AF4 /* HomeCollectionFooter.swift */; };
 		164A2F5D224516DF00B42AF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F59224516DF00B42AF4 /* HomeViewController.swift */; };
 		164A2F602245172F00B42AF4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F5F2245172F00B42AF4 /* ProfileViewController.swift */; };
-		164A2F642245174600B42AF4 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164A2F622245174600B42AF4 /* Profile.storyboard */; };
 		164A2F652245174600B42AF4 /* Review.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164A2F632245174600B42AF4 /* Review.storyboard */; };
 		164A2F732245181B00B42AF4 /* FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F6F2245181B00B42AF4 /* FlickrPhoto.swift */; };
 		164A2F742245181B00B42AF4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F702245181B00B42AF4 /* Result.swift */; };
 		164A2F752245181B00B42AF4 /* FlickrSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F712245181B00B42AF4 /* FlickrSearchResults.swift */; };
 		164A2F762245181B00B42AF4 /* Flickr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F722245181B00B42AF4 /* Flickr.swift */; };
 		164A2F79224518CD00B42AF4 /* DetailActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F78224518CD00B42AF4 /* DetailActivityViewController.swift */; };
-		164A2F7D224518E500B42AF4 /* AcitivityListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F7B224518E500B42AF4 /* AcitivityListTableViewCell.swift */; };
 		164A2F7E224518E500B42AF4 /* ActivityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F7C224518E500B42AF4 /* ActivityListViewController.swift */; };
 		164A2F802245199A00B42AF4 /* Views.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164A2F7F2245199900B42AF4 /* Views.storyboard */; };
 		164A2F8222451EF000B42AF4 /* ProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 164A2F8122451EF000B42AF4 /* ProfileHeaderView.xib */; };
 		164A2F8422451F0A00B42AF4 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F8322451F0A00B42AF4 /* ProfileHeaderView.swift */; };
 		164A2F862245230500B42AF4 /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F852245230500B42AF4 /* ProfileViewCell.swift */; };
 		164A2F8822452CD200B42AF4 /* ProfileFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 164A2F8722452CD200B42AF4 /* ProfileFooterView.xib */; };
+		165626722268D7490065F52F /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165626702268D6EF0065F52F /* SplashScreenViewController.swift */; };
+		165626742268DC190065F52F /* UIAppDelegate+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165626732268DC190065F52F /* UIAppDelegate+View.swift */; };
+		165626752268DC190065F52F /* UIAppDelegate+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165626732268DC190065F52F /* UIAppDelegate+View.swift */; };
+		165626792268E9980065F52F /* TrainerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165626772268E9980065F52F /* TrainerProfileViewController.swift */; };
+		1656267B2268EAE90065F52F /* ProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 164A2F8122451EF000B42AF4 /* ProfileHeaderView.xib */; };
+		1656267C2268EAED0065F52F /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F8322451F0A00B42AF4 /* ProfileHeaderView.swift */; };
+		1656267D2268EAF00065F52F /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F852245230500B42AF4 /* ProfileViewCell.swift */; };
+		1656267E2268EAF40065F52F /* ProfileFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 164A2F8722452CD200B42AF4 /* ProfileFooterView.xib */; };
+		165626802268EBF70065F52F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164A2F622245174600B42AF4 /* Profile.storyboard */; };
+		165626842268EC240065F52F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 165626832268EC240065F52F /* Profile.storyboard */; };
+		1656268C226A29730065F52F /* ClassList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1656268B226A29730065F52F /* ClassList.xib */; };
+		16562692226A2A730065F52F /* AcitivityListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F7B224518E500B42AF4 /* AcitivityListTableViewCell.swift */; };
+		16562693226A2A9D0065F52F /* AcitivityListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F7B224518E500B42AF4 /* AcitivityListTableViewCell.swift */; };
+		16562695226A2B080065F52F /* ClassListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16562694226A2B080065F52F /* ClassListViewController.swift */; };
+		16562697226A2C1A0065F52F /* Classes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16562696226A2C1A0065F52F /* Classes.storyboard */; };
+		1656269A226A31730065F52F /* ClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ECFD22415AA300BE1A62 /* ClassModel.swift */; };
+		1656269C226A31930065F52F /* ClassModel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1656269B226A31930065F52F /* ClassModel1.swift */; };
+		1656269E226AB0A70065F52F /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1656269D226AB0A70065F52F /* EditProfileViewController.swift */; };
 		1657087B2256672900DF0BC2 /* BookingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1657087A2256672900DF0BC2 /* BookingModel.swift */; };
 		165CD0B722675F9B002519DE /* HomeTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1649A512225E419000DDF6AA /* HomeTabCell.xib */; };
 		165CD0BB22676AD7002519DE /* HomeTabSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165CD0BA22676AD7002519DE /* HomeTabSectionHeader.swift */; };
@@ -214,7 +230,6 @@
 		9DB3ED1622415AF800BE1A62 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DB3ED1522415AF800BE1A62 /* GoogleService-Info.plist */; };
 		9DB3ED1C22415AFD00BE1A62 /* ClassService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ED1922415AFD00BE1A62 /* ClassService.swift */; };
 		9DB3ED1D22415AFD00BE1A62 /* FirebaseClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ED1A22415AFD00BE1A62 /* FirebaseClassModel.swift */; };
-		9DB3ED2422415B0700BE1A62 /* ClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ED2222415B0700BE1A62 /* ClassModel.swift */; };
 		9DB3ED2522415B0700BE1A62 /* AddClassViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ED2322415B0700BE1A62 /* AddClassViewModel.swift */; };
 		9DB3ED2722415B0B00BE1A62 /* AddClassNavi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ED2622415B0B00BE1A62 /* AddClassNavi.swift */; };
 		9DB3ED3722415B1000BE1A62 /* AddClassDateSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ED2922415B1000BE1A62 /* AddClassDateSectionView.swift */; };
@@ -318,6 +333,15 @@
 		164A2F8322451F0A00B42AF4 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		164A2F852245230500B42AF4 /* ProfileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
 		164A2F8722452CD200B42AF4 /* ProfileFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFooterView.xib; sourceTree = "<group>"; };
+		165626702268D6EF0065F52F /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		165626732268DC190065F52F /* UIAppDelegate+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAppDelegate+View.swift"; sourceTree = "<group>"; };
+		165626772268E9980065F52F /* TrainerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerProfileViewController.swift; sourceTree = "<group>"; };
+		165626832268EC240065F52F /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Sources/Trainer/Profile/Profile.storyboard; sourceTree = SOURCE_ROOT; };
+		1656268B226A29730065F52F /* ClassList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassList.xib; sourceTree = "<group>"; };
+		16562694226A2B080065F52F /* ClassListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassListViewController.swift; sourceTree = "<group>"; };
+		16562696226A2C1A0065F52F /* Classes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Classes.storyboard; sourceTree = "<group>"; };
+		1656269B226A31930065F52F /* ClassModel1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassModel1.swift; sourceTree = "<group>"; };
+		1656269D226AB0A70065F52F /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		1657087A2256672900DF0BC2 /* BookingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingModel.swift; sourceTree = "<group>"; };
 		165CD0B822676A64002519DE /* HomeTabSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabSectionHeader.xib; sourceTree = "<group>"; };
 		165CD0BA22676AD7002519DE /* HomeTabSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabSectionHeader.swift; sourceTree = "<group>"; };
@@ -447,7 +471,6 @@
 		9DB3ED1822415AFD00BE1A62 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		9DB3ED1922415AFD00BE1A62 /* ClassService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassService.swift; sourceTree = "<group>"; };
 		9DB3ED1A22415AFD00BE1A62 /* FirebaseClassModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseClassModel.swift; sourceTree = "<group>"; };
-		9DB3ED2222415B0700BE1A62 /* ClassModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassModel.swift; sourceTree = "<group>"; };
 		9DB3ED2322415B0700BE1A62 /* AddClassViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassViewModel.swift; sourceTree = "<group>"; };
 		9DB3ED2622415B0B00BE1A62 /* AddClassNavi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassNavi.swift; sourceTree = "<group>"; };
 		9DB3ED2922415B1000BE1A62 /* AddClassDateSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassDateSectionView.swift; sourceTree = "<group>"; };
@@ -597,7 +620,7 @@
 		164A2F612245174600B42AF4 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				164A2F622245174600B42AF4 /* Profile.storyboard */,
+				165626832268EC240065F52F /* Profile.storyboard */,
 				164A2F632245174600B42AF4 /* Review.storyboard */,
 			);
 			path = Storyboard;
@@ -617,8 +640,28 @@
 				164A2F7B224518E500B42AF4 /* AcitivityListTableViewCell.swift */,
 				164A2F7C224518E500B42AF4 /* ActivityListViewController.swift */,
 				161C895F224AAE5100BE9A0D /* LevelButtonExtension.swift */,
+				1656268B226A29730065F52F /* ClassList.xib */,
 			);
 			path = "Activity List";
+			sourceTree = "<group>";
+		};
+		165626762268E9580065F52F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				164A2F622245174600B42AF4 /* Profile.storyboard */,
+				165626772268E9980065F52F /* TrainerProfileViewController.swift */,
+				1656269D226AB0A70065F52F /* EditProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		1656268A226A28AC0065F52F /* ClassList */ = {
+			isa = PBXGroup;
+			children = (
+				16562696226A2C1A0065F52F /* Classes.storyboard */,
+				16562694226A2B080065F52F /* ClassListViewController.swift */,
+			);
+			path = ClassList;
 			sourceTree = "<group>";
 		};
 		1664445B224303620063E3D4 /* Booking */ = {
@@ -805,6 +848,8 @@
 		9DB3EC5B2241586600BE1A62 /* Trainer */ = {
 			isa = PBXGroup;
 			children = (
+				1656268A226A28AC0065F52F /* ClassList */,
+				165626762268E9580065F52F /* Profile */,
 				16844C97225D1E1A00D89644 /* Home */,
 				9DB3ED5B22415B3800BE1A62 /* Assets.xcassets */,
 				9DB3ED5622415B1900BE1A62 /* Storyboard */,
@@ -820,6 +865,7 @@
 				9DB3EC682241586700BE1A62 /* LaunchScreen.storyboard */,
 				9DB3EC6B2241586700BE1A62 /* Info.plist */,
 				9DB3EC632241586600BE1A62 /* Trainer.xcdatamodeld */,
+				165626702268D6EF0065F52F /* SplashScreenViewController.swift */,
 			);
 			path = Trainer;
 			sourceTree = "<group>";
@@ -882,6 +928,7 @@
 				9DB3EC9522415A4700BE1A62 /* PercentLayoutConstraint.swift */,
 				1677370E2253AD6300BFC345 /* UITableView+Extension.swift */,
 				16B971DD2257B0ED0013169F /* UIView+StackView.swift */,
+				165626732268DC190065F52F /* UIAppDelegate+View.swift */,
 			);
 			path = "UIKit+Extension";
 			sourceTree = "<group>";
@@ -994,7 +1041,7 @@
 		9DB3ED2122415B0700BE1A62 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9DB3ED2222415B0700BE1A62 /* ClassModel.swift */,
+				1656269B226A31930065F52F /* ClassModel1.swift */,
 				9DB3ED2322415B0700BE1A62 /* AddClassViewModel.swift */,
 			);
 			path = Model;
@@ -1261,6 +1308,7 @@
 				164A2F652245174600B42AF4 /* Review.storyboard in Resources */,
 				165CF28F22438F3C00953E73 /* BookingCell.xib in Resources */,
 				1664445D224303770063E3D4 /* Bookings.storyboard in Resources */,
+				165626842268EC240065F52F /* Profile.storyboard in Resources */,
 				16773A5C224DA5B900C6BBFB /* Registration.storyboard in Resources */,
 				9DB3ECD222415A7500BE1A62 /* FiraSans-Light.ttf in Resources */,
 				9DB3ECCE22415A7500BE1A62 /* FiraSans-MediumItalic.ttf in Resources */,
@@ -1285,7 +1333,6 @@
 				9DB3ECEB22415A7D00BE1A62 /* CategoryButton.xib in Resources */,
 				9DB3ECD822415A7500BE1A62 /* FiraSans-SemiBold.ttf in Resources */,
 				9DB3ECF922415A9700BE1A62 /* NaviBar.xib in Resources */,
-				164A2F642245174600B42AF4 /* Profile.storyboard in Resources */,
 				9DB3ECE022415A7500BE1A62 /* FiraSans-Italic.ttf in Resources */,
 				164A2F802245199A00B42AF4 /* Views.storyboard in Resources */,
 				9DB3ECC622415A7500BE1A62 /* FiraSans-BoldItalic.ttf in Resources */,
@@ -1312,6 +1359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16562697226A2C1A0065F52F /* Classes.storyboard in Resources */,
 				9DB3ED3822415B1000BE1A62 /* TestView.xib in Resources */,
 				165CD0BC22676B3F002519DE /* HomeTabSectionHeader.xib in Resources */,
 				9DB3ECC922415A7500BE1A62 /* FiraSans-Bold.ttf in Resources */,
@@ -1319,6 +1367,7 @@
 				9DB3ECCB22415A7500BE1A62 /* FiraSans-ExtraLight.ttf in Resources */,
 				9DB3ECBF22415A7500BE1A62 /* FiraSans-Thin.ttf in Resources */,
 				9DB3EC6A2241586700BE1A62 /* LaunchScreen.storyboard in Resources */,
+				1656267B2268EAE90065F52F /* ProfileHeaderView.xib in Resources */,
 				9DB3ECD322415A7500BE1A62 /* FiraSans-Light.ttf in Resources */,
 				9DB3ECCF22415A7500BE1A62 /* FiraSans-MediumItalic.ttf in Resources */,
 				9DB3ED4222415B1000BE1A62 /* AddClassNavi.xib in Resources */,
@@ -1331,6 +1380,7 @@
 				9DB3ECD122415A7500BE1A62 /* FiraSans-BlackItalic.ttf in Resources */,
 				9DB3ECD522415A7500BE1A62 /* FiraSans-Black.ttf in Resources */,
 				9DB3ECC522415A7500BE1A62 /* FiraSans-Medium.ttf in Resources */,
+				165626802268EBF70065F52F /* Profile.storyboard in Resources */,
 				1649A511225E3F0800DDF6AA /* Tabbar.storyboard in Resources */,
 				9DB3ECCD22415A7500BE1A62 /* FiraSans-ThinItalic.ttf in Resources */,
 				9DB3ECD722415A7500BE1A62 /* FiraSans-ExtraBold.ttf in Resources */,
@@ -1340,10 +1390,12 @@
 				9DB3ECC122415A7500BE1A62 /* FiraSans-ExtraLightItalic.ttf in Resources */,
 				9DB3ECEC22415A7D00BE1A62 /* CategoryButton.xib in Resources */,
 				9DB3ED3C22415B1000BE1A62 /* SelectDateView.xib in Resources */,
+				1656268C226A29730065F52F /* ClassList.xib in Resources */,
 				9DB3ECD922415A7500BE1A62 /* FiraSans-SemiBold.ttf in Resources */,
 				165CD0B722675F9B002519DE /* HomeTabCell.xib in Resources */,
 				9DB3ED1622415AF800BE1A62 /* GoogleService-Info.plist in Resources */,
 				9DB3ECE122415A7500BE1A62 /* FiraSans-Italic.ttf in Resources */,
+				1656267E2268EAF40065F52F /* ProfileFooterView.xib in Resources */,
 				9DB3ECC722415A7500BE1A62 /* FiraSans-BoldItalic.ttf in Resources */,
 				9DB3ED5C22415B3800BE1A62 /* Assets.xcassets in Resources */,
 				9DB3EC622241586600BE1A62 /* Main.storyboard in Resources */,
@@ -1580,7 +1632,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				164A2F7D224518E500B42AF4 /* AcitivityListTableViewCell.swift in Sources */,
 				16032D732258FAFD0023BFFB /* ProfileState.swift in Sources */,
 				164A2F412244EEFD00B42AF4 /* ESTabBarItem.swift in Sources */,
 				9DB3ED0122415AA800BE1A62 /* ClassService.swift in Sources */,
@@ -1617,6 +1668,7 @@
 				16773A61224DA5FA00C6BBFB /* LoginViewController.swift in Sources */,
 				9DB3EC9A22415A4700BE1A62 /* UIViewController+StoryboardIdentifier.swift in Sources */,
 				16A0869422464612007E378D /* UserClassesService.swift in Sources */,
+				16562692226A2A730065F52F /* AcitivityListTableViewCell.swift in Sources */,
 				164A2F742245181B00B42AF4 /* Result.swift in Sources */,
 				164A2F79224518CD00B42AF4 /* DetailActivityViewController.swift in Sources */,
 				164A2F532244FFE500B42AF4 /* ExampleBackgroundContentView.swift in Sources */,
@@ -1656,6 +1708,7 @@
 				9DB4AE012241CAEA009A74C2 /* ConfirmBookingViewController.swift in Sources */,
 				16AC45C82242951E00E9B351 /* ScheduleCell.swift in Sources */,
 				16EF3753224FBE2100E96F30 /* AuthService.swift in Sources */,
+				165626742268DC190065F52F /* UIAppDelegate+View.swift in Sources */,
 				164A2F432244EEFD00B42AF4 /* ESTabBar.swift in Sources */,
 				164A2F602245172F00B42AF4 /* ProfileViewController.swift in Sources */,
 				9DB3ECE722415A7D00BE1A62 /* NibView.swift in Sources */,
@@ -1700,31 +1753,36 @@
 				164A2F3E2244EEFD00B42AF4 /* ESTabBarItemContainer.swift in Sources */,
 				164A2F442244EEFD00B42AF4 /* ESTabBar.swift in Sources */,
 				9DB3ECF422415A8700BE1A62 /* CustomEnum.swift in Sources */,
-				9DB3ED2422415B0700BE1A62 /* ClassModel.swift in Sources */,
 				9DB3EC5F2241586600BE1A62 /* ViewController.swift in Sources */,
 				164A2F542244FFE500B42AF4 /* ExampleBackgroundContentView.swift in Sources */,
 				9DB3ED5422415B1500BE1A62 /* AddClassDateViewController.swift in Sources */,
 				9DB3ECA122415A6000BE1A62 /* UIViewController+StoryboardIdentifier.swift in Sources */,
 				165CD0BD22676DE3002519DE /* BookingModel.swift in Sources */,
+				1656267C2268EAED0065F52F /* ProfileHeaderView.swift in Sources */,
 				165CD0BB22676AD7002519DE /* HomeTabSectionHeader.swift in Sources */,
 				9DB3EC5D2241586600BE1A62 /* AppDelegate.swift in Sources */,
 				165F20A6224D150E0077D663 /* UserProtocol.swift in Sources */,
 				9DB3ED4322415B1000BE1A62 /* UIView+Nib.swift in Sources */,
 				9DB3ED4F22415B1500BE1A62 /* AddClassDateTableViewCell.swift in Sources */,
+				165626722268D7490065F52F /* SplashScreenViewController.swift in Sources */,
 				9DB3ED4122415B1000BE1A62 /* SelectDateView.swift in Sources */,
 				9DB3ED1C22415AFD00BE1A62 /* ClassService.swift in Sources */,
 				9DB3ED3922415B1000BE1A62 /* TimePicker.swift in Sources */,
 				16EF3754224FBE2100E96F30 /* AuthService.swift in Sources */,
+				1656269C226A31930065F52F /* ClassModel1.swift in Sources */,
 				9DB3ED2722415B0B00BE1A62 /* AddClassNavi.swift in Sources */,
 				9DB3ECF222415A8700BE1A62 /* CameraHandler.swift in Sources */,
 				9DB3ED4E22415B1500BE1A62 /* MapViewController.swift in Sources */,
 				9DB3EC9D22415A5800BE1A62 /* UIStoryboard+Storyboards.swift in Sources */,
 				9DB3ED4422415B1000BE1A62 /* DatePickerPopup.swift in Sources */,
+				16562695226A2B080065F52F /* ClassListViewController.swift in Sources */,
 				164A2F3C2244EEFD00B42AF4 /* ESTabBarItemBadgeView.swift in Sources */,
 				165CD0C022676E38002519DE /* ActivityImages.swift in Sources */,
+				16562693226A2A9D0065F52F /* AcitivityListTableViewCell.swift in Sources */,
 				9DB3ED3722415B1000BE1A62 /* AddClassDateSectionView.swift in Sources */,
 				9DB3ECEE22415A7D00BE1A62 /* CategoryButton.swift in Sources */,
 				16EF3751224F9D4C00E96F30 /* EmptyViewController.swift in Sources */,
+				1656269A226A31730065F52F /* ClassModel.swift in Sources */,
 				165CD0C422677743002519DE /* TimeStamp.swift in Sources */,
 				9DB3ED1D22415AFD00BE1A62 /* FirebaseClassModel.swift in Sources */,
 				9DB3EC9E22415A5A00BE1A62 /* ColorExtension.swift in Sources */,
@@ -1734,7 +1792,9 @@
 				164A2F422244EEFD00B42AF4 /* ESTabBarItem.swift in Sources */,
 				9DB3ECAA22415A6D00BE1A62 /* ModeltoDictionary.swift in Sources */,
 				9DB3ED3F22415B1000BE1A62 /* AddImageView.swift in Sources */,
+				165626792268E9980065F52F /* TrainerProfileViewController.swift in Sources */,
 				165CD0BE22676E25002519DE /* LevelColor.swift in Sources */,
+				1656269E226AB0A70065F52F /* EditProfileViewController.swift in Sources */,
 				164A2F402244EEFD00B42AF4 /* ESTabBarItemMoreContentView.swift in Sources */,
 				9DB3ECA822415A6D00BE1A62 /* StoryboardIdentifiable.swift in Sources */,
 				1649A515225E464D00DDF6AA /* HomeTabCell.swift in Sources */,
@@ -1748,12 +1808,14 @@
 				16773A5E224DA5F600C6BBFB /* RegisterViewController.swift in Sources */,
 				167737102253AD8D00BFC345 /* UITableView+Extension.swift in Sources */,
 				9DB3ED5322415B1500BE1A62 /* AddClassTextViewController.swift in Sources */,
+				1656267D2268EAF00065F52F /* ProfileViewCell.swift in Sources */,
 				9DB3ED2522415B0700BE1A62 /* AddClassViewModel.swift in Sources */,
 				16773A57224DA19800C6BBFB /* ProfileSetting.swift in Sources */,
 				9DB3ED3D22415B1000BE1A62 /* TestView.swift in Sources */,
 				164A2F462244EEFD00B42AF4 /* ESTabBarItemContentView.swift in Sources */,
 				9DB3ECA222415A6200BE1A62 /* PopupAttribute.swift in Sources */,
 				9DB3ECA022415A5E00BE1A62 /* Object+ClassName.swift in Sources */,
+				165626752268DC190065F52F /* UIAppDelegate+View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

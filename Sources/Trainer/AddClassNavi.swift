@@ -8,13 +8,16 @@
 
 import UIKit
 
+protocol AddClassNaviProtocol {
+    func closeButtonDidPressed()
+}
 
 class AddClassNavi: NibView {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var step: UILabel!
     @IBOutlet weak var closeButton: UIButton!
-    
+    var delegate :  AddClassNaviProtocol?
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -41,10 +44,21 @@ class AddClassNavi: NibView {
         }
     }
     
+    @IBInspectable var hideButton : Bool = false {
+        didSet {
+            self.closeButton.isHidden = hideButton
+        }
+    }
+    
     func setStep(stepNumber : Int) {
         step.text = "\(stepNumber)/5"
     }
     
+    
+    
+    @IBAction func buttonPressed(_ sender: Any) {
+        delegate?.closeButtonDidPressed()
+    }
     
     
 }

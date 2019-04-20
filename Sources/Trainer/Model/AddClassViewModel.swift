@@ -9,7 +9,7 @@
 import Foundation
 
 class AddClassViewModel {
-    var classModel : ClassModel?
+    var classModel : ClassModel1?
     var about : String {
         set (newAbout) {
             classModel?.classAbout = newAbout
@@ -64,7 +64,7 @@ class AddClassViewModel {
         }
     }
 
-    init(classModel : ClassModel) {
+    init(classModel : ClassModel1) {
         self.classModel = classModel
     }
     
