@@ -258,7 +258,7 @@
         <!--Home View Controller-->
         <scene sceneID="I22-G7-2xl">
             <objects>
-                <collectionViewController automaticallyAdjustsScrollViewInsets="NO" id="sBG-Tu-reb" customClass="HomeViewController" customModule="User" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController automaticallyAdjustsScrollViewInsets="NO" id="sBG-Tu-reb" customClass="HomeViewController" customModule="User" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="aK3-Ql-h78">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -375,8 +375,9 @@
                                     <color key="textColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="wID-4n-y60">
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_profile" translatesAutoresizingMaskIntoConstraints="NO" id="wID-4n-y60">
                                     <rect key="frame" x="307" y="33" width="92" height="90"/>
+                                    <color key="backgroundColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="92" id="X3p-pO-RTD"/>
                                     </constraints>
@@ -459,9 +460,12 @@ what you wanna do today?</string>
                             </constraints>
                             <connections>
                                 <outlet property="footButton" destination="4lK-6F-Eeg" id="jqk-mr-kdv"/>
+                                <outlet property="nameLabel" destination="RGQ-DF-9v9" id="rFz-ea-fd7"/>
+                                <outlet property="profileImage" destination="wID-4n-y60" id="FdT-r8-45T"/>
                                 <outlet property="skiingButton" destination="suv-8D-FAv" id="nCg-Bg-LEr"/>
                                 <outlet property="snowboardingButton" destination="wio-lg-xuE" id="72Z-iu-Pzv"/>
                                 <outlet property="swimming" destination="HKB-Rd-Smc" id="7kA-cb-tmx"/>
+                                <outlet property="welcomeLabel" destination="I9b-VV-5fg" id="ScX-p1-CW8"/>
                                 <outlet property="workoutButton" destination="g9i-x6-E0r" id="T1C-2v-BJN"/>
                             </connections>
                         </collectionReusableView>
@@ -489,6 +493,9 @@ what you wanna do today?</string>
                                 <constraint firstItem="Ix3-gq-wVq" firstAttribute="centerY" secondItem="36W-bu-UN6" secondAttribute="centerY" id="FEu-X7-ju8"/>
                                 <constraint firstItem="Ix3-gq-wVq" firstAttribute="centerX" secondItem="36W-bu-UN6" secondAttribute="centerX" id="zVV-Lo-q25"/>
                             </constraints>
+                            <connections>
+                                <outlet property="showAllButton" destination="Ix3-gq-wVq" id="HZd-9X-jEH"/>
+                            </connections>
                         </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="sBG-Tu-reb" id="zTK-CJ-fDh"/>
@@ -499,7 +506,7 @@ what you wanna do today?</string>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DYh-Hd-LNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2528" y="-20"/>
+            <point key="canvasLocation" x="2527.536231884058" y="-20.089285714285712"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Ph1-ep-v3a">
@@ -699,6 +706,14 @@ what you wanna do today?</string>
             </objects>
             <point key="canvasLocation" x="-465.21739130434787" y="-13.392857142857142"/>
         </scene>
+        <!--MapViewController-->
+        <scene sceneID="xpa-e9-VwW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Map" referencedIdentifier="MapViewController" id="yK2-h9-jBG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XzF-gX-slC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3745" y="-681"/>
+        </scene>
         <!--Activity List View Controller-->
         <scene sceneID="RgQ-Gw-dC2">
             <objects>
@@ -742,8 +757,8 @@ what you wanna do today?</string>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valthoren, France" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdE-9H-UFR">
-                                                            <rect key="frame" x="160.5" y="67" width="216.5" height="15"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valthoren, France" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdE-9H-UFR">
+                                                            <rect key="frame" x="160.5" y="67" width="216.5" height="14.5"/>
                                                             <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="12"/>
                                                             <color key="textColor" red="0.20683905480000001" green="0.22982683779999999" blue="0.30865281820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="highlightedColor" red="0.20683905480000001" green="0.22982683779999999" blue="0.30865281820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -825,6 +840,12 @@ what you wanna do today?</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZNk-Bp-mXD">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2Q-eP-E9D">
+                                        <rect key="frame" x="186" y="12" width="42.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="17"/>
+                                        <color key="textColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVx-bo-XaF">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
                                         <constraints>
@@ -835,16 +856,23 @@ what you wanna do today?</string>
                                             <action selector="backButtonPressed:" destination="OQg-QQ-89j" eventType="touchUpInside" id="eVG-SD-Obp"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2Q-eP-E9D">
-                                        <rect key="frame" x="186" y="12" width="42.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="17"/>
-                                        <color key="textColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nP-pe-pEX">
+                                        <rect key="frame" x="361" y="0.0" width="43" height="44"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="17"/>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetPressed:" destination="OQg-QQ-89j" eventType="touchUpInside" id="vW9-Vy-hF5"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="iVx-bo-XaF" firstAttribute="leading" secondItem="ZNk-Bp-mXD" secondAttribute="leading" id="2E3-ec-BD3"/>
+                                    <constraint firstAttribute="bottom" secondItem="4nP-pe-pEX" secondAttribute="bottom" id="7hG-Bn-mhP"/>
+                                    <constraint firstAttribute="trailing" secondItem="4nP-pe-pEX" secondAttribute="trailing" constant="10" id="Dbm-lA-564"/>
+                                    <constraint firstItem="4nP-pe-pEX" firstAttribute="top" secondItem="ZNk-Bp-mXD" secondAttribute="top" id="I2z-d3-vq2"/>
                                     <constraint firstItem="iVx-bo-XaF" firstAttribute="top" secondItem="ZNk-Bp-mXD" secondAttribute="top" id="UB3-Ca-LkC"/>
                                     <constraint firstItem="t2Q-eP-E9D" firstAttribute="centerX" secondItem="ZNk-Bp-mXD" secondAttribute="centerX" id="UG3-gA-YsO"/>
                                     <constraint firstAttribute="height" constant="44" id="ih3-oo-LZI"/>
@@ -869,6 +897,9 @@ what you wanna do today?</string>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n50-SY-D9L">
                                         <rect key="frame" x="0.0" y="0.0" width="384" height="47"/>
+                                        <connections>
+                                            <segue destination="yK2-h9-jBG" kind="presentation" identifier="mapview_identifier" id="qo0-Kv-JOt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -895,7 +926,7 @@ what you wanna do today?</string>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="85s-kn-JbO">
                                 <rect key="frame" x="15" y="185" width="292" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZg-Zs-wO0">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZg-Zs-wO0">
                                         <rect key="frame" x="0.0" y="0.0" width="84" height="27"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="14"/>
@@ -912,7 +943,7 @@ what you wanna do today?</string>
                                             <action selector="levelButtonPressed:" destination="OQg-QQ-89j" eventType="touchUpInside" id="Y6D-jW-SE8"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPL-yg-2PC">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPL-yg-2PC">
                                         <rect key="frame" x="90" y="0.0" width="113" height="27"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="14"/>
@@ -929,7 +960,7 @@ what you wanna do today?</string>
                                             <action selector="levelButtonPressed:" destination="OQg-QQ-89j" eventType="touchUpInside" id="3Og-ry-fFU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AG-41-dmn">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AG-41-dmn">
                                         <rect key="frame" x="209" y="0.0" width="83" height="27"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="14"/>
@@ -982,14 +1013,16 @@ what you wanna do today?</string>
                         <outlet property="advance" destination="6AG-41-dmn" id="rh1-8J-2Bo"/>
                         <outlet property="beginner" destination="gZg-Zs-wO0" id="VYc-gF-KCy"/>
                         <outlet property="intermediate" destination="SPL-yg-2PC" id="0Kd-eu-AO5"/>
+                        <outlet property="locationLabel" destination="gMg-iT-q1V" id="V6A-tW-Bbw"/>
                         <outlet property="naviTitle" destination="t2Q-eP-E9D" id="LPU-aU-Sil"/>
                         <outlet property="noDataLabel" destination="2Fc-11-Lnn" id="clJ-i1-f52"/>
+                        <outlet property="resetFilter" destination="4nP-pe-pEX" id="Gci-Ac-xno"/>
                         <outlet property="tableView" destination="nzQ-49-cQO" id="XtS-BZ-77V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdN-gk-CpH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3384.057971014493" y="-20.089285714285712"/>
+            <point key="canvasLocation" x="3212" y="-20"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Kdl-8B-a0J">
@@ -1375,7 +1408,6 @@ what you wanna do today?</string>
     </scenes>
     <resources>
         <image name="Mask.png" width="414" height="531"/>
-        <image name="Rectangle" width="92" height="92"/>
         <image name="Screenshot 2019-03-02 at 4.34.08 pm.png" width="437" height="629"/>
         <image name="back_button_blue" width="27" height="21"/>
         <image name="back_button_white" width="27" height="21"/>
@@ -1388,6 +1420,7 @@ what you wanna do today?</string>
         <image name="location_icon" width="18" height="21"/>
         <image name="login_bg_1" width="375" height="812"/>
         <image name="login_over_layer" width="375" height="812"/>
+        <image name="main_profile" width="50" height="50"/>
         <image name="markos-mant-228858-unsplash.jpg" width="4896" height="2760"/>
         <image name="rate_star" width="18" height="17"/>
     </resources>

@@ -144,6 +144,7 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate{
             AuthService().signOut{ isComplete in
                 if (isComplete) {
                     self.tableView.reloadData()
+                    
                 }
             }
         }else{

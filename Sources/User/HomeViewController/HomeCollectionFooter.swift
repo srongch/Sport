@@ -10,4 +10,5 @@ import UIKit
 
 class HomeCollectionFooter: UICollectionReusableView {
         
+    @IBOutlet weak var showAllButton: UIButton!
 }

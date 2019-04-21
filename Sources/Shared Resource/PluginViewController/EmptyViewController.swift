@@ -15,18 +15,21 @@ enum EmptyStringType : String {
 class EmptyViewController: UIViewController {
     
     private var emptyLabel = UILabel()
-
+    var superViewFrame : CGRect = .zero
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        superViewFrame = self.view.frame
         emptyLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(emptyLabel)
+        view.frame = CGRect(x: 0, y: 0, width: superViewFrame.size.width, height: 40)
        
         NSLayoutConstraint.activate([
+            emptyLabel.heightAnchor.constraint(equalToConstant: 40),
+            emptyLabel.widthAnchor.constraint(equalTo: view.widthAnchor),
             emptyLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             emptyLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
             ])
-
         // Do any additional setup after loading the view.
     }
     
@@ -46,7 +49,13 @@ class EmptyViewController: UIViewController {
     }
     
     
-    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        //        calculatePreferredSize()
+        print("view frame :\(self.view.frame)")
+        self.view.center = CGPoint(x: superViewFrame.size.width  / 2,
+                                   y: superViewFrame.size.height / 2)
+    }
 
     /*
     // MARK: - Navigation

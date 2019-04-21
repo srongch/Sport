@@ -7,8 +7,14 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeCollectionReusableView: UICollectionReusableView {
+    
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
     
     @IBOutlet weak var workoutButton: CategoryButton!
     @IBOutlet weak var swimming: CategoryButton!
@@ -31,6 +37,28 @@ class HomeCollectionReusableView: UICollectionReusableView {
          footButton.buttonDelegate = deletgate
          snowboardingButton.buttonDelegate = deletgate
         skiingButton.buttonDelegate = deletgate
+    }
+    
+    func setupHeaderForNotLogin(){
+        nameLabel.text = "Hi!"
+        welcomeLabel.text = "Welcome, what you wanna do today?"
+        self.profileImage.image = UIImage(named: "main_profile")
+        self.profileImage.contentMode = .center
+    }
+    
+    func setupHeaderForLogin(user: UserProtocol){
+        self.profileImage.sd_setImage(with: URL(string: user.profile), completed: { [weak self] (image, error, cacheType, imageURL) in
+            guard let image = image else{
+                self?.profileImage.image = UIImage(named: "main_profile")
+                self?.profileImage.contentMode = .center
+                return
+            }
+            self?.profileImage.image = image
+            self?.profileImage.contentMode = .scaleAspectFill
+        })
+        nameLabel.text = "Hi! \(user.name)"
+        welcomeLabel.text = "Welcome back \(user.name), what you wanna do today?"
+        
     }
     
     

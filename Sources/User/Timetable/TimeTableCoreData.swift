@@ -121,8 +121,6 @@ final class TimeTableCoreData {
             filtered[index].sort()
         }
         
-        
-    
         self.delegate?.timeTableDidUpdate(data: filtered)
     }
     

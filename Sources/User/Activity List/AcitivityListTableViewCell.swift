@@ -37,6 +37,7 @@ class AcitivityListTableViewCell: UITableViewCell {
     classTitle.text = model.className
     price.text = "$\(model.classPrice)"
     rating.text = "\(model.rating)"
+    location.text = model.location
     let urlString = model.imageArray[0]
     classImage.sd_setImage(with: URL(string: urlString), completed: nil)
     }

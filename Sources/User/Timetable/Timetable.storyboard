@@ -171,19 +171,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Qlk-IQ-bVs">
-                                <rect key="frame" x="64.5" y="204.5" width="246" height="258.5"/>
+                                <rect key="frame" x="65.5" y="253.5" width="244.5" height="160"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_login" translatesAutoresizingMaskIntoConstraints="NO" id="nr8-cf-Ufl">
-                                        <rect key="frame" x="0.0" y="0.0" width="246.00000000000003" height="114"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="244.5" height="16"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please login to see your schedule." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiI-eW-Zhh">
-                                        <rect key="frame" x="0.0" y="154" width="246" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="56" width="244.5" height="19"/>
                                         <fontDescription key="fontDescription" name="FiraSans-Regular" family="Fira Sans" pointSize="16"/>
                                         <color key="textColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLM-TT-5Qk">
-                                        <rect key="frame" x="0.0" y="213.5" width="246" height="45"/>
+                                        <rect key="frame" x="0.0" y="115" width="244.5" height="45"/>
                                         <color key="backgroundColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="MZ7-CH-sPX"/>

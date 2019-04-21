@@ -11,6 +11,7 @@ enum ButtonType {
     case football
     case snowboarding
     case skiing
+    case topRated
     
     var getTuple: (name: String, imageSelected: String, imageNormal: String, index: Int) {
         switch self {
@@ -24,7 +25,10 @@ enum ButtonType {
             return ("Snowboarding","snowboard_icon_blue","snowboard_icon_white",3)
         case .skiing:
             return ("Skiing","ski_icon_blue","ski_icon_white",4)
+        case .topRated:
+            return ("Top-Rated Activities","","",5)
         }
+        
     }
 }
 

@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 extension UIButton {
-    func setLevelButtonSelected(buttons : [UIButton]){
+    // return if button need to replact the list
+    func setLevelButtonSelected(buttons : [UIButton]) -> Bool{
         if(!self.isSelected){
             self.isSelected = true
             
@@ -24,7 +25,16 @@ extension UIButton {
                     button.setTitleColor(UIColor.blueColor, for: .normal)
                 }
             }
-            
+             return true
+        }
+        return false
+    }
+    
+    func clearSelction(buttons : [UIButton]){
+        buttons.forEach{button in
+            button.isSelected = false
+            button.backgroundColor = UIColor.white
+            button.setTitleColor(UIColor.blueColor, for: .normal)
         }
     }
 }

@@ -17,6 +17,9 @@ class HomeViewController: UICollectionViewController {
     private let classService = ClassService()
     private var classList : [ClassModel]?
     
+    @IBOutlet weak var profilePicture: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
     
     private let reuseIdentifier = "HomeCollectionViewCell"
     private let sectionInsets = UIEdgeInsets(top: 0.0,
@@ -24,19 +27,16 @@ class HomeViewController: UICollectionViewController {
                                              bottom: 30.0,
                                              right: 15.0)
     
-    private var searches: [FlickrSearchResults] = []
-    private let flickr = Flickr()
     private let itemsPerRow: CGFloat = 2
-    
+    var isViewIsFirst = false
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let loadingVC = LoadingViewController.instance(self.view.frame)
         add(loadingVC)
-        classService.getHomeClass {[weak self] (models) in
+        isViewIsFirst = true
+        classService.getHomeClass(forLimit: 4) {[weak self] (models) in
             loadingVC.remove()
             guard let temp = models else{
                 print("no data")
@@ -46,16 +46,22 @@ class HomeViewController: UICollectionViewController {
             self?.classList = models
             self?.collectionView.reloadData()
         }
-        
-        
-        
-       
-        
+    
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        self.setupUserInfo()
+        collectionView.reloadData()
         
     }
     
     func setupUserInfo() {
-        
+        if (isViewIsFirst) {
+            collectionView.reloadData()
+        }else{
+            isViewIsFirst = false
+        }
     }
 
     /*
@@ -67,14 +73,6 @@ class HomeViewController: UICollectionViewController {
         // Pass the selected object to the new view controller.
     }
     */
-}
-
-
-// MARK: - Private
-private extension HomeViewController {
-    func photo(for indexPath: IndexPath) -> FlickrPhoto {
-        return searches[indexPath.section].searchResults[indexPath.row]
-    }
 }
 
 
@@ -121,11 +119,13 @@ extension HomeViewController : CategoryButtonPressedProtocol {
                     fatalError("Invalid view type")
             }
             headerView.setDelegate(deletgate: self)
+            print("is have user \(UserService.shared.isHaveUser)")
+            if (UserService.shared.isHaveUser){
+                headerView.setupHeaderForLogin(user: UserService.shared.globalUser!)
+            }else{
+                headerView.setupHeaderForNotLogin()
+            }
             
-            
-            
-//            let searchTerm = searches[indexPath.section].searchTerm
-//            headerView.label.text = searchTerm
             return headerView
             
     
@@ -140,6 +140,8 @@ extension HomeViewController : CategoryButtonPressedProtocol {
                     fatalError("Invalid view type")
             }
             
+            footerView.showAllButton.addTarget(self, action: #selector(showAllButtonPressed), for: .touchUpInside)
+            
             //            let searchTerm = searches[indexPath.section].searchTerm
             //            headerView.label.text = searchTerm
             return footerView
@@ -149,6 +151,11 @@ extension HomeViewController : CategoryButtonPressedProtocol {
             // 4
             assert(false, "Invalid element type")
         }
+    }
+    
+    @objc func showAllButtonPressed(_ sender : UIButton){
+        print("show all pressed")
+    self.navigationController?.pushViewController(ActivityListViewController.instance(activitiesType:.topRated), animated:true)
     }
     
     func buttonDidPressed(buttonType: ButtonType) {

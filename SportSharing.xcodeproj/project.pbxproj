@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		16032D732258FAFD0023BFFB /* ProfileState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16032D722258FAFD0023BFFB /* ProfileState.swift */; };
+		1609CF41226CCC3300AFB8C0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609CF40226CCC3200AFB8C0 /* MapViewController.swift */; };
+		1609CF42226CCC3300AFB8C0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609CF40226CCC3200AFB8C0 /* MapViewController.swift */; };
+		1609CF44226CCCA300AFB8C0 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1609CF43226CCCA300AFB8C0 /* Map.storyboard */; };
+		1609CF45226CCCA300AFB8C0 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1609CF43226CCCA300AFB8C0 /* Map.storyboard */; };
+		1609CF47226CDF2900AFB8C0 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609CF46226CDF2900AFB8C0 /* Like.swift */; };
 		161C8960224AAE5100BE9A0D /* LevelButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161C895F224AAE5100BE9A0D /* LevelButtonExtension.swift */; };
 		162E794622520B2400C5E5A2 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165F20A0224D141C0077D663 /* UserService.swift */; };
 		162E794B22521D5E00C5E5A2 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162E794822521D5D00C5E5A2 /* ReviewViewController.swift */; };
@@ -41,10 +46,6 @@
 		164A2F5D224516DF00B42AF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F59224516DF00B42AF4 /* HomeViewController.swift */; };
 		164A2F602245172F00B42AF4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F5F2245172F00B42AF4 /* ProfileViewController.swift */; };
 		164A2F652245174600B42AF4 /* Review.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164A2F632245174600B42AF4 /* Review.storyboard */; };
-		164A2F732245181B00B42AF4 /* FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F6F2245181B00B42AF4 /* FlickrPhoto.swift */; };
-		164A2F742245181B00B42AF4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F702245181B00B42AF4 /* Result.swift */; };
-		164A2F752245181B00B42AF4 /* FlickrSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F712245181B00B42AF4 /* FlickrSearchResults.swift */; };
-		164A2F762245181B00B42AF4 /* Flickr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F722245181B00B42AF4 /* Flickr.swift */; };
 		164A2F79224518CD00B42AF4 /* DetailActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F78224518CD00B42AF4 /* DetailActivityViewController.swift */; };
 		164A2F7E224518E500B42AF4 /* ActivityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F7C224518E500B42AF4 /* ActivityListViewController.swift */; };
 		164A2F802245199A00B42AF4 /* Views.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164A2F7F2245199900B42AF4 /* Views.storyboard */; };
@@ -257,7 +258,6 @@
 		9DB3ED4222415B1000BE1A62 /* AddClassNavi.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DB3ED3422415B1000BE1A62 /* AddClassNavi.xib */; };
 		9DB3ED4322415B1000BE1A62 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ED3522415B1000BE1A62 /* UIView+Nib.swift */; };
 		9DB3ED4422415B1000BE1A62 /* DatePickerPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ED3622415B1000BE1A62 /* DatePickerPopup.swift */; };
-		9DB3ED4E22415B1500BE1A62 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ED4622415B1500BE1A62 /* MapViewController.swift */; };
 		9DB3ED4F22415B1500BE1A62 /* AddClassDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ED4722415B1500BE1A62 /* AddClassDateTableViewCell.swift */; };
 		9DB3ED5022415B1500BE1A62 /* AddImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ED4822415B1500BE1A62 /* AddImageCollectionViewCell.swift */; };
 		9DB3ED5122415B1500BE1A62 /* AddClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ED4922415B1500BE1A62 /* AddClassViewController.swift */; };
@@ -307,6 +307,9 @@
 /* Begin PBXFileReference section */
 		0E9687BA0A334C4101B43DB8 /* Pods-UserUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserUITests.debug.xcconfig"; path = "Target Support Files/Pods-UserUITests/Pods-UserUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		16032D722258FAFD0023BFFB /* ProfileState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileState.swift; sourceTree = "<group>"; };
+		1609CF40226CCC3200AFB8C0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = "Sources/Shared Resource/Map/MapViewController.swift"; sourceTree = "<group>"; };
+		1609CF43226CCCA300AFB8C0 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		1609CF46226CDF2900AFB8C0 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		161C895F224AAE5100BE9A0D /* LevelButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelButtonExtension.swift; sourceTree = "<group>"; };
 		162E794822521D5D00C5E5A2 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		162E794922521D5D00C5E5A2 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
@@ -332,10 +335,6 @@
 		164A2F5F2245172F00B42AF4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		164A2F622245174600B42AF4 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		164A2F632245174600B42AF4 /* Review.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Review.storyboard; sourceTree = "<group>"; };
-		164A2F6F2245181B00B42AF4 /* FlickrPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrPhoto.swift; sourceTree = "<group>"; };
-		164A2F702245181B00B42AF4 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		164A2F712245181B00B42AF4 /* FlickrSearchResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrSearchResults.swift; sourceTree = "<group>"; };
-		164A2F722245181B00B42AF4 /* Flickr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flickr.swift; sourceTree = "<group>"; };
 		164A2F78224518CD00B42AF4 /* DetailActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailActivityViewController.swift; sourceTree = "<group>"; };
 		164A2F7B224518E500B42AF4 /* AcitivityListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcitivityListTableViewCell.swift; sourceTree = "<group>"; };
 		164A2F7C224518E500B42AF4 /* ActivityListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityListViewController.swift; sourceTree = "<group>"; };
@@ -504,7 +503,6 @@
 		9DB3ED3422415B1000BE1A62 /* AddClassNavi.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddClassNavi.xib; sourceTree = "<group>"; };
 		9DB3ED3522415B1000BE1A62 /* UIView+Nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 		9DB3ED3622415B1000BE1A62 /* DatePickerPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerPopup.swift; sourceTree = "<group>"; };
-		9DB3ED4622415B1500BE1A62 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9DB3ED4722415B1500BE1A62 /* AddClassDateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassDateTableViewCell.swift; sourceTree = "<group>"; };
 		9DB3ED4822415B1500BE1A62 /* AddImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		9DB3ED4922415B1500BE1A62 /* AddClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassViewController.swift; sourceTree = "<group>"; };
@@ -581,6 +579,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1609CF3C226CCB6300AFB8C0 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				1609CF40226CCC3200AFB8C0 /* MapViewController.swift */,
+				1609CF43226CCCA300AFB8C0 /* Map.storyboard */,
+			);
+			name = Map;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		162E794722521D4B00C5E5A2 /* Reviews */ = {
 			isa = PBXGroup;
 			children = (
@@ -610,10 +618,6 @@
 		164A2F55224516DF00B42AF4 /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
-				164A2F722245181B00B42AF4 /* Flickr.swift */,
-				164A2F6F2245181B00B42AF4 /* FlickrPhoto.swift */,
-				164A2F712245181B00B42AF4 /* FlickrSearchResults.swift */,
-				164A2F702245181B00B42AF4 /* Result.swift */,
 				164A2F56224516DF00B42AF4 /* HomeCollectionViewCell.swift */,
 				164A2F57224516DF00B42AF4 /* HomeCollectionReusableView.swift */,
 				164A2F58224516DF00B42AF4 /* HomeCollectionFooter.swift */,
@@ -936,6 +940,7 @@
 		9DB3EC8C2241596B00BE1A62 /* Shared Resource */ = {
 			isa = PBXGroup;
 			children = (
+				1609CF3C226CCB6300AFB8C0 /* Map */,
 				16DEF6B7226B838F0068D3E4 /* Storyboards */,
 				16DEF6AF226B74400068D3E4 /* Firebase */,
 				16EF3748224F934800E96F30 /* PluginViewController */,
@@ -1047,6 +1052,7 @@
 				168B109A22505059006EE446 /* ReviewModel.swift */,
 				1657087A2256672900DF0BC2 /* BookingModel.swift */,
 				16032D722258FAFD0023BFFB /* ProfileState.swift */,
+				1609CF46226CDF2900AFB8C0 /* Like.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1120,7 +1126,6 @@
 		9DB3ED4522415B1500BE1A62 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9DB3ED4622415B1500BE1A62 /* MapViewController.swift */,
 				9DB3ED4722415B1500BE1A62 /* AddClassDateTableViewCell.swift */,
 				9DB3ED4822415B1500BE1A62 /* AddImageCollectionViewCell.swift */,
 				9DB3ED4922415B1500BE1A62 /* AddClassViewController.swift */,
@@ -1345,6 +1350,7 @@
 			files = (
 				9DB3ED0722415AAF00BE1A62 /* Mask.png in Resources */,
 				165CD0BF22676E2B002519DE /* HomeTabSectionHeader.xib in Resources */,
+				1609CF44226CCCA300AFB8C0 /* Map.storyboard in Resources */,
 				9DB3ECC822415A7500BE1A62 /* FiraSans-Bold.ttf in Resources */,
 				9DB3ECCA22415A7500BE1A62 /* FiraSans-ExtraLight.ttf in Resources */,
 				9DB3ECBE22415A7500BE1A62 /* FiraSans-Thin.ttf in Resources */,
@@ -1437,6 +1443,7 @@
 				9DB3ED3A22415B1000BE1A62 /* TimePicker.xib in Resources */,
 				9DB3ED3E22415B1000BE1A62 /* AddClassDateSectionView.xib in Resources */,
 				9DB3ECDB22415A7500BE1A62 /* FiraSans-SemiBoldItalic.ttf in Resources */,
+				1609CF45226CCCA300AFB8C0 /* Map.storyboard in Resources */,
 				9DB3ECC122415A7500BE1A62 /* FiraSans-ExtraLightItalic.ttf in Resources */,
 				9DB3ECEC22415A7D00BE1A62 /* CategoryButton.xib in Resources */,
 				9DB3ED3C22415B1000BE1A62 /* SelectDateView.xib in Resources */,
@@ -1706,24 +1713,22 @@
 				16E4382E22429F8E00EF8771 /* AlwaysShowPopup.swift in Sources */,
 				9DB3ED0F22415AB500BE1A62 /* CustomCalenderCell.swift in Sources */,
 				9DB4ADFB22419B2C009A74C2 /* Date.swift in Sources */,
-				164A2F732245181B00B42AF4 /* FlickrPhoto.swift in Sources */,
 				164A2F502244FED900B42AF4 /* ExampleBasicContentView.swift in Sources */,
 				16EF374D224F937100E96F30 /* LoadingViewController.swift in Sources */,
 				9DB3ED0E22415AB500BE1A62 /* SlideImageCollectionViewCell.swift in Sources */,
 				16E438312242A9BC00EF8771 /* LevelColor.swift in Sources */,
 				164A2F3F2244EEFD00B42AF4 /* ESTabBarItemMoreContentView.swift in Sources */,
 				16644461224303C20063E3D4 /* BookingViewController.swift in Sources */,
-				164A2F762245181B00B42AF4 /* Flickr.swift in Sources */,
 				164A2F7E224518E500B42AF4 /* ActivityListViewController.swift in Sources */,
 				16FED381225CDB7B009EDB77 /* TimeTable+CoreDataClass.swift in Sources */,
 				16773A5F224DA5F600C6BBFB /* RegisterViewController.swift in Sources */,
 				9DB3EC282241582400BE1A62 /* ViewController.swift in Sources */,
+				1609CF47226CDF2900AFB8C0 /* Like.swift in Sources */,
 				16773A61224DA5FA00C6BBFB /* LoginViewController.swift in Sources */,
 				16DEF6B4226B80CF0068D3E4 /* UserEditProfileViewController.swift in Sources */,
 				9DB3EC9A22415A4700BE1A62 /* UIViewController+StoryboardIdentifier.swift in Sources */,
 				16A0869422464612007E378D /* UserClassesService.swift in Sources */,
 				16562692226A2A730065F52F /* AcitivityListTableViewCell.swift in Sources */,
-				164A2F742245181B00B42AF4 /* Result.swift in Sources */,
 				164A2F79224518CD00B42AF4 /* DetailActivityViewController.swift in Sources */,
 				164A2F532244FFE500B42AF4 /* ExampleBackgroundContentView.swift in Sources */,
 				164A2F5B224516DF00B42AF4 /* HomeCollectionReusableView.swift in Sources */,
@@ -1734,7 +1739,6 @@
 				9DB3ECF122415A8700BE1A62 /* CameraHandler.swift in Sources */,
 				9DB3EC9622415A4700BE1A62 /* UIStoryboard+Storyboards.swift in Sources */,
 				168B109B22505059006EE446 /* ReviewModel.swift in Sources */,
-				164A2F752245181B00B42AF4 /* FlickrSearchResults.swift in Sources */,
 				168B109D2250509B006EE446 /* ReviewProtocol.swift in Sources */,
 				16EF3750224F9D4C00E96F30 /* EmptyViewController.swift in Sources */,
 				9DB3ED1222415AB500BE1A62 /* CalenderViewController.swift in Sources */,
@@ -1777,6 +1781,7 @@
 				9DB3EC9B22415A4700BE1A62 /* PopupAttribute.swift in Sources */,
 				9DB3EC9922415A4700BE1A62 /* Object+ClassName.swift in Sources */,
 				164A2F3B2244EEFD00B42AF4 /* ESTabBarItemBadgeView.swift in Sources */,
+				1609CF41226CCC3300AFB8C0 /* MapViewController.swift in Sources */,
 				16B971D822579BC70013169F /* LoadingButton.swift in Sources */,
 				16AC45C22242825400E9B351 /* TimetableMenuView.swift in Sources */,
 			);
@@ -1828,7 +1833,7 @@
 				1656269C226A31930065F52F /* ClassModel1.swift in Sources */,
 				9DB3ED2722415B0B00BE1A62 /* AddClassNavi.swift in Sources */,
 				9DB3ECF222415A8700BE1A62 /* CameraHandler.swift in Sources */,
-				9DB3ED4E22415B1500BE1A62 /* MapViewController.swift in Sources */,
+				1609CF42226CCC3300AFB8C0 /* MapViewController.swift in Sources */,
 				9DB3EC9D22415A5800BE1A62 /* UIStoryboard+Storyboards.swift in Sources */,
 				9DB3ED4422415B1000BE1A62 /* DatePickerPopup.swift in Sources */,
 				16562695226A2B080065F52F /* ClassListViewController.swift in Sources */,

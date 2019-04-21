@@ -12,8 +12,8 @@ import Firebase
 final class ClassService {
 //
     
-    lazy var classesRef: DatabaseReference = {
-        return Database.database().reference(withPath: "classes")
+    lazy var classesRef: Database = {
+        return Database.database()
     }()
     
     lazy var functions = Functions.functions()
@@ -23,7 +23,7 @@ final class ClassService {
     init (){}
 
     func getClassById(classId : String, completionHandler: @escaping (_ model:  ClassModel?) -> Void) {
-        classesRef.child(classId).observeSingleEvent(of: .value, with: { (snapshot) in
+        classesRef.reference(withPath: "classes").child(classId).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let user = ClassModel(snapshot: snapshot)
             
@@ -35,9 +35,90 @@ final class ClassService {
         }
     }
     
+    func getUserLikeClasses(userId : String,completionHandler: @escaping (_ model:  [ClassModel]?) -> Void){
+        
+        guard userId.count > 0 else{
+            completionHandler(nil)
+            return
+        }
+        
+        classesRef.reference(withPath: "likes").child(userId).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+        //    let user = ClassModel(snapshot: snapshot)
+             guard let dictionary = snapshot.value as? [String:Any] else
+             {return completionHandler(nil)}
+            
+            var classArray = [UserLike]()
+            dictionary.forEach({ (key , value) in
+                        let model = UserLike(key: key, value: value as AnyObject)
+                        if (model != nil){
+                            classArray.append(model)
+                        }
+                        print("Key \(key), value \(value) ")
+                    })
+            
+            
+            
+//            for child in snapshot.children {
+//                if let snapshot = child as? DataSnapshot,
+//                    let model = ClassModel(snapshot: snapshot) {
+//                    classArray.append(model)
+//                }
+//            }
+            //
+            //
+            //
+            //        dictionary.forEach({ (key , value) in
+            //            let model = ClassModel(key: key, value: value as AnyObject)
+            //            if (model != nil){
+            //
+            //            }
+            //            print("Key \(key), value \(value) ")
+            //        })
+            
+            return classArray
+            
+            
+            completionHandler(nil)
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+            completionHandler(nil)
+        }
+    }
     
-    func getHomeClass(completionHandler: @escaping (_ model:  [ClassModel]?) -> Void) {
-        classesRef.queryOrdered(byChild: "rating").queryLimited(toLast: 4).observeSingleEvent(of: .value, with: { (snapshot) in
+    // if existed deleted. if not exist : add
+    func addUserLike(userId : String, classId : String,completionHandler: @escaping (_ isError:  Bool, _ operation : String?) -> Void){
+        if (userId == ""){return completionHandler(true,nil)}
+        
+        functions.httpsCallable("addUserLike").call(["userId" : userId,"classId" : classId]) { (result, error) in
+//                print("\(result?.data )")
+            
+            if (error != nil){
+                print("no nil")
+                return  completionHandler(true,nil)
+            }
+            
+            // [END function_error]
+            guard let value = (result?.data as? [String: AnyObject]),
+                  let result = value["data"] as? String else{
+                    completionHandler(true,nil)
+                    return
+            }
+            print(result)
+            
+            return  completionHandler(false, result)
+           
+        }
+    }
+    
+    func getHomeClass(forLimit: Int,completionHandler: @escaping (_ model:  [ClassModel]?) -> Void) {
+        
+        let ref =  classesRef.reference(withPath: "classes").queryOrdered(byChild: "rating")
+        if forLimit > 0 {
+            ref.queryLimited(toLast: UInt(forLimit))
+        }
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
             
             guard ((snapshot.value as? [String:Any]) != nil) else {
                 completionHandler(nil)
@@ -55,7 +136,13 @@ final class ClassService {
     }
     
     func getClassByActivity(activity : Int ,completionHandler: @escaping (_ model:  [ClassModel]?) -> Void) {
-        classesRef.queryOrdered(byChild: "activityType").queryEqual(toValue: activity).observeSingleEvent(of: .value, with: { (snapshot) in
+        
+        if (activity == 5){
+            self.getHomeClass(forLimit: 0, completionHandler: completionHandler)
+            return
+        }
+        
+        classesRef.reference(withPath: "classes").queryOrdered(byChild: "activityType").queryEqual(toValue: activity).observeSingleEvent(of: .value, with: { (snapshot) in
             
             guard ((snapshot.value as? [String:Any]) != nil) else {
                 completionHandler(nil)

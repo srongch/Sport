@@ -17,8 +17,8 @@ class TimetableViewController: UIViewController {
     @IBOutlet weak var yearButton: UIButton!
     @IBOutlet weak var noDataLabel: UILabel!
     
-    
     lazy private var notLoginVC = NotLoginViewController.instance()
+    lazy private var loadingVC = LoadingViewController.instance(self.view.frame)
     
     var dataService : TimeTableCoreData?
     var selectIndex : Int = 0
@@ -73,6 +73,7 @@ class TimetableViewController: UIViewController {
     }
     
     func loadData(){
+        add(loadingVC)
         dataService = TimeTableCoreData(userId: UserService.shared.globalUser?.uid, delegate : self)
         //        dataService?.delegate = self
         print("user is : \(UserService.shared.globalUser?.uid)")
@@ -165,6 +166,7 @@ extension TimetableViewController : UICollectionViewDelegateFlowLayout, UICollec
 
 extension TimetableViewController : TitmeTableProtocol {
     func timeTableDidUpdate(data: [TimeTableDate]){
+        loadingVC.remove()
         noDataLabel.isHidden = data.count > 0
         self.menuView.setDataSource(data: data)
     }
