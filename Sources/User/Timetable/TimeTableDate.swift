@@ -19,7 +19,7 @@ struct TimeTableDate {
 
 extension TimeTableDate {
     init(timeTable : TimeTable) {
-        self.month = timeTable.date.toDateWithFormate(format: "MM")
+        self.month = timeTable.date.toDateWithFormate(format: "MMMM")
         self.day = timeTable.date.toDateWithFormate(format: "dd")
         self.year = timeTable.date.toDateWithFormate(format: "YYYY")
         self.dayoftheWeek = timeTable.date.toDateWithFormate(format: "E")
@@ -30,7 +30,15 @@ extension TimeTableDate {
         self.details.append(timeTable)
     }
     
+    mutating func sort(){
+      self.details = self.details.sorted(by: {$0.time > $1.time})
+    }
+    
     func isTheSameDate(date : Int64) -> Bool{
-        return date.toDateWithFormate(format: "MMddYYYY") == "\(month)\(day)\(year)"
+        return date.toDateWithFormate(format: "MMMMddYYYY") == "\(month)\(day)\(year)"
+    }
+    
+    func getDate()->String{
+       return "\(month)\(day)\(year)"
     }
 }

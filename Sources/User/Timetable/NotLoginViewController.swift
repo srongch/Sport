@@ -17,7 +17,8 @@ class NotLoginViewController: UIViewController {
     }
     
     @IBAction func loginPressed(_ sender: Any) {
-        
+        let vc = UserLoginViewController.init()
+        self.navigationController?.present(vc, animated: true, completion: nil)
     }
     
     /*

@@ -11,8 +11,8 @@ enum Months : String {
 }
 
 enum Years : String {
-    case y_2017 = "2017",y_2018 = "2018",y_2019 = "2019",y_2020 = "2020"
-    static var allyears = [Years.y_2017.rawValue,Years.y_2018.rawValue,Years.y_2019.rawValue,Years.y_2020.rawValue]
+    case y_2019 = "2019",y_2020 = "2020"
+    static var allyears = [Years.y_2019.rawValue,Years.y_2020.rawValue]
 }
 
 

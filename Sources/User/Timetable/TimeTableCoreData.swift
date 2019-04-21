@@ -21,7 +21,7 @@ final class TimeTableCoreData {
     var commitPredicate: NSPredicate?
     var delegate : TitmeTableProtocol?
   private  var dataSource = [TimeTableDate]()
-    
+    private  var filtered = [TimeTableDate]()
     
   convenience init(userId : String?, delegate : TitmeTableProtocol) {
        self.init()
@@ -100,20 +100,43 @@ final class TimeTableCoreData {
         }
     
         print("total list: \(dataSource.count)")
-        self.delegate?.timeTableDidUpdate(data: dataSource)
+        
+        
+        let month = Date().toMillis()?.toDateWithFormate(format: "MMMM")
+        let year = Date().toMillis()?.toDateWithFormate(format: "YYYY")
+        self.filterData(month: month!, year: year!)
+//        let filter = dataSource.filter { model -> Bool in
+//          return  model.month == month && model.year == year
+//        }
+//
+//        self.delegate?.timeTableDidUpdate(data: filter)
     }
+    
+    func filterData(month : String, year : String){
+        filtered = dataSource.filter { model -> Bool in
+            return  model.month == month && model.year == year
+            }.sorted(by: {$0.getDate() < $1.getDate()})
+        
+        for index in 0..<filtered.count {
+            filtered[index].sort()
+        }
+        
+        
+    
+        self.delegate?.timeTableDidUpdate(data: filtered)
+    }
+    
     
     func getDataSource() -> [TimeTableDate]{
         return dataSource
     }
     
     func getDetailDataByIndex(index : Int) -> TimeTableDate?{
-        if (dataSource.count <= 0) {
+        if (filtered.count <= 0) {
             return nil
         }else{
-            return dataSource[index]
+            return filtered[index]
         }
-        
     }
     
     public func clearDatabase()

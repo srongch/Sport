@@ -15,11 +15,17 @@ class TimetableViewController: UIViewController {
     
     @IBOutlet weak var monthButton: UIButton!
     @IBOutlet weak var yearButton: UIButton!
+    @IBOutlet weak var noDataLabel: UILabel!
     
-    private var notLoginVC : NotLoginViewController?
+    
+    lazy private var notLoginVC = NotLoginViewController.instance()
     
     var dataService : TimeTableCoreData?
     var selectIndex : Int = 0
+    var isNotLoginCurrentShow = false
+    
+    
+    var isViewIsFirst = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,20 +34,32 @@ class TimetableViewController: UIViewController {
             self?.selectIndex = indexPath.row
             self?.scheduleCollectionView.reloadData()
         }
-    
+        
+        isViewIsFirst = true
         self.validateView()
+        self.setupHeader()
         // Do any additional setup after loading the view.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if (!isViewIsFirst){
+           validateView()
+        }else{
+            isViewIsFirst = false
+        }
+    }
+    
+    func setupHeader(){
+        
+        monthButton.setTitle(Date().toMillis()?.toDateWithFormate(format: "MMMM"), for: .normal)
+        yearButton.setTitle(Date().toMillis()?.toDateWithFormate(format: "YYYY"), for: .normal)
+    }
     
     func validateView(){
         if UserService.shared.isHaveUser {
-            
-            guard let vc = notLoginVC else{
-                return
-            }
-            vc.remove()
+            notLoginVC.remove()
+            isNotLoginCurrentShow = false
             self.loadData()
         }else{
             self.showNotLogin()
@@ -49,8 +67,9 @@ class TimetableViewController: UIViewController {
     }
     
     func showNotLogin(){
-        notLoginVC = NotLoginViewController.instance()
-        add(notLoginVC!)
+//        notLoginVC = NotLoginViewController.instance()
+        if isNotLoginCurrentShow == false { add(notLoginVC)}
+        isNotLoginCurrentShow = true
     }
     
     func loadData(){
@@ -68,6 +87,8 @@ class TimetableViewController: UIViewController {
     @IBAction func monthPressed(_ sender: Any) {
         let controller = ArrayChoiceTableViewController(Months.allMonths) { (direction) in
             //            self.model.direction = direction
+            self.monthButton.setTitle(direction.rawValue, for: .normal)
+            self.dataService?.filterData(month : direction.rawValue, year : self.yearButton.title(for: .normal)!)
             print("\(direction) clicked.")
         }
         controller.preferredContentSize = CGSize(width: 150, height: 200)
@@ -78,6 +99,8 @@ class TimetableViewController: UIViewController {
         let controller = ArrayChoiceTableViewController(Years.allyears) { (direction) in
 //            self.model.direction = direction
             print("\(direction) clicked.")
+            self.yearButton.setTitle(direction, for: .normal)
+            self.dataService?.filterData(month : self.monthButton.title(for: .normal)! , year : direction)
         }
         controller.preferredContentSize = CGSize(width: 100, height: 200)
         showPopup(controller, sourceView: sender as! UIView)
@@ -111,8 +134,8 @@ extension TimetableViewController : UICollectionViewDelegateFlowLayout, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ScheduleCell = self.scheduleCollectionView.dequeueReusableCell(withReuseIdentifier: "ScheduleCell", for: indexPath) as! ScheduleCell
-        
-        let classRegister = ClassRegistration(level: Int.random(in: 0...2), activity : Int.random(in: 0...5))
+//
+//        let classRegister = ClassRegistration(level: Int.random(in: 0...2), activity : Int.random(in: 0...5))
         
         cell.setupCell(model : dataService!.getDetailDataByIndex(index: selectIndex)!.details[indexPath.row])
 //        cell.setupView(isSelected: selectedIndexPath == indexPath)
@@ -142,6 +165,7 @@ extension TimetableViewController : UICollectionViewDelegateFlowLayout, UICollec
 
 extension TimetableViewController : TitmeTableProtocol {
     func timeTableDidUpdate(data: [TimeTableDate]){
+        noDataLabel.isHidden = data.count > 0
         self.menuView.setDataSource(data: data)
     }
 }

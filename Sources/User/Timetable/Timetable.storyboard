@@ -122,12 +122,19 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is no class available." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5i-fE-3A8">
+                                <rect key="frame" x="90.5" y="324" width="194" height="19.5"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Bold" family="Fira Sans" pointSize="16"/>
+                                <color key="textColor" red="0.2089855075" green="0.22602123020000001" blue="0.30197033290000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="ePx-Fe-Hw3" firstAttribute="trailing" secondItem="c4L-Pw-OeV" secondAttribute="trailing" id="1ue-fd-lLt"/>
                             <constraint firstItem="fjO-d2-Ii2" firstAttribute="leading" secondItem="c4L-Pw-OeV" secondAttribute="leading" id="4pw-Gg-sFr"/>
                             <constraint firstItem="c4L-Pw-OeV" firstAttribute="trailing" secondItem="n9n-dw-Qah" secondAttribute="trailing" id="9YX-cV-Am3"/>
+                            <constraint firstItem="s5i-fE-3A8" firstAttribute="centerY" secondItem="dJ9-sS-Na4" secondAttribute="centerY" id="Awl-Ki-yID"/>
                             <constraint firstItem="ePx-Fe-Hw3" firstAttribute="top" secondItem="n9n-dw-Qah" secondAttribute="bottom" constant="10" id="ChZ-Gs-3w3"/>
                             <constraint firstItem="n9n-dw-Qah" firstAttribute="top" secondItem="c4L-Pw-OeV" secondAttribute="top" id="GrB-BF-oGR"/>
                             <constraint firstItem="c4L-Pw-OeV" firstAttribute="bottom" secondItem="fjO-d2-Ii2" secondAttribute="bottom" id="KE3-mS-90o"/>
@@ -138,6 +145,7 @@
                             <constraint firstItem="ePx-Fe-Hw3" firstAttribute="leading" secondItem="39e-us-NxU" secondAttribute="trailing" id="q8A-Ss-PZf"/>
                             <constraint firstItem="fjO-d2-Ii2" firstAttribute="top" secondItem="ePx-Fe-Hw3" secondAttribute="bottom" constant="20" id="qm4-tX-2cg"/>
                             <constraint firstItem="c4L-Pw-OeV" firstAttribute="trailing" secondItem="fjO-d2-Ii2" secondAttribute="trailing" id="vnU-dU-RlD"/>
+                            <constraint firstItem="s5i-fE-3A8" firstAttribute="centerX" secondItem="dJ9-sS-Na4" secondAttribute="centerX" id="xK8-3z-Ww6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c4L-Pw-OeV"/>
                     </view>
@@ -145,13 +153,14 @@
                     <connections>
                         <outlet property="menuView" destination="ePx-Fe-Hw3" id="w0t-Gu-5db"/>
                         <outlet property="monthButton" destination="W6t-em-F5b" id="VnI-Ao-95h"/>
+                        <outlet property="noDataLabel" destination="s5i-fE-3A8" id="V4A-Y2-DIL"/>
                         <outlet property="scheduleCollectionView" destination="fjO-d2-Ii2" id="obb-4w-gwG"/>
                         <outlet property="yearButton" destination="RUK-jB-u6b" id="bb8-qB-k8A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YRb-vZ-i3p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="548" y="-58"/>
+            <point key="canvasLocation" x="548" y="-58.020989505247378"/>
         </scene>
         <!--Not Login View Controller-->
         <scene sceneID="A61-uc-ttS">

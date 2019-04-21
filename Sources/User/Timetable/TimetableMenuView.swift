@@ -46,7 +46,13 @@ class TimetableMenuView: UICollectionView {
     
     public func setDataSource (data : [TimeTableDate]){
         self.data = data
+        selectedIndexPath = IndexPath(row: 0, section: 0)
         self.reloadData()
+        guard let clousor = didSelectItmeClosure else{
+            return
+        }
+//        selectedIndexPath
+        clousor(IndexPath(row: 0, section: 0))
     }
     
     
