@@ -72,8 +72,8 @@ struct ClassModel : ModeltoDictionaryProtocol, LevelColorProtocol {
         setupData(value: value,key: snapshot.key)
     }
     
-    init?(value : [String:AnyObject] ) {
-        setupData(value: value, key: nil)
+    init?(value : [String:AnyObject], key : String ) {
+        setupData(value: value, key: key)
     }
     
     mutating func setupData(value : [String:AnyObject] , key : String?){
@@ -162,18 +162,18 @@ extension ClassModel {
                 classArray.append(model)
           }
         }
-//
-//
-//
-//        dictionary.forEach({ (key , value) in
-//            let model = ClassModel(key: key, value: value as AnyObject)
-//            if (model != nil){
-//
-//            }
-//            print("Key \(key), value \(value) ")
-//        })
         
         return classArray
+    }
+    
+   static func getclassModels(data : Dictionary<String,AnyObject>) -> [ClassModel]{
+        //        var array = [BookingModel]()
+        
+        let  array  = data.map { (key, value)  in
+            ClassModel(value : value as! [String : AnyObject], key: key  )
+        }
+        
+        return array as! [ClassModel]
     }
     
     var getImageFromArray: String {

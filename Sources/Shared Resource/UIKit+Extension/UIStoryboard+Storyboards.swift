@@ -24,6 +24,7 @@ extension UIStoryboard {
         case profiles
         case classes
         case tabbar
+        case favorite
         
         var filename: String {
             return rawValue.capitalized

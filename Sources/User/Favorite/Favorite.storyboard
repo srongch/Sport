@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorite View Controller-->
+        <scene sceneID="oga-XQ-8FF">
+            <objects>
+                <viewController storyboardIdentifier="FavoriteViewController" id="swB-1o-WBD" customClass="FavoriteViewController" customModule="User" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SWL-5a-p1y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbe-In-6bu" customClass="AddClassNavi" customModule="User" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="zRH-9G-D0W"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="naviTitle" value="Favorite"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="back_button_blue"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="naviStep" value=" "/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gf8-uz-EIP">
+                                <rect key="frame" x="0.0" y="89" width="414" height="807"/>
+                                <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="cbe-In-6bu" firstAttribute="leading" secondItem="wkS-bX-csZ" secondAttribute="leading" id="1P2-Gg-sDD"/>
+                            <constraint firstAttribute="bottom" secondItem="gf8-uz-EIP" secondAttribute="bottom" id="AYQ-Y6-taR"/>
+                            <constraint firstItem="gf8-uz-EIP" firstAttribute="leading" secondItem="wkS-bX-csZ" secondAttribute="leading" id="I3C-Ho-4NR"/>
+                            <constraint firstItem="gf8-uz-EIP" firstAttribute="top" secondItem="cbe-In-6bu" secondAttribute="bottom" id="X2y-kd-7hP"/>
+                            <constraint firstItem="wkS-bX-csZ" firstAttribute="trailing" secondItem="gf8-uz-EIP" secondAttribute="trailing" id="ZGx-cJ-coi"/>
+                            <constraint firstItem="cbe-In-6bu" firstAttribute="top" secondItem="wkS-bX-csZ" secondAttribute="top" id="eRu-Xr-zUm"/>
+                            <constraint firstItem="cbe-In-6bu" firstAttribute="trailing" secondItem="wkS-bX-csZ" secondAttribute="trailing" id="js2-LI-kWQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wkS-bX-csZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="navi" destination="cbe-In-6bu" id="6Af-hZ-y8D"/>
+                        <outlet property="tableView" destination="gf8-uz-EIP" id="n1C-sS-PQs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dGM-Ib-QoF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-949" y="177"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back_button_blue" width="27" height="21"/>
+    </resources>
+</document>

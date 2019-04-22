@@ -13,6 +13,9 @@
 		1609CF44226CCCA300AFB8C0 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1609CF43226CCCA300AFB8C0 /* Map.storyboard */; };
 		1609CF45226CCCA300AFB8C0 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1609CF43226CCCA300AFB8C0 /* Map.storyboard */; };
 		1609CF47226CDF2900AFB8C0 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609CF46226CDF2900AFB8C0 /* Like.swift */; };
+		1609CF4B226D495200AFB8C0 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609CF4A226D495200AFB8C0 /* FavoriteViewController.swift */; };
+		1609CF4D226D496600AFB8C0 /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1609CF4C226D496600AFB8C0 /* Favorite.storyboard */; };
+		1609CF4E226D4AA000AFB8C0 /* ClassList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1656268B226A29730065F52F /* ClassList.xib */; };
 		161C8960224AAE5100BE9A0D /* LevelButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161C895F224AAE5100BE9A0D /* LevelButtonExtension.swift */; };
 		162E794622520B2400C5E5A2 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165F20A0224D141C0077D663 /* UserService.swift */; };
 		162E794B22521D5E00C5E5A2 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162E794822521D5D00C5E5A2 /* ReviewViewController.swift */; };
@@ -310,6 +313,8 @@
 		1609CF40226CCC3200AFB8C0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = "Sources/Shared Resource/Map/MapViewController.swift"; sourceTree = "<group>"; };
 		1609CF43226CCCA300AFB8C0 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		1609CF46226CDF2900AFB8C0 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
+		1609CF4A226D495200AFB8C0 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		1609CF4C226D496600AFB8C0 /* Favorite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
 		161C895F224AAE5100BE9A0D /* LevelButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelButtonExtension.swift; sourceTree = "<group>"; };
 		162E794822521D5D00C5E5A2 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		162E794922521D5D00C5E5A2 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
@@ -589,6 +594,15 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
+		1609CF49226D493F00AFB8C0 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				1609CF4A226D495200AFB8C0 /* FavoriteViewController.swift */,
+				1609CF4C226D496600AFB8C0 /* Favorite.storyboard */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
 		162E794722521D4B00C5E5A2 /* Reviews */ = {
 			isa = PBXGroup;
 			children = (
@@ -844,6 +858,7 @@
 		9DB3EC242241582400BE1A62 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				1609CF49226D493F00AFB8C0 /* Favorite */,
 				16DEF6BC226B8ABD0068D3E4 /* Registration */,
 				16B971DB22579F0D0013169F /* Assets.xcassets */,
 				162E794722521D4B00C5E5A2 /* Reviews */,
@@ -1368,6 +1383,7 @@
 				162E794D22521D5E00C5E5A2 /* ReviewTableViewCell.xib in Resources */,
 				16AC45CA2242953000E9B351 /* ScheduleCell.xib in Resources */,
 				9DB3ECDE22415A7500BE1A62 /* FiraSans-Regular.ttf in Resources */,
+				1609CF4E226D4AA000AFB8C0 /* ClassList.xib in Resources */,
 				9DB3ECC222415A7500BE1A62 /* FiraSans-LightItalic.ttf in Resources */,
 				9DB3ECDC22415A7500BE1A62 /* FiraSans-ExtraBoldItalic.ttf in Resources */,
 				9DB3ECD022415A7500BE1A62 /* FiraSans-BlackItalic.ttf in Resources */,
@@ -1382,6 +1398,7 @@
 				9DB3ECCC22415A7500BE1A62 /* FiraSans-ThinItalic.ttf in Resources */,
 				9DB3ECD622415A7500BE1A62 /* FiraSans-ExtraBold.ttf in Resources */,
 				9DB3ECDA22415A7500BE1A62 /* FiraSans-SemiBoldItalic.ttf in Resources */,
+				1609CF4D226D496600AFB8C0 /* Favorite.storyboard in Resources */,
 				9DB3ECC022415A7500BE1A62 /* FiraSans-ExtraLightItalic.ttf in Resources */,
 				9DB3ECFB22415A9E00BE1A62 /* GoogleService-Info.plist in Resources */,
 				9DB3ECEB22415A7D00BE1A62 /* CategoryButton.xib in Resources */,
@@ -1711,6 +1728,7 @@
 				1680A8F52243E6F300B23A1B /* TabBarViewController.swift in Sources */,
 				9DB3ECF322415A8700BE1A62 /* CustomEnum.swift in Sources */,
 				16E4382E22429F8E00EF8771 /* AlwaysShowPopup.swift in Sources */,
+				1609CF4B226D495200AFB8C0 /* FavoriteViewController.swift in Sources */,
 				9DB3ED0F22415AB500BE1A62 /* CustomCalenderCell.swift in Sources */,
 				9DB4ADFB22419B2C009A74C2 /* Date.swift in Sources */,
 				164A2F502244FED900B42AF4 /* ExampleBasicContentView.swift in Sources */,

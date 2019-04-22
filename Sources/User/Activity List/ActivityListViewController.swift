@@ -36,6 +36,8 @@ class ActivityListViewController: UIViewController {
     var placeMark : MKPlacemark?
     var level : Int?
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -46,16 +48,27 @@ class ActivityListViewController: UIViewController {
             guard let model = classModel else {return}
             self.classArray = model
             self.filteredArray = model
-            self.tableView.reloadData()
-        }
-        
-//        classArray.getuse
-        if UserService.shared.isHaveUser {
-            classService.getUserLikeClasses(userId: UserService.shared.globalUser?.uid ?? "") { classModels in
-                
+            
+            if UserService.shared.isHaveUser {
+                self.loadLikeList(reloadAtIndex: nil)
+            }else{
+                self.tableView.reloadData()
             }
         }
-        
+    }
+    
+    func loadLikeList(reloadAtIndex : IndexPath?){
+        self.classService.getUserLikeClasses(userId: UserService.shared.globalUser?.uid ?? "") { likeModels in
+            self.likeList = likeModels
+            
+            guard let indexPath = reloadAtIndex else{
+                self.tableView.reloadData()
+                return
+            }
+            
+            self.tableView.reloadRows(at: [indexPath], with: .fade)
+            
+        }
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
@@ -85,16 +98,7 @@ class ActivityListViewController: UIViewController {
                 self.presentAlertView(with: "Operation Failed.", isOneButton: true, onDone: {}, onCancel: {})
                 return
             }
-            
-            switch operation! {
-            case "remove" :
-            
-                break
-            default :
-                
-                break
-            }
-            
+            self.loadLikeList(reloadAtIndex: IndexPath(row: sender.tag, section: 0))
         }
     }
     
@@ -137,9 +141,6 @@ class ActivityListViewController: UIViewController {
         //My location
         let location = place.location
         
-        //My buddy's location
-//        let myBuddysLocation = CLLocation(latitude: 59.326354, longitude: 18.072310)
-        
         return array.filter({ model -> Bool in
             let placeLocation = CLLocation(latitude: model.latitude, longitude: model.longtitude)
             //Measuring my distance to my buddy's (in km)
@@ -150,12 +151,6 @@ class ActivityListViewController: UIViewController {
             return distance < 0.6
         })
         
-        //Measuring my distance to my buddy's (in km)
-//        let distance = myLocation.distance(from: myBuddysLocation) / 1000
-        
-        //Display the result in km
-//        print(String(format: "The distance to my buddy is %.01fkm", distance))
-//        return array
     }
    
     
@@ -201,11 +196,32 @@ extension ActivityListViewController : UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AcitivityListTableViewCell") as! AcitivityListTableViewCell
         
-        
        let model = filteredArray![indexPath.row]
        cell.setupCell(model: model)
-       cell.likeButton.tag = indexPath.row
+       
+        cell.likeButton.tag = indexPath.row
         cell.likeButton.addTarget(self, action: #selector(likeButtonPressed), for: .touchUpInside)
+        
+        if UserService.shared.isHaveUser {
+            cell.likeButton.isHidden = false
+            
+            guard let list = likeList else{
+                cell.likeButton.isSelected = false
+                return cell
+            }
+    
+            if list.contains(where: {$0.classId == model.key}) {
+                // it exists, do something
+                cell.likeButton.isSelected = true
+            } else {
+                //item could not be found
+                cell.likeButton.isSelected = false
+            }
+        }else{
+            cell.likeButton.isHidden = true
+        }
+        
+        
 
         return cell //4.
     }
@@ -221,11 +237,6 @@ extension ActivityListViewController : MapViewDelegate{
     func mapViewDidSelectedPlace(mapItem: MKPlacemark) {
         self.placeMark = mapItem
         self.locationLabel.text = self.placeMark?.name
-        
-//        locationText.text = mapItem.name
-//        locationSelected.0 = mapItem.name ?? ""
-//        locationSelected.1 = mapItem.coordinate.latitude
-//        locationSelected.2 = mapItem.coordinate.longitude
         filterList()
     }
 }

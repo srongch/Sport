@@ -81,6 +81,7 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate{
             vc.delegate = self
             self.navigationController?.pushViewController(vc, animated: true)
         case .favorite : print("favorite")
+            self.navigationController?.pushViewController(FavoriteViewController.instance(), animated: true)
         case .payment :
             print("payment")
             self.navigationController?.pushViewController(BookingViewController.instance(), animated: true)

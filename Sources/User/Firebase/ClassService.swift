@@ -35,7 +35,7 @@ final class ClassService {
         }
     }
     
-    func getUserLikeClasses(userId : String,completionHandler: @escaping (_ model:  [ClassModel]?) -> Void){
+    func getUserLikeClasses(userId : String,completionHandler: @escaping (_ model:  [UserLike]?) -> Void){
         
         guard userId.count > 0 else{
             completionHandler(nil)
@@ -44,42 +44,20 @@ final class ClassService {
         
         classesRef.reference(withPath: "likes").child(userId).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
-        //    let user = ClassModel(snapshot: snapshot)
-             guard let dictionary = snapshot.value as? [String:Any] else
-             {return completionHandler(nil)}
+//        //    let user = ClassModel(snapshot: snapshot)
+//             guard let dictionary = snapshot.value as? [String:Any] else
+//             {return completionHandler(nil)}
             
             var classArray = [UserLike]()
-            dictionary.forEach({ (key , value) in
-                        let model = UserLike(key: key, value: value as AnyObject)
-                        if (model != nil){
-                            classArray.append(model)
-                        }
-                        print("Key \(key), value \(value) ")
-                    })
+
+            for child in snapshot.children {
+                if let snapshot = child as? DataSnapshot,
+                    let model = UserLike(snapshot: snapshot) {
+                    classArray.append(model)
+                }
+            }
             
-            
-            
-//            for child in snapshot.children {
-//                if let snapshot = child as? DataSnapshot,
-//                    let model = ClassModel(snapshot: snapshot) {
-//                    classArray.append(model)
-//                }
-//            }
-            //
-            //
-            //
-            //        dictionary.forEach({ (key , value) in
-            //            let model = ClassModel(key: key, value: value as AnyObject)
-            //            if (model != nil){
-            //
-            //            }
-            //            print("Key \(key), value \(value) ")
-            //        })
-            
-            return classArray
-            
-            
-            completionHandler(nil)
+            completionHandler(classArray)
             // ...
         }) { (error) in
             print(error.localizedDescription)
@@ -95,7 +73,8 @@ final class ClassService {
 //                print("\(result?.data )")
             
             if (error != nil){
-                print("no nil")
+                print(error?.localizedDescription)
+                
                 return  completionHandler(true,nil)
             }
             
@@ -183,13 +162,13 @@ final class ClassService {
             }
             
             guard let reviews = value["reviews"] as? Dictionary<String, AnyObject> else {
-                completionHandler( ClassModel(value: classes ), nil,false)
+                completionHandler( ClassModel(value: classes,key: "" ), nil,false)
                 return
             }
             
             let reviewArray = ReviewModel.getReviews(data: reviews )
             
-             return completionHandler(ClassModel(value: classes ),reviewArray,false)
+             return completionHandler(ClassModel(value: classes,key: "" ),reviewArray,false)
            
             
         }
@@ -220,6 +199,27 @@ final class ClassService {
             print("\(data)")
             
             return  completionHandler(BookingModel.getBookingModels(data: data).sorted(by: {$0.timeStamp > $1.timeStamp}),false)
+        }
+        
+    }
+    
+    func userFavorite(userId : String, completionHandler: @escaping (_ result : [ClassModel]?,_ isError : Bool) -> Void){
+        print("\(userId)")
+        functions.httpsCallable("userFavorite").call(["userId" : userId]) { (result, error) in
+                print("\(result?.data )")
+            
+            if (error != nil){
+                print("no nil")
+                return  completionHandler(nil, true)
+            }
+            
+            guard let value = (result?.data as? [String: AnyObject]),
+                let data = value["data"] as? Dictionary<String, AnyObject> else {
+                    return  completionHandler(nil, true)
+            }
+            print("\(data)")
+//
+            return  completionHandler(ClassModel.getclassModels(data: data).sorted(by: {$0.timeStamp > $1.timeStamp}),false)
         }
         
     }

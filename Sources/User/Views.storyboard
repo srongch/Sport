@@ -776,6 +776,7 @@ what you wanna do today?</string>
                                                                 <constraint firstAttribute="height" constant="24" id="Vn8-zv-Uxm"/>
                                                             </constraints>
                                                             <state key="normal" image="likk_icon"/>
+                                                            <state key="selected" image="likk_icon_on"/>
                                                             <state key="highlighted" image="likk_icon_on"/>
                                                         </button>
                                                     </subviews>
