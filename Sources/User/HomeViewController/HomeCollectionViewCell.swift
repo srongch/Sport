@@ -23,7 +23,8 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     internal func setupCell(model: ClassModel){
         ratingLabel.text = "\(model.rating)"
-        imageView.sd_setImage(with: URL(string: model.imageArray.first!), completed: nil)
+        if(model.imageArray.count > 0){ imageView.sd_setImage(with: URL(string: model.imageArray.first!), completed: nil)}
+        
         levelLabel.text = model.getLevelName()
         levelLabel.textColor = model.getLevelColor()
         classNameLabel.text = model.className

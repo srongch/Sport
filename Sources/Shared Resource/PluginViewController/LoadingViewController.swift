@@ -13,6 +13,8 @@ class LoadingViewController: UIViewController {
     let backgroundView = UIView()
     private lazy var activityIndicator = UIActivityIndicatorView(style: .white)
     var superViewFrame : CGRect = .zero
+    var isNeedFullScreen : Bool = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +28,17 @@ class LoadingViewController: UIViewController {
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         backgroundView.addSubview(activityIndicator)
         self.view.addSubview(backgroundView)
-        self.view.backgroundColor = .clear
-        self.view.frame.size = backgroundView.frame.size
+        
+        if (isNeedFullScreen) {
+            self.view.backgroundColor = .background_color
+        }else{
+            self.view.frame.size = backgroundView.frame.size
+            self.view.backgroundColor = .clear
+        }
         
         NSLayoutConstraint.activate([
             activityIndicator.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
             activityIndicator.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor),
-            backgroundView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
             ])
         
     }
@@ -53,6 +59,8 @@ class LoadingViewController: UIViewController {
         print("view frame :\(self.view.frame)")
         self.view.center = CGPoint(x: superViewFrame.size.width  / 2,
                                    y: superViewFrame.size.height / 2)
+        backgroundView.center = CGPoint(x: view.frame.size.width  / 2,
+                                        y: view.frame.size.height / 2)
     }
     
 
@@ -73,5 +81,12 @@ extension LoadingViewController {
         let vc = LoadingViewController()
         vc.superViewFrame = superViewFrame
     return vc
+    }
+    
+    static func instance(_ superViewFrame : CGRect, _ isNeedFullScreen : Bool) -> LoadingViewController {
+        let vc = LoadingViewController()
+        vc.superViewFrame = superViewFrame
+        vc.isNeedFullScreen = isNeedFullScreen
+        return vc
     }
 }

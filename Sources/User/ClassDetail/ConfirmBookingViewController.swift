@@ -39,6 +39,9 @@ class ConfirmBookingViewController: UIViewController {
             return
         }
         
+        let notification = Notification(bookingModel: self.bookingModel!)
+        AppDelegate.shared.scheduleNotification(notification: notification)
+        
         setupView()
         
 //        setupView(d)
@@ -87,6 +90,10 @@ extension ConfirmBookingViewController : LoadingButtonProtocol {
             }else{
                 
                 self?.presentAlertView(with: "Booking Completed.", isOneButton: true, onDone: {
+                    
+                    let notification = Notification(bookingModel: model)
+                    AppDelegate.shared.scheduleNotification(notification: notification)
+                    
                     self?.navigationController?.pushViewController(BookingViewController.instance(), animated: true)
                 }, onCancel: {})
             }

@@ -31,7 +31,6 @@ enum TabbarEnum {
         v3.tabBarItem = ESTabBarItem.init(ExampleBackgroundContentView(),title: nil, image: UIImage(named: "bar_icon_profile"), selectedImage: UIImage(named: "bar_icon_profile_select"))
         
         tabBarController.viewControllers = [v1, v2,v3]
-        
         return tabBarController
     }
 }

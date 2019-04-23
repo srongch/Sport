@@ -34,7 +34,7 @@ class BookingViewController: UIViewController, NaviBarProtocol{
     }
     
     func buttonBackPressed(){
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
 

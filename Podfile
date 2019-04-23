@@ -6,6 +6,7 @@ def share_resources
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
+  pod 'Firebase/Messaging'
   pod "TPKeyboardAvoidingSwift"
   pod 'SDWebImage', '~> 4.0'
   pod 'Firebase/Functions'

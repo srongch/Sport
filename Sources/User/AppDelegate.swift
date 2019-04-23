@@ -9,19 +9,30 @@
 import UIKit
 import CoreData
 import Firebase
+import UserNotifications
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    let notificationCenter = UNUserNotificationCenter.current()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
          FirebaseApp.configure()
-         print("i  user login \(UserService.shared.isHaveUser )")
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        window?.rootViewController = SplashScreenViewController.instance()
-//        window?.makeKeyAndVisible()
+         print("i  user login \(UserService.shared.isHaveUser)")
+        
+        notificationCenter.delegate = self
+        
+        let options: UNAuthorizationOptions = [.alert, .sound, .badge]
+        
+        notificationCenter.requestAuthorization(options: options) {
+            (didAllow, error) in
+            if !didAllow {
+                print("User has declined notifications")
+            }
+        }
+        
         return true
     }
     
@@ -41,6 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        UIApplication.shared.applicationIconBadgeNumber = 0
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
@@ -93,6 +105,94 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    
 }
+
+// [START ios_10_message_handling]
+@available(iOS 10, *)
+extension AppDelegate : UNUserNotificationCenterDelegate {
+
+    // Receive displayed notifications for iOS 10 devices.
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        let userInfo = notification.request.content.userInfo
+
+        // With swizzling disabled you must let Messaging know about the message, for Analytics
+        // Messaging.messaging().appDidReceiveMessage(userInfo)
+        // Print message ID.
+//        if let messageID = userInfo[gcmMessageIDKey] {
+//            print("Message ID: \(messageID)")
+//        }
+
+        // Print full message.
+        print(userInfo)
+
+        // Change this to your preferred presentation option
+        completionHandler([.alert, .sound])
+    }
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+        let userInfo = response.notification.request.content.userInfo
+        // Print message ID.
+//        if let messageID = userInfo[gcmMessageIDKey] {
+//            print("Message ID: \(messageID)")
+//        }
+
+        // Print full message.
+        print(userInfo)
+
+        if response.notification.request.identifier.contains("local_noti") {
+            let dataDict:[String: String] = ["data": response.notification.request.identifier]
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Booking_Noti"), object: nil, userInfo: dataDict)
+           
+             let tabbar = TabbarEnum.userTabbar()
+             tabbar.selectedIndex = 1
+             AppDelegate.shared.gotoView(view: tabbar)
+            
+            print("Handling notifications with the Local Notification Identifier")
+        }
+        
+        completionHandler()
+    }
+    
+    
+    func scheduleNotification(notification: Notification) {
+        
+        guard let scheduleDate = notification.scheduleDate else {
+            return
+        }
+        
+        let content = UNMutableNotificationContent()
+        
+        content.title = notification.title
+        content.body = notification.body
+        content.sound = UNNotificationSound.default
+        content.badge = 1
+        content.categoryIdentifier = notification.categoryIdentifire
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: scheduleDate, repeats: false)
+        let identifier = notification.identifier
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        notificationCenter.add(request) { (error) in
+            if let error = error {
+                print("Error \(error.localizedDescription)")
+            }
+        }
+        
+//        let snoozeAction = UNNotificationAction(identifier: "Snooze", title: "Snooze", options: [])
+//        let deleteAction = UNNotificationAction(identifier: "DeleteAction", title: "Delete", options: [.destructive])
+        let category = UNNotificationCategory(identifier: notification.identifier,
+                                              actions: [],
+                                              intentIdentifiers: [],
+                                              options: [])
+        
+        notificationCenter.setNotificationCategories([category])
+    }
+}
+// [END ios_10_message_handling]
 

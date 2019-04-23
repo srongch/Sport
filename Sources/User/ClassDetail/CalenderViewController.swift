@@ -49,7 +49,12 @@ class CalenderViewController: UIViewController,NaviBarProtocol {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
+        if (classModel!.times.count < Int(itemsPerRow)){
+            timeViewWrapperieghtConstrain.constant = 60
+        }else{
         timeViewWrapperieghtConstrain.constant =  (CGFloat(classModel!.times.count)/CGFloat(itemsPerRow)) * 60
+        }
     }
     
     func setupCollectionView(){

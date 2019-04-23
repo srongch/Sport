@@ -93,12 +93,28 @@ final class ClassService {
     
     func getHomeClass(forLimit: Int,completionHandler: @escaping (_ model:  [ClassModel]?) -> Void) {
         
-        let ref =  classesRef.reference(withPath: "classes").queryOrdered(byChild: "rating")
+        let ref =  classesRef
+//        reference(withPath: "classes").queryOrdered(byChild: "rating")
         if forLimit > 0 {
-            ref.queryLimited(toLast: UInt(forLimit))
+            ref.reference(withPath: "classes").queryOrdered(byChild: "rating").queryLimited(toLast: 4).observeSingleEvent(of: .value, with: { (snapshot) in
+                self.handleResult(snapshot: snapshot, completionHandler: completionHandler)
+            }) { (error) in
+                print(error.localizedDescription)
+                completionHandler(nil)
+            }
         }
-        ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            
+        else{
+            ref.reference(withPath: "classes").queryOrdered(byChild: "rating").observeSingleEvent(of: .value, with: { (snapshot) in
+                self.handleResult(snapshot: snapshot, completionHandler: completionHandler)
+            }) { (error) in
+                print(error.localizedDescription)
+                completionHandler(nil)
+            }
+    
+            }
+    }
+        
+        func handleResult(snapshot : DataSnapshot,completionHandler: @escaping (_ model:  [ClassModel]?) -> Void ) {
             guard ((snapshot.value as? [String:Any]) != nil) else {
                 completionHandler(nil)
                 return
@@ -108,11 +124,8 @@ final class ClassService {
             model?.sort(by: {$0.rating > $1.rating})
             completionHandler(model)
             // ...
-        }) { (error) in
-            print(error.localizedDescription)
-            completionHandler(nil)
         }
-    }
+    
     
     func getClassByActivity(activity : Int ,completionHandler: @escaping (_ model:  [ClassModel]?) -> Void) {
         

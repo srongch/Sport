@@ -165,7 +165,7 @@ extension HomeViewController : CategoryButtonPressedProtocol {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let model = classList![indexPath.row]
-        self.navigationController?.pushViewController(ClassDetailViewController.instance(classId: model.key,authorId: model.authorId), animated: true)
+        self.navigationController?.pushViewController(UserClassDetailViewController.instance(classId: model.key,authorId: model.authorId), animated: true)
     }
     
 }

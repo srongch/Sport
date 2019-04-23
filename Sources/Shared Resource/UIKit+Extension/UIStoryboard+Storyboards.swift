@@ -23,8 +23,11 @@ extension UIStoryboard {
         case profile
         case profiles
         case classes
+        case sharedClass
         case tabbar
         case favorite
+        case map
+        case sharedClasses
         
         var filename: String {
             return rawValue.capitalized

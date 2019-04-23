@@ -13,15 +13,6 @@
         <!--Map View Controller-->
         <scene sceneID="3GR-OP-OqC">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DLX-3M-4h7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="Wv2-DV-1Rw">
-                    <connections>
-                        <outlet property="delegate" destination="7pp-h4-PnW" id="dln-aG-YSj"/>
-                        <outlet property="searchContentsController" destination="7pp-h4-PnW" id="MF2-RQ-NKS"/>
-                        <outlet property="searchResultsDataSource" destination="7pp-h4-PnW" id="78F-XZ-hdA"/>
-                        <outlet property="searchResultsDelegate" destination="7pp-h4-PnW" id="68d-1e-aza"/>
-                    </connections>
-                </searchDisplayController>
                 <viewController storyboardIdentifier="MapViewController" id="7pp-h4-PnW" customClass="MapViewController" customModule="Trainer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o6D-Ir-ins">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -122,6 +113,15 @@
                         <outlet property="searchResultTableView" destination="TpX-U2-sVC" id="VEd-gg-gSU"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DLX-3M-4h7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Wv2-DV-1Rw">
+                    <connections>
+                        <outlet property="delegate" destination="7pp-h4-PnW" id="dln-aG-YSj"/>
+                        <outlet property="searchContentsController" destination="7pp-h4-PnW" id="MF2-RQ-NKS"/>
+                        <outlet property="searchResultsDataSource" destination="7pp-h4-PnW" id="78F-XZ-hdA"/>
+                        <outlet property="searchResultsDelegate" destination="7pp-h4-PnW" id="68d-1e-aza"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="716" y="-637"/>
         </scene>

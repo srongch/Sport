@@ -31,14 +31,22 @@ extension Setting {
         var array = [Setting]()
         if (isLogin){
             array.append(Setting(text: "Edit Profile", type: .editProfile))
+            
+            if (isUser) {
+                array.append(Setting(text: "Favorite", type: .favorite))
+                array.append(Setting(text: "Payment", type: .payment))
+            }else{
+                // is for trainer
+            }
+            
         }
-        
-        if (isUser) {
-            array.append(Setting(text: "Favorite", type: .favorite))
-             array.append(Setting(text: "Payment", type: .payment))
-        }else{
-            // is for trainer
-        }
+//        
+//        if (isUser) {
+//            array.append(Setting(text: "Favorite", type: .favorite))
+//             array.append(Setting(text: "Payment", type: .payment))
+//        }else{
+//            // is for trainer
+//        }
         return array
     }
 }
