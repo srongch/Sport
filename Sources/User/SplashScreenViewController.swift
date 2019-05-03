@@ -35,15 +35,19 @@ class SplashScreenViewController: UIViewController {
         if ((user) != nil) {
             // User is signed in.
              UserService.shared.getUser(userID: user!.uid, email: "", completionHandler: { _ in
-                self.imageView.stopAnimating()
+//                self.imageView.stopAnimating()
                   self.router()
              })
+        }else{
+           
+            self.router()
         }
    
         
     }
     
     private func router() {
+         self.imageView.stopAnimating()
      AppDelegate.shared.gotoView(view: TabbarEnum.userTabbar())
   
     }

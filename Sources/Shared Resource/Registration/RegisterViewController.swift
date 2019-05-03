@@ -41,8 +41,17 @@ class RegisterViewController: UIViewController {
             return
         }
         
+        if password != confirmPwd {
+            presentAlertView(with: "Password not matches.", isOneButton: true, onDone: {}, onCancel: {})
+            return
+        }
+        
+        
+        let vc = LoadingViewController.instance(self.view.frame)
+        add(vc)
         // Register the user account on Firebase
         AuthService().signUpWith(email: emailAddress, password: password, name: name, userType :UserType.getType()) {[weak self] (user, error,errorMsg) in
+            vc.remove()
             if (error){
                 let alertController = UIAlertController(title: "Registration Error", message: errorMsg, preferredStyle: .alert)
                 let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)

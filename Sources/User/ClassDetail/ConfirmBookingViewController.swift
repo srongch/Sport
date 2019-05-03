@@ -51,7 +51,7 @@ class ConfirmBookingViewController: UIViewController, NaviBarProtocol {
         let model = bookingModel!
         classImage.sd_setImage(with: URL(string: model.classImage), completed: nil)
         classTitle.text = model.className
-        dateLabel.text = model.classDate.toDateWithFormate(format: "MM-DD-YYYY")
+        dateLabel.text = model.classDate.toDateWithFormate(format: "MM-dd-YYYY")
         timeLabel.text = "\(model.classTime.toDateWithFormate(format: "HH:SS"))  |  \(model.classHour) hour"
         
         numberofPeopleLeft.text = "£\(model.price)* \(model.numberofPeople)"
