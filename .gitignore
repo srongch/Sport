@@ -1242,3 +1242,21 @@ Pods/Target Support Files/Protobuf/Protobuf-prefix.pch
 Pods/Target Support Files/Protobuf/Protobuf-umbrella.h
 Pods/Target Support Files/Protobuf/Protobuf.modulemap
 Pods/Target Support Files/Protobuf/Protobuf.xcconfig
+Pods/Headers/Private/FirebaseAnalyticsInterop/FIRAnalyticsInterop.h
+Pods/Headers/Private/FirebaseAnalyticsInterop/FIRInteropEventNames.h
+Pods/Headers/Private/FirebaseAnalyticsInterop/FIRInteropParameterNames.h
+Pods/Headers/Public/FirebaseAnalyticsInterop/FIRAnalyticsInterop.h
+Pods/Headers/Public/FirebaseAnalyticsInterop/FIRInteropEventNames.h
+Pods/Headers/Public/FirebaseAnalyticsInterop/FIRInteropParameterNames.h
+Pods/Target Support Files/FirebaseAnalyticsInterop/FirebaseAnalyticsInterop.xcconfig
+Pods/Target Support Files/FirebaseMessaging/FirebaseMessaging-dummy.m
+Pods/Target Support Files/FirebaseMessaging/FirebaseMessaging-Info.plist
+Pods/Target Support Files/FirebaseMessaging/FirebaseMessaging-umbrella.h
+Pods/Target Support Files/FirebaseMessaging/FirebaseMessaging.modulemap
+Pods/Target Support Files/FirebaseMessaging/FirebaseMessaging.xcconfig
+Pods/Target Support Files/Protobuf/Protobuf-dummy.m
+Pods/Target Support Files/Protobuf/Protobuf-Info.plist
+Pods/Target Support Files/Protobuf/Protobuf-prefix.pch
+Pods/Target Support Files/Protobuf/Protobuf-umbrella.h
+Pods/Target Support Files/Protobuf/Protobuf.modulemap
+Pods/Target Support Files/Protobuf/Protobuf.xcconfig
