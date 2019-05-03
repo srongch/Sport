@@ -15,6 +15,7 @@ class TrainerTimeTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
+        self.view.backgroundColor = .background_color
 
         // Do any additional setup after loading the view.
     }

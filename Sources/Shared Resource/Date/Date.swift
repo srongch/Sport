@@ -33,8 +33,9 @@ extension Date {
         let isInRage = isGreaterThan(fromDate) && isSmallerThan(toDate)
         
         if isInRage {
-            let dayArray = dayOfTheWeek.map { $0 == 6 ? 1 : $0 + 2}
-            return dayArray.contains(self.dayNumberOfWeek() ?? 1)
+            // 0 is Monday
+            let dayArray = dayOfTheWeek.map { $0 + 1}
+            return dayArray.contains(self.dayNumberOfWeek() ?? 0)
             
         }else{
             return isInRage

@@ -20,7 +20,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFC-yd-goH" customClass="AddClassNavi" customModule="Trainer" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="45"/>
-                                <color key="backgroundColor" red="0.96086698770000001" green="0.96861177679999999" blue="0.96862834689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="dfc-xD-Bpg"/>
                                 </constraints>
@@ -34,6 +34,7 @@
                             </mapView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="MJe-FY-8f1">
                                 <rect key="frame" x="0.0" y="89" width="414" height="56"/>
+                                <color key="barTintColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TpX-U2-sVC">
@@ -83,7 +84,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.96086698770000001" green="0.96861177679999999" blue="0.96862834689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="TpX-U2-sVC" secondAttribute="bottom" id="29U-Zt-79t"/>
                             <constraint firstItem="MJe-FY-8f1" firstAttribute="leading" secondItem="o6D-Ir-ins" secondAttribute="leading" id="A1V-ea-R9r"/>

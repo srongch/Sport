@@ -97,3 +97,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+extension AppDelegate{
+    func getLocationManger()->CLLocationManager? {
+        return self.locationManager
+    }
+}

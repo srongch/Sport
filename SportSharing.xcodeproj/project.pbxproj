@@ -136,6 +136,7 @@
 		16B2D835226E90FB0064DE39 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2D834226E90FB0064DE39 /* Notification.swift */; };
 		16B2D837226E941B0064DE39 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2D836226E941B0064DE39 /* String+Date.swift */; };
 		16B6D9EB227AE0EA00A2F41E /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2D82C226DDF4B0064DE39 /* ReviewModel.swift */; };
+		16B6D9ED227C4A2600A2F41E /* TrainerClassDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B6D9EC227C4A2600A2F41E /* TrainerClassDetailViewController.swift */; };
 		16B971D822579BC70013169F /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B971D722579BC70013169F /* LoadingButton.swift */; };
 		16B971DA22579BDE0013169F /* LoadingButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16B971D922579BDE0013169F /* LoadingButton.xib */; };
 		16B971DC22579F0E0013169F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16B971DB22579F0D0013169F /* Assets.xcassets */; };
@@ -207,14 +208,12 @@
 		9DB3EC9922415A4700BE1A62 /* Object+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3EC9222415A4700BE1A62 /* Object+ClassName.swift */; };
 		9DB3EC9A22415A4700BE1A62 /* UIViewController+StoryboardIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3EC9322415A4700BE1A62 /* UIViewController+StoryboardIdentifier.swift */; };
 		9DB3EC9B22415A4700BE1A62 /* PopupAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3EC9422415A4700BE1A62 /* PopupAttribute.swift */; };
-		9DB3EC9C22415A4700BE1A62 /* PercentLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3EC9522415A4700BE1A62 /* PercentLayoutConstraint.swift */; };
 		9DB3EC9D22415A5800BE1A62 /* UIStoryboard+Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3EC8F22415A4700BE1A62 /* UIStoryboard+Storyboards.swift */; };
 		9DB3EC9E22415A5A00BE1A62 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3EC9022415A4700BE1A62 /* ColorExtension.swift */; };
 		9DB3EC9F22415A5C00BE1A62 /* UIView+IBDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3EC9122415A4700BE1A62 /* UIView+IBDesignable.swift */; };
 		9DB3ECA022415A5E00BE1A62 /* Object+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3EC9222415A4700BE1A62 /* Object+ClassName.swift */; };
 		9DB3ECA122415A6000BE1A62 /* UIViewController+StoryboardIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3EC9322415A4700BE1A62 /* UIViewController+StoryboardIdentifier.swift */; };
 		9DB3ECA222415A6200BE1A62 /* PopupAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3EC9422415A4700BE1A62 /* PopupAttribute.swift */; };
-		9DB3ECA322415A6400BE1A62 /* PercentLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3EC9522415A4700BE1A62 /* PercentLayoutConstraint.swift */; };
 		9DB3ECA722415A6D00BE1A62 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ECA522415A6D00BE1A62 /* StoryboardIdentifiable.swift */; };
 		9DB3ECA822415A6D00BE1A62 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ECA522415A6D00BE1A62 /* StoryboardIdentifiable.swift */; };
 		9DB3ECA922415A6D00BE1A62 /* ModeltoDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ECA622415A6D00BE1A62 /* ModeltoDictionary.swift */; };
@@ -429,6 +428,7 @@
 		16B2D82F226DDFA80064DE39 /* ReviewServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewServices.swift; sourceTree = "<group>"; };
 		16B2D834226E90FB0064DE39 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		16B2D836226E941B0064DE39 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
+		16B6D9EC227C4A2600A2F41E /* TrainerClassDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerClassDetailViewController.swift; sourceTree = "<group>"; };
 		16B971D722579BC70013169F /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 		16B971D922579BDE0013169F /* LoadingButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingButton.xib; sourceTree = "<group>"; };
 		16B971DB22579F0D0013169F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -450,8 +450,8 @@
 		16EF3752224FBE2100E96F30 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		16FED378225C9AAB009EDB77 /* TimeTableCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableCoreData.swift; sourceTree = "<group>"; };
 		16FED37B225C9B96009EDB77 /* TimeTable.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimeTable.xcdatamodel; sourceTree = "<group>"; };
-		16FED37F225CDB7B009EDB77 /* TimeTable+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TimeTable+CoreDataClass.swift"; path = "/Users/a100456065/Documents/GitHub/Sport/Sources/User/Timetable/TimeTable+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		16FED380225CDB7B009EDB77 /* TimeTable+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TimeTable+CoreDataProperties.swift"; path = "/Users/a100456065/Documents/GitHub/Sport/Sources/User/Timetable/TimeTable+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		16FED37F225CDB7B009EDB77 /* TimeTable+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TimeTable+CoreDataClass.swift"; path = "Sources/User/Timetable/TimeTable+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		16FED380225CDB7B009EDB77 /* TimeTable+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TimeTable+CoreDataProperties.swift"; path = "/Users/chhemsronglong/Development/Project/Sport/Sources/User/Timetable/TimeTable+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		17477614BCB929C31E84549E /* Pods_UserTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D3B5B687F9C147999EF8E6C /* Pods-UserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserTests.debug.xcconfig"; path = "Target Support Files/Pods-UserTests/Pods-UserTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3FF8ED5872442A09920ACAD9 /* Pods-TrainerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainerUITests.release.xcconfig"; path = "Target Support Files/Pods-TrainerUITests/Pods-TrainerUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -492,7 +492,6 @@
 		9DB3EC9222415A4700BE1A62 /* Object+ClassName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Object+ClassName.swift"; sourceTree = "<group>"; };
 		9DB3EC9322415A4700BE1A62 /* UIViewController+StoryboardIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardIdentifier.swift"; sourceTree = "<group>"; };
 		9DB3EC9422415A4700BE1A62 /* PopupAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupAttribute.swift; sourceTree = "<group>"; };
-		9DB3EC9522415A4700BE1A62 /* PercentLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentLayoutConstraint.swift; sourceTree = "<group>"; };
 		9DB3ECA522415A6D00BE1A62 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
 		9DB3ECA622415A6D00BE1A62 /* ModeltoDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModeltoDictionary.swift; sourceTree = "<group>"; };
 		9DB3ECAC22415A7500BE1A62 /* FiraSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Thin.ttf"; sourceTree = "<group>"; };
@@ -726,6 +725,7 @@
 			children = (
 				16562696226A2C1A0065F52F /* Classes.storyboard */,
 				16562694226A2B080065F52F /* ClassListViewController.swift */,
+				16B6D9EC227C4A2600A2F41E /* TrainerClassDetailViewController.swift */,
 			);
 			path = ClassList;
 			sourceTree = "<group>";
@@ -1053,7 +1053,6 @@
 				9DB3EC9222415A4700BE1A62 /* Object+ClassName.swift */,
 				9DB3EC9322415A4700BE1A62 /* UIViewController+StoryboardIdentifier.swift */,
 				9DB3EC9422415A4700BE1A62 /* PopupAttribute.swift */,
-				9DB3EC9522415A4700BE1A62 /* PercentLayoutConstraint.swift */,
 				1677370E2253AD6300BFC345 /* UITableView+Extension.swift */,
 				16B971DD2257B0ED0013169F /* UIView+StackView.swift */,
 				165626732268DC190065F52F /* UIAppDelegate+View.swift */,
@@ -1786,7 +1785,6 @@
 				164A2F412244EEFD00B42AF4 /* ESTabBarItem.swift in Sources */,
 				16DEF6B5226B80FA0068D3E4 /* EditProfileViewController.swift in Sources */,
 				9DB3ED0122415AA800BE1A62 /* ClassService.swift in Sources */,
-				9DB3EC9C22415A4700BE1A62 /* PercentLayoutConstraint.swift in Sources */,
 				16844C96225CF1D400D89644 /* TimeTableDate.swift in Sources */,
 				164A2F3D2244EEFD00B42AF4 /* ESTabBarItemContainer.swift in Sources */,
 				16DEF6C0226B96560068D3E4 /* NotLoginViewController.swift in Sources */,
@@ -1907,7 +1905,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				165CD0C322677698002519DE /* TransactionModel.swift in Sources */,
-				9DB3ECA322415A6400BE1A62 /* PercentLayoutConstraint.swift in Sources */,
 				16BB7699227660F700B129FC /* AlwaysShowPopup.swift in Sources */,
 				16B2D829226DDDB00064DE39 /* ReviewViewController.swift in Sources */,
 				16BB769D2276610F00B129FC /* ScheduleCell.swift in Sources */,
@@ -1936,6 +1933,7 @@
 				9DB3ED1C22415AFD00BE1A62 /* ClassService.swift in Sources */,
 				16BB7695227660EA00B129FC /* TimetableViewController.swift in Sources */,
 				9DB3ED3922415B1000BE1A62 /* TimePicker.swift in Sources */,
+				16B6D9ED227C4A2600A2F41E /* TrainerClassDetailViewController.swift in Sources */,
 				16EF3754224FBE2100E96F30 /* AuthService.swift in Sources */,
 				1656269C226A31930065F52F /* ClassModel1.swift in Sources */,
 				16BB769B2276610800B129FC /* TimetableCell.swift in Sources */,

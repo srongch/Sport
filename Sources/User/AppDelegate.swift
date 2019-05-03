@@ -10,6 +10,8 @@ import UIKit
 import CoreData
 import Firebase
 import UserNotifications
+import CoreLocation
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -173,8 +175,8 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         content.badge = 1
         content.categoryIdentifier = notification.categoryIdentifire
         
-//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: scheduleDate, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: scheduleDate, repeats: false)
         let identifier = notification.identifier
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         
@@ -195,4 +197,11 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
     }
 }
 // [END ios_10_message_handling]
+
+extension AppDelegate{
+    func getLocationManger()->CLLocationManager? {
+        return nil
+    }
+}
+
 

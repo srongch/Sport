@@ -102,7 +102,7 @@ extension ClassListViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = self.modelList[indexPath.row]
-        self.navigationController?.pushViewController(ClassDetailViewController.instance(classId: model.key, authorId: model.authorId), animated: true)
+         self.navigationController?.pushViewController(TrainerClassDetailViewController.instance(classId: model.key, authorId: model.authorId), animated: true)
     }
     
 }

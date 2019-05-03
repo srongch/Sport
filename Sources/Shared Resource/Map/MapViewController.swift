@@ -22,23 +22,28 @@ class MapViewController: UIViewController,UISearchBarDelegate {
     var searchResult : [MKMapItem] = []
     var mapDelegate : MapViewDelegate?
     var selectedPin: MKPlacemark?
+    let regionRadius: Double = 1000
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        mapView.showsUserLocation = true
+//        mapVi
+//        mapView.showsUserLocation = true
         mapView.delegate = self
+        
         searchBar.delegate = self
         searchResultTableView.delegate = self
         searchResultTableView?.dataSource = self
         searchResultTableView.isHidden = true
         navi.delegate = self
+        self.centerMapOnUserLocation()
     }
     
     @IBAction func addLocation(_ sender: Any) {
                 guard let mapdeletegate = mapDelegate,
                       let pinSelected = selectedPin else {
+                        presentAlertView(with: "Please user search box to select location.", isOneButton: true, onDone: {}, onCancel: {})
                     return
                 }
                 self.dismiss(animated: true) {
@@ -46,6 +51,12 @@ class MapViewController: UIViewController,UISearchBarDelegate {
                 }
     }
     
+    func centerMapOnUserLocation() {
+            guard let locationmanager = AppDelegate.shared.getLocationManger(),
+            let coordinate = locationmanager.location?.coordinate else {return}
+            let coordinateRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+            mapView.setRegion(coordinateRegion, animated: true)
+    }
     
     /*
     // MARK: - Navigation
