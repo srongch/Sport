@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/chhemsronglong/Development/Project/Sport/Sources/User/Timetable/TimeTable+CoreDataClass.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/chhemsronglong/Development/Project/Sport/Sources/User/Timetable/TimeTable+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
       location = "group:SportSharing.xcodeproj">
    </FileRef>
    <FileRef

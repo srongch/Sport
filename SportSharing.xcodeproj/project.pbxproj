@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		16032D732258FAFD0023BFFB /* ProfileState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16032D722258FAFD0023BFFB /* ProfileState.swift */; };
+		1604C256226F61060014B859 /* ModelDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1604C255226F61060014B859 /* ModelDictionary.swift */; };
+		1604C258226F61E40014B859 /* Dictionary+UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1604C257226F61E40014B859 /* Dictionary+UserDefault.swift */; };
+		1604C259226F74810014B859 /* ReviewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168B109C2250509B006EE446 /* ReviewProtocol.swift */; };
+		1604C25B226F75000014B859 /* SharedClassService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1604C25A226F75000014B859 /* SharedClassService.swift */; };
+		1604C25C226F75880014B859 /* SlideImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ED0922415AB400BE1A62 /* SlideImageCollectionViewCell.swift */; };
+		1604C25D226F75D80014B859 /* SharedClassService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1604C25A226F75000014B859 /* SharedClassService.swift */; };
+		1604C260226F76810014B859 /* TrainerLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1604C25F226F76810014B859 /* TrainerLoginViewController.swift */; };
+		1604C262226FCB6B0014B859 /* SharedImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1604C261226FCB6A0014B859 /* SharedImages.xcassets */; };
+		1604C263226FCB6B0014B859 /* SharedImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1604C261226FCB6A0014B859 /* SharedImages.xcassets */; };
 		1609CF41226CCC3300AFB8C0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609CF40226CCC3200AFB8C0 /* MapViewController.swift */; };
 		1609CF42226CCC3300AFB8C0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1609CF40226CCC3200AFB8C0 /* MapViewController.swift */; };
 		1609CF44226CCCA300AFB8C0 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1609CF43226CCCA300AFB8C0 /* Map.storyboard */; };
@@ -45,7 +54,6 @@
 		164A2F5C224516DF00B42AF4 /* HomeCollectionFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F58224516DF00B42AF4 /* HomeCollectionFooter.swift */; };
 		164A2F5D224516DF00B42AF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F59224516DF00B42AF4 /* HomeViewController.swift */; };
 		164A2F602245172F00B42AF4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F5F2245172F00B42AF4 /* ProfileViewController.swift */; };
-		164A2F79224518CD00B42AF4 /* DetailActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F78224518CD00B42AF4 /* DetailActivityViewController.swift */; };
 		164A2F7E224518E500B42AF4 /* ActivityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A2F7C224518E500B42AF4 /* ActivityListViewController.swift */; };
 		164A2F802245199A00B42AF4 /* Views.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164A2F7F2245199900B42AF4 /* Views.storyboard */; };
 		164A2F8222451EF000B42AF4 /* ProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 164A2F8122451EF000B42AF4 /* ProfileHeaderView.xib */; };
@@ -102,7 +110,6 @@
 		16844C96225CF1D400D89644 /* TimeTableDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16844C95225CF1D400D89644 /* TimeTableDate.swift */; };
 		16844C9A225D1E3500D89644 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16844C98225D1E3100D89644 /* HomeViewController.swift */; };
 		168B109D2250509B006EE446 /* ReviewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168B109C2250509B006EE446 /* ReviewProtocol.swift */; };
-		16A0869422464612007E378D /* UserClassesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A0869322464612007E378D /* UserClassesService.swift */; };
 		16AC45BC22427EB100E9B351 /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AC45BB22427EB100E9B351 /* Timetable.storyboard */; };
 		16AC45BE22427EED00E9B351 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AC45BD22427EED00E9B351 /* TimetableViewController.swift */; };
 		16AC45C22242825400E9B351 /* TimetableMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AC45C12242825400E9B351 /* TimetableMenuView.swift */; };
@@ -124,15 +131,32 @@
 		16B2D82A226DDDB00064DE39 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2D825226DDDB00064DE39 /* ReviewTableViewCell.swift */; };
 		16B2D82B226DDDB00064DE39 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2D825226DDDB00064DE39 /* ReviewTableViewCell.swift */; };
 		16B2D82D226DDF4C0064DE39 /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2D82C226DDF4B0064DE39 /* ReviewModel.swift */; };
-		16B2D82E226DDF4C0064DE39 /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2D82C226DDF4B0064DE39 /* ReviewModel.swift */; };
 		16B2D830226DDFA80064DE39 /* ReviewServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2D82F226DDFA80064DE39 /* ReviewServices.swift */; };
 		16B2D831226DDFA80064DE39 /* ReviewServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2D82F226DDFA80064DE39 /* ReviewServices.swift */; };
 		16B2D835226E90FB0064DE39 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2D834226E90FB0064DE39 /* Notification.swift */; };
 		16B2D837226E941B0064DE39 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2D836226E941B0064DE39 /* String+Date.swift */; };
+		16B6D9EB227AE0EA00A2F41E /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B2D82C226DDF4B0064DE39 /* ReviewModel.swift */; };
 		16B971D822579BC70013169F /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B971D722579BC70013169F /* LoadingButton.swift */; };
 		16B971DA22579BDE0013169F /* LoadingButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16B971D922579BDE0013169F /* LoadingButton.xib */; };
 		16B971DC22579F0E0013169F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16B971DB22579F0D0013169F /* Assets.xcassets */; };
 		16B971DE2257B0ED0013169F /* UIView+StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B971DD2257B0ED0013169F /* UIView+StackView.swift */; };
+		16BB76932276608300B129FC /* TrainerTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BB76922276608300B129FC /* TrainerTimeTableViewController.swift */; };
+		16BB7694227660E600B129FC /* Timetable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AC45BB22427EB100E9B351 /* Timetable.storyboard */; };
+		16BB7695227660EA00B129FC /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AC45BD22427EED00E9B351 /* TimetableViewController.swift */; };
+		16BB7696227660EE00B129FC /* TimeTable+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FED37F225CDB7B009EDB77 /* TimeTable+CoreDataClass.swift */; };
+		16BB7697227660F100B129FC /* TimeTable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FED380225CDB7B009EDB77 /* TimeTable+CoreDataProperties.swift */; };
+		16BB7698227660F500B129FC /* ArrayChoiceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E4382D22429F8D00EF8771 /* ArrayChoiceTableViewController.swift */; };
+		16BB7699227660F700B129FC /* AlwaysShowPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E4382C22429F8D00EF8771 /* AlwaysShowPopup.swift */; };
+		16BB769A227660FE00B129FC /* TimetableMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AC45C12242825400E9B351 /* TimetableMenuView.swift */; };
+		16BB769B2276610800B129FC /* TimetableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AC45C3224284D300E9B351 /* TimetableCell.swift */; };
+		16BB769C2276610B00B129FC /* TimetableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16AC45C5224284E500E9B351 /* TimetableCell.xib */; };
+		16BB769D2276610F00B129FC /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AC45C72242951E00E9B351 /* ScheduleCell.swift */; };
+		16BB769E2276611200B129FC /* ScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16AC45C92242953000E9B351 /* ScheduleCell.xib */; };
+		16BB769F2276611400B129FC /* TimeTableCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FED378225C9AAB009EDB77 /* TimeTableCoreData.swift */; };
+		16BB76A02276611800B129FC /* TimeTable.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16FED37A225C9B96009EDB77 /* TimeTable.xcdatamodeld */; };
+		16BB76A12276611A00B129FC /* TimeTableDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16844C95225CF1D400D89644 /* TimeTableDate.swift */; };
+		16BB76A22276611D00B129FC /* NotLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DEF6BF226B96560068D3E4 /* NotLoginViewController.swift */; };
+		16BB76A32276623100B129FC /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DEF6BD226B8AD40068D3E4 /* UserLoginViewController.swift */; };
 		16DEF6AE226B6A8B0068D3E4 /* TrainerEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DEF6AD226B6A8B0068D3E4 /* TrainerEditViewController.swift */; };
 		16DEF6B1226B74510068D3E4 /* UploadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DEF6B0226B74510068D3E4 /* UploadTask.swift */; };
 		16DEF6B2226B74950068D3E4 /* UploadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DEF6B0226B74510068D3E4 /* UploadTask.swift */; };
@@ -248,9 +272,6 @@
 		9DB3ECFB22415A9E00BE1A62 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DB3ECFA22415A9E00BE1A62 /* GoogleService-Info.plist */; };
 		9DB3ECFE22415AA300BE1A62 /* ClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ECFD22415AA300BE1A62 /* ClassModel.swift */; };
 		9DB3ED0122415AA800BE1A62 /* ClassService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ED0022415AA800BE1A62 /* ClassService.swift */; };
-		9DB3ED0522415AAF00BE1A62 /* Screenshot 2019-03-02 at 4.34.08 pm.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DB3ED0222415AAF00BE1A62 /* Screenshot 2019-03-02 at 4.34.08 pm.png */; };
-		9DB3ED0622415AAF00BE1A62 /* beautiful-beauty-blurred-background-1239288.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9DB3ED0322415AAF00BE1A62 /* beautiful-beauty-blurred-background-1239288.jpg */; };
-		9DB3ED0722415AAF00BE1A62 /* Mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DB3ED0422415AAF00BE1A62 /* Mask.png */; };
 		9DB3ED0E22415AB500BE1A62 /* SlideImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ED0922415AB400BE1A62 /* SlideImageCollectionViewCell.swift */; };
 		9DB3ED0F22415AB500BE1A62 /* CustomCalenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB3ED0A22415AB400BE1A62 /* CustomCalenderCell.swift */; };
 		9DB3ED1122415AB500BE1A62 /* Classes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DB3ED0C22415AB400BE1A62 /* Classes.storyboard */; };
@@ -323,6 +344,11 @@
 /* Begin PBXFileReference section */
 		0E9687BA0A334C4101B43DB8 /* Pods-UserUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserUITests.debug.xcconfig"; path = "Target Support Files/Pods-UserUITests/Pods-UserUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		16032D722258FAFD0023BFFB /* ProfileState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileState.swift; sourceTree = "<group>"; };
+		1604C255226F61060014B859 /* ModelDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDictionary.swift; sourceTree = "<group>"; };
+		1604C257226F61E40014B859 /* Dictionary+UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+UserDefault.swift"; sourceTree = "<group>"; };
+		1604C25A226F75000014B859 /* SharedClassService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedClassService.swift; sourceTree = "<group>"; };
+		1604C25F226F76810014B859 /* TrainerLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerLoginViewController.swift; sourceTree = "<group>"; };
+		1604C261226FCB6A0014B859 /* SharedImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SharedImages.xcassets; sourceTree = "<group>"; };
 		1609CF40226CCC3200AFB8C0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = "Sources/Shared Resource/Map/MapViewController.swift"; sourceTree = "<group>"; };
 		1609CF43226CCCA300AFB8C0 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		1609CF46226CDF2900AFB8C0 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
@@ -349,8 +375,6 @@
 		164A2F59224516DF00B42AF4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		164A2F5F2245172F00B42AF4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		164A2F622245174600B42AF4 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		164A2F632245174600B42AF4 /* Review.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Review.storyboard; sourceTree = "<group>"; };
-		164A2F78224518CD00B42AF4 /* DetailActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailActivityViewController.swift; sourceTree = "<group>"; };
 		164A2F7B224518E500B42AF4 /* AcitivityListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcitivityListTableViewCell.swift; sourceTree = "<group>"; };
 		164A2F7C224518E500B42AF4 /* ActivityListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityListViewController.swift; sourceTree = "<group>"; };
 		164A2F7F2245199900B42AF4 /* Views.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Views.storyboard; sourceTree = "<group>"; };
@@ -387,7 +411,6 @@
 		16844C95225CF1D400D89644 /* TimeTableDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableDate.swift; sourceTree = "<group>"; };
 		16844C98225D1E3100D89644 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		168B109C2250509B006EE446 /* ReviewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewProtocol.swift; sourceTree = "<group>"; };
-		16A0869322464612007E378D /* UserClassesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClassesService.swift; sourceTree = "<group>"; };
 		16AC45BB22427EB100E9B351 /* Timetable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timetable.storyboard; sourceTree = "<group>"; };
 		16AC45BD22427EED00E9B351 /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
 		16AC45C12242825400E9B351 /* TimetableMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableMenuView.swift; sourceTree = "<group>"; };
@@ -410,6 +433,7 @@
 		16B971D922579BDE0013169F /* LoadingButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingButton.xib; sourceTree = "<group>"; };
 		16B971DB22579F0D0013169F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16B971DD2257B0ED0013169F /* UIView+StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+StackView.swift"; sourceTree = "<group>"; };
+		16BB76922276608300B129FC /* TrainerTimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerTimeTableViewController.swift; sourceTree = "<group>"; };
 		16DEF6AD226B6A8B0068D3E4 /* TrainerEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerEditViewController.swift; sourceTree = "<group>"; };
 		16DEF6B0226B74510068D3E4 /* UploadTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTask.swift; sourceTree = "<group>"; };
 		16DEF6B3226B80CF0068D3E4 /* UserEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditProfileViewController.swift; sourceTree = "<group>"; };
@@ -500,9 +524,6 @@
 		9DB3ECFA22415A9E00BE1A62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../OneDrive - University of Derby/iOS/google/user/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9DB3ECFD22415AA300BE1A62 /* ClassModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassModel.swift; sourceTree = "<group>"; };
 		9DB3ED0022415AA800BE1A62 /* ClassService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassService.swift; sourceTree = "<group>"; };
-		9DB3ED0222415AAF00BE1A62 /* Screenshot 2019-03-02 at 4.34.08 pm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2019-03-02 at 4.34.08 pm.png"; sourceTree = "<group>"; };
-		9DB3ED0322415AAF00BE1A62 /* beautiful-beauty-blurred-background-1239288.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "beautiful-beauty-blurred-background-1239288.jpg"; sourceTree = "<group>"; };
-		9DB3ED0422415AAF00BE1A62 /* Mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mask.png; sourceTree = "<group>"; };
 		9DB3ED0922415AB400BE1A62 /* SlideImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		9DB3ED0A22415AB400BE1A62 /* CustomCalenderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCalenderCell.swift; sourceTree = "<group>"; };
 		9DB3ED0C22415AB400BE1A62 /* Classes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Classes.storyboard; sourceTree = "<group>"; };
@@ -603,6 +624,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1604C25E226F76690014B859 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				1604C25F226F76810014B859 /* TrainerLoginViewController.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
 		1609CF3C226CCB6300AFB8C0 /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -665,18 +694,10 @@
 		164A2F612245174600B42AF4 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				164A2F7F2245199900B42AF4 /* Views.storyboard */,
 				165626832268EC240065F52F /* Profile.storyboard */,
-				164A2F632245174600B42AF4 /* Review.storyboard */,
 			);
 			path = Storyboard;
-			sourceTree = "<group>";
-		};
-		164A2F77224518CD00B42AF4 /* Detail Activity */ = {
-			isa = PBXGroup;
-			children = (
-				164A2F78224518CD00B42AF4 /* DetailActivityViewController.swift */,
-			);
-			path = "Detail Activity";
 			sourceTree = "<group>";
 		};
 		164A2F7A224518E500B42AF4 /* Activity List */ = {
@@ -754,14 +775,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		16A08692224645AF007E378D /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				16A0869322464612007E378D /* UserClassesService.swift */,
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
 		16AC45BA22427E8D00E9B351 /* Timetable */ = {
 			isa = PBXGroup;
 			children = (
@@ -787,6 +800,7 @@
 		16B2D801226DBC080064DE39 /* ClassDetail */ = {
 			isa = PBXGroup;
 			children = (
+				9DB3ED0922415AB400BE1A62 /* SlideImageCollectionViewCell.swift */,
 				16B2D808226DBCAC0064DE39 /* ClassDetailViewController.swift */,
 				16B2D812226DC2D80064DE39 /* Sharedclasses.storyboard */,
 			);
@@ -813,11 +827,20 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
+		16BB76912276606B00B129FC /* TimeTable */ = {
+			isa = PBXGroup;
+			children = (
+				16BB76922276608300B129FC /* TrainerTimeTableViewController.swift */,
+			);
+			path = TimeTable;
+			sourceTree = "<group>";
+		};
 		16DEF6AF226B74400068D3E4 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
 				16DEF6B0226B74510068D3E4 /* UploadTask.swift */,
 				16B2D82F226DDFA80064DE39 /* ReviewServices.swift */,
+				1604C25A226F75000014B859 /* SharedClassService.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -900,10 +923,7 @@
 				1609CF49226D493F00AFB8C0 /* Favorite */,
 				16DEF6BC226B8ABD0068D3E4 /* Registration */,
 				16B971DB22579F0D0013169F /* Assets.xcassets */,
-				16A08692224645AF007E378D /* Service */,
-				164A2F7F2245199900B42AF4 /* Views.storyboard */,
 				164A2F7A224518E500B42AF4 /* Activity List */,
-				164A2F77224518CD00B42AF4 /* Detail Activity */,
 				164A2F612245174600B42AF4 /* Storyboard */,
 				164A2F5E2245172F00B42AF4 /* Profile */,
 				164A2F55224516DF00B42AF4 /* HomeViewController */,
@@ -911,9 +931,6 @@
 				1664445B224303620063E3D4 /* Booking */,
 				16AC45BA22427E8D00E9B351 /* Timetable */,
 				9DB3ED0822415AB400BE1A62 /* ClassDetail */,
-				9DB3ED0322415AAF00BE1A62 /* beautiful-beauty-blurred-background-1239288.jpg */,
-				9DB3ED0422415AAF00BE1A62 /* Mask.png */,
-				9DB3ED0222415AAF00BE1A62 /* Screenshot 2019-03-02 at 4.34.08 pm.png */,
 				9DB3ECFF22415AA800BE1A62 /* Firebase */,
 				9DB3ECFC22415AA300BE1A62 /* Model */,
 				9DB3ECFA22415A9E00BE1A62 /* GoogleService-Info.plist */,
@@ -950,6 +967,8 @@
 		9DB3EC5B2241586600BE1A62 /* Trainer */ = {
 			isa = PBXGroup;
 			children = (
+				16BB76912276606B00B129FC /* TimeTable */,
+				1604C25E226F76690014B859 /* Registration */,
 				1656268A226A28AC0065F52F /* ClassList */,
 				165626762268E9580065F52F /* Profile */,
 				16844C97225D1E1A00D89644 /* Home */,
@@ -1010,6 +1029,7 @@
 				9DB3ECA422415A6D00BE1A62 /* Protocol */,
 				9DB3EC8E22415A4700BE1A62 /* UIKit+Extension */,
 				16773A55224D9D9100C6BBFB /* ProfileSetting.swift */,
+				1604C261226FCB6A0014B859 /* SharedImages.xcassets */,
 			);
 			path = "Shared Resource";
 			sourceTree = "<group>";
@@ -1038,6 +1058,7 @@
 				16B971DD2257B0ED0013169F /* UIView+StackView.swift */,
 				165626732268DC190065F52F /* UIAppDelegate+View.swift */,
 				16B2D836226E941B0064DE39 /* String+Date.swift */,
+				1604C257226F61E40014B859 /* Dictionary+UserDefault.swift */,
 			);
 			path = "UIKit+Extension";
 			sourceTree = "<group>";
@@ -1051,6 +1072,7 @@
 				16E438342242AF3400EF8771 /* ActivityImages.swift */,
 				165F20A2224D14330077D663 /* UserProtocol.swift */,
 				168B109C2250509B006EE446 /* ReviewProtocol.swift */,
+				1604C255226F61060014B859 /* ModelDictionary.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -1125,7 +1147,6 @@
 		9DB3ED0822415AB400BE1A62 /* ClassDetail */ = {
 			isa = PBXGroup;
 			children = (
-				9DB3ED0922415AB400BE1A62 /* SlideImageCollectionViewCell.swift */,
 				9DB3ED0A22415AB400BE1A62 /* CustomCalenderCell.swift */,
 				9DB3ED0C22415AB400BE1A62 /* Classes.storyboard */,
 				9DB3ED0D22415AB400BE1A62 /* CalenderViewController.swift */,
@@ -1412,7 +1433,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DB3ED0722415AAF00BE1A62 /* Mask.png in Resources */,
 				165CD0BF22676E2B002519DE /* HomeTabSectionHeader.xib in Resources */,
 				1609CF44226CCCA300AFB8C0 /* Map.storyboard in Resources */,
 				9DB3ECC822415A7500BE1A62 /* FiraSans-Bold.ttf in Resources */,
@@ -1422,7 +1442,6 @@
 				9DB3EC332241582500BE1A62 /* LaunchScreen.storyboard in Resources */,
 				164A2F8822452CD200B42AF4 /* ProfileFooterView.xib in Resources */,
 				16B971DA22579BDE0013169F /* LoadingButton.xib in Resources */,
-				9DB3ED0622415AAF00BE1A62 /* beautiful-beauty-blurred-background-1239288.jpg in Resources */,
 				16B2D813226DC2D80064DE39 /* Sharedclasses.storyboard in Resources */,
 				16B2D826226DDDB00064DE39 /* ReviewTableViewCell.xib in Resources */,
 				165CF28F22438F3C00953E73 /* BookingCell.xib in Resources */,
@@ -1440,7 +1459,6 @@
 				16DEF6BB226B84DE0068D3E4 /* AddClassNavi.xib in Resources */,
 				9DB3ECD422415A7500BE1A62 /* FiraSans-Black.ttf in Resources */,
 				9DB3ECC422415A7500BE1A62 /* FiraSans-Medium.ttf in Resources */,
-				9DB3ED0522415AAF00BE1A62 /* Screenshot 2019-03-02 at 4.34.08 pm.png in Resources */,
 				16AC45C6224284E500E9B351 /* TimetableCell.xib in Resources */,
 				16AC45BC22427EB100E9B351 /* Timetable.storyboard in Resources */,
 				16B971DC22579F0E0013169F /* Assets.xcassets in Resources */,
@@ -1458,6 +1476,7 @@
 				9DB3ECE022415A7500BE1A62 /* FiraSans-Italic.ttf in Resources */,
 				164A2F802245199A00B42AF4 /* Views.storyboard in Resources */,
 				9DB3ECC622415A7500BE1A62 /* FiraSans-BoldItalic.ttf in Resources */,
+				1604C262226FCB6B0014B859 /* SharedImages.xcassets in Resources */,
 				9DB3EC2B2241582400BE1A62 /* Main.storyboard in Resources */,
 				164A2F8222451EF000B42AF4 /* ProfileHeaderView.xib in Resources */,
 			);
@@ -1490,6 +1509,8 @@
 				9DB3ECBF22415A7500BE1A62 /* FiraSans-Thin.ttf in Resources */,
 				9DB3EC6A2241586700BE1A62 /* LaunchScreen.storyboard in Resources */,
 				1656267B2268EAE90065F52F /* ProfileHeaderView.xib in Resources */,
+				16BB769C2276610B00B129FC /* TimetableCell.xib in Resources */,
+				16BB7694227660E600B129FC /* Timetable.storyboard in Resources */,
 				9DB3ECD322415A7500BE1A62 /* FiraSans-Light.ttf in Resources */,
 				9DB3ECCF22415A7500BE1A62 /* FiraSans-MediumItalic.ttf in Resources */,
 				9DB3ED4222415B1000BE1A62 /* AddClassNavi.xib in Resources */,
@@ -1509,6 +1530,7 @@
 				9DB3ECCD22415A7500BE1A62 /* FiraSans-ThinItalic.ttf in Resources */,
 				9DB3ECD722415A7500BE1A62 /* FiraSans-ExtraBold.ttf in Resources */,
 				9DB3ED3A22415B1000BE1A62 /* TimePicker.xib in Resources */,
+				1604C263226FCB6B0014B859 /* SharedImages.xcassets in Resources */,
 				9DB3ED3E22415B1000BE1A62 /* AddClassDateSectionView.xib in Resources */,
 				9DB3ECDB22415A7500BE1A62 /* FiraSans-SemiBoldItalic.ttf in Resources */,
 				1609CF45226CCCA300AFB8C0 /* Map.storyboard in Resources */,
@@ -1520,6 +1542,7 @@
 				16B2D821226DDD5D0064DE39 /* Reviews.storyboard in Resources */,
 				165CD0B722675F9B002519DE /* HomeTabCell.xib in Resources */,
 				9DB3ED1622415AF800BE1A62 /* GoogleService-Info.plist in Resources */,
+				16BB769E2276611200B129FC /* ScheduleCell.xib in Resources */,
 				9DB3ECE122415A7500BE1A62 /* FiraSans-Italic.ttf in Resources */,
 				1656267E2268EAF40065F52F /* ProfileFooterView.xib in Resources */,
 				16B2D814226DC2D80064DE39 /* Sharedclasses.storyboard in Resources */,
@@ -1782,6 +1805,7 @@
 				16B2D828226DDDB00064DE39 /* ReviewViewController.swift in Sources */,
 				16DEF6BE226B8AD40068D3E4 /* UserLoginViewController.swift in Sources */,
 				9DB4ADFD22419BF0009A74C2 /* TimeStamp.swift in Sources */,
+				1604C256226F61060014B859 /* ModelDictionary.swift in Sources */,
 				16B971DE2257B0ED0013169F /* UIView+StackView.swift in Sources */,
 				1680A8F52243E6F300B23A1B /* TabBarViewController.swift in Sources */,
 				9DB3ECF322415A8700BE1A62 /* CustomEnum.swift in Sources */,
@@ -1801,12 +1825,11 @@
 				16773A5F224DA5F600C6BBFB /* RegisterViewController.swift in Sources */,
 				9DB3EC282241582400BE1A62 /* ViewController.swift in Sources */,
 				1609CF47226CDF2900AFB8C0 /* Like.swift in Sources */,
+				1604C25B226F75000014B859 /* SharedClassService.swift in Sources */,
 				16773A61224DA5FA00C6BBFB /* LoginViewController.swift in Sources */,
 				16DEF6B4226B80CF0068D3E4 /* UserEditProfileViewController.swift in Sources */,
 				9DB3EC9A22415A4700BE1A62 /* UIViewController+StoryboardIdentifier.swift in Sources */,
-				16A0869422464612007E378D /* UserClassesService.swift in Sources */,
 				16562692226A2A730065F52F /* AcitivityListTableViewCell.swift in Sources */,
-				164A2F79224518CD00B42AF4 /* DetailActivityViewController.swift in Sources */,
 				164A2F532244FFE500B42AF4 /* ExampleBackgroundContentView.swift in Sources */,
 				164A2F5B224516DF00B42AF4 /* HomeCollectionReusableView.swift in Sources */,
 				165CF29122438F6F00953E73 /* BookingCell.swift in Sources */,
@@ -1838,6 +1861,7 @@
 				9DB3ECA922415A6D00BE1A62 /* ModeltoDictionary.swift in Sources */,
 				9DB3ECA722415A6D00BE1A62 /* StoryboardIdentifiable.swift in Sources */,
 				164A2F5D224516DF00B42AF4 /* HomeViewController.swift in Sources */,
+				1604C258226F61E40014B859 /* Dictionary+UserDefault.swift in Sources */,
 				16B2D835226E90FB0064DE39 /* Notification.swift in Sources */,
 				164A2F862245230500B42AF4 /* ProfileViewCell.swift in Sources */,
 				9DB3ECE922415A7D00BE1A62 /* UIView+XIB.swift in Sources */,
@@ -1888,7 +1912,11 @@
 			files = (
 				165CD0C322677698002519DE /* TransactionModel.swift in Sources */,
 				9DB3ECA322415A6400BE1A62 /* PercentLayoutConstraint.swift in Sources */,
+				16BB7699227660F700B129FC /* AlwaysShowPopup.swift in Sources */,
 				16B2D829226DDDB00064DE39 /* ReviewViewController.swift in Sources */,
+				16BB769D2276610F00B129FC /* ScheduleCell.swift in Sources */,
+				16B6D9EB227AE0EA00A2F41E /* ReviewModel.swift in Sources */,
+				16BB769F2276611400B129FC /* TimeTableCoreData.swift in Sources */,
 				9DB3EC652241586600BE1A62 /* Trainer.xcdatamodeld in Sources */,
 				9DB3ED5022415B1500BE1A62 /* AddImageCollectionViewCell.swift in Sources */,
 				164A2F3E2244EEFD00B42AF4 /* ESTabBarItemContainer.swift in Sources */,
@@ -1902,21 +1930,28 @@
 				1656267C2268EAED0065F52F /* ProfileHeaderView.swift in Sources */,
 				165CD0BB22676AD7002519DE /* HomeTabSectionHeader.swift in Sources */,
 				9DB3EC5D2241586600BE1A62 /* AppDelegate.swift in Sources */,
+				16BB769A227660FE00B129FC /* TimetableMenuView.swift in Sources */,
 				165F20A6224D150E0077D663 /* UserProtocol.swift in Sources */,
+				1604C25D226F75D80014B859 /* SharedClassService.swift in Sources */,
 				9DB3ED4322415B1000BE1A62 /* UIView+Nib.swift in Sources */,
 				9DB3ED4F22415B1500BE1A62 /* AddClassDateTableViewCell.swift in Sources */,
 				165626722268D7490065F52F /* SplashScreenViewController.swift in Sources */,
 				9DB3ED4122415B1000BE1A62 /* SelectDateView.swift in Sources */,
 				9DB3ED1C22415AFD00BE1A62 /* ClassService.swift in Sources */,
+				16BB7695227660EA00B129FC /* TimetableViewController.swift in Sources */,
 				9DB3ED3922415B1000BE1A62 /* TimePicker.swift in Sources */,
 				16EF3754224FBE2100E96F30 /* AuthService.swift in Sources */,
 				1656269C226A31930065F52F /* ClassModel1.swift in Sources */,
+				16BB769B2276610800B129FC /* TimetableCell.swift in Sources */,
 				9DB3ED2722415B0B00BE1A62 /* AddClassNavi.swift in Sources */,
 				9DB3ECF222415A8700BE1A62 /* CameraHandler.swift in Sources */,
 				1609CF42226CCC3300AFB8C0 /* MapViewController.swift in Sources */,
+				1604C260226F76810014B859 /* TrainerLoginViewController.swift in Sources */,
+				16BB7696227660EE00B129FC /* TimeTable+CoreDataClass.swift in Sources */,
 				9DB3EC9D22415A5800BE1A62 /* UIStoryboard+Storyboards.swift in Sources */,
 				9DB3ED4422415B1000BE1A62 /* DatePickerPopup.swift in Sources */,
 				16562695226A2B080065F52F /* ClassListViewController.swift in Sources */,
+				16BB76A22276611D00B129FC /* NotLoginViewController.swift in Sources */,
 				164A2F3C2244EEFD00B42AF4 /* ESTabBarItemBadgeView.swift in Sources */,
 				165CD0C022676E38002519DE /* ActivityImages.swift in Sources */,
 				16562693226A2A9D0065F52F /* AcitivityListTableViewCell.swift in Sources */,
@@ -1927,18 +1962,22 @@
 				1656269A226A31730065F52F /* ClassModel.swift in Sources */,
 				165CD0C422677743002519DE /* TimeStamp.swift in Sources */,
 				9DB3ED1D22415AFD00BE1A62 /* FirebaseClassModel.swift in Sources */,
+				16BB76A32276623100B129FC /* UserLoginViewController.swift in Sources */,
 				9DB3EC9E22415A5A00BE1A62 /* ColorExtension.swift in Sources */,
 				16773A62224DA5FA00C6BBFB /* LoginViewController.swift in Sources */,
-				16B2D82E226DDF4C0064DE39 /* ReviewModel.swift in Sources */,
+				1604C259226F74810014B859 /* ReviewProtocol.swift in Sources */,
 				9DB3EC9F22415A5C00BE1A62 /* UIView+IBDesignable.swift in Sources */,
+				16BB7698227660F500B129FC /* ArrayChoiceTableViewController.swift in Sources */,
 				162E794622520B2400C5E5A2 /* UserService.swift in Sources */,
 				164A2F422244EEFD00B42AF4 /* ESTabBarItem.swift in Sources */,
 				9DB3ECAA22415A6D00BE1A62 /* ModeltoDictionary.swift in Sources */,
 				9DB3ED3F22415B1000BE1A62 /* AddImageView.swift in Sources */,
 				165626792268E9980065F52F /* TrainerProfileViewController.swift in Sources */,
 				165CD0BE22676E25002519DE /* LevelColor.swift in Sources */,
+				16BB76A12276611A00B129FC /* TimeTableDate.swift in Sources */,
 				1656269E226AB0A70065F52F /* EditProfileViewController.swift in Sources */,
 				16DEF6AE226B6A8B0068D3E4 /* TrainerEditViewController.swift in Sources */,
+				16BB7697227660F100B129FC /* TimeTable+CoreDataProperties.swift in Sources */,
 				164A2F402244EEFD00B42AF4 /* ESTabBarItemMoreContentView.swift in Sources */,
 				16DEF6B1226B74510068D3E4 /* UploadTask.swift in Sources */,
 				9DB3ECA822415A6D00BE1A62 /* StoryboardIdentifiable.swift in Sources */,
@@ -1951,11 +1990,14 @@
 				16EF374E224F937100E96F30 /* LoadingViewController.swift in Sources */,
 				9DB3ECE822415A7D00BE1A62 /* NibView.swift in Sources */,
 				164A2F482244EEFD00B42AF4 /* ESTabBarController.swift in Sources */,
+				16BB76A02276611800B129FC /* TimeTable.xcdatamodeld in Sources */,
 				16773A5E224DA5F600C6BBFB /* RegisterViewController.swift in Sources */,
 				167737102253AD8D00BFC345 /* UITableView+Extension.swift in Sources */,
 				9DB3ED5322415B1500BE1A62 /* AddClassTextViewController.swift in Sources */,
 				1656267D2268EAF00065F52F /* ProfileViewCell.swift in Sources */,
+				16BB76932276608300B129FC /* TrainerTimeTableViewController.swift in Sources */,
 				9DB3ED2522415B0700BE1A62 /* AddClassViewModel.swift in Sources */,
+				1604C25C226F75880014B859 /* SlideImageCollectionViewCell.swift in Sources */,
 				16B2D831226DDFA80064DE39 /* ReviewServices.swift in Sources */,
 				16773A57224DA19800C6BBFB /* ProfileSetting.swift in Sources */,
 				9DB3ED3D22415B1000BE1A62 /* TestView.swift in Sources */,
