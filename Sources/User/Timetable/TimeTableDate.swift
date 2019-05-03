@@ -27,8 +27,18 @@ extension TimeTableDate {
     }
     
     mutating func addTimeTable(timeTable : TimeTable) {
-        self.details.append(timeTable)
+        
+        guard let index = self.details.index(where: {
+            $0.title == timeTable.title && $0.time == timeTable.time
+        }) else {
+            print("different date on \(timeTable.title) && \(timeTable.time)")
+//            self.details.append(timeTable)
+            self.details.append(timeTable)
+            return
+        }
+        
     }
+    
     
     mutating func sort(){
       self.details = self.details.sorted(by: {$0.time > $1.time})

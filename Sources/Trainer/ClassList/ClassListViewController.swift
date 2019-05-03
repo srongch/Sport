@@ -50,6 +50,14 @@ class ClassListViewController: UIViewController {
     
     @IBAction func addClassPressed(_ sender: Any) {
         
+        guard (UserService.shared.globalUser?.memo != "") else {
+            self.presentAlertView(with: "Please complete your profile first. Procced to profile page?", isOneButton: false, onDone: {
+                self.navigationController?.pushViewController(TrainerEditViewController.init(), animated: true)
+            }, onCancel: {})
+            return
+        }
+        
+        
         let navi = AddClassViewController.instance()
         let vc = navi.visibleViewController as! AddClassViewController
         vc.delegate = self as AddClassViewProtocol
@@ -81,6 +89,7 @@ extension ClassListViewController : UITableViewDelegate, UITableViewDataSource{
         
         let model = self.modelList[indexPath.row]
         cell.setupCell(model: model)
+        cell.likeButton.isHidden = true
         cell.likeButton.tag = indexPath.row
    //     cell.likeButton.addTarget(self, action: #selector(likeButtonPressed), for: .touchUpInside)
         
@@ -89,6 +98,11 @@ extension ClassListViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 195
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = self.modelList[indexPath.row]
+        self.navigationController?.pushViewController(ClassDetailViewController.instance(classId: model.key, authorId: model.authorId), animated: true)
     }
     
 }
@@ -102,9 +116,6 @@ extension ClassListViewController : AddClassNaviProtocol,AddClassViewProtocol{
     
     }
     
-    
-    
-//    func
 }
 
 extension ClassListViewController  {

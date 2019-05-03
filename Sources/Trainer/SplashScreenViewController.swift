@@ -22,8 +22,9 @@ class SplashScreenViewController: UIViewController {
             return
         }
         print("user is \(user.uid)")
-        UserService.shared.getUser(userID: user.uid, email: "", completionHandler: { _ in
-            self.router(isLoggedIn: true)
+        UserService.shared.getUser(userID: user.uid, email: "", completionHandler: { userModel in
+            
+            self.router(isLoggedIn: userModel.userType == .trainer)
         })
         
     }
@@ -33,7 +34,7 @@ class SplashScreenViewController: UIViewController {
         if(isLoggedIn){
             AppDelegate.shared.gotoView(view: SplashScreenViewController.trainerTabbar())
         }else{
-            AppDelegate.shared.gotoView(view: LoginViewController.instance())
+            AppDelegate.shared.gotoView(view: TrainerLoginViewController.init())
         }
         
     }
@@ -66,13 +67,15 @@ extension SplashScreenViewController {
         
         let v1 = HomeViewController.instance()
         let v2 = ClassListViewController.instance()
-        let v3 = TrainerProfileViewController.instance()
+        let v3 = TrainerTimeTableViewController()
+        let v4 = TrainerProfileViewController.instance()
         
         v1.tabBarItem = ESTabBarItem.init(ExampleBackgroundContentView(),title: nil, image: UIImage(named: "state_off"), selectedImage: UIImage(named: "state_on"))
         v2.tabBarItem = ESTabBarItem.init(ExampleBackgroundContentView(),title: nil, image: UIImage(named: "class_off"), selectedImage: UIImage(named: "class_on"))
-        v3.tabBarItem = ESTabBarItem.init(ExampleBackgroundContentView(),title: nil, image: UIImage(named: "bar_icon_profile"), selectedImage: UIImage(named: "bar_icon_profile_select"))
+        v3.tabBarItem = ESTabBarItem.init(ExampleBackgroundContentView(),title: nil, image: UIImage(named: "alarm_tab"), selectedImage: UIImage(named: "alarm_tab_on"))
+     v4.tabBarItem = ESTabBarItem.init(ExampleBackgroundContentView(),title: nil, image: UIImage(named: "bar_icon_profile"), selectedImage: UIImage(named: "bar_icon_profile_select"))
         
-        tabBarController.viewControllers = [v1, v2,v3]
+        tabBarController.viewControllers = [v1, v2,v3,v4]
         
         return tabBarController
     }

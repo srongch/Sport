@@ -15,23 +15,6 @@ class UserClassDetailViewController: UIViewController, ClassDetailViewController
     private var mainVc : ClassDetailViewController?
     @IBOutlet weak var dateButton: UIButton!
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)   {
-        print("init nibName style")
-        mainVc = ClassDetailViewController.instance(classId: classID, authorId: authorID)
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-      //  tap = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
-    }
-    
-    // note slightly new syntax for 2017
-    required init?(coder aDecoder: NSCoder) {
-        print("init coder style")
-        
-        
-        super.init(coder: aDecoder)
-       
-      //  tap = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         mainVc = ClassDetailViewController.instance(classId: classID, authorId: authorID)

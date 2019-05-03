@@ -41,19 +41,28 @@ class ActivityListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         naviTitle.text = activityType.getTuple.name
         self.buttonArray = [beginner,intermediate,advance]
         
+        
+        let vc = LoadingViewController.instance(view.frame)
+        add(vc)
+        
         classService.getClassByActivity(activity: activityType.getTuple.index) {classModel in
-            guard let model = classModel else {return}
+            
+            guard let model = classModel else {
+                vc.remove()
+                return}
             self.classArray = model
             self.filteredArray = model
             
+            self.tableView.reloadData()
             if UserService.shared.isHaveUser {
                 self.loadLikeList(reloadAtIndex: nil)
-            }else{
-                self.tableView.reloadData()
             }
+            
+            vc.remove()
         }
     }
     
@@ -228,6 +237,11 @@ extension ActivityListViewController : UITableViewDelegate,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 195
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = filteredArray![indexPath.row]
+        self.navigationController?.pushViewController(UserClassDetailViewController.instance(classId: model.key, authorId: model.authorId), animated: true)
     }
     
     

@@ -40,13 +40,6 @@ extension Setting {
             }
             
         }
-//        
-//        if (isUser) {
-//            array.append(Setting(text: "Favorite", type: .favorite))
-//             array.append(Setting(text: "Payment", type: .payment))
-//        }else{
-//            // is for trainer
-//        }
         return array
     }
 }

@@ -173,8 +173,8 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         content.badge = 1
         content.categoryIdentifier = notification.categoryIdentifire
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-//        let trigger = UNCalendarNotificationTrigger(dateMatching: scheduleDate, repeats: false)
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: scheduleDate, repeats: false)
         let identifier = notification.identifier
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         

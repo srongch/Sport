@@ -26,7 +26,7 @@ class ClassDetailViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    var classService = ClassService()
+    var classService = SharedClassService()
     var classModel = ClassModel()
     var reviewModel = [ReviewModel]()
     
@@ -124,12 +124,13 @@ class ClassDetailViewController: UIViewController {
         
         priceLabel.text = "£\(classModel.classPrice)"
         
-        imageView.sd_setImage(with: URL(string:classModel.getImageFromArray), completed: nil)
+        imageView.sd_setImage(with: URL(string:classModel.authorProfile), completed: nil)
         instructorName.text = "Meet your instructor,  \(classModel.authorName)"
         instructorDetail.text = classModel.authorDesc
         
         programLabel.text = classModel.className
         timeLabel.text = classModel.timeTable
+        timetableLabel.text = classModel.timeTable
         equipmentLabel.text = classModel.equipment
         
         addressLabel.text = classModel.location

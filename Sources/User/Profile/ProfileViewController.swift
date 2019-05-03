@@ -174,7 +174,7 @@ extension ProfileViewController : EditProfileProtocol{
 
 extension ProfileViewController {
     static func instance ()-> UINavigationController {
-        return UIStoryboard.storyboard(.profile).instantiateViewController(withIdentifier:"ProfileNavigation") as! UINavigationController
+        return UIStoryboard.storyboard(.profile).instantiateViewController(withIdentifier:"UserProfileNavi") as! UINavigationController
     }
     
     static func instancedView ()-> ProfileViewController {

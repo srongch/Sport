@@ -38,14 +38,14 @@ class HomeViewController: UIViewController {
     
     func updateView(){
         self.tableView.reloadData()
-        self.totalLabel.text = "$\(totalEarn)"
+        self.totalLabel.text = "£\(totalEarn)"
     }
     
     func loadData (){
         let vc = LoadingViewController.instance(self.view.frame)
         add(vc)
         
-        ClassService().bookingList(authorId: UserService.shared.globalUser?.uid ?? "") { (models, isError) in
+        ClassService().bookingList(userId: UserService.shared.globalUser?.uid ?? "") { (models, isError) in
             print("size is : \(models?.count)")
             vc.remove()
             guard !isError else{

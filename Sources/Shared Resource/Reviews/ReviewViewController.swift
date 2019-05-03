@@ -26,9 +26,12 @@ class ReviewViewController: UIViewController {
         tableView.estimatedRowHeight = 85.0
         tableView.rowHeight = UITableView.automaticDimension
         
+        let vc = LoadingViewController.instance(view.frame)
+        add(vc)
         ReviewServices().getReview(classId: self.classId) { reviewModels in
             self.reviewList = reviewModels
             self.tableView.reloadData()
+            vc.remove()
         }
         
     }

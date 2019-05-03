@@ -28,7 +28,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
         levelLabel.text = model.getLevelName()
         levelLabel.textColor = model.getLevelColor()
         classNameLabel.text = model.className
-        priceLabel.text = "$\(model.classPrice)"
+        priceLabel.text = "£\(model.classPrice)"
         
     }
     

@@ -18,7 +18,7 @@
         <!--Review View Controller-->
         <scene sceneID="gyk-b2-vIM">
             <objects>
-                <viewController storyboardIdentifier="ReviewViewController" id="4XO-dJ-VME" customClass="ReviewViewController" customModule="User" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReviewViewController" id="4XO-dJ-VME" customClass="ReviewViewController" customModule="Trainer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZOj-tr-z6t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,6 +34,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEQ-WY-Cjb">
                                         <rect key="frame" x="10" y="0.0" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="M9Y-XR-rCd"/>
                                         </constraints>
@@ -69,7 +70,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.96086698770523071" green="0.96861177682876587" blue="0.96862834692001343" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.93337756400000005" green="0.93724149469999996" blue="0.93725556139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="xlF-8x-VPm" firstAttribute="leading" secondItem="Q5B-aX-twe" secondAttribute="leading" id="6EX-HO-pKU"/>
                             <constraint firstItem="tv4-3q-Xeo" firstAttribute="top" secondItem="xlF-8x-VPm" secondAttribute="bottom" id="94S-Xd-aFU"/>

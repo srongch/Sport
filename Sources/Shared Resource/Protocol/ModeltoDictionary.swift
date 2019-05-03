@@ -10,6 +10,8 @@ import Foundation
 
 protocol ModeltoDictionaryProtocol {
     var asDictionary : [String:Any] {get}
+    
+//    func getFromDisk(forKey : String)-> [String:Any]
 }
 
 extension ModeltoDictionaryProtocol {
@@ -21,4 +23,12 @@ extension ModeltoDictionaryProtocol {
         }).compactMap{ $0 })
         return dict
     }
+//    
+//    func saveToDisk(forKey : String){
+////        / Save to User Defaults
+//        UserDefaults.standard.set(self.asDictionary, forKey: forKey)
+//        // Read from User Defaults
+//    }
+    
+    
 }

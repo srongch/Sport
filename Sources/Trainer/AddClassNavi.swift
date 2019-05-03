@@ -12,6 +12,7 @@ protocol AddClassNaviProtocol {
     func closeButtonDidPressed()
 }
 
+@IBDesignable
 class AddClassNavi: NibView {
 
     @IBOutlet weak var titleLabel: UILabel!

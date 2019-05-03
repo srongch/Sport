@@ -46,6 +46,7 @@ struct ClassModel : ModeltoDictionaryProtocol, LevelColorProtocol {
     var authorId : String = ""
     var authorName : String = ""
     var authorDesc : String = ""
+    var authorProfile : String = ""
     
     init(){}
     
@@ -134,7 +135,8 @@ struct ClassModel : ModeltoDictionaryProtocol, LevelColorProtocol {
         self.reviews = value["reviews"] as? Int ?? 0
         self.authorId = value["authorId"] as? String ?? ""
         self.authorName = value["authorName"] as? String ?? ""
-        self.authorDesc = value["description"] as? String ?? ""
+        self.authorDesc = value["authorDesc"] as? String ?? ""
+        self.authorProfile = value["authorProfile"] as? String ?? ""
     }
     
     

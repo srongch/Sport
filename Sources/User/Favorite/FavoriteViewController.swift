@@ -9,7 +9,7 @@
 import UIKit
 
 class FavoriteViewController: UIViewController {
-
+    
     @IBOutlet weak var navi: AddClassNavi!
     @IBOutlet weak var tableView: UITableView!
     var modelList = [ClassModel]()
@@ -37,10 +37,9 @@ class FavoriteViewController: UIViewController {
         ClassService().userFavorite(userId: UserService.shared.globalUser!.uid) { models , isError in
             vc.remove()
             guard let temp = models else {
-//                            self.noDataLabel.isHidden = false
                 let vc = EmptyViewController(caseType: .noDataList)
                 self.add(vc)
-                            return
+                return
             }
             
             self.modelList = temp
@@ -51,7 +50,7 @@ class FavoriteViewController: UIViewController {
     
     @objc func likeButtonPressed(_ sender : UIButton){
         print("button tag is \(sender.tag)")
-       
+        
         let tempModel = modelList[sender.tag]
         let indexPath = IndexPath(row: sender.tag, section: 0)
         ClassService().addUserLike(userId: UserService.shared.globalUser?.uid ?? "", classId: tempModel.key) { isError, operation in
@@ -63,27 +62,25 @@ class FavoriteViewController: UIViewController {
             
             switch operation!{
             case "added":
-            break
+                break
             default:
                 self.modelList.remove(at: indexPath.row)
                 self.tableView.reloadData()
                 break
             }
-            
-          //  self.loadLikeList(reloadAtIndex: IndexPath(row: sender.tag, section: 0))
         }
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 extension FavoriteViewController : AddClassNaviProtocol{
@@ -99,7 +96,6 @@ extension FavoriteViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AcitivityListTableViewCell") as! AcitivityListTableViewCell
-        //   cell.backgroundColor = .green
         
         let model = self.modelList[indexPath.row]
         cell.setupCell(model: model)
@@ -120,5 +116,5 @@ extension FavoriteViewController {
     static func instance ()-> FavoriteViewController {
         return UIStoryboard.storyboard(.favorite).instantiateViewController(withIdentifier:"FavoriteViewController") as! FavoriteViewController
     }
-
+    
 }

@@ -33,30 +33,36 @@ final class TimeTableCoreData {
             }
         }
     
-    clearDatabase()
-//
-            if let uid = userId {
+        if let uid = userId {
                 getUserClass(userId: uid)
-            }
+            
+    }
 
-    
-    
-    
     }
     
     func getUserClass(userId : String) {
         ClassService().bookingList(userId: userId) { bookingList, isError in
-            bookingList?.forEach({ bookingModel in
-                let timeTable = TimeTable(context: self.container.viewContext)
-                timeTable.title = bookingModel.className
-                timeTable.level  = Int16(bookingModel.levelType)
-                timeTable.activity = Int16(bookingModel.activityType)
-                timeTable.location = "dfg"
-                timeTable.time = bookingModel.timeStamp
-                timeTable.date = bookingModel.classDate
-            })
-            self.saveContext()
-            self.fetch()
+            
+            if (isError){
+                self.fetch()
+                return
+            }else{
+                self.clearDatabase()
+                bookingList?.forEach({ bookingModel in
+                    let timeTable = TimeTable(context: self.container.viewContext)
+                    timeTable.title = bookingModel.className
+                    timeTable.level  = Int16(bookingModel.levelType)
+                    timeTable.activity = Int16(bookingModel.activityType)
+                    timeTable.location = bookingModel.location
+                    timeTable.time = bookingModel.classTime
+                    timeTable.date = bookingModel.classDate
+                })
+                self.saveContext()
+                self.fetch()
+            }
+        
+            
+           
         }
     }
     

@@ -11,31 +11,41 @@ import Firebase
 
 class SplashScreenViewController: UIViewController {
 
+//    var imageArray : Array<Any> {
+//
+//    }
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let imageArray = [UIImage(named: "animation1"),
+                          UIImage(named: "animation2"),
+                          UIImage(named: "animation3"),
+                          UIImage(named: "animation4"),
+                          UIImage(named: "animation5")]
+        
+        imageView.animationImages = imageArray as! [UIImage]
+        imageView.animationDuration = 0.9
+        imageView.startAnimating()
         // Do any additional setup after loading the view.
-        var user = Auth.auth().currentUser;
+        let user = Auth.auth().currentUser;
         
         if ((user) != nil) {
             // User is signed in.
-             UserService.shared.getUser(userID: user!.uid, email: "", completionHandler: { _ in })
+             UserService.shared.getUser(userID: user!.uid, email: "", completionHandler: { _ in
+                self.imageView.stopAnimating()
+                  self.router()
+             })
         }
-         self.router()
-        
-//        Auth.auth().addStateDidChangeListener() { auth, user in
-//            if user != nil {
-//
-//            }
-//
-//        }
+   
         
     }
     
     private func router() {
      AppDelegate.shared.gotoView(view: TabbarEnum.userTabbar())
-//        UIApplication.shared.delegate?.window?!.rootViewController = TabbarEnum.userTabbar()
-//        UIApplication.shared.delegate?.window??.makeKeyAndVisible()
+  
     }
     
 

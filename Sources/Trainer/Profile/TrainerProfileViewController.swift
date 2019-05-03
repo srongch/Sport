@@ -120,7 +120,7 @@ extension TrainerProfileViewController : UITableViewDataSource, UITableViewDeleg
             print("log out")
             AuthService().signOut{ isComplete in
                 if (isComplete) {
-                   AppDelegate.shared.gotoView(view: LoginViewController.instance())
+                   AppDelegate.shared.gotoView(view: TrainerLoginViewController.init())
                 }
             }
         }else{

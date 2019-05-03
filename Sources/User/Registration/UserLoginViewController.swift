@@ -8,9 +8,14 @@
 
 import UIKit
 
+protocol UserLoginProtocol {
+    func loginViewDidClose()
+}
+
 class UserLoginViewController: UIViewController {
 
      let vc =  LoginViewController.instance()
+    var delegate : UserLoginProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +45,9 @@ class UserLoginViewController: UIViewController {
 
 extension UserLoginViewController : LoginViewControllerProtocol{
     func loginDidSucess() {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true,completion: {
+          self.delegate?.loginViewDidClose()
+        })
 //        self.dismiss(animated: true, completion: nil)
     }
     

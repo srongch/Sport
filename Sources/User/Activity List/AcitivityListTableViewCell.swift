@@ -35,11 +35,13 @@ class AcitivityListTableViewCell: UITableViewCell {
     level.text = model.getLevelName().uppercased()
     level.textColor = model.getLevelColor()
     classTitle.text = model.className
-    price.text = "$\(model.classPrice)"
+    price.text = "£\(model.classPrice)"
     rating.text = "\(model.rating)"
     location.text = model.location
-    let urlString = model.imageArray[0]
-    classImage.sd_setImage(with: URL(string: urlString), completed: nil)
+    if model.imageArray.count > 0 {
+        classImage.sd_setImage(with: URL(string: model.imageArray[0]), completed: nil)
+    }
+    
     }
 
 }

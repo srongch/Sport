@@ -22,16 +22,30 @@ extension UserType {
     }
 }
 
-protocol UserProtocol {
+protocol UserProtocol : ModeltoDictionaryProtocol  {
     var name : String {get set}
     var profile : String {get set}
     var uid : String {get set}
     var email : String {get set}
     var userType : UserType {get set}
     var memo : String {get set}
+    func saveToDisk()
+}
+
+extension UserProtocol {
+    func saveToDisk() {
+        UserDefaults.standard.set(self.name, forKey: "user_name")
+        UserDefaults.standard.set(self.profile, forKey: "user_profile")
+        UserDefaults.standard.set(self.uid, forKey: "user_uid")
+        UserDefaults.standard.set(self.email, forKey: "user_email")
+        UserDefaults.standard.set(self.userType.rawValue, forKey: "user_userType")
+        UserDefaults.standard.set(self.memo, forKey: "user_memo")
+    }
 }
 
 struct CustomUser: UserProtocol {
+ 
+    
     var userType: UserType
     
     var email: String
@@ -75,6 +89,21 @@ struct CustomUser: UserProtocol {
     }
     
     
+}
+
+extension CustomUser {
+    static func loadFromDisk ()-> CustomUser?{
+        guard let name =  UserDefaults.standard.value(forKey: "user_name") as? String,
+              let profile = UserDefaults.standard.value(forKey: "user_name") as? String,
+              let uid = UserDefaults.standard.value(forKey: "user_uid") as? String,
+              let email = UserDefaults.standard.value(forKey: "user_email") as? String,
+              let userType = UserDefaults.standard.value(forKey: "user_userType") as? String,
+              let memo = UserDefaults.standard.value(forKey: "user_memo") as? String else {
+              return nil
+        }
+        return CustomUser(name: name, profile: profile, uid: uid, email: email, userType: UserType.init(rawValue: userType)!,memo: memo)
+    
+    }
 }
 
 

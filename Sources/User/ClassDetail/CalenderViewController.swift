@@ -9,7 +9,7 @@
 import UIKit
 import JTAppleCalendar
 
-class CalenderViewController: UIViewController,NaviBarProtocol {
+class CalenderViewController: UIViewController,NaviBarProtocol,UserLoginProtocol {
 
     
     @IBOutlet weak var naviBar: NaviBar!
@@ -179,6 +179,13 @@ class CalenderViewController: UIViewController,NaviBarProtocol {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation */
+
+    func loginViewDidClose() {
+//
+        self.performSegue(withIdentifier: "comfirmbookingseque", sender: nil)
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //         Get the new view controller using segue.destination.
 //         Pass the selected object to the new view controller.
@@ -186,7 +193,7 @@ class CalenderViewController: UIViewController,NaviBarProtocol {
         if (segue.identifier == "comfirmbookingseque"){
             print("ready to go")
             let vc = segue.destination as! ConfirmBookingViewController
-            vc.bookingModel = BookingModel(userid: UserService.shared.globalUser?.uid ?? "98tKelkTBGcaQOG5157Q2Lv5mgm2",
+            vc.bookingModel = BookingModel(userid: UserService.shared.globalUser?.uid ?? "",
                                            classId: classModel!.key, className: classModel!.className, classImage: classModel!.imageArray[0],
                                            classDate: self.selectDate!,
                                            classTime: (self.classModel?.times[self.selectTime!])!,
@@ -194,7 +201,7 @@ class CalenderViewController: UIViewController,NaviBarProtocol {
                                            numberofPeople: numberofPerson,
                                            price: self.classModel!.classPrice,
                                            activityType: classModel!.activityType,
-                                           levelType: classModel!.levelType,authorId: self.classModel!.authorId)
+                                           levelType: classModel!.levelType,authorId: self.classModel!.authorId, location: classModel!.location)
         }
         
         
@@ -202,19 +209,28 @@ class CalenderViewController: UIViewController,NaviBarProtocol {
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if (identifier == "comfirmbookingseque"){
-            guard let selectedDate = self.selectDate  else{
+            guard self.selectDate != nil  else{
                 print("date not selected")
                 presentAlertView(with: "Select a date.", isOneButton: true, onDone: {}, onCancel: {})
                 return false
             }
             
-            guard let selectedTime = self.selectTime else {
+            guard self.selectTime != nil else {
                 presentAlertView(with: "Select a time.", isOneButton: true, onDone: {}, onCancel: {})
                 return false
             }
             
             if (self.numberofPerson <= 0){
                 presentAlertView(with: "Select number of people.", isOneButton: true, onDone: {}, onCancel: {})
+                return false
+            }
+            
+            guard (UserService.shared.globalUser != nil) else{
+                self.presentAlertView(with: "Please login to procced.", isOneButton: false, onDone: {
+                    let vc = UserLoginViewController.init()
+                    vc.delegate = self
+                    self.navigationController?.present(vc, animated: true, completion: nil)
+                    }, onCancel: {})
                 return false
             }
             
@@ -335,7 +351,7 @@ extension CalenderViewController : UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let time = classModel else {
+        guard (classModel != nil) else {
             return 
         }
         selectTime = indexPath.row

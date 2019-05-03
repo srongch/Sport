@@ -152,41 +152,7 @@ final class ClassService {
     }
     
     
-    func classDetailById(classId : String, authorId : String, completionHandler: @escaping (_ classModel:ClassModel?,_ reviewArry : [ReviewModel]?, _ isError : Bool) -> Void){
-        // [START function_add_numbers]
-        functions.httpsCallable("getClassById").call(["classId": classId,"authorId" : authorId]) { (result, error) in
-            // [START function_error]
-            if let error = error as NSError? {
-                if error.domain == FunctionsErrorDomain {
-                    let code = FunctionsErrorCode(rawValue: error.code)
-                    let message = error.localizedDescription
-                    let details = error.userInfo[FunctionsErrorDetailsKey]
-                }
-                // [START_EXCLUDE]
-                print(error.localizedDescription)
-                return completionHandler(nil,nil,true)
-                // [END_EXCLUDE]
-            }
-            // [END function_error]
-            guard let value = (result?.data as? [String: AnyObject]),
-                let classes = value["classes"] as?  [String : AnyObject] else{
-                    completionHandler(nil,nil,true)
-                return
-            }
-            
-            guard let reviews = value["reviews"] as? Dictionary<String, AnyObject> else {
-                completionHandler( ClassModel(value: classes,key: "" ), nil,false)
-                return
-            }
-            
-            let reviewArray = ReviewModel.getReviews(data: reviews )
-            
-             return completionHandler(ClassModel(value: classes,key: "" ),reviewArray,false)
-           
-            
-        }
-        // [END function_add_numbers]
-    }
+
     
     func doBooking(bookingModel : BookingModel, completionHandler: @escaping (_ isError : Bool) -> Void){
         functions.httpsCallable("userBooking").call(bookingModel.asDictionary) { (result, error) in
@@ -198,13 +164,18 @@ final class ClassService {
     
     func bookingList(userId : String, completionHandler: @escaping (_ result : [BookingModel]? ,_ isError : Bool) -> Void){
         functions.httpsCallable("userBookingList").call(["userId" : userId]) { (result, error) in
-        //    print("\(result?.data )")
-            
-            if (error != nil){
-                print("no nil")
+  
+            if let error = error as NSError? {
+                if error.domain == NSURLErrorDomain{
+                    print("\(error.code)")
+                    print("\(error.localizedDescription)")
+                }
+                // [START_EXCLUDE]
+                print(error.localizedDescription)
                 return  completionHandler(nil, true)
+                // [END_EXCLUDE]
             }
-
+            
             guard let value = (result?.data as? [String: AnyObject]),
                   let data = value["data"] as? Dictionary<String, AnyObject> else {
                return  completionHandler(nil, true)

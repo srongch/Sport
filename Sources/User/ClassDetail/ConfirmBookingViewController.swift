@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class ConfirmBookingViewController: UIViewController {
+class ConfirmBookingViewController: UIViewController, NaviBarProtocol {
     
     var bookingModel : BookingModel?
     
@@ -39,9 +39,6 @@ class ConfirmBookingViewController: UIViewController {
             return
         }
         
-        let notification = Notification(bookingModel: self.bookingModel!)
-        AppDelegate.shared.scheduleNotification(notification: notification)
-        
         setupView()
         
 //        setupView(d)
@@ -50,16 +47,22 @@ class ConfirmBookingViewController: UIViewController {
     
     func setupView(){
         confirmButton.delegate = self
+        naviBar.delegate = self
         let model = bookingModel!
         classImage.sd_setImage(with: URL(string: model.classImage), completed: nil)
         classTitle.text = model.className
         dateLabel.text = model.classDate.toDateWithFormate(format: "MM-DD-YYYY")
         timeLabel.text = "\(model.classTime.toDateWithFormate(format: "HH:SS"))  |  \(model.classHour) hour"
         
-        numberofPeopleLeft.text = "$\(model.price)* \(model.numberofPeople)"
-        numberofPeopleRight.text = "$\(model.price * Double(model.numberofPeople))"
+        numberofPeopleLeft.text = "£\(model.price)* \(model.numberofPeople)"
+        numberofPeopleRight.text = "£\(model.price * Double(model.numberofPeople))"
+        
         
         totalPriceLabel.text = numberofPeopleRight.text
+    }
+    
+    func buttonBackPressed() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     /*
@@ -91,6 +94,8 @@ extension ConfirmBookingViewController : LoadingButtonProtocol {
                 
                 self?.presentAlertView(with: "Booking Completed.", isOneButton: true, onDone: {
                     
+                    
+                    //set local notification to a specific date
                     let notification = Notification(bookingModel: model)
                     AppDelegate.shared.scheduleNotification(notification: notification)
                     

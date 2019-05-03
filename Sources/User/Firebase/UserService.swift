@@ -30,6 +30,7 @@ final class UserService {
     }
     
     // MARK: - Firebase Database References
+    lazy var functions = Functions.functions()
     
     let BASE_DB_REF: DatabaseReference = Database.database().reference()
     
@@ -101,18 +102,37 @@ final class UserService {
     }
     
     func getUser(userID : String,email : String, completionHandler: @escaping (_ user : UserProtocol) -> Void) {
-        USER_DB_REF.child(userID).observeSingleEvent(of: .value) { (snapshot) in
-            
-            if let user = CustomUser(snapshot: snapshot){
-                completionHandler(user)
-                self.globalUser = user
-                return
+        
+        functions.httpsCallable("ping").call() { (result, error) in
+            if (error != nil){
+                if let user = CustomUser.loadFromDisk(){
+                    self.globalUser = user
+                    completionHandler(user)
+                }else{
+                    completionHandler(CustomUser(name: "Jonh Deo", profile: "", uid: userID, email:email , userType: .user))
+                }
+                
             }else{
-                completionHandler(CustomUser(name: "Jonh Deo", profile: "", uid: userID, email:email , userType: .user))
-                return
+                self.USER_DB_REF.child(userID).observeSingleEvent(of: .value) { (snapshot) in
+                    
+                    if let user = CustomUser(snapshot: snapshot){
+                        completionHandler(user)
+                        self.globalUser = user
+                        self.globalUser?.saveToDisk()
+                        
+                        return
+                    }else{
+                        completionHandler(CustomUser(name: "Jonh Deo", profile: "", uid: userID, email:email , userType: .user))
+                        return
+                    }
+                    
+                }
             }
             
+            
         }
+        
+        
     
     }
 }

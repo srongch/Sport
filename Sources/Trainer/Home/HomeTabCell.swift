@@ -30,7 +30,7 @@ class HomeTabCell: UITableViewCell {
         profileView.sd_setImage(with: URL(string: bookingModel.profile), completed: nil)
         name.text = bookingModel.name
         classTitle.text = bookingModel.className
-        amount.text = "$\(bookingModel.price * Double(bookingModel.numberofPeople))"
+        amount.text = "£\(bookingModel.price * Double(bookingModel.numberofPeople))"
     }
     
 }

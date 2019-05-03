@@ -26,9 +26,10 @@ struct BookingModel : ModeltoDictionaryProtocol,LevelColorProtocol,ActivityImage
     var authorId : String = ""
     var profile : String = ""
     var name : String = ""
+    var location : String = ""
     
     init(userid: String, classId : String,className : String, classImage : String, classDate : Date, classTime : Int64, classHour : Int, numberofPeople : Int,price : Double,
-         activityType: Int, levelType: Int, authorId: String ) {
+         activityType: Int, levelType: Int, authorId: String, location : String) {
         self.userId = userid
         self.classId = classId
         self.className = className
@@ -41,6 +42,7 @@ struct BookingModel : ModeltoDictionaryProtocol,LevelColorProtocol,ActivityImage
         self.activityType = activityType
         self.levelType = levelType
         self.authorId = authorId
+        self.location = location
     }
     
     
@@ -67,6 +69,7 @@ extension BookingModel {
         self.authorId = value["authorId"] as? String ?? ""
         self.profile = value["profile"] as? String ?? ""
         self.name = value["name"] as? String ?? ""
+        self.location = value["location"] as? String ?? ""
     }
     
     static func getBookingModels(data : Dictionary<String,AnyObject>) -> [BookingModel]{

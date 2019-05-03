@@ -422,7 +422,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7CW-TB-VlD">
-                                <rect key="frame" x="103" y="782" width="208" height="80"/>
+                                <rect key="frame" x="103" y="786" width="208" height="76"/>
                                 <state key="normal" image="check_date"/>
                                 <connections>
                                     <segue destination="9t2-zL-Qvq" kind="show" identifier="checkdateidentifier" id="mEa-I9-kax"/>
@@ -707,7 +707,7 @@
         <image name="adult_icon" width="7" height="20"/>
         <image name="book" width="208" height="80"/>
         <image name="calender-stripe" width="40" height="40"/>
-        <image name="check_date" width="208" height="80"/>
+        <image name="check_date" width="208" height="76"/>
         <image name="left_arrow" width="15" height="20"/>
         <image name="minus_icon" width="24" height="24"/>
         <image name="plus_icon" width="24" height="24"/>
